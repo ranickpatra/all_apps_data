@@ -40,31 +40,31 @@
 <p>The array is searched sequentially and unsorted items are moved and inserted into the sorted sub-list (in the same array). This algorithm is not suitable for large data sets as its average and worst case complexity are of Ο(n<sup>2</sup>), where <b>n</b> is the number of items.</p>
 <h2>How Insertion Sort Works?</h2>
 <p>We take an unsorted array for our example.</p>
-<img alt="Unsorted Array" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//unsorted_array.jpg"/>
+<img alt="Unsorted Array" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/unsorted_array.jpg"/>
 <p>Insertion sort compares the first two elements.</p>
-<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//insertion_sort_1.jpg"/>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_1.jpg"/>
 <p>It finds that both 14 and 33 are already in ascending order. For now, 14 is in sorted sub-list.</p>
-<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//insertion_sort_2.jpg"/>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_2.jpg"/>
 <p>Insertion sort moves ahead and compares 33 with 27.</p>
-<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//insertion_sort_3.jpg"/>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_3.jpg"/>
 <p>And finds that 33 is not in the correct position.</p>
-<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//insertion_sort_4.jpg"/>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_4.jpg"/>
 <p>It swaps 33 with 27. It also checks with all the elements of sorted sub-list. Here we see that the sorted sub-list has only one element 14, and 27 is greater than 14. Hence, the sorted sub-list remains sorted after swapping.</p>
-<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//insertion_sort_5.jpg"/>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_5.jpg"/>
 <p>By now we have 14 and 27 in the sorted sub-list. Next, it compares 33 with 10.</p>
-<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//insertion_sort_6.jpg"/>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_6.jpg"/>
 <p>These values are not in a sorted order.</p>
-<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//insertion_sort_7.jpg"/>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_7.jpg"/>
 <p>So we swap them.</p>
-<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//insertion_sort_8.jpg"/>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_8.jpg"/>
 <p>However, swapping makes 27 and 10 unsorted.</p>
-<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//insertion_sort_9.jpg"/>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_9.jpg"/>
 <p>Hence, we swap them too.</p>
-<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//insertion_sort_10.jpg"/>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_10.jpg"/>
 <p>Again we find 14 and 10 in an unsorted order.</p>
-<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//insertion_sort_11.jpg"/>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_11.jpg"/>
 <p>We swap them again. By the end of third iteration, we have a sorted sub-list of 4 items.</p>
-<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//insertion_sort_12.jpg"/>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_12.jpg"/>
 <p>This process goes on until all the unsorted values are covered in a sorted sub-list. Now we shall see some programming aspects of insertion sort.</p>
 <h3>Algorithm</h3>
 <p>Now we have a bigger picture of how this sorting technique works, so we can derive simple steps by which we can achieve insertion sort.</p>
