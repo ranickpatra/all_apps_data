@@ -45,7 +45,7 @@
 </ul>
 <h2>Linked List Representation</h2>
 <p>Linked list can be visualized as a chain of nodes, where every node points to the next node.</p>
-<img alt="Linked List" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list.jpg"/>
+<img alt="Linked List" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list.jpg"/>
 <p>As per the above illustration, following are the important points to be considered.</p>
 <ul class="list">
 <li><p>Linked List contains a link element called first.</p></li>
@@ -71,43 +71,43 @@
 </ul>
 <h2>Insertion Operation</h2>
 <p>Adding a new node in linked list is a more than one step activity. We shall learn this with diagrams here. First, create a node using the same structure and find the location where it has to be inserted.</p>
-<img alt="Linked List Insertion" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_insertion_0.jpg"/>
+<img alt="Linked List Insertion" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_insertion_0.jpg"/>
 <p>Imagine that we are inserting a node <b>B</b> (NewNode), between <b>A</b> (LeftNode) and <b>C</b> (RightNode). Then point B.next to C −</p>
 <pre class="result notranslate">NewNode.next −&gt; RightNode;
 </pre>
 <p>It should look like this −</p>
-<img alt="Linked List Insertion" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_insertion_1.jpg"/>
+<img alt="Linked List Insertion" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_insertion_1.jpg"/>
 <p>Now, the next node at the left should point to the new node.</p>
 <pre class="result notranslate">LeftNode.next −&gt; NewNode;
 </pre>
-<img alt="Linked List Insertion" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_insertion_2.jpg"/>
+<img alt="Linked List Insertion" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_insertion_2.jpg"/>
 <p>This will put the new node in the middle of the two. The new list should look like this −</p>
-<img alt="Linked List Insertion" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_insertion_3.jpg"/>
+<img alt="Linked List Insertion" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_insertion_3.jpg"/>
 <p>Similar steps should be taken if the node is being inserted at the beginning of the list. While inserting it at the end, the second last node of the list should point to the new node and the new node will point to NULL.</p>
 <h2>Deletion Operation</h2>
 <p>Deletion is also a more than one step process. We shall learn with pictorial representation. First, locate the target node to be removed, by using searching algorithms.</p>
-<img alt="Linked List Deletion" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_deletion_0.jpg"/>
+<img alt="Linked List Deletion" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_deletion_0.jpg"/>
 <p>The left (previous) node of the target node now should point to the next node of the target node −</p>
 <pre class="result notranslate">LeftNode.next −&gt; TargetNode.next;
 </pre>
-<img alt="Linked List Deletion" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_deletion_1.jpg"/>
+<img alt="Linked List Deletion" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_deletion_1.jpg"/>
 <p>This will remove the link that was pointing to the target node. Now, using the following code, we will remove what the target node is pointing at.</p>
 <pre class="result notranslate">TargetNode.next −&gt; NULL;
 </pre>
-<img alt="Linked List Deletion" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_deletion_2.jpg"/>
+<img alt="Linked List Deletion" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_deletion_2.jpg"/>
 <p>We need to use the deleted node. We can keep that in memory otherwise we can simply deallocate memory and wipe off the target node completely.</p>
-<img alt="Linked List Deletion" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_deletion_3.jpg"/>
+<img alt="Linked List Deletion" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_deletion_3.jpg"/>
 <h2>Reverse Operation</h2>
 <p>This operation is a thorough one. We need to make the last node to be pointed by the head node and reverse the whole linked list.</p>
-<img alt="Linked List Reverse Operation" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_reverse_0.jpg"/>
+<img alt="Linked List Reverse Operation" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_reverse_0.jpg"/>
 <p>First, we traverse to the end of the list. It should be pointing to NULL. Now, we shall make it point to its previous node −</p>
-<img alt="Linked List Reverse Operation" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_reverse_1.jpg"/>
+<img alt="Linked List Reverse Operation" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_reverse_1.jpg"/>
 <p>We have to make sure that the last node is not the lost node. So we'll have some temp node, which looks like the head node pointing to the last node. Now, we shall make all left side nodes point to their previous nodes one by one.</p>
-<img alt="Linked List Reverse Operation" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_reverse_2.jpg"/>
+<img alt="Linked List Reverse Operation" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_reverse_2.jpg"/>
 <p>Except the node (first node) pointed by the head node, all nodes should point to their predecessor, making them their new successor. The first node will point to NULL.</p>
-<img alt="Linked List Reverse Operation" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_reverse_3.jpg"/>
+<img alt="Linked List Reverse Operation" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_reverse_3.jpg"/>
 <p>We'll make the head node point to the new first node by using the temp node.</p>
-<img alt="Linked List Reverse Operation" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_reverse_4.jpg"/>
+<img alt="Linked List Reverse Operation" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//linked_list_reverse_4.jpg"/>
 <p>The linked list is now reversed. To see linked list implementation in C programming language, please <a href="https://www.tutorialspoint.com/data_structures_algorithms/linked_list_program_in_c.htm">click here</a>.</p>
 <hr/>
 

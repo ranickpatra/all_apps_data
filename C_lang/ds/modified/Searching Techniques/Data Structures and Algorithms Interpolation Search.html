@@ -41,15 +41,15 @@
 <p>There are cases where the location of target data may be known in advance. For example, in case of a telephone directory, if we want to search the telephone number of Morphius. Here, linear search and even binary search will seem slow as we can directly jump to memory space where the names start from 'M' are stored.</p>
 <h2>Positioning in Binary Search</h2>
 <p>In binary search, if the desired data is not found then the rest of the list is divided in two parts, lower and higher. The search is carried out in either of them.</p>
-<img alt="BST Step One" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//bst_step_one.jpg"/>
-<img alt="BST Step Two" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//bst_step_two.jpg"/>
-<img alt="BST Step Three" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//bst_step_three.jpg"/>
-<img alt="BST Step Four" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//bst_step_four.jpg"/>
+<img alt="BST Step One" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//bst_step_one.jpg"/>
+<img alt="BST Step Two" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//bst_step_two.jpg"/>
+<img alt="BST Step Three" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//bst_step_three.jpg"/>
+<img alt="BST Step Four" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//bst_step_four.jpg"/>
 <p>Even when the data is sorted, binary search does not take advantage to probe the position of the desired data.</p>
 <h2>Position Probing in Interpolation Search</h2>
 <p>Interpolation search finds a particular item by computing the probe position. Initially, the probe position is the position of the middle most item of the collection.</p>
-<img alt="Interpolation Step One" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//interpolation_step_one.jpg"/>
-<img alt="Interpolation Step Two" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//interpolation_step_two.jpg"/>
+<img alt="Interpolation Step One" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//interpolation_step_one.jpg"/>
+<img alt="Interpolation Step Two" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//interpolation_step_two.jpg"/>
 <p>If a match occurs, then the index of the item is returned. To split the list into two parts, we use the following method −</p>
 <pre class="result notranslate">mid = Lo + ((Hi - Lo) / (A[Hi] - A[Lo])) * (X - A[Lo])
 

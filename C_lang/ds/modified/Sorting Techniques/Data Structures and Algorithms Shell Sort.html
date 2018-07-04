@@ -46,16 +46,16 @@ where −
 <p>This algorithm is quite efficient for medium-sized data sets as its average and worst case complexity are of Ο(n), where <b>n</b> is the number of items.</p>
 <h2>How Shell Sort Works?</h2>
 <p>Let us consider the following example to have an idea of how shell sort works. We take the same array we have used in our previous examples. For our example and ease of understanding, we take the interval of 4. Make a virtual sub-list of all values located at the interval of 4 positions. Here these values are {35, 14}, {33, 19}, {42, 27} and {10, 44}</p>
-<img alt="Shell Sort" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//shell_sort_gap_4.jpg"/>
+<img alt="Shell Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//shell_sort_gap_4.jpg"/>
 <p>We compare values in each sub-list and swap them (if necessary) in the original array. After this step, the new array should look like this −</p>
-<img alt="Shell Sort" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//shell_sort_step_1.jpg"/>
+<img alt="Shell Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//shell_sort_step_1.jpg"/>
 <p>Then, we take interval of 2 and this gap generates two sub-lists - {14, 27, 35, 42}, {19, 10, 33, 44}</p>
-<img alt="Shell Sort" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//shell_sort_gap_2.jpg"/>
+<img alt="Shell Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//shell_sort_gap_2.jpg"/>
 <p>We compare and swap the values, if required, in the original array. After this step, the array should look like this −</p>
-<img alt="Shell Sort" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//shell_sort_step_2.jpg"/>
+<img alt="Shell Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//shell_sort_step_2.jpg"/>
 <p>Finally, we sort the rest of the array using interval of value 1. Shell sort uses insertion sort to sort the array.</p>
 <p>Following is the step-by-step depiction −</p>
-<img alt="Shell Sort" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//shell_sort.jpg"/>
+<img alt="Shell Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//shell_sort.jpg"/>
 <p>We see that it required only four swaps to sort the rest of the array.</p>
 <h3>Algorithm</h3>
 <p>Following is the algorithm for shell sort.</p>

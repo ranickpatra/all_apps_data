@@ -37,7 +37,7 @@
 
 <hr/>
 <p>Depth First Search (DFS) algorithm traverses a graph in a depthward motion and uses a stack to remember to get the next vertex to start a search, when a dead end occurs in any iteration.</p>
-<img alt="Depth First Travesal" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//depth_first_traversal.jpg"/>
+<img alt="Depth First Travesal" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//depth_first_traversal.jpg"/>
 <p>As in the example given above, DFS algorithm traverses from S to A to D to G to E to B first, then to F and lastly to C. It employs the following rules.</p>
 <ul class="list">
 <li><p><b>Rule 1</b> − Visit the adjacent unvisited vertex. Mark it as visited. Display it. Push it in a stack.</p></li>
@@ -52,37 +52,37 @@
 </tr>
 <tr>
 <td class="ts" style="width:5%;">1</td>
-<td style="width:50%"><img alt="Depth First Search Step One" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//dfs_one.jpg"/></td>
+<td style="width:50%"><img alt="Depth First Search Step One" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//dfs_one.jpg"/></td>
 <td style="vertical-align:middle;">Initialize the stack.</td>
 </tr>
 <tr>
 <td class="ts" style="width:5%;">2</td>
-<td style="width:50%"><img alt="Depth First Search Step Two" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//dfs_two.jpg"/></td>
+<td style="width:50%"><img alt="Depth First Search Step Two" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//dfs_two.jpg"/></td>
 <td style="vertical-align:middle;">Mark <b>S</b> as visited and put it onto the stack. Explore any unvisited adjacent node from <b>S</b>. We have three nodes and we can pick any of them. For this example, we shall take the node in an alphabetical order.</td>
 </tr>
 <tr>
 <td class="ts" style="width:5%;">3</td>
-<td style="width:50%"><img alt="Depth First Search Step Three" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//dfs_three.jpg"/></td>
+<td style="width:50%"><img alt="Depth First Search Step Three" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//dfs_three.jpg"/></td>
 <td style="vertical-align:middle;">Mark <b>A</b> as visited and put it onto the stack. Explore any unvisited adjacent node from A. Both <b>S</b> and <b>D</b> are adjacent to <b>A</b> but we are concerned for unvisited nodes only.</td>
 </tr>
 <tr>
 <td class="ts" style="width:5%;">4</td>
-<td style="width:50%"><img alt="Depth First Search Step Four" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//dfs_four.jpg"/></td>
+<td style="width:50%"><img alt="Depth First Search Step Four" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//dfs_four.jpg"/></td>
 <td style="vertical-align:middle;">Visit <b>D</b> and mark it as visited and put onto the stack. Here, we have <b>B</b> and <b>C</b> nodes, which are adjacent to <b>D</b> and both are unvisited. However, we shall again choose in an alphabetical order.</td>
 </tr>
 <tr>
 <td class="ts" style="width:5%;">5</td>
-<td style="width:50%"><img alt="Depth First Search Step Five" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//dfs_five.jpg"/></td>
+<td style="width:50%"><img alt="Depth First Search Step Five" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//dfs_five.jpg"/></td>
 <td style="vertical-align:middle;">We choose <b>B</b>, mark it as visited and put onto the stack. Here <b>B</b> does not have any unvisited adjacent node. So, we pop <b>B</b> from the stack.</td>
 </tr>
 <tr>
 <td class="ts" style="width:5%;">6</td>
-<td style="width:50%"><img alt="Depth First Search Step Six" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//dfs_six.jpg"/></td>
+<td style="width:50%"><img alt="Depth First Search Step Six" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//dfs_six.jpg"/></td>
 <td style="vertical-align:middle;">We check the stack top for return to the previous node and check if it has any unvisited nodes. Here, we find <b>D</b> to be on the top of the stack.</td>
 </tr>
 <tr>
 <td class="ts" style="width:5%;">7</td>
-<td style="width:50%"><img alt="Depth First Search Step Seven" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//dfs_seven.jpg"/></td>
+<td style="width:50%"><img alt="Depth First Search Step Seven" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//dfs_seven.jpg"/></td>
 <td style="vertical-align:middle;">Only unvisited adjacent node is from <b>D</b> is <b>C</b> now. So we visit <b>C</b>, mark it as visited and put it onto the stack.</td>
 </tr>
 </tbody></table>
