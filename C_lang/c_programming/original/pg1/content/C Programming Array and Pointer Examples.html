@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://www.programiz.com/c-programming/c-pointer-examples -->
+<html class="no-js js" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.programiz.com/">
+<!--[if IE 9]>
+<link rel="prefetch" href="//cdn.programiz.com" />
+<![endif]-->
+<link rel="shortcut icon" href="https://cdn.programiz.com/sites/tutorial2program/files/c-favicons.png" type="image/png">
+<meta name="description" content="This page contains examples of arrays and pointers in C programming language...">
+<meta name="generator" content="Drupal 7 (http://drupal.org)">
+<link rel="canonical" href="https://www.programiz.com/c-programming/c-pointer-examples">
+<link rel="shortlink" href="https://www.programiz.com/node/169">
+<meta name="google-site-verification" content="17JZPeRuYVi-HGRJIG06Wx4uVrQSGPSGk7RLbZ7LaTA">
+<meta name="msvalidate.01" content="AC4EA77B0980B7169F9EEC142ADCC15B">
+<!-- Google Tag Manager -->
+<script async="" src="./C Programming Array and Pointer Examples_files/analytics.js"></script><script src="./C Programming Array and Pointer Examples_files/123000288571689" async=""></script><script async="" src="./C Programming Array and Pointer Examples_files/fbevents.js"></script><script async="" src="./C Programming Array and Pointer Examples_files/gtm.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TKXT7MH');</script>
+<!-- End Google Tag Manager -->
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '123000288571689');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=123000288571689&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+<script type="text/javascript" src="https://dsh7ky7308k4b.cloudfront.net/publishers/Programizcom.min.js"></script>
+
+
+<script async="async" src="./C Programming Array and Pointer Examples_files/gpt.js"></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+
+
+<script>
+  googletag.cmd.push(function() {
+	if(window.innerWidth > 768){
+   googletag.defineSlot('/8095840/.2_A.34657.4_Programiz.com_tier1', [300, 250], 'div-gpt-ad-1527670429257-0').addService(googletag.pubads());
+   googletag.defineSlot('/8095840/.2_A.34660.4_Programiz.com_tier1', [300, 250], 'div-gpt-ad-1527670429257-1').addService(googletag.pubads());
+    
+  }
+	else{
+   googletag.defineSlot('/8095840/.2_A.34653.4_Programiz.com_tier1', [300, 250], 'div-gpt-ad-1527670353707-0').addService(googletag.pubads());
+	}	
+		googletag.enableServices();
+	  });
+	</script>
+  <title>C Programming Array and Pointer Examples</title>
+  <link href="./C Programming Array and Pointer Examples_files/css" rel="stylesheet">
+  <link href="./C Programming Array and Pointer Examples_files/icon" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="./C Programming Array and Pointer Examples_files/css_WSgzCiaLFuERen0TMp4LzgnjcxS3tn-QyZRD85wZ2cs.css" media="all">
+<link type="text/css" rel="stylesheet" href="./C Programming Array and Pointer Examples_files/css_3I03pJits2CKnSomFtyZgUmNkiDHMl2HjyoOrdsGu_8.css" media="all">
+<link type="text/css" rel="stylesheet" href="./C Programming Array and Pointer Examples_files/css_VWGhZkkR4B4tMJA7PC_wov8dAxaI-MS03BCM3K8jjJA.css" media="screen">
+<link type="text/css" rel="stylesheet" href="./C Programming Array and Pointer Examples_files/css_36JbTIbHkX9TeP0yu3dTHrOHbHF-6-_qVnhNK0wAa7k.css" media="all">
+<link type="text/css" rel="stylesheet" href="./C Programming Array and Pointer Examples_files/css_iGec9D4XeQWc1VlhKtvst2A9wnKBYj3mMXxOhH2ZqhY.css" media="all">
+<link type="text/css" rel="stylesheet" href="./C Programming Array and Pointer Examples_files/css_5w9zKWmFIox1ed4zWL2tzX8XT5Tvs85mCVB9CUkEnVQ.css" media="all">
+<link type="text/css" rel="stylesheet" href="./C Programming Array and Pointer Examples_files/css_5aQvY9eDN5XIiayMtb_05FejVu1px73z0dS0wFjNJKo.css" media="all">
+  <script type="text/javascript" src="./C Programming Array and Pointer Examples_files/jquery.min.js"></script><link rel="preload" href="https://adservice.google.co.in/adsid/integrator.js?domain=www.programiz.com" as="script"><script type="text/javascript" src="https://adservice.google.co.in/adsid/integrator.js?domain=www.programiz.com"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=www.programiz.com" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=www.programiz.com"></script><script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_220.js" async=""></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery || document.write("<script src='/sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="./C Programming Array and Pointer Examples_files/js_vSmhpx_T-AShyt_WMW5_TcwwxJP1imoVOa8jvwL_mxE.js"></script>
+<script type="text/javascript" src="./C Programming Array and Pointer Examples_files/jquery-ui.min.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery.ui || document.write("<script src='/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery-ui.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="./C Programming Array and Pointer Examples_files/js_Xdog1yvbsHUl33-wo9ctRnQMgE_3uBBG15y3yJm_2eY.js"></script>
+<script type="text/javascript" src="./C Programming Array and Pointer Examples_files/js_6mtNsXgWzNZac4UBJK9kpj3XdXTz7NcBgjY5eMSdK94.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-36675496-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="./C Programming Array and Pointer Examples_files/js_1idk1Z3VP3hlw_7ergGcv0EkKW5OmiHkq_oP2y09WAM.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"c","theme_token":"y5mYk4prUYaKPiQveAagvc27uk6D0I0-mKEH36ufyYg","js":{"sites\/all\/libraries\/prettify\/prettify.js":1,"sites\/all\/modules\/prettify\/prettify.loader.js":1,"\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.10.2\/jquery.min.js":1,"0":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"\/\/ajax.googleapis.com\/ajax\/libs\/jqueryui\/1.10.2\/jquery-ui.min.js":1,"1":1,"sites\/all\/modules\/codefilter\/codefilter.js":1,"sites\/all\/modules\/search_autocomplete\/js\/jquery.autocomplete.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/all\/themes\/Ultimate\/sidr-package-1.2.1\/jquery.sidr.min.js":1,"sites\/all\/themes\/Ultimate\/js\/plugins.js":1,"sites\/all\/themes\/Ultimate\/js\/main.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.menu.css":1,"misc\/ui\/jquery.ui.autocomplete.css":1,"sites\/all\/modules\/codefilter\/codefilter.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/quiz\/quiz.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/search_autocomplete\/css\/themes\/basic-blue.css":1,"sites\/all\/themes\/Ultimate\/css\/normalize.css":1,"sites\/all\/themes\/Ultimate\/css\/main.css":1,"sites\/all\/themes\/Ultimate\/sidr-package-1.2.1\/stylesheets\/jquery.sidr.dark.css":1,"sites\/all\/themes\/c\/c.css":1,"sites\/all\/modules\/prettify\/styles\/stackoverflow.css":1}},"prettify":{"linenums":false,"match":"","nocode":"nocode","custom":[],"markup":{"precode":true,"code":false,"pre":false}},"search_autocomplete":{"form6":{"selector":"#search-api-page-search-form[action=\u0022\/searchh\u0022] #edit-keys-2","minChars":"3","max_sug":"10","type":"internal","datas":"https:\/\/www.programiz.com\/search_autocomplete\/autocomplete\/6\/","fid":"6","theme":"basic-blue","auto_submit":"1","auto_redirect":"1"},"form7":{"selector":"#search-api-page-search-form-simplest-programming-tutorials-f #edit-keys-2","minChars":"3","max_sug":"10","type":"internal","datas":"https:\/\/www.programiz.com\/search_autocomplete\/autocomplete\/7\/","fid":"7","theme":"basic-blue","auto_submit":"1","auto_redirect":"1"}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"urlIsAjaxTrusted":{"\/c-programming\/c-pointer-examples":true}});
+//--><!]]>
+</script>
+<script type="text/javascript" src="./C Programming Array and Pointer Examples_files/ml_jQuery.inputmask.bundle.min.js"></script><script type="text/javascript" src="./C Programming Array and Pointer Examples_files/ml_jQuery.inputmask.bundle.min.js"></script><style type="text/css">:root topadblock, :root td[valign="top"] > .mainmenu[style="padding:10px 0 0 0 !important;"], :root input[onclick^="window.open('http://www.friendlyduck.com/"], :root img[alt^="Fuckbook"], :root iframe[src^="http://cdn1.adexprt.com/"], :root iframe[src^="http://ad.yieldmanager.com/"], :root div[id^="zergnet-widget"], :root div[id^="mainads"], :root div[id^="dmRosAdWrapper"], :root div[id^="div_ad_stack_"], :root iframe[id^="google_ads_iframe"], :root div[id^="crt-"][style], :root div[id^="cns_ads_"], :root div[id^="ads300_250-widget"], :root iframe[src^="http://cdn2.adexprt.com/"], :root div[id^="ads300_100-widget"], :root div[id^="ads250_250-widget"], :root div[id^="adrotate_widgets-"], :root div[id^="adfox_"], :root div[id^="ad_script_"], :root div[id^="ad-server-"], :root div[id^="ad-cid-"], :root div[id^="acm-ad-tag-"], :root div[id^="MarketGid"], :root div[id^="ADV-SLOT-"], :root div[class^="proadszone-"], :root div[class^="local-feed-banner-ads"], :root div[class^="block-openx-"], :root div[class^="ads-partner-"], :root div[class^="ad_position_"], :root div[class^="ad_border_"], :root div[class^="Ad__container"], :root div[class^="Ad__bigBox"], :root div[id^="div-adtech-ad-"], :root div[class*="_AdInArticle_"], :root div[class$="dealnews"] > .dealnews, :root div > [class][onclick*=".updateAnalyticsEvents"], :root bottomadblock, :root aside[itemtype="https://schema.org/WPAdBlock"], :root aside[id^="div-gpt-ad"], :root a[target="_blank"][href^="http://api.taboola.com/"], :root a[style="display:block;width:300px;min-height:250px"][href^="http://li.cnet.com/click?"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[onmousedown^="this.href='http://staffpicks.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[onmousedown^="this.href='http://staffpicks.outbrain.com/network/redir?"][target="_blank"], :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[onmousedown^="this.href='/wp-content/embed-ad-content/"], :root a[href^="https://www.share-online.biz/affiliate/"], :root a[href^="https://www.oboom.com/ad/"], :root a[href^="https://www.firstload.com/affiliate/"], :root a[href^="https://www.camyou.com/?cam="][href*="&track="], :root a[href^="https://www.bebi.com"], :root a[href^="https://www.adskeeper.co.uk/"], :root a[href^="https://windscribe.com/promo/"], :root a[href^="https://trust.zone/go/r.php?RID="], :root a[href^="https://tracking.truthfinder.com/?a="], :root div[class^="gemini-ad"], :root a[href^="https://torguard.net/aff.php"], :root a[href^="https://t.mobtya.com/"], :root a[href^="https://syndication.exoclick.com/splash.php?"], :root div[id^="YFBMSN"], :root a[href^="https://secure.eveonline.com/ft/?aid="], :root a[href^="https://redirect.ero-advertising.com/"], :root a[href^="https://pubads.g.doubleclick.net/"], :root div[id^="proadszone-"], :root a[href^="https://mk-ads.com/"], :root a[href^="https://members.linkifier.com/public/affiliateLanding?refCode="], :root div[class^="BlockAdvert-"], :root a[href^="https://go.onclasrv.com/"], :root a[href^="https://go.ad2up.com/"], :root a[href^="https://farm.plista.com/pets"], :root a[href^="https://evaporate.pw/"], :root a[href^="https://click.plista.com/pets"], :root a[href^="https://chaturbate.com/affiliates/"], :root a[href^="https://www.googleadservices.com/pagead/aclk?"], :root a[href^="https://awentw.com/"], :root a[href^="https://servedbyadbutler.com/"], :root a[href^="https://affiliates.bet-at-home.com/processing/"], :root a[href^="https://adhealers.com/"], :root a[href^="https://ad.atdmt.com/"], :root a[href^="http://xtgem.com/click?"], :root a[href^="http://wxdownloadmanager.com/dl/"], :root a[href^="http://www.zergnet.com/i/"], :root a[href^="http://www.usearchmedia.com/signup?"], :root a[href^="http://www.torntv-downloader.com/"], :root a[href^="http://www.tirerack.com/affiliates/"], :root a[href^="http://www.text-link-ads.com/"], :root div[id^="div_openx_ad_"], :root a[href^="http://www.streamate.com/exports/"], :root a[href^="http://www.sfippa.com/"], :root a[href^="http://www.xmediaserve.com/"], :root a[href^="http://www.sex.com/videos/?utm_"], :root a[href^="http://www.sex.com/?utm_"], :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"], :root a[href^="http://www.roboform.com/php/land.php"], :root a[href^="http://www.quick-torrent.com/download.html?aff"], :root a[href^="http://www.pinkvisualgames.com/?revid="], :root a[href^="http://www.paddypower.com/?AFF_ID="], :root div[data-spotim-slot], :root a[href^="http://www.mysuperpharm.com/"], :root a[href^="http://www.myfreepaysite.com/sfw_int.php?aid"], :root a[href^="http://www.myfreepaysite.com/sfw.php?aid"], :root a[href^="http://www.myfreecams.com/?co_id="][href*="&track="], :root a[href^="http://www.moneyducks.com/"], :root a[href^="http://www.menaon.com/installs/"], :root a[href^="http://www.securegfm.com/"], :root a[href^="http://www.liversely.net/"], :root a[href^="http://www.linkbucks.com/referral/"], :root a[href^="http://www.ireel.com/signup?ref"], :root a[href^="http://www.incredimail.com/?id="], :root a[href^="http://www.idownloadplay.com/"], :root a[href^="http://www.hitcpm.com/"], :root a[href^="http://www.greenmangaming.com/?tap_a="], :root a[href^="http://www.getyourguide.com/?partner_id="], :root a[href^="http://www.gamebookers.com/cgi-bin/intro.cgi?"], :root a[href^="http://www.friendlyquacks.com/"], :root a[href^="http://www.fpcTraffic2.com/blind/in.cgi?"], :root a[href^="http://www.fonts.com/BannerScript/"], :root a[href^="http://www.fleshlight.com/"], :root a[href^="http://www.flashx.tv/downloadthis"], :root a[href^="http://www.firstload.de/affiliate/"], :root a[href^="http://www.fducks.com/"], :root a[href^="http://www.faceporn.net/free?"], :root a[href^="http://www.epicgameads.com/"], :root a[href^="http://www.easydownloadnow.com/"], :root a[href^="http://www.duckssolutions.com/"], :root a[href^="http://www.duckcash.eu/"], :root a[href^="http://www.drowle.com/"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"], :root a[href^="http://www.downloadweb.org/"], :root a[href^="http://www.downloadthesefiles.com/"], :root a[href^="http://www.installads.net/"], :root a[href^="http://www.download-provider.org/"], :root a[href^="http://www.down1oads.com/"], :root iframe[id^="google_ads_frame"], :root a[href^="http://www.dealcent.com/register.php?affid="], :root a[href^="http://www.fbooksluts.com/"], :root a[href^="http://c.actiondesk.com/"], :root a[href^="http://www.cdjapan.co.jp/aff/click.cgi/"], :root a[href^="http://www.cash-duck.com/"], :root a[href^="http://www.bet365.com/"][href*="&affiliate="], :root a[href^="http://www.badoink.com/go.php?"], :root a[href^="http://ad-emea.doubleclick.net/"], :root a[href^="http://www.adskeeper.co.uk/"], :root a[href^="http://www.ragazzeinvendita.com/?rcid="], :root a[href^="http://www.adbrite.com/mb/commerce/purchase_form.php?"], :root a[href^="http://www.brightwheel.info/"], :root a[href^="http://www.1clickdownloader.com/"], :root a[href^="http://www.123-reg.co.uk/affiliate2.cgi"], :root div[id^="lazyad-"], :root a[href^="http://wopertific.info/"], :root a[href^="http://see-work.info/"], :root a[href^="http://prousa.work/"], :root a[href^="http://websitedhoome.com/"], :root a[href^="http://uploaded.net/ref/"], :root a[href^="http://www.graboid.com/affiliates/"], :root a[href^="http://tracking.toroadvertising.com/"], :root a[data-redirect^="http://paid.outbrain.com/network/redir?"], :root a[href^="http://track.affiliatenetwork.co.za/"], :root a[href^="http://track.adform.net/"], :root a[href^="http://t.wowtrk.com/"], :root a[href^="http://adprovider.adlure.net/"], :root a[href^="http://tezfiles.com/pr/"], :root .mw > #rcnt > #center_col > #taw > .c, :root a[href^="http://taboola-"][href*="/redirect.php?app.type="], :root a[href^="http://t.mdn2015x3.com/"], :root a[href^="http://clickandjoinyourgirl.com/"], :root a[href^="http://webtrackerplus.com/"], :root a[href^="http://b.bestcompleteusa.info/"], :root a[href^="http://t.mdn2015x2.com/"], :root a[href^="http://www.seekbang.com/cs/"], :root a[href^="http://bluehost.com/track/"], :root a[href^="http://syndication.exoclick.com/"], :root a[href^="http://steel.starflavor.bid/"], :root a[href^="http://sharesuper.info/"], :root a[href^="http://getlinksinaseconds.com/"], :root a[href^="http://secure.signup-way.com/"], :root a[href*=".clkcln.com/"], :root a[href^="http://secure.signup-page.com/"], :root [onclick^="window.open('http://adultfriendfinder.com/search/"], :root a[href^="http://secure.hostgator.com/~affiliat/"], :root a[href^="http://ryushare.com/affiliate.python"], :root a[href^="http://record.commissionking.com/"], :root div[class*="-storyBodyAd-"], :root a[href^="http://record.betsafe.com/"], :root a[href^="http://gca.sh/user/register?ref="], :root a[href^="http://promos.bwin.com/"], :root a[href^="http://prochina.link/"], :root a[href^="http://z1.zedo.com/"], :root a[href^="http://pokershibes.com/index.php?ref="], :root .ra[width="30%"][align="right"] + table[width="70%"][cellpadding="0"], :root a[href^="http://searchtabnew.com/"], :root a[href^="http://pan.adraccoon.com?"], :root a[href^="http://n217adserv.com/"], :root a[href^="http://mojofun.info/"], :root a[href^="http://mmo123.co/"], :root a[href^="http://media.paddypower.com/redirect.aspx?"], :root a[href^="http://www.bitlord.me/share/"], :root a[href^="http://www.socialsex.com/"], :root a[href^="http://www.affbuzzads.com/affiliate/"], :root a[href*=".qertewrt.com/"], :root a[href^="http://lp.ncdownloader.com/"], :root #rhs_block .xpdopen > ._OKe > div > .mod > ._yYf, :root a[href^="http://lp.ezdownloadpro.info/"], :root a[href*="/adServe/banners?"], :root a[href^="http://liversely.com/"], :root a[href^="http://latestdownloads.net/download.php?"], :root a[href^="http://keep2share.cc/pr/"], :root a[href^="http://k2s.cc/pr/"], :root a[href^="http://k2s.cc/code/"], :root a[href^="http://www.liutilities.com/"], :root a[href^="http://www.dl-provider.com/search/"], :root a[href^="http://tracking.deltamediallc.com/"], :root a[href*=".bang.com/"][href*="&aff="], :root a[href^="http://join3.bannedsextapes.com/track/"], :root a[href^="http://green.trafficinvest.com/"], :root a[href^="http://jobitem.org/"], :root a[href^="//adbit.co/?a=Advertise&"], :root a[href^="http://istri.it/?"], :root a[href^="https://dltags.com/"], :root a[href^="http://onclickads.net/"], :root a[href^="http://www.terraclicks.com/"], :root a[href^="http://www.coinducks.com/"], :root a[href^="http://internalredirect.site/"], :root a[href^="http://cdn.adstract.com/"], :root a[href^="http://hyperlinksecure.com/go/"], :root a[href^="http://pubads.g.doubleclick.net/"], :root a[href^="http://www.myvpn.pro/"], :root a[href^="http://hyperies.info/"], :root a[href^="http://hpn.houzz.com/"], :root a[href^="http://greensmoke.com/"], :root a[href^="http://farm.plista.com/pets"], :root a[href^="http://mo8mwxi1.com/"], :root div[class^="ResponsiveAd-"], :root a[href^="http://www.revenuehits.com/"], :root a[href^="http://go.seomojo.com/tracking202/"], :root div[id^="block-views-topheader-ad-block-"], :root a[href^="http://go.oclaserver.com/"], :root .__y_elastic .__y_item, :root a[href^="http://go.mobisla.com/"], :root div[id^="advads-"], :root a[href^="http://www.ringtonematcher.com/"], :root a[href^="http://www.adshost2.com/"], :root a[href^="//srv.buysellads.com/"], :root a[href^="http://g1.v.fwmrm.net/ad/"], :root div[id^="div-gpt-ad"], :root a[href^="http://fusionads.net"], :root a[href^="http://us.marketgid.com"], :root A[href^="https://www.friendlyduck.com/AF_"], :root a[href^="http://imads.integral-marketing.com/"], :root a[href^="http://freesoftwarelive.com/"], :root a[href^="http://adtrackone.eu/"], :root a[href^="http://finaljuyu.com/"], :root a[href^="http://tour.affbuzzads.com/"], :root a[href^="http://fileupnow.rocks/"], :root a[href^="http://fileloadr.com/"], :root a[href^="http://extra.bet365.com/"][href*="?affiliate="], :root a[href^="http://elitefuckbook.com/"], :root div[id^="ads300_600-widget"], :root div[class^="Ad__adContainer"], :root a[href^="http://web.adblade.com/"], :root a[href^="http://elite-sex-finder.com/?"], :root a[href^="http://webgirlz.online/landing/"], :root a[href^="http://eclkmpsa.com/"], :root a[href^="http://dethao.com/"], :root a[href^="http://ddownload39.club/"], :root a[href^="http://data.committeemenencyclopedicrepertory.info/"], :root a[href^="https://understandsolar.com/signup/?lead_source="][href*="&tracking_code="], :root a[href^="http://hdplugin.flashplayer-updates.com/"], :root a[href^="http://data.ad.yieldmanager.net/"], :root #content > #center > .dose > .dosesingle, :root a[href^="http://campaign.bharatmatrimony.com/track/"], :root a[href^="http://d2.zedo.com/"], :root a[href^="http://contractallsticker.net/"], :root a[href^="http://codec.codecm.com/"], :root div[id^="ads120_600-widget"], :root a[href^="http://clk.directrev.com/"], :root a[href^="http://refer.webhostingbuzz.com/"], :root a[href^="https://paid.outbrain.com/network/redir?"], :root a[href^="http://clickserv.sitescout.com/"], :root a[href*=".intab.fun/"], :root a[href^="http://clicks.guamwnvgashbkashawhgkhahshmashcas.pw/"], :root a[href^="http://www.downloadplayer1.com/"], :root a[href^="http://clicks.binarypromos.com/"], :root a[href^="https://dediseedbox.com/clients/aff.php?"], :root a[href^="http://www.wantstraffic.com/"], :root .lads[width="100%"][style="background:#FFF8DD"], :root a[href^="http://databass.info/"], :root a[href^="http://www.urmediazone.com/signup"], :root a[href^="http://ads.pheedo.com/"], :root a[href^="http://click.plista.com/pets"], :root a[href^="http://chaturbate.com/affiliates/"], :root a[href^="http://www.friendlyadvertisements.com/"], :root a[href^="http://cdn3.adbrau.com/"], :root a[href^="http://get.slickvpn.com/"], :root a[href*="/adrotate-out.php?"], :root a[href^="http://track.trkvluum.com/"], :root a[href^="http://2pxg8bcf.top/"], :root a[href^="http://cpaway.afftrack.com/"], :root a[href^="http://cdn.adsrvmedia.net/"], :root a[href^="http://360ads.go2cloud.org/"], :root a[href^="http://dftrck.com/"], :root a[href^="http://casino-x.com/?partner"], :root a[href^="http://campeeks.com/"][href*="&utm_"], :root a[href^="http://www.on2url.com/app/adtrack.asp"], :root #\5f _nq__hh[style="display:block!important"], :root a[href^="http://guideways.info/"], :root a[href^="http://campaign.bharatmatrimony.com/cbstrack/"], :root a[href^="http://www.clkads.com/adServe/"], :root a[href^="http://ads.expekt.com/affiliates/"], :root a[href^="http://callville.xyz/"], :root div[itemtype="http://schema.org/WPAdBlock"], :root a[href^="http://xads.zedo.com/"], :root a[href^="http://c.jumia.io/"], :root a[href^="http://down1oads.com/"], :root a[href^="http://buysellads.com/"], :root a[href^="http://serve.williamhill.com/promoRedirect?"], :root a[href^="http://feedads.g.doubleclick.net/"], :root a[href^="http://bs.serving-sys.com/"], :root a[href^="http://bonusfapturbo.nmvsite.com/"], :root a[href^="http://betahit.click/"], :root a[href^="http://cinema.friendscout24.de?"], :root [lazy-ad="lefttop_banner"], :root a[href^="http://servicegetbook.net/"], :root a[href^="https://trklvs.com/"], :root a[href^="http://bestorican.com/"], :root a[href^="http://bcp.crwdcntrl.net/"], :root a[href^="http://bc.vc/?r="], :root a[href^="http://banners.victor.com/processing/"], :root a[href^="http://install.securewebsiteaccess.com/"], :root .inlineNewsletterSubscription + .inlineNewsletterSubscription div[class$="_item"], :root a[href^="http://clkmon.com/adServe/"], :root a[href^="http://www.torntvdl.com/"], :root a[href^="http://at.atwola.com/"], :root a[href^="//88d7b6aa44fb8eb.com/"], :root a[href^="http://api.ringtonematcher.com/"], :root div[id^="ad-position-"], :root a[href^="http://affiliate.glbtracker.com/"], :root a[href^="http://anonymous-net.com/"], :root a[href^="https://www.dsct1.com/"], :root a[href^="http://amzn.to/"] > img[src^="data"], :root .icons-rss-feed + .icons-rss-feed div[class$="_item"], :root a[href^="http://aflrm.com/"], :root a[href^="http://affiliates.pinnaclesports.com/processing/"], :root a[href^="http://affiliate.godaddy.com/"], :root a[href^="http://partner.sbaffiliates.com/"], :root a[href^="http://affiliate.coral.co.uk/processing/"], :root a[href^="http://zevera.com/afi.html"], :root a[href^="http://adsrv.keycaptcha.com"], :root a[href^="http://adserving.unibet.com/"], :root a[href^="https://bs.serving-sys.com"], :root a[href^="https://atomidownload.com/"], :root a[href^="http://adtransfer.net/"], :root a[href^="http://adserver.itsfogo.com/"], :root iframe[src^="http://static.mozo.com.au/strips/"], :root a[href^="https://www.spyoff.com/"], :root AD-TRIPLE-BOX, :root a[href^="http://ads2.williamhill.com/redirect.aspx?"], :root a[href^="https://secure.adnxs.com/clktrb?"], :root a[href^="http://adserver.adtechus.com/"], :root .__ywvr .__y_item, :root a[href^="http://download-performance.com/"], :root #\5f _mom_ad_12, :root a[href^="http://ads.integral-marketing.com/"], :root a[href^="http://adserver.adtech.de/"], :root a[href^="http://ads.betfair.com/redirect.aspx?"], :root a[href^="http://aff.ironsocket.com/"], :root a[href^="http://ads.affbuzzads.com/"], :root a[href^="http://online.ladbrokes.com/promoRedirect?"], :root a[href^="http://ads.ad-center.com/"], :root a[href^="http://www.firstclass-download.com/"], :root a[href*=".trust.zone"], :root a[href^="http://adrunnr.com/"], :root a[href^="http://admingame.info/"], :root div[id^="q1-adset-"], :root a[href^="http://adfarm.mediaplex.com/"], :root #center_col > #taw > #tvcap > .rscontainer, :root a[href^="http://adf.ly/?id="], :root a[href^="http://goldmoney.com/?gmrefcode="], :root a[href^="http://adexprt.me/"], :root a[href^="http://www.sex.com/pics/?utm_"], :root a[href^="http://engine.newsmaxfeednetwork.com/"], :root a[href^="http://www.plus500.com/?id="], :root #flowplayer > div[style="z-index: 208; position: absolute; width: 300px; height: 275px; left: 222.5px; top: 85px;"], :root a[href^="http://ad.yieldmanager.com/"], :root a[href^="http://ad.doubleclick.net/"], :root a[href^="http://abc2.mobile-10.com/"], :root a[href^="http://NowDownloadAll.com"], :root a[href^="http://www.ducksnetwork.com/"], :root a[href^="http://3wr110.net/"], :root a[href^="http://www5.smartadserver.com/call/pubjumpi/"], :root a[href^="//ads.ad-center.com/"], :root a[href^="http://1phads.com/"], :root a[href^="http://adserving.liveuniversenetwork.com/"], :root a[href^="http://www1.clickdownloader.com/"], :root a[href^="//tracking.content-recommendation.net/"][href*="/sponsored/click.html?"], :root #center_col > #resultStats + div[style="border:1px solid #dedede;margin-bottom:11px;padding:5px 7px 5px 6px"], :root a[href^="https://www.secureupload.eu/suprerefid="], :root a[href^="http://yads.zedo.com/"], :root #mbEnd[cellspacing="0"][cellpadding="0"], :root a[href^="http://adclick.g.doubleclick.net/"], :root a[href^="//t.MtagMonetizationA.com/"], :root #MAIN.ShowTopic > .ad, :root a[href^="http://findersocket.com/"], :root a[href^="http://cdn3.adexprts.com/"], :root a[href^="//jsmptjmp.com/"], :root a[href^="//go.onclasrv.com/"], :root a[href^="http://games.ucoz.ru/"][target="_blank"], :root [id*="ScriptRoot"], :root div[id^="advads_"], :root a[href^="//db52cc91beabf7e8.com/"], :root #\5f _mom_ad_2, :root a[href^="http://ads.activtrades.com/"], :root a[href^="//api.ad-goi.com/"], :root a[href^="http://www.clickansave.net/"], :root a[href^="http://www.sexgangsters.com/?pid="], :root a[href^="http://www.amazon.co.uk/exec/obidos/external-search?"], :root div[id^="google_ads_iframe_"], :root a[href^="http://www.pheedo.com/"], :root a[href^="http://www.affiliates1128.com/processing/"], :root #mn div[style="position:relative"] > #center_col > ._Ak, :root div[id^="google_dfp_"], :root a[href^="//5e1fcb75b6d662d.com/"], :root #content > #right > .dose > .dosesingle, :root a[href^="http://9nl.es/"], :root #center_col > #resultStats + div + #res + #tads, :root a[href^="//40ceexln7929.com/"], :root a[href^="//00ae8b5a9c1d597.com/"], :root a[href^="https://keep2share.cc/pr/"], :root [onclick*="content.ad/"], :root div[class^="awpcp-random-ads"], :root a[href^="http://galleries.securewebsiteaccess.com/"], :root a[href^=" http://n47adshostnet.com/"], :root a[href^="http://linksnappy.com/?ref="], :root #main_col > #center_col div[style="font-size:14px;margin:0 4px;padding:1px 5px;background:#fff7ed"], :root [id*="MGWrap"], :root a[href^="http://adtrack123.pl/"], :root .section-result[data-result-ad-type], :root script[src^="http://free-shoutbox.net/app/webroot/shoutbox/sb.php?shoutbox="] + #freeshoutbox_content, :root a[href^=" http://ads.ad-center.com/"], :root a[href="http://track.freemmo2017.com/"], :root .GPMV2XEDA2 > .GPMV2XEDP1 > .GPMV2XEDJBB, :root a[href*="onclkds."], :root a[href^="http://a.adquantix.com/"], :root a[href^="http://srvpub.com/"], :root div[id^="dfp-slot-"], :root .l-container > #fishtank, :root a[href^="//go.vedohd.org/"], :root a[href^="https://fileboom.me/pr/"], :root a[href^="http://marketgid.com"], :root a[href*="pussl3.com"], :root div[itemtype="http://www.schema.org/WPAdBlock"], :root .__zinit .__y_item, :root .ch[onclick="ga(this,event)"], :root a[href^="https://ad.doubleclick.net/"], :root a[href*="letsadvertisetogether.com"], :root a[href^="http://data.linoleictanzaniatitanic.com/"], :root a[href*="=exoclick"], :root a[href*="=adscript"], :root #mn #center_col > div > h2.spon:first-child, :root a[href*="=Adtracker"], :root .ra[align="right"][width="30%"], :root a[href*="5iclx7wa4q.com"], :root a[href^="https://www.popads.net/users/"], :root a[href^="http://tracking.crazylead.com/"], :root a[href*="/cmd.php?ad="], :root #ads > .dose > .dosesingle, :root a[href^="//bwnjijl7w.com/"], :root a[href*=".revimedia.com/"], :root a[href^="http://fsoft4down.com/"], :root a[href*="ad2upapp.com/"], :root .plista_widget_belowArticleRelaunch_item[data-type="pet"], :root a[href*=".adsrv.eacdn.com/"] > img, :root a[href^="http://lp.ilivid.com/"], :root a[href*=".inclk.com/"], :root a[href*=".ichlnk.com/"], :root a[href^="http://api.content.ad/"], :root a[href^="http://galleries.pinballpublishernetwork.com/"], :root .ob_dual_right > .ob_ads_header ~ .odb_div, :root a[href*=".adk2x.com/"], :root #\5f _admvnlb_modal_container, :root a[href^="http://www.firstload.com/affiliate/"], :root a[href^="http://duckcash.eu/"], :root a[href^="http://www.mobileandinternetadvertising.com/"], :root a[data-widget-outbrain-redirect^="http://paid.outbrain.com/network/redir?"], :root a[data-url^="http://paid.outbrain.com/network/redir?"] + .author, :root a[href^="http://www.my-dirty-hobby.com/?sub="], :root a[href^="http://liversely.net/"], :root a[data-url^="http://paid.outbrain.com/network/redir?"], :root a[href^="http://www.bet365.com/"][href*="?affiliate="], :root a[data-redirect^="https://paid.outbrain.com/network/redir?"], :root a[href^="http://www.twinplan.com/AF_"], :root a[href^="http://n.admagnet.net/"], :root a[href^="http://connectlinking6.com/"], :root a[data-obtrack^="http://paid.outbrain.com/network/redir?"], :root a[href^="//www.mgid.com/"], :root div[id^="ad-div-"], :root #center_col > div[style="font-size:14px;margin-right:0;min-height:5px"] > div[style="font-size:14px;margin:0 4px;padding:1px 5px;background:#fff8e7"], :root .__y_inner > .__y_item, :root AMP-AD, :root .jobs-information-call-to-action + .jobs-information-call-to-action div[class$="_item"], :root .trc_rbox_div .syndicatedItem, :root a[href^="http://go.ad2up.com/"], :root [id*="MarketGid"], :root div[class^="lifeOnwerAd"], :root a[data-oburl^="http://paid.outbrain.com/network/redir?"], :root .widget-pane-section-result[data-result-ad-type], :root #center_col > #main > .dfrd > .mnr-c > .c._oc._zs, :root .trc_rbox_div .syndicatedItemUB, :root .trc_rbox .syndicatedItem, :root a[href^="http://pwrads.net/"], :root #mn div[style="position:relative"] > #center_col > div > ._dPg, :root .rhsvw[style="background-color:#fff;margin:0 0 14px;padding-bottom:1px;padding-top:1px;"], :root a[href^="http://www.pinkvisualpad.com/?revid="], :root a[href^="//porngames.adult/?SID="], :root #main-content > [style="padding:10px 0 0 0 !important;"], :root a[href^="http://www.webtrackerplus.com/"], :root .GJJKPX2N1 > .GJJKPX2M1 > .GJJKPX2P4, :root a[href^="http://centertrust.xyz/"], :root .ob_container .item-container-obpd, :root a[href^="http://ad.au.doubleclick.net/"], :root a[href^="https://intrev.co/"], :root a[href^="http://record.sportsbetaffiliates.com.au/"], :root #topstuff > #tads, :root a[href^="http://www.1clickmoviedownloader.info/"], :root .mw > #rcnt > #center_col > #taw > #tvcap > .c, :root #mn #center_col > div > h2.spon:first-child + ol:last-child, :root .plistaList > .plista_widget_underArticle_item[data-type="pet"], :root a[href*="a2g-secure.com"], :root a[href^="http://adultfriendfinder.com/p/register.cgi?pid="], :root a[href^="http://www.yourfuckbook.com/?"], :root a[href^="http://ads.sprintrade.com/"], :root .GHOFUQ5BG2 > .GHOFUQ5BF2 > .GHOFUQ5BG5, :root a[href^="http://www.richducks.com/"], :root a[href^="http://www.babylon.com/welcome/index?affID"], :root a[href^="http://ad-apac.doubleclick.net/"], :root .gbfwa > div[class$="_item"], :root a[href^="http://prochina.space/"], :root a[href^="http://www.freefilesdownloader.com/"], :root a[href^="http://ul.to/ref/"], :root a[href^="http://www.uniblue.com/cm/"], :root a[data-redirect^="http://click.plista.com/pets"], :root #rhs_block > script + .c._oc._Ve.rhsvw, :root .rscontainer > .ellip, :root .plistaList > .itemLinkPET, :root a[href^="http://mgid.com/"], :root a[data-redirect^="this.href='http://paid.outbrain.com/network/redir?"], :root a[href^="http://track.incognitovpn.com/"], :root a[href^="http://click.guamwnvgashbkashawhgkhahshmashcas.pw/"], :root a[href^="http://stateresolver.link/"], :root .__ywl .__y_item, :root a[href*=".clksite.com/"], :root #center_col > #resultStats + #tads, :root .__yinit .__y_item, :root [ad-id^="googlead"], :root a[href^="http://adlev.neodatagroup.com/"], :root .ra[align="left"][width="30%"], :root a[href^="https://trackjs.com/?utm_source"], :root AFS-AD, :root a[href^="http://server.cpmstar.com/click.aspx?poolid="], :root #cnt #center_col > #res > #topstuff > .ts, :root #cnt #center_col > #taw > #tvcap > .c._oc._Lp, :root .trc_rbox_div a[target="_blank"][href^="http://tab"], :root .GKJYXHBF2 > .GKJYXHBE2 > .GKJYXHBH5, :root #rhs_block .mod > .gws-local-hotels__booking-module, :root a[href*="googleme.eu"], :root .mod > ._jH + .rscontainer, :root .GFYY1SVD2 > .GFYY1SVC2 > .GFYY1SVF5, :root a[href^="https://dcs.adgear.com/clicks/"], :root a[data-oburl^="https://paid.outbrain.com/network/redir?"], :root a[href^="http://affiliates.score-affiliates.com/"], :root ADS-RIGHT, :root a[href^="http://www.accuserveadsystem.com/accuserve-go.php?"], :root a[href^="http://c.ketads.com/"], :root a[target="_blank"][onmousedown="this.href^='http://paid.outbrain.com/network/redir?"], :root #tads + div + .c, :root a[href^="https://betway.com/"][href*="&a="], :root a[href^="http://rekoverr.com/"], :root #rhswrapper > #rhssection[border="0"][bgcolor="#ffffff"], :root .Mpopup + #Mad > #MadZone, :root a[href^="http://www.TwinPlan.com/AF_"], :root a[href^="http://landingpagegenius.com/"], :root a[href^="http://www.streamtunerhd.com/signup?"], :root #ssmiwdiv[jsdisplay], :root a[href^="http://paid.outbrain.com/network/redir?"], :root a[href^="http://easydownload4you.com/"], :root #rhs_block > #mbEnd, :root #center_col > #\5f Emc, :root a[href^="http://papi.mynativeplatform.com:80/pub2/"], :root div[id^="dfp-ad-"], :root .GB3L-QEDGY .GB3L-QEDF- > .GB3L-QEDE-, :root #rhs_block .mod > .luhb-div > div[data-async-type="updateHotelBookingModule"], :root input[onclick^="window.open('http://www.FriendlyDuck.com/"], :root a[href^="//z6naousb.com/"], :root .rc-cta[data-target], :root a[href^="http://hd-plugins.com/download/"], :root #rhs_block > .ts[cellspacing="0"][cellpadding="0"][style="padding:0"], :root .GFYY1SVE2 > .GFYY1SVD2 > .GFYY1SVG5, :root a[href^="http://tracker.mybroadband.co.za/"], :root #flowplayer > div[style="position: absolute; width: 300px; height: 275px; left: 222.5px; top: 85px; z-index: 999;"], :root a[href^="http://cwcams.com/landing/click/"], :root .nrelate .nr_partner, :root a[href^="http://www.adxpansion.com"], :root a[href^="http://wgpartner.com/"], :root #center_col > #resultStats + #tads + #res + #tads, :root .trc_related_container div[data-item-syndicated="true"], :root a[href^="http://t.mdn2015x1.com/"], :root .trc_rbox_border_elm .syndicatedItem, :root a[href^="http://dwn.pushtraffic.net/"], :root a[href$="/vghd.shtml"], :root a[href^="//medleyads.com/spot/"], :root #rhs_block > ol > .rhsvw > .kp-blk > .xpdopen > ._OKe > ol > ._DJe > .luhb-div, :root #center_col > #res > #topstuff + #search > div > #ires > #rso > #flun, :root #resultspanel > #topads, :root p[id^="div-gpt-ad-"], :root #assetsListings[style="display: block;"], :root #header + #content > #left > #rlblock_left, :root a[href*="emprestimo.eu"] { display: none !important; }</style></head>
+<body style="">
+          <div class="region region-after-body">
+    <div id="block-block-129" class="block block-block">
+
+    
+  <div class="content">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKXT7MH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->  </div>
+</div>
+<div id="block-block-152" class="block block-block">
+
+    
+  <div class="content">
+    <style>
+
+    .fancy-premium {
+        background: white;
+    }
+
+     .light .fancy-cross, .light .fancy-text, .light .fancy-text strong {
+           color: rgb(72, 72, 94);
+     }
+   
+     .light .fancy-cross {
+              position: fixed;
+right: 0px;
+top: 0px;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 50px;
+height: 50px;
+     }
+     
+     .fancy-text {
+        color: rgb(72, 72, 94);
+    }
+
+    .fancy-sign-up {
+         float: left;
+         width: 100px;
+    }
+
+</style>
+
+<script src="https://m.servedby-buysellads.com/monetization.js" type="text/javascript" style="display: none !important;"></script>
+<script>
+ function getParameterByName(name, url) {
+	    if (!url) url = window.location.href;
+	    name = name.replace(/[\[\]]/g, "\\$&");
+	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+	        results = regex.exec(url);
+	    if (!results) return null;
+	    if (!results[2]) return '';
+	    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+function ths_ad() {
+        var fancyCode = '<div class="light fancy-premium clearfix"><a href="http://www.thehackingschool.com/web-development.html?r=programiz" rel="nofollow" class="fancy-premium-wrapper"><div class="fancy-logo"><img src="//cdn.programiz.com/sites/tutorial2program/files/the-hacking-school-logo.png" style="width:75px" /></div><div class="fancy-text"><strong>Learning How To Code Will Never Go Out Of Fashion. </strong>Apply for the next Cohort at India\'s Finest Coding Bootcamp</div><div class="fancy-sign-up">Learn More</div></a><div class="fancy-cross">x</div></div>'
+                jQuery("footer").append(fancyCode);
+}
+
+
+(function($) {
+     
+      var testmode = getParameterByName('testmode');
+   //   if(!testmode) return;
+/*      $.getJSON('https://freegeoip.net/json/', function (location) {
+            var country = location.country_name;
+            switch (country) {
+                case "Nepal":
+                    ths_ad();
+                    break;
+               case "India":
+                  ths_ad();
+                  break;
+                default: 
+                     if (typeof _bsa !== 'undefined' && _bsa) {
+                               _bsa.init('flexbar', 'CKYDL2Q7', 'placement:programizcom');
+                      }
+            }
+        });
+*/
+if (typeof _bsa !== 'undefined' && _bsa) {
+                               _bsa.init('flexbar', 'CKYDL2Q7', 'placement:programizcom');
+                      }
+})(jQuery);
+
+</script>  </div>
+</div>
+  </div>
+
+<div id="programiz-header" class="nav-down clearfix">
+<header class="header-wrapper">
+<div class="logo-header-wrapper clearfix">
+
+	
+<div class="logo">
+<a href="https://www.programiz.com/c-programming" title="C Programming">C Programming Logo</a>
+</div>
+
+<div class="secondary-nav">
+    <ul>
+        <li><a href="https://www.programiz.com/cpp-programming" title="C++">C++</a></li>
+        <li><a href="https://www.programiz.com/python-programming" title="Python Tutorial">Python</a></li>
+        <li><a href="https://www.programiz.com/r-programming" title="R Tutorial">R Tutorial</a></li>
+        <li><a href="https://www.programiz.com/java-programming" title="Java Tutorial">Java</a></li>
+        <li><a href="https://www.programiz.com/kotlin-programming" title="Kotlin Tutorial">Kotlin</a></li>
+    </ul>
+</div>
+
+</div>
+<div class="main-nav-wrapper clearfix">
+<div>
+    <nav class="main-nav">
+        <h2>MENU</h2>
+        <ul>
+            <li class="desktop-only"><a class="material-icons" title="Programiz Home" href="https://www.programiz.com/">home</a></li>
+            <li><a class="c-programming" title="C Tutorial" href="https://www.programiz.com/c-programming">Tutorial</a></li>
+            <li><a title="C Examples" class="c-programming" href="https://www.programiz.com/c-programming/examples">Examples</a></li>
+            <li class="desktop-only"><a class="c-programming" title="C Library Functions" href="https://www.programiz.com/c-programming/library-function">Library Functions</a></li>
+        </ul>
+    </nav>
+<a href="https://www.programiz.com/c-programming/c-pointer-examples" class="material-icons search-icon">search</a>
+</div>
+</div>
+</header>
+</div>
+<div id="search-area" class="clearfix">
+<span class="material-icons">close</span>
+  <div class="region region-search">
+    <div id="block-search-api-page-simplest-programming-tutorials-f" class="block block-search-api-page">
+
+    <h2>Simplest programming tutorials for beginners</h2>
+  
+  <div class="content">
+    <form action="https://www.programiz.com/c-programming/c-pointer-examples" method="post" id="search-api-page-search-form-simplest-programming-tutorials-f" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-keys-2">
+  <label class="element-invisible" for="edit-keys-2">What do you want to learn today? </label>
+ <input placeholder="Example: Python list" type="text" id="edit-keys-2" name="keys_2" value="" size="15" maxlength="128" class="form-text form-autocomplete ui-autocomplete-processed ui-autocomplete-input" data-sa-theme="basic-blue" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" data-sa-theme="basic-blue" style="display: none;"></ul></div>
+<input type="hidden" name="id" value="2">
+<input type="submit" id="edit-submit-2" name="op" value="Go" class="form-submit"><input type="hidden" name="form_build_id" value="form-FylV5509UysBDdOcum_bKexbbzajEGcz-h_z7aFCT3E">
+<input type="hidden" name="form_id" value="search_api_page_search_form_simplest_programming_tutorials_f">
+</div></form>  </div>
+</div>
+  </div>
+</div>
+<div id="main-wrapper-two-column" class="clearfix">
+<div class="clearfix">
+<div id="programiz-main-content">
+<section class="main-content">
+<h1>C Programming Array and Pointer Examples</h1>
+ 
+<div class="page-short-description">
+In this article, you'll learn to create and work with arrays and pointers in C through detailed examples.</div>
+<div class="inside-content">
+  <div class="region region-content-inside">
+    <div id="block-block-43" class="block block-block">
+
+    
+  <div class="content">
+    <style>
+.Programiz_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Programiz_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Programiz_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Programiz_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" style="display: none !important;"></script>
+<!-- Programiz_Responsive_Top -->
+<ins class="adsbygoogle Programiz_Responsive_Top" style="display: none !important;" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021">
+</ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  </div>
+</div>
+  </div>
+</div>
+  
+<img src="./C Programming Array and Pointer Examples_files/c-array-pointers_0.jpg" alt="C Programming Array and Pointer Examples" title="C Programming Array and Pointer Examples">
+<div class="clearfix">
+
+
+  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="node-169" class="node node-c-tutorial clearfix" about="/c-programming/c-pointer-examples" typeof="sioc:Item foaf:Document">
+<span property="dc:title" content="C Programming Array and Pointer Examples" class="rdf-meta element-hidden"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>To understand all programs in this article, you should have the knowledge of following array and pointer topics:</p>
+
+<ol>
+	<li><a href="https://www.programiz.com/c-programming/c-arrays" title="C programming Arrays">Arrays</a></li>
+	<li><a href="https://www.programiz.com/c-programming/c-multi-dimensional-arrays" title="Multidimensional Arrays in C Programming">Multi-dimensional Arrays</a></li>
+	<li><a href="https://www.programiz.com/c-programming/c-pointers" title="C Programming Pointers">Pointers</a></li>
+	<li><a href="https://www.programiz.com/c-programming/c-pointers-arrays" title="Relation Between Arrays and Pointer">Array and Pointer Relation</a></li>
+	<li><a href="https://www.programiz.com/c-programming/c-pointer-functions" title="Call by Reference in C programming">Call by Reference</a></li>
+	<li><a href="https://www.programiz.com/c-programming/c-dynamic-memory-allocation" title="Dynamic Memory Allocation in C programming">Dynamic Memory Allocation</a></li>
+</ol>
+
+<p>&nbsp;</p>
+
+<h2>Array and Pointer Examples</h2>
+
+<table summary="Source code and examples in C programming Language">
+	<tbody>
+		<tr>
+			<td><a href="https://www.programiz.com/c-programming/examples/average-arrays">C Program to Calculate Average Using Arrays</a></td>
+		</tr>
+		<tr>
+			<td><a href="https://www.programiz.com/c-programming/examples/array-largest-element">C Program to Find Largest Element of an Array</a></td>
+		</tr>
+		<tr>
+			<td><a href="https://www.programiz.com/c-programming/examples/standard-deviation">C Program to Calculate Standard Deviation</a></td>
+		</tr>
+		<tr>
+			<td><a href="https://www.programiz.com/c-programming/examples/add-matrix">C Program to Add Two Matrix Using Multi-dimensional Arryas</a></td>
+		</tr>
+		<tr>
+			<td><a href="https://www.programiz.com/c-programming/examples/matrix-multiplication">C Program to Multiply to Matrix Using Multi-dimensional Arrays</a></td>
+		</tr>
+		<tr>
+			<td><a href="https://www.programiz.com/c-programming/examples/matrix-transpose">C Program to Find Transpose of a Matrix</a></td>
+		</tr>
+		<tr>
+			<td><a href="https://www.programiz.com/c-programming/examples/matrix-multiplication-function">C Program to Multiply two Matrices by Passing Matrix to Function</a></td>
+		</tr>
+		<tr>
+			<td><a href="https://www.programiz.com/c-programming/examples/access-array-pointer">C Program to Access Elements of an Array Using Pointer</a></td>
+		</tr>
+		<tr>
+			<td><a href="https://www.programiz.com/c-programming/examples/swapping-cyclic-order">C Program Swap Numbers in Cyclic Order Using Call by Reference</a></td>
+		</tr>
+		<tr>
+			<td><a href="https://www.programiz.com/c-programming/examples/dynamic-memory-allocation-largest">C Program to Find Largest Number Using Dynamic Memory Allocation</a></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+</div></div></div></div>
+</div>  </div>
+</div>
+  </div>
+
+
+
+<div class="content-bottom"> 
+  <div class="region region-content-bottom">
+    <div id="block-block-4" class="block block-block">
+
+    
+  <div class="content">
+    <ul class="custom-pager clearfix">
+    <li class="previous">
+    <strong>PREVIOUS</strong>
+    <br>
+    <a href="https://www.programiz.com/c-programming/c-arrays-functions">Arrays &amp; Function</a></li>
+<li class="next">
+    <strong>NEXT</strong>
+    <br>
+    <a href="https://www.programiz.com/c-programming/c-pointers">C Pointers</a></li>
+</ul>
+  </div>
+</div>
+<div id="block-block-122" class="block block-block">
+
+    
+  <div class="content">
+    <hr>
+<style>
+.programiz-responsive-bottom { margin: 20px auto 35px; width: 300px; height: 250px; }
+@media(min-width: 748px) { .programiz-responsive-bottom { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .programiz-responsive-bottom { width: 300px; height: 250px; margin: 20px auto 35px; } }
+@media(min-width: 1150px) { .programiz-responsive-bottom { width: 728px; height: 90px; margin: 15px auto 40px; } }
+</style>
+
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" style="display: none !important;"></script>
+<!-- Programiz Responsive Bottom -->
+<ins class="adsbygoogle programiz-responsive-bottom" style="display: none !important;" data-ad-client="ca-pub-9007421361448641" data-ad-slot="6838197222">
+</ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  </div>
+</div>
+  </div>
+</div>
+</div>
+</section>
+</div>
+<aside id="programiz-left-sidebar">
+  <div class="region region-sidebar-left">
+    <div id="block-block-1" class="block block-block">
+
+    
+  <div class="content">
+    <nav class="header-list-menu">
+	<h2>C Programming</h2>
+	<ul class="topmenu">
+		<li>
+			<h3>C Introduction<span class="indicator_hide"></span></h3>
+			<ul class="submenu visuallyhidden">
+				<li><a href="https://www.programiz.com/c-programming/c-keywords-identifier" target="_top">Keywords &amp; Identifier</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-variables-constants" target="_top">Variables &amp; Constants</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-data-types" target="_top">C Data Types</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-input-output" target="_top">C Input/Output</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-operators" target="_top">C Operators</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-introduction-examples" target="_top">C Introduction Examples</a></li>
+			</ul>
+		</li>
+		<li>
+			<h3>C Flow Control<span class="indicator_hide"></span></h3>
+			<ul class="submenu visuallyhidden">
+				<li><a href="https://www.programiz.com/c-programming/c-if-else-statement" target="_top">C if...else</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-for-loop" target="_top">C for Loop</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-do-while-loops" target="_top">C do...while Loop</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-break-continue-statement" target="_top">C break and continue</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-switch-case-statement" target="_top">C switch...case</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-goto-statement">C Programming goto</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-decision-making-loops-examples" target="_top">Control Flow Examples</a></li>
+			</ul>
+		</li>
+		<li>
+			<h3>C Functions<span class="indicator_hide"></span></h3>
+			<ul class="submenu visuallyhidden">
+				<li><a href="https://www.programiz.com/c-programming/c-functions" target="_top">C Programming Functions</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-user-defined-functions" target="_top">C User-defined Functions</a></li>
+				<li><a href="https://www.programiz.com/c-programming/types-user-defined-functions">C Function Types</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-recursion" target="_top">C Recursion</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-storage-class" target="_top">C Storage Class</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-functions-examples" target="_top">C Function Examples</a></li>
+			</ul>
+		</li>
+		<li>
+			<h3>C Programming Arrays<span class="indicator_hide"></span></h3>
+			<ul class="submenu visuallyhidden">
+				<li><a href="https://www.programiz.com/c-programming/c-arrays">C Programming Arrays</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-multi-dimensional-arrays" target="_top">C Multi-dimensional Arrays</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-arrays-functions" target="_top">C Arrays &amp; Function</a></li>
+			</ul>
+		</li>
+		<li>
+			<h3>C Programming Pointers<span class="indicator_show"></span></h3>
+			<ul class="submenu visuallynothidden">
+				<li><a href="https://www.programiz.com/c-programming/c-pointers" target="_top">C Programming Pointers</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-pointers-arrays" target="_top">C Pointers &amp; Arrays</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-pointer-functions" target="_top">C Pointers And Functions</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-dynamic-memory-allocation" target="_top">C Memory Allocation</a></li>
+				<li class="currentPage"><a href="https://www.programiz.com/c-programming/c-pointer-examples" target="_top">Array &amp; Pointer Examples</a></li>
+			</ul>
+		</li>
+		<li>
+			<h3>C Programming Strings<span class="indicator_hide"></span></h3>
+			<ul class="submenu visuallyhidden">
+				<li><a href="https://www.programiz.com/c-programming/c-strings">C Programming String</a></li>
+				<li><a href="https://www.programiz.com/c-programming/string-handling-functions" target="_top">C String Functions</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-string-examples">C String Examples</a></li>
+			</ul>
+		</li>
+		<li>
+			<h3>Structure And Union<span class="indicator_hide"></span></h3>
+			<ul class="submenu visuallyhidden">
+				<li><a href="https://www.programiz.com/c-programming/c-structures" target="_top">C Structure</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-structures-pointers" target="_top">Structures &amp; Pointers</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-structure-function" target="_top">C Structure &amp; Function</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-unions" target="_top">C Programming Union</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-structure-examples" target="_top">Structure Examples</a></li>
+			</ul>
+		</li>
+		<li>
+			<h3>C Programming Files<span class="indicator_hide"></span></h3>
+			<ul class="submenu visuallyhidden">
+				<li><a href="https://www.programiz.com/c-programming/c-file-input-output" target="_top">C Files Input/Output</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-file-examples">C Files Examples</a></li>
+			</ul>
+		</li>
+		<li>
+			<h3>Additional Topics<span class="indicator_hide"></span></h3>
+			<ul class="submenu visuallyhidden">
+				<li><a href="https://www.programiz.com/c-programming/c-enumeration" target="_top">C Enumeration</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-preprocessor-macros" target="_top">C Preprocessors</a></li>
+				<li><a href="https://www.programiz.com/c-programming/library-function">C Library Functions</a></li>
+				<li><a href="https://www.programiz.com/c-programming/examples">C Programming Examples</a></li>
+			</ul>
+		</li>
+	</ul>
+</nav>  </div>
+</div>
+<div id="block-block-154" class="block block-block">
+
+    
+  <div class="content">
+    <style>
+.programiz_left1 { display: none; }
+@media(min-width: 900px) { .programiz_left1 { margin: 30px auto; display: block; width: 300px; height: 250px; }} 
+</style>
+
+<!-- /8095840/.2_A.34660.4_Programiz.com_tier1 -->
+<script>
+	var number = Math.random();
+	if(number >= 0.2) {
+                console.log('pub');
+		document.write('<div id=\'div-gpt-ad-1527670429257-1\'>\r\n<script>\r\n\tgoogletag.cmd.push(function() { googletag.display(\'div-gpt-ad-1527670429257-1\'); });\r\n<\/script>\r\n<\/div>');
+	} else {
+                console.log('ga');
+		document.write('<script async src=\"\/\/pagead2.googlesyndication.com\/pagead\/js\/adsbygoogle.js\"><\/script>\r\n<!-- Programiz Responsive Left1 -->\r\n<ins class=\"adsbygoogle programiz_left1\"\r\n     data-ad-client=\"ca-pub-9007421361448641\"\r\n     data-ad-slot=\"2944551229\"><\/ins>\r\n<script>\r\n(adsbygoogle = window.adsbygoogle || []).push({});\r\n<\/script>');
+	}
+</script><div id="div-gpt-ad-1527670429257-1">
+<script>
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-1'); });
+</script>
+</div>  </div>
+</div>
+<div id="block-block-30" class="block block-block">
+
+    
+  <div class="content">
+    <div class="subscribe ml-subscribe-form ml-subscribe-form-1805321" id="mlb2-1805321">
+	<h3>Receive the latest tutorial to improve your programming skills</h3>
+
+	<div class="ml-vertical-align-center">
+		<div class="subscribe-form ml-block-success" style="display:none">
+			<div class="form-section">
+				<p>You have successfully subscribed to our newsletter.</p>
+			</div>
+		</div>
+
+		<form action="https://app.mailerlite.com/webforms/submit/k8c3w0" class="ml-block-form" data-code="k8c3w0" method="POST" target="_blank"><input name="fields[email]" placeholder="Enter Your Email" type="text" value=""> <input name="ml-submit" type="hidden" value="1"><button class="primary" type="submit">Join</button><button class="loading" disabled="disabled" style="display: none;" type="submit"><img height="20" src="./C Programming Array and Pointer Examples_files/rolling.gif" style="width: 20px; height: 20px;" width="20"></button></form>
+		<script>
+            function ml_webform_success_1805321() {
+                jQuery('.ml-subscribe-form-1805321 .ml-block-success').show();
+                jQuery('.ml-subscribe-form-1805321 .ml-block-form').hide();
+            };
+        </script></div>
+</div>
+<script type="text/javascript" src="./C Programming Array and Pointer Examples_files/webforms.js"></script>  </div>
+</div>
+<div id="block-block-46" class="block block-block">
+
+    
+  <div class="content">
+    <style>
+.Programiz_Responsive_Left2 { display: none; }
+@media(min-width: 900px) { .Programiz_Responsive_Left2 { margin: 30px auto; display: block; width: 300px; height: 600px; }} 
+</style>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" style="display: none !important;"></script>
+<!-- Programiz Responsive Left2 -->
+<ins class="adsbygoogle Programiz_Responsive_Left2" data-ad-client="ca-pub-9007421361448641" data-ad-slot="4421284423" style="display: none !important;"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  </div>
+</div>
+  </div>
+</aside>
+</div>
+</div>
+<div id="back-to-top"></div>
+<footer id="footer">
+<div class="clearfix footer-wrapper">
+<div class="footer-left">
+  <div class="region region-footer-left">
+    <div id="block-block-86" class="block block-block">
+
+    
+  <div class="content">
+    <div class="subscribe ml-subscribe-form ml-subscribe-form-5357625" id="mlb2-5357625">
+	<p>Get Latest Updates on Programiz</p>
+
+	<div class="ml-vertical-align-center">
+		<div class="subscribe-form ml-block-success" style="display:none">
+			<div class="form-section">
+				<p>You have successfully subscribed to our newsletter.</p>
+			</div>
+		</div>
+
+		<form action="https://app.mailerlite.com/webforms/submit/z7v3o3" class="ml-block-form" data-code="z7v3o3" method="POST" target="_blank"><input name="fields[email]" placeholder="Enter Your Email" type="text" value=""> <input name="ml-submit" type="hidden" value="1"><button class="primary" type="submit">Subscribe</button><button class="loading" disabled="disabled" style="display: none;" type="submit"><img height="20" src="./C Programming Array and Pointer Examples_files/rolling.gif" style="width: 20px; height: 20px;" width="20"></button></form>
+		<script>
+            function ml_webform_success_1805321() {
+                jQuery('.ml-subscribe-form-1805321 .ml-block-success').show();
+                jQuery('.ml-subscribe-form-1805321 .ml-block-form').hide();
+            };
+        </script></div>
+</div>
+<script type="text/javascript" src="./C Programming Array and Pointer Examples_files/webforms.js"></script>  </div>
+</div>
+  </div>
+</div>
+<div class="footer-right">
+  <div class="region region-footer-right">
+    <div id="block-block-87" class="block block-block">
+
+    
+  <div class="content">
+    <ul>
+	<li><a href="https://www.programiz.com/about-us">About</a></li>
+	<li><a href="https://www.programiz.com/contact">Contact</a></li>
+	<li><a href="https://www.programiz.com/advertise">Advertise</a></li>
+</ul>
+  </div>
+</div>
+  </div>
+</div>
+</div>
+<div class="copyright">
+Copyright © by Programiz | All rights reserved | <a href="https://www.programiz.com/privacy-policy">Privacy Policy</a>
+</div>
+</footer>
+  <script type="text/javascript" src="./C Programming Array and Pointer Examples_files/js_wMq06n34El81cPtKvKVuAehyOEwepE71d1W2gGcEjDE.js"></script>
+<script type="text/javascript" src="./C Programming Array and Pointer Examples_files/js_ZPMVUwauT3CzfUSIYk-Kc3nwhp80i90VcKjYuHm5owQ.js"></script>
+
+
+<div id="sidr-left" class="sidr left" style="transition: left 0.2s ease;"><div class="sidr-inner">
+	<h2>C Programming</h2>
+	<ul class="sidr-class-topmenu">
+		<li>
+			<h3>C Introduction<span class="sidr-class-indicator_hide"></span></h3>
+			<ul class="sidr-class-submenu sidr-class-visuallyhidden">
+				<li><a href="https://www.programiz.com/c-programming/c-keywords-identifier" target="_top">Keywords &amp; Identifier</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-variables-constants" target="_top">Variables &amp; Constants</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-data-types" target="_top">C Data Types</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-input-output" target="_top">C Input/Output</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-operators" target="_top">C Operators</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-introduction-examples" target="_top">C Introduction Examples</a></li>
+			</ul>
+		</li>
+		<li>
+			<h3>C Flow Control<span class="sidr-class-indicator_hide"></span></h3>
+			<ul class="sidr-class-submenu sidr-class-visuallyhidden">
+				<li><a href="https://www.programiz.com/c-programming/c-if-else-statement" target="_top">C if...else</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-for-loop" target="_top">C for Loop</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-do-while-loops" target="_top">C do...while Loop</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-break-continue-statement" target="_top">C break and continue</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-switch-case-statement" target="_top">C switch...case</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-goto-statement">C Programming goto</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-decision-making-loops-examples" target="_top">Control Flow Examples</a></li>
+			</ul>
+		</li>
+		<li>
+			<h3>C Functions<span class="sidr-class-indicator_hide"></span></h3>
+			<ul class="sidr-class-submenu sidr-class-visuallyhidden">
+				<li><a href="https://www.programiz.com/c-programming/c-functions" target="_top">C Programming Functions</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-user-defined-functions" target="_top">C User-defined Functions</a></li>
+				<li><a href="https://www.programiz.com/c-programming/types-user-defined-functions">C Function Types</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-recursion" target="_top">C Recursion</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-storage-class" target="_top">C Storage Class</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-functions-examples" target="_top">C Function Examples</a></li>
+			</ul>
+		</li>
+		<li>
+			<h3>C Programming Arrays<span class="sidr-class-indicator_hide"></span></h3>
+			<ul class="sidr-class-submenu sidr-class-visuallyhidden">
+				<li><a href="https://www.programiz.com/c-programming/c-arrays">C Programming Arrays</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-multi-dimensional-arrays" target="_top">C Multi-dimensional Arrays</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-arrays-functions" target="_top">C Arrays &amp; Function</a></li>
+			</ul>
+		</li>
+		<li>
+			<h3>C Programming Pointers<span class="sidr-class-indicator_show"></span></h3>
+			<ul class="sidr-class-submenu sidr-class-visuallynothidden">
+				<li><a href="https://www.programiz.com/c-programming/c-pointers" target="_top">C Programming Pointers</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-pointers-arrays" target="_top">C Pointers &amp; Arrays</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-pointer-functions" target="_top">C Pointers And Functions</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-dynamic-memory-allocation" target="_top">C Memory Allocation</a></li>
+				<li class="sidr-class-currentPage"><a href="https://www.programiz.com/c-programming/c-pointer-examples" target="_top">Array &amp; Pointer Examples</a></li>
+			</ul>
+		</li>
+		<li>
+			<h3>C Programming Strings<span class="sidr-class-indicator_hide"></span></h3>
+			<ul class="sidr-class-submenu sidr-class-visuallyhidden">
+				<li><a href="https://www.programiz.com/c-programming/c-strings">C Programming String</a></li>
+				<li><a href="https://www.programiz.com/c-programming/string-handling-functions" target="_top">C String Functions</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-string-examples">C String Examples</a></li>
+			</ul>
+		</li>
+		<li>
+			<h3>Structure And Union<span class="sidr-class-indicator_hide"></span></h3>
+			<ul class="sidr-class-submenu sidr-class-visuallyhidden">
+				<li><a href="https://www.programiz.com/c-programming/c-structures" target="_top">C Structure</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-structures-pointers" target="_top">Structures &amp; Pointers</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-structure-function" target="_top">C Structure &amp; Function</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-unions" target="_top">C Programming Union</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-structure-examples" target="_top">Structure Examples</a></li>
+			</ul>
+		</li>
+		<li>
+			<h3>C Programming Files<span class="sidr-class-indicator_hide"></span></h3>
+			<ul class="sidr-class-submenu sidr-class-visuallyhidden">
+				<li><a href="https://www.programiz.com/c-programming/c-file-input-output" target="_top">C Files Input/Output</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-file-examples">C Files Examples</a></li>
+			</ul>
+		</li>
+		<li>
+			<h3>Additional Topics<span class="sidr-class-indicator_hide"></span></h3>
+			<ul class="sidr-class-submenu sidr-class-visuallyhidden">
+				<li><a href="https://www.programiz.com/c-programming/c-enumeration" target="_top">C Enumeration</a></li>
+				<li><a href="https://www.programiz.com/c-programming/c-preprocessor-macros" target="_top">C Preprocessors</a></li>
+				<li><a href="https://www.programiz.com/c-programming/library-function">C Library Functions</a></li>
+				<li><a href="https://www.programiz.com/c-programming/examples">C Programming Examples</a></li>
+			</ul>
+		</li>
+	</ul>
+</div></div></body></html>

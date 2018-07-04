@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="./style/style1.css">
+  <link rel="stylesheet" href="./style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+<h2 class="page_title"><strong>C Program to Find G.C.D Using Recursion</strong></h2><br><p>
+Example to find the GCD of two positive integers (entered by the user) using recursion in C programming.</p><br><section class="main-content">
+
+
+<div class="inside-content">
+<div class="region region-content-inside">
+<div class="block block-block" id="block-block-43">
+<div class="content">
+<style>
+.Programiz_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Programiz_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Programiz_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Programiz_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+<script async="" src="./images/f(3).txt"></script>
+<!-- Programiz_Responsive_Top -->
+<ins class="adsbygoogle Programiz_Responsive_Top" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021" data-adsbygoogle-status="done" style="display: inline-block; width: 728px; height: 90px;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div>
+</div>
+</div>
+<p>To understand this example, you should have the knowledge of following C programming topics:</p><ul><li>C Programming Functions</li><li>C Programming User-defined functions</li><li>C Programming Recursion </li></ul><div class="clearfix">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/c-programming/examples/hcf-recursion" class="node node-c-example clearfix" id="node-213" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="C Program to Find G.C.D Using Recursion" property="dc:title"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>This program takes two positive integers as input from the user and calculates <abbr title="Greatest Common Divisor">GCD</abbr> using recursion.</p>
+<p>Visit this page to learn how you can calculate the <abbr title="Greatest Common Divisor">GCD</abbr> using loops.</p>
+<h2>Example: GCD of Two Numbers using Recursion</h2>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> hcf</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> n1</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> n2</span><span class="pun">);</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> n1</span><span class="pun">,</span><span class="pln"> n2</span><span class="pun">;</span><span class="pln">
+   printf</span><span class="pun">(</span><span class="str">"Enter two positive integers: "</span><span class="pun">);</span><span class="pln">
+   scanf</span><span class="pun">(</span><span class="str">"%d %d"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">n1</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">n2</span><span class="pun">);</span><span class="pln">
+
+   printf</span><span class="pun">(</span><span class="str">"G.C.D of %d and %d is %d."</span><span class="pun">,</span><span class="pln"> n1</span><span class="pun">,</span><span class="pln"> n2</span><span class="pun">,</span><span class="pln"> hcf</span><span class="pun">(</span><span class="pln">n1</span><span class="pun">,</span><span class="pln">n2</span><span class="pun">));</span><span class="pln">
+   </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> hcf</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> n1</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> n2</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">n2 </span><span class="pun">!=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+       </span><span class="kwd">return</span><span class="pln"> hcf</span><span class="pun">(</span><span class="pln">n2</span><span class="pun">,</span><span class="pln"> n1</span><span class="pun">%</span><span class="pln">n2</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">else</span><span class="pln"> 
+       </span><span class="kwd">return</span><span class="pln"> n1</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p></p><div class="block-inject block-inject-1" id="block-inject-1"><div class="block block-block" id="block-block-153">
+<div class="content">
+<!-- /8095840/.2_A.34657.4_Programiz.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth <= 768) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+<!-- /8095840/.2_A.34660.4_Programiz.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth > 768) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div> </div>
+</div>
+</div><div class="clearfix"></div><p><strong>Output</strong></p>
+<pre><samp>Enter two positive integers: 366
+60
+G.C.D of 366 and 60 is 6.</samp></pre>
+</div></div></div></div>
+</div> </div>
+</div>
+</div>
+
+</div>
+</section>
+  </div>
+</body>
+</html>

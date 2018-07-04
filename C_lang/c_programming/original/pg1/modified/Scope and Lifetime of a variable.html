@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/style/style1.css">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+<h2 class="page_title"><strong>Scope and Lifetime of a variable</strong></h2><br><p>
+You will learn about scope and lifetime of local and global variables in this tutorial. Also, you will learn about static and register variables.</p><br><section class="main-content">
+
+
+<div class="inside-content">
+<div class="region region-content-inside">
+<div class="block block-block" id="block-block-43">
+<div class="content">
+<style>
+.Learn C language_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Learn C language_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" style="display: none !important;"></script>
+<!-- Learn C language_Responsive_Top -->
+<ins class="adsbygoogle Learn C language_Responsive_Top" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021" style="display: none !important;">
+</ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div>
+</div>
+</div>
+<img alt="Scope and Lifetime of a variable" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/images/variable-scope.jpg" title="Scope and Lifetime of a variable"/>
+<div class="clearfix">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/c-programming/c-storage-class" class="node node-c-tutorial clearfix" id="node-138" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="Scope and Lifetime of a variable" property="dc:title"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Every variable in C programming has two properties: type and storage class.</p>
+<p>Type refers to the data type of a variable. And, storage class determines the scope and lifetime of a variable.</p>
+<p>There are 4 types of storage class:</p>
+<ol>
+<li>automatic</li>
+<li>external</li>
+<li>static</li>
+<li>register</li>
+</ol>
+<h2>Local Variable</h2>
+<p>The variables declared inside the function are automatic or local variables.</p>
+<p>The local variables exist only inside the function in which it is declared. When the function exits, the local variables are destroyed.</p>
+<pre>int main() {
+    int n; // n is a local variable to main() function
+    ... .. ...
+}
+
+void func() {
+   int n1; // n1 is local to func() function
+}
+</pre>
+<p>In the above code, <var>n1</var> is destroyed when <code>func()</code> exits. Likewise, <var>n</var> gets destroyed when <code>main()</code> exits.</p>
+<h2>Global Variable</h2>
+<p>Variables that are declared outside of all functions are known as external variables. External or global variables are accessible to any function.</p>
+<hr/>
+<h3>Example #1: External Variable</h3>
+<pre class="prettyprint prettyprinted" style="" title="Source Code to demonstrate working of automatic storage class."><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">void</span><span class="pln"> display</span><span class="pun">();</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> n </span><span class="pun">=</span><span class="pln"> </span><span class="lit">5</span><span class="pun">;</span><span class="pln">  </span><span class="com">// global variable</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="pun">++</span><span class="pln">n</span><span class="pun">;</span><span class="pln">     </span><span class="com">// variable n is not declared in the main() function</span><span class="pln">
+    display</span><span class="pun">();</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">void</span><span class="pln"> display</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="pun">++</span><span class="pln">n</span><span class="pun">;</span><span class="pln">     </span><span class="com">// variable n is not declared in the display() function</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"n = %d"</span><span class="pun">,</span><span class="pln"> n</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p><b>Output</b></p>
+<pre><samp>n = 7</samp></pre>
+<p></p><div class="block-inject block-inject-1" id="block-inject-1"><div class="block block-block" id="block-block-123">
+<div class="content">
+<!-- /8095840/.2_A.34657.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth <= 768) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+<!-- /8095840/.2_A.34660.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth > 768) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div> </div>
+</div>
+</div><div class="clearfix"></div><p>Suppose, a global variable is declared in <code>file1</code>. If you try to use that variable in a different file <code>file2</code>, the compiler will complain. To solve this problem, keyword <code>extern</code> is used in <code>file2</code> to indicate that the external variable is declared in another file.</p>
+<h2>Register Variable</h2>
+<p>The <code>register</code> keyword is used to declare register variables. Register variables were supposed to be faster than local variables.</p>
+<p>However, modern compilers are very good at code optimization and there is a rare chance that using register variables will make your program faster. </p>
+<p>Unless you are working on embedded system where you know how to optimize code for the given application, there is no use of register variables.</p>
+<h2>Static Variable</h2>
+<p>A static variable is declared by using keyword <code>static</code>. For example;</p>
+<pre>static int i;</pre>
+<p>The value of a static variable persists until the end of the program.</p>
+<hr/>
+<h3>Example #2: Static Variable</h3>
+<pre class="prettyprint prettyprinted" style="" title="Source Code to demonstrate working of static variable."><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">void</span><span class="pln"> display</span><span class="pun">();</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    display</span><span class="pun">();</span><span class="pln">
+    display</span><span class="pun">();</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">void</span><span class="pln"> display</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> c </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"%d  "</span><span class="pun">,</span><span class="pln">c</span><span class="pun">);</span><span class="pln">
+    c </span><span class="pun">+=</span><span class="pln"> </span><span class="lit">5</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p><b>Output</b></p>
+<pre><samp>0  5</samp></pre>
+<p>During the first function call, the value of <var>c</var> is equal to 0. Then, it's value is increased by 5.</p>
+<p>During the second function call, variable <var>c</var> is not initialized to 0 again. It's because <var>c</var> is a static variable. So, 5 is displayed on the screen.</p>
+</div></div></div></div>
+</div> </div>
+</div>
+</div>
+
+</div>
+</section>
+  </div>
+</body>
+</html>

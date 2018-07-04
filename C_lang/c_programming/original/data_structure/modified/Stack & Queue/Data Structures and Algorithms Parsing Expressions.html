@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Introduction to C</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style/style1.css">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+<div class="col-md-7 middle-col" style="height: 2593px;">
+<h1>Data Structure - Expression Parsing</h1>
+
+<hr/>
+
+
+
+<hr/>
+<p>The way to write arithmetic expression is known as a <b>notation</b>. An arithmetic expression can be written in three different but equivalent notations, i.e., without changing the essence or output of an expression. These notations are −</p>
+<ul class="list">
+<li>Infix Notation</li>
+<li>Prefix (Polish) Notation</li>
+<li>Postfix (Reverse-Polish) Notation</li>
+</ul>
+<p>These notations are named as how they use operator in expression. We shall learn the same here in this chapter.</p>
+<h2>Infix Notation</h2>
+<p>We write expression in <b>infix</b> notation, e.g. a - b + c, where operators are used <b>in</b>-between operands. It is easy for us humans to read, write, and speak in infix notation but the same does not go well with computing devices. An algorithm to process infix notation could be difficult and costly in terms of time and space consumption.</p>
+<h2>Prefix Notation</h2>
+<p>In this notation, operator is <b>prefix</b>ed to operands, i.e. operator is written ahead of operands. For example, <b>+ab</b>. This is equivalent to its infix notation <b>a + b</b>. Prefix notation is also known as <b>Polish Notation</b>.</p>
+<h2>Postfix Notation</h2>
+<p>This notation style is known as <b>Reversed Polish Notation</b>. In this notation style, the operator is <b>postfix</b>ed to the operands i.e., the operator is written after the operands. For example, <b>ab+</b>. This is equivalent to its infix notation <b>a + b</b>.</p>
+<p>The following table briefly tries to show the difference in all three notations −</p>
+<table class="table table-bordered" style="text-align:center;">
+<tbody><tr>
+<th style="text-align:center;">Sr.No.</th>
+<th style="text-align:center;">Infix Notation</th>
+<th style="text-align:center;">Prefix Notation</th>
+<th style="text-align:center;">Postfix Notation</th>
+</tr>
+<tr>
+<td>1</td>
+<td>a + b</td>
+<td>+ a b</td>
+<td>a b +</td>
+</tr>
+<tr>
+<td>2</td>
+<td>(a + b) ∗ c</td>
+<td>∗ + a b c</td>
+<td>a b + c ∗</td>
+</tr>
+<tr>
+<td>3</td>
+<td>a ∗ (b + c)</td>
+<td>∗ a + b c</td>
+<td>a b c + ∗</td>
+</tr>
+<tr>
+<td>4</td>
+<td>a / b + c / d</td>
+<td>+ / a b / c d</td>
+<td>a b / c d / +</td>
+</tr>
+<tr>
+<td>5</td>
+<td>(a + b) ∗ (c + d)</td>
+<td>∗ + a b + c d</td>
+<td>a b + c d + ∗</td>
+</tr>
+<tr>
+<td>6</td>
+<td>((a + b) ∗ c) - d</td>
+<td>- ∗ +  a b c d</td>
+<td>a b + c ∗ d -</td>
+</tr>
+</tbody></table>
+<h2>Parsing Expressions</h2>
+<p>As we have discussed, it is not a very efficient way to design an algorithm or program to parse infix notations. Instead, these infix notations are first converted into either postfix or prefix notations and then computed.</p>
+<p>To parse any arithmetic expression, we need to take care of operator precedence and associativity also.</p>
+<h3>Precedence</h3>
+<p>When an operand is in between two different operators, which operator will take the operand first, is decided by the precedence of an operator over others. For example −</p>
+<img alt="Operator Precendence" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/operator_precedence.jpg"/>
+<p>As multiplication operation has precedence over addition, b * c will be evaluated first. A table of operator precedence is provided later.</p>
+<h3>Associativity</h3>
+<p>Associativity describes the rule where operators with the same precedence appear in an expression. For example, in expression a + b − c, both + and – have the same precedence, then which part of the expression will be evaluated first, is determined by associativity of those operators. Here, both + and − are left associative, so the expression will be evaluated as <b>(a + b) − c</b>.</p>
+<p>Precedence and associativity determines the order of evaluation of an expression. Following is an operator precedence and associativity table (highest to lowest) −</p>
+<table class="table table-bordered" style="text-align:center;">
+<tbody><tr>
+<th style="text-align:center;">Sr.No.</th>
+<th style="text-align:center;">Operator</th>
+<th style="text-align:center;">Precedence</th>
+<th style="text-align:center;">Associativity</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Exponentiation ^</td>
+<td>Highest</td>
+<td>Right Associative</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Multiplication ( ∗ ) &amp; Division ( / )</td>
+<td>Second Highest</td>
+<td>Left Associative</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Addition ( + ) &amp; Subtraction ( − )</td>
+<td>Lowest</td>
+<td>Left Associative</td>
+</tr>
+</tbody></table>
+<p>The above table shows the default behavior of operators. At any point of time in expression evaluation, the order can be altered by using parenthesis. For example −</p>
+<p>In <b>a + b*c</b>, the expression part <b>b</b>*<b>c</b> will be evaluated first, with multiplication as precedence over addition. We here use parenthesis for <b>a + b</b> to be evaluated first, like <b>(a + b)*c</b>.</p>
+<h2>Postfix Evaluation Algorithm</h2>
+<p>We shall now look at the algorithm on how to evaluate postfix notation −</p>
+<pre class="result notranslate">Step 1 − scan the expression from left to right 
+Step 2 − if it is an operand push it to stack 
+Step 3 − if it is an operator pull operand from stack and perform operation 
+Step 4 − store the output of step 3, back to stack 
+Step 5 − scan the expression until all operands are consumed 
+Step 6 − pop the stack and perform operation
+</pre>
+<p>To see the implementation in C programming language, please <a href="https://www.tutorialspoint.com/data_structures_algorithms/expression_parsing_using_statck.htm">click here</a>.</p>
+<hr/>
+
+
+
+<hr/>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead" style="display: none !important;">
+<div class="bottomadtag" style="display: none !important;">Advertisements</div>
+<!-- /60931893/tutorial_bottom_leader_board -->
+<div id="div-gpt-ad-1510138782906-3">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1510138782906-3'); });
+</script>
+</div>
+</div>
+</div>
+
+  </div>
+
+</body>
+
+</html>
+
+

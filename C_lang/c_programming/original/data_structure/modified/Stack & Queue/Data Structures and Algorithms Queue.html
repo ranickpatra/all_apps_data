@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Introduction to C</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style/style1.css">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+<div class="col-md-7 middle-col">
+<h1>Data Structure and Algorithms - Queue</h1>
+
+<hr/>
+
+
+
+<hr/>
+<p>Queue is an abstract data structure, somewhat similar to Stacks. Unlike stacks, a queue is open at both its ends. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Queue follows First-In-First-Out methodology, i.e., the data item stored first will be accessed first.</p>
+<img alt="Queue Example" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/queue_example.jpg"/>
+<p>A real-world example of queue can be a single-lane one-way road, where the vehicle enters first, exits first. More real-world examples can be seen as queues at the ticket windows and bus-stops.</p>
+<h2>Queue Representation</h2>
+<p>As we now understand that in queue, we access both ends for different reasons. The following diagram given below tries to explain queue representation as data structure −</p>
+<img alt="Queue Example" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/queue_diagram.jpg"/>
+<p>As in stacks, a queue can also be implemented using Arrays, Linked-lists, Pointers and Structures. For the sake of simplicity, we shall implement queues using one-dimensional array.</p>
+<h2>Basic Operations</h2>
+<p>Queue operations may involve initializing or defining the queue, utilizing it, and then completely erasing it from the memory. Here we shall try to understand the basic operations associated with queues −</p>
+<ul class="list">
+<li><p><b>enqueue()</b> − add (store) an item to the queue.</p></li>
+<li><p><b>dequeue()</b> − remove (access) an item from the queue.</p></li>
+</ul>
+<p>Few more functions are required to make the above-mentioned queue operation efficient. These are −</p>
+<ul class="list">
+<li><p><b>peek()</b> − Gets the element at the front of the queue without removing it.</p></li>
+<li><p><b>isfull()</b> − Checks if the queue is full.</p></li>
+<li><p><b>isempty()</b> − Checks if the queue is empty.</p></li>
+</ul>
+<p>In queue, we always dequeue (or access) data, pointed by <b>front</b> pointer and while enqueing (or storing) data in the queue we take help of <b>rear</b> pointer.</p>
+<p>Let's first learn about supportive functions of a queue −</p>
+<h3>peek()</h3>
+<p>This function helps to see the data at the <b>front</b> of the queue. The algorithm of peek() function is as follows −</p>
+<p><b>Algorithm</b></p>
+<pre class="result notranslate">begin procedure peek
+   return queue[front]
+end procedure
+</pre>
+<p>Implementation of peek() function in C programming language −</p>
+<p><b>Example</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">int</span><span class="pln"> peek</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">return</span><span class="pln"> queue</span><span class="pun">[</span><span class="pln">front</span><span class="pun">];</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<h3>isfull()</h3>
+<p>As we are using single dimension array to implement queue, we just check for the rear pointer to reach at MAXSIZE to determine that the queue is full. In case we maintain the queue in a circular linked-list, the algorithm will differ. Algorithm of isfull() function −</p>
+<p><b>Algorithm</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">begin</span><span class="pln"> procedure isfull
+
+   </span><span class="kwd">if</span><span class="pln"> rear equals to MAXSIZE
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+   </span><span class="kwd">else</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pln">
+   endif
+   
+</span><span class="kwd">end</span><span class="pln"> procedure</span></pre>
+<p>Implementation of isfull() function in C programming language −</p>
+<p><b>Example</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">bool</span><span class="pln"> isfull</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">rear </span><span class="pun">==</span><span class="pln"> MAXSIZE </span><span class="pun">-</span><span class="pln"> </span><span class="lit">1</span><span class="pun">)</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+   </span><span class="kwd">else</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<h3>isempty()</h3>
+<p>Algorithm of isempty() function −</p>
+<p><b>Algorithm</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">begin</span><span class="pln"> procedure isempty
+
+   </span><span class="kwd">if</span><span class="pln"> front </span><span class="kwd">is</span><span class="pln"> less than MIN  OR front </span><span class="kwd">is</span><span class="pln"> greater than rear
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+   </span><span class="kwd">else</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pln">
+   endif
+   
+</span><span class="kwd">end</span><span class="pln"> procedure</span></pre>
+<p>If the value of <b>front</b> is less than MIN or 0, it tells that the queue is not yet initialized, hence empty.</p>
+<p>Here's the C programming code −</p>
+<p><b>Example</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">bool</span><span class="pln"> isempty</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">front </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="pun">||</span><span class="pln"> front </span><span class="pun">&gt;</span><span class="pln"> rear</span><span class="pun">)</span><span class="pln"> 
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+   </span><span class="kwd">else</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<h2>Enqueue Operation</h2>
+<p>Queues maintain two data pointers, <b>front</b> and <b>rear</b>. Therefore, its operations are comparatively difficult to implement than that of stacks.</p>
+<p>The following steps should be taken to enqueue (insert) data into a queue −</p>
+<ul class="list">
+<li><p><b>Step 1</b> − Check if the queue is full.</p></li>
+<li><p><b>Step 2</b> − If the queue is full, produce overflow error and exit.</p></li>
+<li><p><b>Step 3</b> − If the queue is not full, increment <b>rear</b> pointer to point the next empty space.</p></li>
+<li><p><b>Step 4</b> − Add data element to the queue location, where the rear is pointing.</p></li>
+<li><p><b>Step 5</b> − return success.</p></li>
+</ul>
+<img alt="Insert Operation" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/queue_enqueue_diagram.jpg"/>
+<p>Sometimes, we also check to see if a queue is initialized or not, to handle any unforeseen situations.</p>
+<h3>Algorithm for enqueue operation</h3>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="pln">procedure enqueue</span><span class="pun">(</span><span class="pln">data</span><span class="pun">)</span><span class="pln">      
+   
+   </span><span class="kwd">if</span><span class="pln"> queue </span><span class="kwd">is</span><span class="pln"> full
+      </span><span class="kwd">return</span><span class="pln"> overflow
+   endif
+   
+   rear </span><span class="pun">←</span><span class="pln"> rear </span><span class="pun">+</span><span class="pln"> </span><span class="lit">1</span><span class="pln">
+   queue</span><span class="pun">[</span><span class="pln">rear</span><span class="pun">]</span><span class="pln"> </span><span class="pun">←</span><span class="pln"> data
+   </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+   
+</span><span class="kwd">end</span><span class="pln"> procedure</span></pre>
+<p>Implementation of enqueue() in C programming language −</p>
+<p><b>Example</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">int</span><span class="pln"> enqueue</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> data</span><span class="pun">)</span><span class="pln">      
+   </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">isfull</span><span class="pun">())</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+   
+   rear </span><span class="pun">=</span><span class="pln"> rear </span><span class="pun">+</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+   queue</span><span class="pun">[</span><span class="pln">rear</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> data</span><span class="pun">;</span><span class="pln">
+   
+   </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln"> procedure</span></pre>
+<h2>Dequeue Operation</h2>
+<p>Accessing data from the queue is a process of two tasks − access the data where <b>front</b> is pointing and remove the data after access. The following steps are taken to perform <b>dequeue</b> operation −</p>
+<ul class="list">
+<li><p><b>Step 1</b> − Check if the queue is empty.</p></li>
+<li><p><b>Step 2</b> − If the queue is empty, produce underflow error and exit.</p></li>
+<li><p><b>Step 3</b> − If the queue is not empty, access the data where <b>front</b> is pointing.</p></li>
+<li><p><b>Step 4</b> − Increment <b>front</b> pointer to point to the next available data element.</p></li>
+<li><p><b>Step 5</b> − Return success.</p></li>
+</ul>
+<img alt="Remove Operation" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/queue_dequeue_diagram.jpg"/>
+<h3>Algorithm for dequeue operation</h3>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="pln">procedure dequeue
+   
+   </span><span class="kwd">if</span><span class="pln"> queue </span><span class="kwd">is</span><span class="pln"> empty
+      </span><span class="kwd">return</span><span class="pln"> underflow
+   </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">if</span><span class="pln">
+
+   data </span><span class="pun">=</span><span class="pln"> queue</span><span class="pun">[</span><span class="pln">front</span><span class="pun">]</span><span class="pln">
+   front </span><span class="pun">←</span><span class="pln"> front </span><span class="pun">+</span><span class="pln"> </span><span class="lit">1</span><span class="pln">
+   </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+
+</span><span class="kwd">end</span><span class="pln"> procedure</span></pre>
+<p>Implementation of dequeue() in C programming language −</p>
+<p><b>Example</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">int</span><span class="pln"> dequeue</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">isempty</span><span class="pun">())</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+
+   </span><span class="kwd">int</span><span class="pln"> data </span><span class="pun">=</span><span class="pln"> queue</span><span class="pun">[</span><span class="pln">front</span><span class="pun">];</span><span class="pln">
+   front </span><span class="pun">=</span><span class="pln"> front </span><span class="pun">+</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+
+   </span><span class="kwd">return</span><span class="pln"> data</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>For a complete Queue program in C programming language, please <a href="https://www.tutorialspoint.com/data_structures_algorithms/queue_program_in_c.htm">click here</a>.</p>
+<hr/>
+
+
+
+<hr/>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead" style="display: none !important;">
+<div class="bottomadtag" style="display: none !important;">Advertisements</div>
+<!-- /60931893/tutorial_bottom_leader_board -->
+<div id="div-gpt-ad-1510138782906-3">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1510138782906-3'); });
+</script>
+</div>
+</div>
+</div>
+
+  </div>
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="./style/style1.css">
+  <link rel="stylesheet" href="./style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+<h2 class="page_title"><strong>C Programming Enumeration</strong></h2><br><p>
+In this article, you will learn to work with enumeration (enum). Also, you will learn where enums are commonly used in C programming.</p><br><section class="main-content">
+
+
+<div class="inside-content">
+<div class="region region-content-inside">
+<div class="block block-block" id="block-block-43">
+<div class="content">
+<style>
+.Learn C language_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Learn C language_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+<script async="" src="./images/f(3).txt"></script>
+<!-- Learn C language_Responsive_Top -->
+<ins class="adsbygoogle Learn C language_Responsive_Top" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021" data-adsbygoogle-status="done" style="display: inline-block; width: 728px; height: 90px;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div>
+</div>
+</div>
+<img alt="C enum" src="./images/c-enum.jpg" title="C enum"/>
+<div class="clearfix">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/c-programming/c-enumeration" class="node node-c-tutorial clearfix" id="node-132" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="C Programming Enumeration" property="dc:title"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>An enumeration is a user-defined data type that consists of integral constants. To define an enumeration, keyword <code>enum</code> is used.</p>
+<pre>enum flag { const1, const2, ..., constN };</pre>
+<p>Here, name of the enumeration is <var>flag</var>.</p>
+<p>And, <var>const1</var>, <var>const2</var>,...., <var>constN</var> are values of type <var>flag</var>.</p>
+<p>By default, <var>const1</var> is 0, <var>const2</var>  is 1 and so on. You can change default values of enum elements during declaration (if necessary).</p>
+<pre>// Changing default values of enum
+enum suit {
+    club = 0,
+    diamonds = 10,
+    hearts = 20,
+    spades = 3,
+};</pre>
+<h2>Enumerated Type Declaration</h2>
+<p>When you create an enumerated type, only blueprint for the variable is created. Here's how you can create variables of enum type.</p>
+<pre>enum boolean { false, true };
+enum boolean check;</pre>
+<p></p><div class="block-inject block-inject-1" id="block-inject-1"><div class="block block-block" id="block-block-123">
+<div class="content">
+<!-- /8095840/.2_A.34657.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth <= 768) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+<!-- /8095840/.2_A.34660.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth > 768) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div> </div>
+</div>
+</div><div class="clearfix"></div><p>Here, a variable <var>check</var> of type <strong><code>enum boolean</code></strong> is created.</p>
+<p>Here is another way to declare same <var>check</var> variable using different syntax.</p>
+<pre>enum boolean 
+{ 
+   false, true
+} check;
+
+</pre>
+<h3>Example: Enumeration Type</h3>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+
+</span><span class="kwd">enum</span><span class="pln"> week </span><span class="pun">{</span><span class="pln"> sunday</span><span class="pun">,</span><span class="pln"> monday</span><span class="pun">,</span><span class="pln"> tuesday</span><span class="pun">,</span><span class="pln"> wednesday</span><span class="pun">,</span><span class="pln"> thursday</span><span class="pun">,</span><span class="pln"> friday</span><span class="pun">,</span><span class="pln"> saturday </span><span class="pun">};</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">enum</span><span class="pln"> week today</span><span class="pun">;</span><span class="pln">
+    today </span><span class="pun">=</span><span class="pln"> wednesday</span><span class="pun">;</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"Day %d"</span><span class="pun">,</span><span class="pln">today</span><span class="pun">+</span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+<p><b>Output</b></p>
+<pre>Day 4</pre>
+<h2>Why enums are used in C programming?</h2>
+<p>Enum variable takes only one value out of many possible values. Example to demonstrate it,</p>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+
+</span><span class="kwd">enum</span><span class="pln"> suit </span><span class="pun">{</span><span class="pln">
+    club </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln">
+    diamonds </span><span class="pun">=</span><span class="pln"> </span><span class="lit">10</span><span class="pun">,</span><span class="pln">
+    hearts </span><span class="pun">=</span><span class="pln"> </span><span class="lit">20</span><span class="pun">,</span><span class="pln">
+    spades </span><span class="pun">=</span><span class="pln"> </span><span class="lit">3</span><span class="pln">
+</span><span class="pun">}</span><span class="pln"> card</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln"> 
+</span><span class="pun">{</span><span class="pln">
+        card </span><span class="pun">=</span><span class="pln"> club</span><span class="pun">;</span><span class="pln">
+	printf</span><span class="pun">(</span><span class="str">"Size of enum variable = %d bytes"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">sizeof</span><span class="pun">(</span><span class="pln">card</span><span class="pun">));</span><span class="pln">	
+	</span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+<p><b>Output</b></p>
+<pre><samp>Size of enum variable = 4 bytes</samp></pre>
+<p>It's because the size of an integer is 4 bytes. </p>
+<p>This makes enum a good choice to work with flags.</p>
+<p>You can accomplish the same task using structures. However, working with enums gives you efficiency along with flexibility.</p>
+<h3>How to use enums for flags?</h3>
+<p>Let us take an example,</p>
+<pre class="prettyprint prettyprinted" style=""><code><span class="kwd">enum</span><span class="pln"> designFlags </span><span class="pun">{</span><span class="pln">
+	ITALICS </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+	BOLD </span><span class="pun">=</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+	UNDERLINE </span><span class="pun">=</span><span class="pln"> </span><span class="lit">4</span><span class="pln">
+</span><span class="pun">}</span><span class="pln"> button</span><span class="pun">;</span></code></pre>
+<p>Suppose you are designing a button for Windows application. You can set flags <var>ITALICS</var>, <var>BOLD</var> and <var>UNDERLINE</var> to work with text.</p>
+<p>There is a reason why all the integral constants are power of 2 in above pseudocode.</p>
+<pre>// In binary
+
+ITALICS = 00000001
+BOLD = 00000010
+UNDERLINE = 00000100 
+</pre>
+<p>Since, the integral constants are power of 2, you can combine two or more flags at once without overlapping using bitwise OR | operator. This allows you to choose two or more flags at once. For example,</p>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+
+</span><span class="kwd">enum</span><span class="pln"> designFlags </span><span class="pun">{</span><span class="pln">
+	BOLD </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+	ITALICS </span><span class="pun">=</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+	UNDERLINE </span><span class="pun">=</span><span class="pln"> </span><span class="lit">4</span><span class="pln">
+</span><span class="pun">};</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+	</span><span class="kwd">int</span><span class="pln"> myDesign </span><span class="pun">=</span><span class="pln"> BOLD </span><span class="pun">|</span><span class="pln"> UNDERLINE</span><span class="pun">;</span><span class="pln"> 
+
+        </span><span class="com">//    00000001</span><span class="pln">
+        </span><span class="com">//  | 00000100</span><span class="pln">
+        </span><span class="com">//  ___________</span><span class="pln">
+        </span><span class="com">//    00000101</span><span class="pln">
+
+	printf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span><span class="pln"> myDesign</span><span class="pun">);</span><span class="pln">
+
+	</span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>Output</p>
+<pre><samp>5</samp></pre>
+<p>When the output is 5, you always know that bold and underline is used.</p>
+<p>Also, you can add flag to your requirements.</p>
+<pre>if (myDesign &amp; ITALICS) {
+    // code for italics
+}</pre>
+<p>Here, we have added italics to our design. Note, only code for italics is written inside if statement.</p>
+<p>You can accomplish almost anything in C programming without using enumerations. However, they can be pretty handy in certain situations. That's what differentiates good programmers from great programmers.</p>
+</div></div></div></div>
+</div> </div>
+</div>
+</div>
+
+</div>
+</section>
+  </div>
+</body>
+</html>

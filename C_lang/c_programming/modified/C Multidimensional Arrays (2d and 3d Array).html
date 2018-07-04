@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="./style/style1.css">
+  <link rel="stylesheet" href="./style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+<h2 class="page_title"><strong>C Programming Multidimensional Arrays</strong></h2><br><p>
+In this article, you will learn to work with multidimensional arrays (two dimensional and three dimensional array).</p><br><section class="main-content">
+
+
+<div class="inside-content">
+<div class="region region-content-inside">
+<div class="block block-block" id="block-block-43">
+<div class="content">
+<style>
+.Learn C language_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Learn C language_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" style="display: none !important;"></script>
+<!-- Learn C language_Responsive_Top -->
+<ins class="adsbygoogle Learn C language_Responsive_Top" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021" style="display: none !important;">
+</ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div>
+</div>
+</div>
+<img alt="C Multidimensional Arrays" src="./images/c-multidimensional-arrays.jpg" title="C Two-dimensional Array"/>
+<div class="clearfix">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/c-programming/c-multi-dimensional-arrays" class="node node-c-tutorial clearfix" id="node-135" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="C Programming Multidimensional Arrays" property="dc:title"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>In C programming, you can create an array of arrays known as multidimensional array. For example,</p>
+<pre>float x[3][4];</pre>
+<p>Here, <var>x</var> is a two-dimensional (2d) array. The array can hold 12 elements. You can think the array as table with 3 row and each row has 4 column.</p>
+<p><img alt="Two dimensional array in C programming" src="./images/two-dimensional-array.jpg"/></p>
+<p>Similarly, you can declare a three-dimensional (3d) array. For example,</p>
+<pre>float y[2][4][3];</pre>
+<p>Here,The array <var>y</var> can hold 24 elements.</p>
+<p>You can think this example as: Each 2 elements have 4 elements, which makes 8 elements and each 8 elements can have 3 elements. Hence, the total number of elements is 24.</p>
+<h2>How to initialize a multidimensional array?</h2>
+<p>There is more than one way to initialize a multidimensional array.</p>
+<h3>Initialization of a two dimensional array</h3>
+<pre>// Different ways to initialize two dimensional array
+
+int c[2][3] = {{1, 3, 0}, {-1, 5, 9}};
+         
+int c[][3] = {{1, 3, 0}, {-1, 5, 9}};
+                
+int c[2][3] = {1, 3, 0, -1, 5, 9};</pre>
+<p></p><div class="block-inject block-inject-1" id="block-inject-1"><div class="block block-block" id="block-block-123">
+<div class="content">
+<!-- /8095840/.2_A.34657.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth <= 768) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+<!-- /8095840/.2_A.34660.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth > 768) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div> </div>
+</div>
+</div><div class="clearfix"></div><p>Above code are three different ways to initialize a two dimensional arrays.</p>
+<h3>Initialization of a three dimensional array.</h3>
+<p>You can initialize a three dimensional array in a similar way like a two dimensional array. Here's an example,</p>
+<pre>int test[2][3][4] = { 
+                     { {3, 4, 2, 3}, {0, -3, 9, 11}, {23, 12, 23, 2} },
+                     { {13, 4, 56, 3}, {5, 9, 3, 5}, {3, 1, 4, 9} }
+                 };</pre>
+<h3>Example #1: Two Dimensional Array to store and display values</h3>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">// C program to store temperature of two cities for a week and display it.</span><span class="pln">
+</span><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+
+</span><span class="kwd">const</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> CITY </span><span class="pun">=</span><span class="pln"> </span><span class="lit">2</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">const</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> WEEK </span><span class="pun">=</span><span class="pln"> </span><span class="lit">7</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> temperature</span><span class="pun">[</span><span class="pln">CITY</span><span class="pun">][</span><span class="pln">WEEK</span><span class="pun">];</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;</span><span class="pln"> CITY</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">for</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> j </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j </span><span class="pun">&lt;</span><span class="pln"> WEEK</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">j</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            printf</span><span class="pun">(</span><span class="str">"City %d, Day %d: "</span><span class="pun">,</span><span class="pln"> i</span><span class="pun">+</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> j</span><span class="pun">+</span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+            scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">temperature</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">]);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"\nDisplaying values: \n\n"</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;</span><span class="pln"> CITY</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">for</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> j </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j </span><span class="pun">&lt;</span><span class="pln"> WEEK</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">j</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            printf</span><span class="pun">(</span><span class="str">"City %d, Day %d = %d\n"</span><span class="pun">,</span><span class="pln"> i</span><span class="pun">+</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> j</span><span class="pun">+</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> temperature</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">]);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>City 1, Day 1: 33
+City 1, Day 2: 34
+City 1, Day 3: 35
+City 1, Day 4: 33
+City 1, Day 5: 32
+City 1, Day 6: 31
+City 1, Day 7: 30
+City 2, Day 1: 23
+City 2, Day 2: 22
+City 2, Day 3: 21
+City 2, Day 4: 24
+City 2, Day 5: 22
+City 2, Day 6: 25
+City 2, Day 7: 26
+
+Displaying values: 
+
+City 1, Day 1 = 33
+City 1, Day 2 = 34
+City 1, Day 3 = 35
+City 1, Day 4 = 33
+City 1, Day 5 = 32
+City 1, Day 6 = 31
+City 1, Day 7 = 30
+City 2, Day 1 = 23
+City 2, Day 2 = 22
+City 2, Day 3 = 21
+City 2, Day 4 = 24
+City 2, Day 5 = 22
+City 2, Day 6 = 25
+City 2, Day 7 = 26</samp></pre>
+<h3>Example #2: Sum of two matrices using Two dimensional arrays</h3>
+<p><strong>C program to find the sum of two matrices of order 2*2 using multidimensional arrays.</strong></p>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">float</span><span class="pln"> a</span><span class="pun">[</span><span class="lit">2</span><span class="pun">][</span><span class="lit">2</span><span class="pun">],</span><span class="pln"> b</span><span class="pun">[</span><span class="lit">2</span><span class="pun">][</span><span class="lit">2</span><span class="pun">],</span><span class="pln"> c</span><span class="pun">[</span><span class="lit">2</span><span class="pun">][</span><span class="lit">2</span><span class="pun">];</span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> i</span><span class="pun">,</span><span class="pln"> j</span><span class="pun">;</span><span class="pln">
+
+   </span><span class="com">// Taking input using nested for loop</span><span class="pln">
+   printf</span><span class="pun">(</span><span class="str">"Enter elements of 1st matrix\n"</span><span class="pun">);</span><span class="pln">
+   </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="lit">2</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">&lt;</span><span class="lit">2</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">j</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+       printf</span><span class="pun">(</span><span class="str">"Enter a%d%d: "</span><span class="pun">,</span><span class="pln"> i</span><span class="pun">+</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> j</span><span class="pun">+</span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+       scanf</span><span class="pun">(</span><span class="str">"%f"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">a</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">]);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+  </span><span class="com">// Taking input using nested for loop</span><span class="pln">
+   printf</span><span class="pun">(</span><span class="str">"Enter elements of 2nd matrix\n"</span><span class="pun">);</span><span class="pln">
+   </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="lit">2</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">&lt;</span><span class="lit">2</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">j</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+       printf</span><span class="pun">(</span><span class="str">"Enter b%d%d: "</span><span class="pun">,</span><span class="pln"> i</span><span class="pun">+</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> j</span><span class="pun">+</span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+       scanf</span><span class="pun">(</span><span class="str">"%f"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">b</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">]);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+   </span><span class="com">// adding corresponding elements of two arrays</span><span class="pln">
+   </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="lit">2</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">&lt;</span><span class="lit">2</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">j</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+       c</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> a</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">]</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> b</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">];</span><span class="pln"> 
+    </span><span class="pun">}</span><span class="pln">
+
+   </span><span class="com">// Displaying the sum</span><span class="pln">
+   printf</span><span class="pun">(</span><span class="str">"\nSum Of Matrix:"</span><span class="pun">);</span><span class="pln">
+
+   </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="lit">2</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">&lt;</span><span class="lit">2</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">j</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+       printf</span><span class="pun">(</span><span class="str">"%.1f\t"</span><span class="pun">,</span><span class="pln"> c</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">]);</span><span class="pln">  
+       
+       </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">j</span><span class="pun">==</span><span class="lit">1</span><span class="pun">)</span><span class="pln">            
+          printf</span><span class="pun">(</span><span class="str">"\n"</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+<p><strong>Ouput</strong></p>
+<pre><samp>Enter elements of 1st matrix
+Enter a11: 2;
+Enter a12: 0.5;
+Enter a21: -1.1;
+Enter a22: 2;
+Enter elements of 2nd matrix
+Enter b11: 0.2;
+Enter b12: 0;
+Enter b21: 0.23;
+Enter b22: 23;
+
+Sum Of Matrix:
+2.2     0.5
+-0.9    25.0</samp></pre>
+<h3>Example 3: Three Dimensional Array</h3>
+<p><strong>C Program to store values entered by the user in a three-dimensional array and display it.</strong></p>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// this array can store 12 elements</span><span class="pln">
+
+    </span><span class="kwd">int</span><span class="pln"> i</span><span class="pun">,</span><span class="pln"> j</span><span class="pun">,</span><span class="pln"> k</span><span class="pun">,</span><span class="pln"> test</span><span class="pun">[</span><span class="lit">2</span><span class="pun">][</span><span class="lit">3</span><span class="pun">][</span><span class="lit">2</span><span class="pun">];</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter 12 values: \n"</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">2</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">j </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">3</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">j</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">k </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> k </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">2</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">k </span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">test</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">][</span><span class="pln">k</span><span class="pun">]);</span><span class="pln">
+            </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="com">// Displaying values with proper index.</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"\nDisplaying values:\n"</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">2</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">j </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">3</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">j</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">k </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> k </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">2</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">k </span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                printf</span><span class="pun">(</span><span class="str">"test[%d][%d][%d] = %d\n"</span><span class="pun">,</span><span class="pln"> i</span><span class="pun">,</span><span class="pln"> j</span><span class="pun">,</span><span class="pln"> k</span><span class="pun">,</span><span class="pln"> test</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">][</span><span class="pln">k</span><span class="pun">]);</span><span class="pln">
+            </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p><b>Output</b></p>
+<pre><samp>Enter 12 values: 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+
+Displaying Values:
+test[0][0][0] = 1
+test[0][0][1] = 2
+test[0][1][0] = 3
+test[0][1][1] = 4
+test[0][2][0] = 5
+test[0][2][1] = 6
+test[1][0][0] = 7
+test[1][0][1] = 8
+test[1][1][0] = 9
+test[1][1][1] = 10
+test[1][2][0] = 11
+test[1][2][1] = 12</samp></pre>
+</div></div></div></div>
+</div> </div>
+</div>
+</div>
+
+</div>
+</section>
+  </div>
+</body>
+</html>

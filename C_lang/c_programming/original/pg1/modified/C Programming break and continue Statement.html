@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/style/style1.css">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+<h2 class="page_title"><strong>C Programming break and continue Statement</strong></h2><br><p>
+In this tutorial, you will learn how to use break and continue statements to alter the program flow of loops.</p><br><section class="main-content">
+
+
+<div class="inside-content">
+<div class="region region-content-inside">
+<div class="block block-block" id="block-block-43">
+<div class="content">
+<style>
+.Learn C language_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Learn C language_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" style="display: none !important;"></script>
+<!-- Learn C language_Responsive_Top -->
+<ins class="adsbygoogle Learn C language_Responsive_Top" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021" style="display: none !important;">
+</ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div>
+</div>
+</div>
+<img alt="break and continue statement in Programming" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/images/break-continue-statement.jpg" title=""/>
+<div class="clearfix">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/c-programming/c-break-continue-statement" class="node node-c-tutorial clearfix" id="node-144" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="C Programming break and continue Statement" property="dc:title"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>It is sometimes desirable to skip some statements inside the loop or terminate the loop immediately without checking the test expression.</p>
+<p>In such cases, <code>break</code> and <code>continue</code> statements are used.</p>
+<hr/>
+<h2>break Statement</h2>
+<p>The break statement terminates the loop (for, while and do...while loop) immediately when it is encountered. The break statement is used with decision making statement such as if...else.</p>
+<hr/>
+<h3>Syntax of break statement</h3>
+<pre>break;</pre>
+<p>The simple code above is the syntax for break statement.</p>
+<hr/>
+<h3>Flowchart of break statement</h3>
+<p><img alt="Flowchart of break statement" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/images/c-break-statement.jpg" style="height: 374px; width: 320px;" title="break statement Flowchart"/></p>
+<hr/>
+<h3>How break statement works?</h3>
+<p><img alt="Working of break statement" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/images/how-break-statement-works_1.jpg" style="height: 429px; width: 320px;"/></p>
+<hr/>
+<h3>Example #1: break statement</h3>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">// Program to calculate the sum of maximum of 10 numbers</span><span class="pln">
+</span><span class="com">// Calculates sum until user enters positive number</span><span class="pln">
+
+</span><span class="com"># include &lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> i</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">double</span><span class="pln"> number</span><span class="pun">,</span><span class="pln"> sum </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0.0</span><span class="pun">;</span><span class="pln">
+
+    </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">1</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;=</span><span class="pln"> </span><span class="lit">10</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"Enter a n%d: "</span><span class="pun">,</span><span class="pln">i</span><span class="pun">);</span><span class="pln">
+        scanf</span><span class="pun">(</span><span class="str">"%lf"</span><span class="pun">,&amp;</span><span class="pln">number</span><span class="pun">);</span><span class="pln">
+
+        </span><span class="com">// If user enters negative number, loop is terminated</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">number </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">0.0</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="kwd">break</span><span class="pun">;</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+
+        sum </span><span class="pun">+=</span><span class="pln"> number</span><span class="pun">;</span><span class="pln"> </span><span class="com">// sum = sum + number;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Sum = %.2lf"</span><span class="pun">,</span><span class="pln">sum</span><span class="pun">);</span><span class="pln">
+    
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter a n1: 2.4
+Enter a n2: 4.5
+Enter a n3: 3.4
+Enter a n4: -3
+Sum = 10.30
+</samp></pre>
+<p></p><div class="block-inject block-inject-1" id="block-inject-1"><div class="block block-block" id="block-block-123">
+<div class="content">
+<!-- /8095840/.2_A.34657.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth <= 768) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+<!-- /8095840/.2_A.34660.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth > 768) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div> </div>
+</div>
+</div><div class="clearfix"></div><p>This program calculates the sum of maximum of 10 numbers. It's because, when the user enters negative number, the break statement is executed and loop is terminated.</p>
+<p>In C programming, break statement is also used with switch...case statement.</p>
+<hr/>
+<h2>continue Statement</h2>
+<p>The continue statement skips some statements inside the loop. The continue statement is used with decision making statement such as if...else.</p>
+<hr/>
+<h3>Syntax of continue Statement</h3>
+<pre>continue;
+</pre>
+<hr/>
+<h3>Flowchart of continue Statement</h3>
+<p><img alt="Flowchart of continue statement" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/images/c-continue-flowchart.jpg" style="height: 374px; width: 320px;" title="continue statement Flowchart"/></p>
+<hr/>
+<h3>How continue statement works?</h3>
+<p><img alt="Working of continue statement in C programming" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/images/how-continue-statement-works.jpg" style="width: 320px; height: 408px;"/></p>
+<hr/>
+<h3>Example #2: continue statement</h3>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">// Program to calculate sum of maximum of 10 numbers</span><span class="pln">
+</span><span class="com">// Negative numbers are skipped from calculation</span><span class="pln">
+
+</span><span class="com"># include &lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> i</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">double</span><span class="pln"> number</span><span class="pun">,</span><span class="pln"> sum </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0.0</span><span class="pun">;</span><span class="pln">
+
+    </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">1</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;=</span><span class="pln"> </span><span class="lit">10</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"Enter a n%d: "</span><span class="pun">,</span><span class="pln">i</span><span class="pun">);</span><span class="pln">
+        scanf</span><span class="pun">(</span><span class="str">"%lf"</span><span class="pun">,&amp;</span><span class="pln">number</span><span class="pun">);</span><span class="pln">
+
+        </span><span class="com">// If user enters negative number, loop is terminated</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">number </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">0.0</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="kwd">continue</span><span class="pun">;</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+
+        sum </span><span class="pun">+=</span><span class="pln"> number</span><span class="pun">;</span><span class="pln"> </span><span class="com">// sum = sum + number;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Sum = %.2lf"</span><span class="pun">,</span><span class="pln">sum</span><span class="pun">);</span><span class="pln">
+    
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter a n1: 1.1
+Enter a n2: 2.2
+Enter a n3: 5.5
+Enter a n4: 4.4
+Enter a n5: -3.4
+Enter a n6: -45.5
+Enter a n7: 34.5
+Enter a n8: -4.2
+Enter a n9: -1000
+Enter a n10: 12
+Sum = 59.70
+</samp></pre>
+<p>In the program, when the user enters positive number, the sum is calculated using <code>sum += number;</code> statement.</p>
+<p>When the user enters negative number, the <code>continue</code> statement is executed and skips the negative number from calculation.</p>
+</div></div></div></div>
+</div> </div>
+</div>
+</div>
+
+</div>
+</section>
+  </div>
+</body>
+</html>

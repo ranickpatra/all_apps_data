@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="./style/style1.css">
+  <link rel="stylesheet" href="./style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+<h2 class="page_title"><strong>C Programming Pointers</strong></h2><br><p>
+In this article, you'll learn about pointers; what are they, how do you use them and the common mistakes you might face when working with them.</p><br><section class="main-content">
+
+
+<div class="inside-content">
+<div class="region region-content-inside">
+<div class="block block-block" id="block-block-43">
+<div class="content">
+<style>
+.Learn C language_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Learn C language_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" style="display: none !important;"></script>
+<!-- Learn C language_Responsive_Top -->
+<ins class="adsbygoogle Learn C language_Responsive_Top" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021" style="display: none !important;">
+</ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div>
+</div>
+</div>
+<img alt="C programming pointers" src="./images/c-pointers.jpg" title="C programming pointers"/>
+<div class="clearfix">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/c-programming/c-pointers" class="node node-c-tutorial clearfix" id="node-134" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="C Programming Pointers" property="dc:title"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Pointers are powerful features of C and (C++) programming that differentiates it from other popular programming languages like: Java and Python.</p>
+<p>Pointers are used in C program to access the memory and manipulate the address.</p>
+<h2>Address in C</h2>
+<p>Before you get into the concept of pointers, let's first get familiar with address in C.</p>
+<p>If you have a variable <var>var</var> in your program, <code>&amp;var</code> will give you its address in the memory, where <code>&amp;</code> is commonly called the reference operator.</p>
+<p>You must have seen this notation while using scanf() function. It was used in the function to store the user inputted value in the address of <var>var</var>.</p>
+<pre>scanf("%d", &amp;var);</pre>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">/* Example to demonstrate use of reference operator in C programming. */</span><span class="pln">
+</span><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">int</span><span class="pln"> </span><span class="kwd">var</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">5</span><span class="pun">;</span><span class="pln">
+  printf</span><span class="pun">(</span><span class="str">"Value: %d\n"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">var</span><span class="pun">);</span><span class="pln">
+  printf</span><span class="pun">(</span><span class="str">"Address: %u"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="kwd">var</span><span class="pun">);</span><span class="pln">  </span><span class="com">//Notice, the ampersand(&amp;) before var.</span><span class="pln">
+  </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Value: 5 
+Address: 2686778</samp></pre>
+<p><strong>Note:</strong> You may obtain different value of address while using this code.</p>
+<p>In above source code, value 5 is stored in the memory location 2686778. <var>var</var> is just the name given to that location.</p>
+<h2>Pointer variables</h2>
+<p>In C, there is a special variable that stores just the address of another variable. It is called Pointer variable or, simply, a pointer.</p>
+<p>Declaration of Pointer</p>
+<pre>data_type* pointer_variable_name;
+int* p;
+</pre>
+<p>Above statement defines, <var>p</var> as pointer variable of type <code>int</code>.</p>
+<h3>Reference operator (&amp;) and Dereference operator (*)</h3>
+<p>As discussed, &amp; is called reference operator. It gives you the address of a variable.</p>
+<p>Likewise, there is another operator that gets you the value from the address, it is called a dereference operator (*).</p>
+<p>Below example clearly demonstrates the use of pointers, reference operator and dereference operator.</p>
+<p><strong>Note:</strong> The * sign when declaring a pointer is not a dereference operator. It is just a similar notation that creates a pointer.</p>
+<h3>Example To Demonstrate Working of Pointers</h3>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">/* Source code to demonstrate, handling of pointers in C program */</span><span class="pln">
+</span><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">(){</span><span class="pln">
+   </span><span class="kwd">int</span><span class="pun">*</span><span class="pln"> pc</span><span class="pun">;</span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> c</span><span class="pun">;</span><span class="pln">
+   c</span><span class="pun">=</span><span class="lit">22</span><span class="pun">;</span><span class="pln">
+   printf</span><span class="pun">(</span><span class="str">"Address of c:%u\n"</span><span class="pun">,&amp;</span><span class="pln">c</span><span class="pun">);</span><span class="pln">
+   printf</span><span class="pun">(</span><span class="str">"Value of c:%d\n\n"</span><span class="pun">,</span><span class="pln">c</span><span class="pun">);</span><span class="pln">
+   pc</span><span class="pun">=&amp;</span><span class="pln">c</span><span class="pun">;</span><span class="pln">
+   printf</span><span class="pun">(</span><span class="str">"Address of pointer pc:%u\n"</span><span class="pun">,</span><span class="pln">pc</span><span class="pun">);</span><span class="pln">
+   printf</span><span class="pun">(</span><span class="str">"Content of pointer pc:%d\n\n"</span><span class="pun">,*</span><span class="pln">pc</span><span class="pun">);</span><span class="pln">
+   c</span><span class="pun">=</span><span class="lit">11</span><span class="pun">;</span><span class="pln">
+   printf</span><span class="pun">(</span><span class="str">"Address of pointer pc:%u\n"</span><span class="pun">,</span><span class="pln">pc</span><span class="pun">);</span><span class="pln">
+   printf</span><span class="pun">(</span><span class="str">"Content of pointer pc:%d\n\n"</span><span class="pun">,*</span><span class="pln">pc</span><span class="pun">);</span><span class="pln">
+   </span><span class="pun">*</span><span class="pln">pc</span><span class="pun">=</span><span class="lit">2</span><span class="pun">;</span><span class="pln">
+   printf</span><span class="pun">(</span><span class="str">"Address of c:%u\n"</span><span class="pun">,&amp;</span><span class="pln">c</span><span class="pun">);</span><span class="pln">
+   printf</span><span class="pun">(</span><span class="str">"Value of c:%d\n\n"</span><span class="pun">,</span><span class="pln">c</span><span class="pun">);</span><span class="pln">
+   </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+<p></p><div class="block-inject block-inject-1" id="block-inject-1"><div class="block block-block" id="block-block-123">
+<div class="content">
+<!-- /8095840/.2_A.34657.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth <= 768) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+<!-- /8095840/.2_A.34660.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth > 768) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div> </div>
+</div>
+</div><div class="clearfix"></div><p><strong>Output</strong></p>
+<pre><samp>Address of c: 2686784
+Value of c: 22
+
+Address of pointer pc: 2686784
+Content of pointer pc: 22
+
+Address of pointer pc: 2686784
+Content of pointer pc: 11
+
+Address of c: 2686784
+Value of c: 2</samp></pre>
+<p><img alt="Working of pointers in C programming" src="./images/pointers-in-c-programming.jpg" title="C pointers"/></p>
+<p><strong>Explanation of program and figure</strong></p>
+<ol>
+<li><code>int* pc;</code> creates a pointer <var>pc</var> and <code>int c;</code> creates a normal variable <var>c</var>.<br/>
+		Since <var>pc</var> and <var>c</var> are both not initialized, pointer <var>pc</var> points to either no address or a random address. Likewise, variable <var>c</var> is assigned an address but contains a random/garbage value.</li>
+<li><code>c=22;</code> assigns 22 to the variable c, i.e.,22 is stored in the memory location of variable <var>c</var>.<br/>
+		Note that, when printing <code>&amp;c</code> (address of c), we use %u rather than %d since address is usually expressed as an unsigned integer (always positive).</li>
+<li><code>pc=&amp;c;</code> assigns the address of variable to <var>c</var> to the pointer <var>pc</var>.<br/>
+		When printing, you see value of <var>pc</var> is the same as the address of <var>c</var> and the content of <var>pc</var> (*pc) is 22 as well.</li>
+<li><code>c=11;</code> assigns 11 to variable <var>c</var>.<br/>
+		We assign a new value to <var>c</var> to see its effect on pointer <var>pc</var>.</li>
+<li>Since, pointer <var>pc</var> points to the same address as <var>c</var>, value pointed by pointer <var>pc</var> is 11 as well.<br/>
+		Printing the address and content of <var>pc</var> shows the updated content as 11.</li>
+<li><code>*pc=2;</code> changes the contents of the memory location pointed by pointer <var>pc</var> to 2.<br/>
+		Since the address of pointer <var>pc</var> is same as address of <var>c</var>, value of <var>c</var> also changes to 2.</li>
+</ol>
+<h4>Common mistakes when working with pointers</h4>
+<p>Suppose, you want pointer pc to point to the address of c. Then,</p>
+<pre class="prettyprint prettyprinted" style=""><code><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> c</span><span class="pun">,</span><span class="pln"> </span><span class="pun">*</span><span class="pln">pc</span><span class="pun">;</span><span class="pln">
+
+</span><span class="com">// Wrong! pc is address whereas, c is not an address.</span><span class="pln">
+pc </span><span class="pun">=</span><span class="pln"> c</span><span class="pun">;</span><span class="pln">  
+
+</span><span class="com">// Wrong! *pc is the value pointed by address whereas, %amp;c is an address.</span><span class="pln">
+</span><span class="pun">*</span><span class="pln">pc </span><span class="pun">=</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">c</span><span class="pun">;</span><span class="pln"> 
+
+</span><span class="com">// Correct! pc is an address and, %amp;pc is also an address.</span><span class="pln">
+pc </span><span class="pun">=</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">c</span><span class="pun">;</span><span class="pln"> 
+
+</span><span class="com">// Correct! *pc is the value pointed by address and, c is also a value.</span><span class="pln">
+</span><span class="pun">*</span><span class="pln">pc </span><span class="pun">=</span><span class="pln"> c</span><span class="pun">;</span></code></pre>
+<p>In both cases, pointer pc is not pointing to the address of c.</p>
+</div></div></div></div>
+</div> </div>
+</div>
+</div>
+
+</div>
+</section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Introduction to C</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style/style1.css">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+<div class="col-md-7 middle-col">
+<h1>Data Structures - Asymptotic Analysis</h1>
+
+<hr/>
+
+
+
+<hr/>
+<p>Asymptotic analysis of an algorithm refers to defining the mathematical boundation/framing of its run-time performance. Using asymptotic analysis, we can very well conclude the best case, average case, and worst case scenario of an algorithm.</p>
+<p>Asymptotic analysis is input bound i.e., if there's no input to the algorithm, it is concluded to work in a constant time. Other than the "input" all other factors are considered constant.</p>
+<p>Asymptotic analysis refers to computing the running time of any operation in mathematical units of computation. For example, the running time of one operation is computed as <i>f</i>(n) and may be for another operation it is computed as <i>g</i>(n<sup>2</sup>). This means the first operation running time will increase linearly with the increase in <b>n</b> and the running time of the second operation will increase exponentially when <b>n</b> increases. Similarly, the running time of both operations will be nearly the same if <b>n</b> is significantly small.</p>
+<p>Usually, the time required by an algorithm falls under three types −</p>
+<ul class="list">
+<li><p><b>Best Case</b> − Minimum time required for program execution.</p></li>
+<li><p><b>Average Case</b> − Average time required for program execution.</p></li>
+<li><p><b>Worst Case</b> − Maximum time required for program execution.</p></li>
+</ul>
+<h2>Asymptotic Notations</h2>
+<p>Following are the commonly used asymptotic notations to calculate the running time complexity of an algorithm.</p>
+<ul class="list">
+<li>Ο Notation</li>
+<li>Ω Notation</li>
+<li>θ Notation</li>
+</ul>
+<h3>Big Oh Notation, Ο</h3>
+<p>The notation Ο(n) is the formal way to express the upper bound of an algorithm's running time. It measures the worst case time complexity or the longest amount of time an algorithm can possibly take to complete.</p>
+<img alt="Big O Notation" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/big_o_notation.jpg"/>
+<p>For example, for a function <b><i>f</i>(n)</b></p>
+<pre class="result notranslate">Ο(<i>f</i>(n)) = { <i>g</i>(n) : there exists c &gt; 0 and n<sub>0</sub> such that <i>f</i>(n) ≤ c.<i>g</i>(n) for all n &gt; n<sub>0</sub>. }
+</pre>
+<h3>Omega Notation, Ω</h3>
+<p>The notation Ω(n) is the formal way to express the lower bound of an algorithm's running time. It measures the best case time complexity or the best amount of time an algorithm can possibly take to complete.</p>
+<img alt="Omega Notation" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/omega_notation.jpg"/>
+<p>For example, for a function <b><i>f</i>(n)</b></p>
+<pre class="result notranslate">Ω(<i>f</i>(n)) ≥ { <i>g</i>(n) : there exists c &gt; 0 and n<sub>0</sub> such that <i>g</i>(n) ≤ c.<i>f</i>(n) for all n &gt; n<sub>0</sub>. }
+</pre>
+<h3>Theta Notation, θ</h3>
+<p>The notation θ(n) is the formal way to express both the lower bound and the upper bound of an algorithm's running time. It is represented as follows −</p>
+<img alt="Theta Notation" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/theta_notation.jpg"/>
+<pre class="result notranslate">θ(<i>f</i>(n)) = { <i>g</i>(n) if and only if <i>g</i>(n) =  Ο(<i>f</i>(n)) and <i>g</i>(n) = Ω(<i>f</i>(n)) for all n &gt; n<sub>0</sub>. }
+</pre>
+<h2>Common Asymptotic Notations</h2>
+<p>Following is a list of some common asymptotic notations −</p>
+<table class="table table-bordered" style="text-align:center;">
+<tbody><tr>
+<td>constant</td>
+<td>−</td>
+<td>Ο(1)</td>
+</tr>
+<tr>
+<td>logarithmic</td>
+<td>−</td>
+<td>Ο(log n)</td>
+</tr>
+<tr>
+<td>linear</td>
+<td>−</td>
+<td>Ο(n)</td>
+</tr>
+<tr>
+<td>n log n</td>
+<td>−</td>
+<td>Ο(n log n)</td>
+</tr>
+<tr>
+<td>quadratic</td>
+<td>−</td>
+<td>Ο(n<sup>2</sup>)</td>
+</tr>
+<tr>
+<td>cubic</td>
+<td>−</td>
+<td>Ο(n<sup>3</sup>)</td>
+</tr>
+<tr>
+<td>polynomial</td>
+<td>−</td>
+<td>n<sup>Ο(1)</sup></td>
+</tr>
+<tr>
+<td>exponential</td>
+<td>−</td>
+<td>2<sup>Ο(n)</sup></td>
+</tr>
+</tbody></table>
+<hr/>
+
+
+
+<hr/>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead" style="display: none !important;">
+<div class="bottomadtag" style="display: none !important;">Advertisements</div>
+<!-- /60931893/tutorial_bottom_leader_board -->
+<div id="div-gpt-ad-1510138782906-3">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1510138782906-3'); });
+</script>
+</div>
+</div>
+</div>
+
+  </div>
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Introduction to C</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style/style1.css">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+<div class="col-md-7 middle-col" style="height: 2593px;">
+<h1>Data Structure - Recursion Basics</h1>
+
+<hr/>
+
+
+
+<hr/>
+<p>Some computer programming languages allow a module or function to call itself. This technique is known as recursion. In recursion, a function <b>α</b> either calls itself directly or calls a function <b>β</b> that in turn calls the original function <b>α</b>. The function <b>α</b> is called recursive function.</p>
+<p><b>Example</b> − a function calling itself.</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">int</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> value</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">value </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">1</span><span class="pun">)</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pun">;</span><span class="pln">
+   </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">value </span><span class="pun">-</span><span class="pln"> </span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+
+   printf</span><span class="pun">(</span><span class="str">"%d "</span><span class="pun">,</span><span class="pln">value</span><span class="pun">);</span><span class="pln">   
+</span><span class="pun">}</span></pre>
+<p><b>Example</b> − a function that calls another function which in turn calls it again.</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">int</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> value</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">value </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">1</span><span class="pun">)</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pun">;</span><span class="pln">
+   </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">value </span><span class="pun">-</span><span class="pln"> </span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+
+   printf</span><span class="pun">(</span><span class="str">"%d "</span><span class="pun">,</span><span class="pln">value</span><span class="pun">);</span><span class="pln">   
+</span><span class="pun">}</span></pre>
+<h2>Properties</h2>
+<p>A recursive function can go infinite like a loop. To avoid infinite running of recursive function, there are two properties that a recursive function must have −</p>
+<ul class="list">
+<li><p><b>Base criteria</b> − There must be at least one base criteria or condition, such that, when this condition is met the function stops calling itself recursively.</p></li>
+<li><p><b>Progressive approach</b> − The recursive calls should progress in such a way that each time a recursive call is made it comes closer to the base criteria.</p></li>
+</ul>
+<h2>Implementation</h2>
+<p>Many programming languages implement recursion by means of <b>stacks</b>. Generally, whenever a function (<b>caller</b>) calls another function (<b>callee</b>) or itself as callee, the caller function transfers execution control to the callee. This transfer process may also involve some data to be passed from the caller to the callee.</p>
+<p>This implies, the caller function has to suspend its execution temporarily and resume later when the execution control returns from the callee function. Here, the caller function needs to start exactly from the point of execution where it puts itself on hold. It also needs the exact same data values it was working on. For this purpose, an activation record (or stack frame) is created for the caller function.</p>
+<img alt="Activation Records" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/activation_records.jpg"/>
+<p>This activation record keeps the information about local variables, formal parameters, return address and all information passed to the caller function.</p>
+<h2>Analysis of Recursion</h2>
+<p>One may argue why to use recursion, as the same task can be done with iteration. The first reason is, recursion makes a program more readable and because of latest enhanced CPU systems, recursion is more efficient than iterations.</p>
+<h2>Time Complexity</h2>
+<p>In case of iterations, we take number of iterations to count the time complexity. Likewise, in case of recursion, assuming everything is constant, we try to figure out the number of times a recursive call is being made. A call made to a function is Ο(1), hence the (n) number of times a recursive call is made makes the recursive function Ο(n).</p>
+<h2>Space Complexity</h2>
+<p>Space complexity is counted as what amount of extra space is required for a module to execute. In case of iterations, the compiler hardly requires any extra space. The compiler keeps updating the values of variables used in the iterations. But in case of recursion, the system needs to store activation record each time a recursive call is made. Hence, it is considered that space complexity of recursive function may go higher than that of a function with iteration.</p>
+<hr/>
+
+
+
+<hr/>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead" style="display: none !important;">
+<div class="bottomadtag" style="display: none !important;">Advertisements</div>
+<!-- /60931893/tutorial_bottom_leader_board -->
+<div id="div-gpt-ad-1510138782906-3">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1510138782906-3'); });
+</script>
+</div>
+</div>
+</div>
+
+  </div>
+
+</body>
+
+</html>
+
+

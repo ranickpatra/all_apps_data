@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Introduction to C</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style/style1.css">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+<div class="col-md-7 middle-col">
+<h1>Data Structure and Algorithms Insertion Sort</h1>
+
+<hr/>
+
+
+
+<hr/>
+<p>This is an in-place comparison-based sorting algorithm. Here, a sub-list is maintained which is always sorted. For example, the lower part of an array is maintained to be sorted. An element which is to be 'insert'ed in this sorted sub-list, has to find its appropriate place and then it has to be inserted there. Hence the name, <b>insertion sort</b>.</p>
+<p>The array is searched sequentially and unsorted items are moved and inserted into the sorted sub-list (in the same array). This algorithm is not suitable for large data sets as its average and worst case complexity are of Ο(n<sup>2</sup>), where <b>n</b> is the number of items.</p>
+<h2>How Insertion Sort Works?</h2>
+<p>We take an unsorted array for our example.</p>
+<img alt="Unsorted Array" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/unsorted_array.jpg"/>
+<p>Insertion sort compares the first two elements.</p>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_1.jpg"/>
+<p>It finds that both 14 and 33 are already in ascending order. For now, 14 is in sorted sub-list.</p>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_2.jpg"/>
+<p>Insertion sort moves ahead and compares 33 with 27.</p>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_3.jpg"/>
+<p>And finds that 33 is not in the correct position.</p>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_4.jpg"/>
+<p>It swaps 33 with 27. It also checks with all the elements of sorted sub-list. Here we see that the sorted sub-list has only one element 14, and 27 is greater than 14. Hence, the sorted sub-list remains sorted after swapping.</p>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_5.jpg"/>
+<p>By now we have 14 and 27 in the sorted sub-list. Next, it compares 33 with 10.</p>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_6.jpg"/>
+<p>These values are not in a sorted order.</p>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_7.jpg"/>
+<p>So we swap them.</p>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_8.jpg"/>
+<p>However, swapping makes 27 and 10 unsorted.</p>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_9.jpg"/>
+<p>Hence, we swap them too.</p>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_10.jpg"/>
+<p>Again we find 14 and 10 in an unsorted order.</p>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_11.jpg"/>
+<p>We swap them again. By the end of third iteration, we have a sorted sub-list of 4 items.</p>
+<img alt="Insertion Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/insertion_sort_12.jpg"/>
+<p>This process goes on until all the unsorted values are covered in a sorted sub-list. Now we shall see some programming aspects of insertion sort.</p>
+<h3>Algorithm</h3>
+<p>Now we have a bigger picture of how this sorting technique works, so we can derive simple steps by which we can achieve insertion sort.</p>
+<pre class="result notranslate"><b>Step 1</b> − If it is the first element, it is already sorted. return 1;
+<b>Step 2</b> − Pick next element
+<b>Step 3</b> − Compare with all elements in the sorted sub-list
+<b>Step 4</b> − Shift all the elements in the sorted sub-list that is greater than the 
+         value to be sorted
+<b>Step 5</b> − Insert the value
+<b>Step 6</b> − Repeat until list is sorted
+</pre>
+<h2>Pseudocode</h2>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="pln">procedure insertionSort</span><span class="pun">(</span><span class="pln"> A </span><span class="pun">:</span><span class="pln"> array of items </span><span class="pun">)</span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> holePosition
+   </span><span class="kwd">int</span><span class="pln"> valueToInsert
+	
+   </span><span class="kwd">for</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> to length</span><span class="pun">(</span><span class="pln">A</span><span class="pun">)</span><span class="pln"> inclusive </span><span class="kwd">do</span><span class="pun">:</span><span class="pln">
+	
+      </span><span class="com">/* select value to be inserted */</span><span class="pln">
+      valueToInsert </span><span class="pun">=</span><span class="pln"> A</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]</span><span class="pln">
+      holePosition </span><span class="pun">=</span><span class="pln"> i
+      
+      </span><span class="com">/*locate hole position for the element to be inserted */</span><span class="pln">
+		
+      </span><span class="kwd">while</span><span class="pln"> holePosition </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> A</span><span class="pun">[</span><span class="pln">holePosition</span><span class="pun">-</span><span class="lit">1</span><span class="pun">]</span><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> valueToInsert </span><span class="kwd">do</span><span class="pun">:</span><span class="pln">
+         A</span><span class="pun">[</span><span class="pln">holePosition</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> A</span><span class="pun">[</span><span class="pln">holePosition</span><span class="pun">-</span><span class="lit">1</span><span class="pun">]</span><span class="pln">
+         holePosition </span><span class="pun">=</span><span class="pln"> holePosition </span><span class="pun">-</span><span class="lit">1</span><span class="pln">
+      </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">while</span><span class="pln">
+		
+      </span><span class="com">/* insert the number at hole position */</span><span class="pln">
+      A</span><span class="pun">[</span><span class="pln">holePosition</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> valueToInsert
+      
+   </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">for</span><span class="pln">
+	
+</span><span class="kwd">end</span><span class="pln"> procedure</span></pre>
+<p>To know about insertion sort implementation in C programming language, please <a href="https://www.tutorialspoint.com/data_structures_algorithms/insertion_sort_program_in_c.htm">click here</a>.</p>
+<hr/>
+
+
+
+<hr/>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead" style="display: none !important;">
+<div class="bottomadtag" style="display: none !important;">Advertisements</div>
+<!-- /60931893/tutorial_bottom_leader_board -->
+<div id="div-gpt-ad-1510138782906-3">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1510138782906-3'); });
+</script>
+</div>
+</div>
+</div>
+
+  </div>
+
+</body>
+
+</html>
+
+

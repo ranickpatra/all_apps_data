@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Introduction to C</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style/style1.css">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+<div class="col-md-7 middle-col">
+<h1>Data Structure and Algorithms - Tree</h1>
+
+<hr/>
+
+
+
+<hr/>
+<p>Tree represents the nodes connected by edges. We will discuss binary tree or binary search tree specifically.</p>
+<p>Binary Tree is a special datastructure used for data storage purposes. A binary tree has a special condition that each node can have a maximum of two children. A binary tree has the benefits of both an ordered array and a linked list as search is as quick as in a sorted array and insertion or deletion operation are as fast as in linked list.</p>
+<img alt="Binary Tree" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/binary_tree.jpg"/>
+<h2>Important Terms</h2>
+<p>Following are the important terms with respect to tree.</p>
+<ul class="list">
+<li><p><b>Path</b> − Path refers to the sequence of nodes along the edges of a tree.</p></li>
+<li><p><b>Root</b> − The node at the top of the tree is called root. There is only one root per tree and one path from the root node to any node.</p></li>
+<li><p><b>Parent</b> − Any node except the root node has one edge upward to a node called parent.</p></li>
+<li><p><b>Child</b> − The node below a given node connected by its edge downward is called its child node.</p></li>
+<li><p><b>Leaf</b> − The node which does not have any child node is called the leaf node.</p></li>
+<li><p><b>Subtree</b> − Subtree represents the descendants of a node.</p></li>
+<li><p><b>Visiting</b> − Visiting refers to checking the value of a node when control is on the node.</p></li>
+<li><p><b>Traversing</b> − Traversing means passing through nodes in a specific order.</p></li>
+<li><p><b>Levels</b> − Level of a node represents the generation of a node. If the root node is at level 0, then its next child node is at level 1, its grandchild is at level 2, and so on.</p></li>
+<li><p><b>keys</b> − Key represents a value of a node based on which a search operation is to be carried out for a node.</p></li>
+</ul>
+<h2>Binary Search Tree Representation</h2>
+<p>Binary Search tree exhibits a special behavior. A node's left child must have a value less than its parent's value and the node's right child must have a value greater than its parent value.</p>
+<img alt="Binary Search Tree" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/binary_search_tree.jpg"/>
+<p>We're going to implement tree using node object and connecting them through references.</p>
+<h2>Tree Node</h2>
+<p>The code to write a tree node would be similar to what is given below. It has a data part and references to its left and right child nodes.</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">struct</span><span class="pln"> node </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> data</span><span class="pun">;</span><span class="pln">   
+   </span><span class="kwd">struct</span><span class="pln"> node </span><span class="pun">*</span><span class="pln">leftChild</span><span class="pun">;</span><span class="pln">
+   </span><span class="kwd">struct</span><span class="pln"> node </span><span class="pun">*</span><span class="pln">rightChild</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">};</span></pre>
+<p>In a tree, all nodes share common construct.</p>
+<h2>BST Basic Operations</h2>
+<p>The basic operations that can be performed on a binary search tree data structure, are the following −</p>
+<ul class="list">
+<li><p><b>Insert</b> − Inserts an element in a tree/create a tree.</p></li>
+<li><p><b>Search</b> − Searches an element in a tree.</p></li>
+<li><p><b>Preorder Traversal</b> − Traverses a tree in a pre-order manner.</p></li>
+<li><p><b>Inorder Traversal</b> − Traverses a tree in an in-order manner.</p></li>
+<li><p><b>Postorder Traversal</b> − Traverses a tree in a post-order manner.</p></li>
+</ul>
+<p>We shall learn creating (inserting into) a tree structure and searching a data item in a tree in this chapter. We shall learn about tree traversing methods in the coming chapter.</p>
+<h2>Insert Operation</h2>
+<p>The very first insertion creates the tree. Afterwards, whenever an element is to be inserted, first locate its proper location. Start searching from the root node, then if the data is less than the key value, search for the empty location in the left subtree and insert the data. Otherwise, search for the empty location in the right subtree and insert the data.</p>
+<h3>Algorithm</h3>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="typ">If</span><span class="pln"> root </span><span class="kwd">is</span><span class="pln"> NULL 
+   </span><span class="kwd">then</span><span class="pln"> create root node
+</span><span class="kwd">return</span><span class="pln">
+
+</span><span class="typ">If</span><span class="pln"> root exists </span><span class="kwd">then</span><span class="pln">
+   compare the data </span><span class="kwd">with</span><span class="pln"> node</span><span class="pun">.</span><span class="pln">data
+   
+   </span><span class="kwd">while</span><span class="pln"> </span><span class="kwd">until</span><span class="pln"> insertion position </span><span class="kwd">is</span><span class="pln"> located
+
+      </span><span class="typ">If</span><span class="pln"> data </span><span class="kwd">is</span><span class="pln"> greater than node</span><span class="pun">.</span><span class="pln">data
+         </span><span class="kwd">goto</span><span class="pln"> right subtree
+      </span><span class="kwd">else</span><span class="pln">
+         </span><span class="kwd">goto</span><span class="pln"> left subtree
+
+   endwhile 
+   
+   insert data
+	
+</span><span class="kwd">end</span><span class="pln"> </span><span class="typ">If</span><span class="pln">      </span></pre>
+<h3>Implementation</h3>
+<p>The implementation of insert function should look like this −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">void</span><span class="pln"> insert</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> data</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">struct</span><span class="pln"> node </span><span class="pun">*</span><span class="pln">tempNode </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">struct</span><span class="pln"> node</span><span class="pun">*)</span><span class="pln"> malloc</span><span class="pun">(</span><span class="kwd">sizeof</span><span class="pun">(</span><span class="kwd">struct</span><span class="pln"> node</span><span class="pun">));</span><span class="pln">
+   </span><span class="kwd">struct</span><span class="pln"> node </span><span class="pun">*</span><span class="pln">current</span><span class="pun">;</span><span class="pln">
+   </span><span class="kwd">struct</span><span class="pln"> node </span><span class="pun">*</span><span class="pln">parent</span><span class="pun">;</span><span class="pln">
+
+   tempNode</span><span class="pun">-&gt;</span><span class="pln">data </span><span class="pun">=</span><span class="pln"> data</span><span class="pun">;</span><span class="pln">
+   tempNode</span><span class="pun">-&gt;</span><span class="pln">leftChild </span><span class="pun">=</span><span class="pln"> NULL</span><span class="pun">;</span><span class="pln">
+   tempNode</span><span class="pun">-&gt;</span><span class="pln">rightChild </span><span class="pun">=</span><span class="pln"> NULL</span><span class="pun">;</span><span class="pln">
+
+   </span><span class="com">//if tree is empty, create root node</span><span class="pln">
+   </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">root </span><span class="pun">==</span><span class="pln"> NULL</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      root </span><span class="pun">=</span><span class="pln"> tempNode</span><span class="pun">;</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      current </span><span class="pun">=</span><span class="pln"> root</span><span class="pun">;</span><span class="pln">
+      parent  </span><span class="pun">=</span><span class="pln"> NULL</span><span class="pun">;</span><span class="pln">
+
+      </span><span class="kwd">while</span><span class="pun">(</span><span class="lit">1</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">                
+         parent </span><span class="pun">=</span><span class="pln"> current</span><span class="pun">;</span><span class="pln">
+
+         </span><span class="com">//go to left of the tree</span><span class="pln">
+         </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">data </span><span class="pun">&lt;</span><span class="pln"> parent</span><span class="pun">-&gt;</span><span class="pln">data</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            current </span><span class="pun">=</span><span class="pln"> current</span><span class="pun">-&gt;</span><span class="pln">leftChild</span><span class="pun">;</span><span class="pln">                
+            
+            </span><span class="com">//insert to the left</span><span class="pln">
+            </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">current </span><span class="pun">==</span><span class="pln"> NULL</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+               parent</span><span class="pun">-&gt;</span><span class="pln">leftChild </span><span class="pun">=</span><span class="pln"> tempNode</span><span class="pun">;</span><span class="pln">
+               </span><span class="kwd">return</span><span class="pun">;</span><span class="pln">
+            </span><span class="pun">}</span><span class="pln">
+         </span><span class="pun">}</span><span class="pln">
+			
+         </span><span class="com">//go to right of the tree</span><span class="pln">
+         </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            current </span><span class="pun">=</span><span class="pln"> current</span><span class="pun">-&gt;</span><span class="pln">rightChild</span><span class="pun">;</span><span class="pln">
+            
+            </span><span class="com">//insert to the right</span><span class="pln">
+            </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">current </span><span class="pun">==</span><span class="pln"> NULL</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+               parent</span><span class="pun">-&gt;</span><span class="pln">rightChild </span><span class="pun">=</span><span class="pln"> tempNode</span><span class="pun">;</span><span class="pln">
+               </span><span class="kwd">return</span><span class="pun">;</span><span class="pln">
+            </span><span class="pun">}</span><span class="pln">
+         </span><span class="pun">}</span><span class="pln">
+      </span><span class="pun">}</span><span class="pln">            
+   </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<h2>Search Operation</h2>
+<p>Whenever an element is to be searched, start searching from the root node, then if the data is less than the key value, search for the element in the left subtree. Otherwise, search for the element in the right subtree. Follow the same algorithm for each node.</p>
+<h3>Algorithm</h3>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="typ">If</span><span class="pln"> root</span><span class="pun">.</span><span class="pln">data </span><span class="kwd">is</span><span class="pln"> equal to search</span><span class="pun">.</span><span class="pln">data
+   </span><span class="kwd">return</span><span class="pln"> root
+</span><span class="kwd">else</span><span class="pln">
+   </span><span class="kwd">while</span><span class="pln"> data </span><span class="kwd">not</span><span class="pln"> found
+
+      </span><span class="typ">If</span><span class="pln"> data </span><span class="kwd">is</span><span class="pln"> greater than node</span><span class="pun">.</span><span class="pln">data
+         </span><span class="kwd">goto</span><span class="pln"> right subtree
+      </span><span class="kwd">else</span><span class="pln">
+         </span><span class="kwd">goto</span><span class="pln"> left subtree
+         
+      </span><span class="typ">If</span><span class="pln"> data found
+         </span><span class="kwd">return</span><span class="pln"> node
+   endwhile 
+   
+   </span><span class="kwd">return</span><span class="pln"> data </span><span class="kwd">not</span><span class="pln"> found
+   
+</span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">if</span><span class="pln">      </span></pre>
+<p>The implementation of this algorithm should look like this.</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">struct</span><span class="pln"> node</span><span class="pun">*</span><span class="pln"> search</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> data</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">struct</span><span class="pln"> node </span><span class="pun">*</span><span class="pln">current </span><span class="pun">=</span><span class="pln"> root</span><span class="pun">;</span><span class="pln">
+   printf</span><span class="pun">(</span><span class="str">"Visiting elements: "</span><span class="pun">);</span><span class="pln">
+
+   </span><span class="kwd">while</span><span class="pun">(</span><span class="pln">current</span><span class="pun">-&gt;</span><span class="pln">data </span><span class="pun">!=</span><span class="pln"> data</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">current </span><span class="pun">!=</span><span class="pln"> NULL</span><span class="pun">)</span><span class="pln">
+      printf</span><span class="pun">(</span><span class="str">"%d "</span><span class="pun">,</span><span class="pln">current</span><span class="pun">-&gt;</span><span class="pln">data</span><span class="pun">);</span><span class="pln"> 
+      
+      </span><span class="com">//go to left tree</span><span class="pln">
+
+      </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">current</span><span class="pun">-&gt;</span><span class="pln">data </span><span class="pun">&gt;</span><span class="pln"> data</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+         current </span><span class="pun">=</span><span class="pln"> current</span><span class="pun">-&gt;</span><span class="pln">leftChild</span><span class="pun">;</span><span class="pln">
+      </span><span class="pun">}</span><span class="pln">
+      </span><span class="com">//else go to right tree</span><span class="pln">
+      </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">                
+         current </span><span class="pun">=</span><span class="pln"> current</span><span class="pun">-&gt;</span><span class="pln">rightChild</span><span class="pun">;</span><span class="pln">
+      </span><span class="pun">}</span><span class="pln">
+
+      </span><span class="com">//not found</span><span class="pln">
+      </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">current </span><span class="pun">==</span><span class="pln"> NULL</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+         </span><span class="kwd">return</span><span class="pln"> NULL</span><span class="pun">;</span><span class="pln">
+      </span><span class="pun">}</span><span class="pln">
+
+      </span><span class="kwd">return</span><span class="pln"> current</span><span class="pun">;</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">  
+</span><span class="pun">}</span></pre>
+<p>To know about the implementation of binary search tree data structure, please <a href="https://www.tutorialspoint.com/data_structures_algorithms/tree_traversal_in_c.htm"> click here</a>.</p>
+<hr/>
+
+
+
+<hr/>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead" style="display: none !important;">
+<div class="bottomadtag" style="display: none !important;">Advertisements</div>
+<!-- /60931893/tutorial_bottom_leader_board -->
+<div id="div-gpt-ad-1510138782906-3">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1510138782906-3'); });
+</script>
+</div>
+</div>
+</div>
+
+  </div>
+
+</body>
+
+</html>
+
+

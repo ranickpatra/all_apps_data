@@ -1,0 +1,25 @@
+@font-face {
+    font-family: norm_font;
+    src: url(https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/style/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: bold_font;
+  src: url(https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/style/OpenSans-Bold.ttf);
+}
+
+.page_title {
+  font-family: bold_font;
+  text-align: center;
+}
+
+
+div {
+  font-family: norm_font;
+  line-height: 25px;
+}
+
+li>img {
+  width: 100%;
+  max-width: 700px;
+}

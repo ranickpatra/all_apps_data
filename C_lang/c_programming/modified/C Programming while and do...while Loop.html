@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="./style/style1.css">
+  <link rel="stylesheet" href="./style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+<h2 class="page_title"><strong>C Programming while and do...while Loop</strong></h2><br><p>
+Loops are used in programming to repeat a specific block of code. After reading this tutorial, you will learn how to create a while and do...while loop in C programming.</p><br><section class="main-content">
+
+
+<div class="inside-content">
+<div class="region region-content-inside">
+<div class="block block-block" id="block-block-43">
+<div class="content">
+<style>
+.Learn C language_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Learn C language_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" style="display: none !important;"></script>
+<!-- Learn C language_Responsive_Top -->
+<ins class="adsbygoogle Learn C language_Responsive_Top" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021" style="display: none !important;">
+</ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div>
+</div>
+</div>
+<img alt="while loop in C programming" src="./images/while-loop.jpg" title="while loop in C programming"/>
+<div class="clearfix">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/c-programming/c-do-while-loops" class="node node-c-tutorial clearfix" id="node-145" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="C Programming while and do...while Loop" property="dc:title"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Loops are used in programming to repeat a specific block until some end condition is met. There are three loops in C programming:</p>
+<ol>
+<li>for loop</li>
+<li>while loop</li>
+<li>do...while loop</li>
+</ol>
+<h2>while loop</h2>
+<p>The syntax of a while loop is:</p>
+<pre>while (testExpression) 
+{
+    //codes 
+}
+</pre>
+<p>where, <code>testExpression</code> checks the condition is true or false before each loop.</p>
+<hr/>
+<h3>How while loop works?</h3>
+<p>The while loop evaluates the test expression.</p>
+<p>If the test expression is true (nonzero), codes inside the body of while loop are exectued. The test expression is evaluated again. The process goes on until the test expression is false.</p>
+<p>When the test expression is false, the while loop is terminated.</p>
+<hr/>
+<h3>Flowchart of while loop</h3>
+<p><img alt="flowchart of while loop in C programming" src="./images/c-while-loop.jpg" title="while loop flowchart"/></p>
+<hr/>
+<h3>Example #1: while loop</h3>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">// Program to find factorial of a number</span><span class="pln">
+</span><span class="com">// For a positive integer n, factorial = 1*2*3...n</span><span class="pln">
+
+</span><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> number</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">long</span><span class="pln"> </span><span class="kwd">long</span><span class="pln"> factorial</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter an integer: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">number</span><span class="pun">);</span><span class="pln">
+
+    factorial </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+
+    </span><span class="com">// loop terminates when number is less than or equal to 0</span><span class="pln">
+    </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="pln">number </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        factorial </span><span class="pun">*=</span><span class="pln"> number</span><span class="pun">;</span><span class="pln">  </span><span class="com">// factorial = factorial*number;</span><span class="pln">
+        </span><span class="pun">--</span><span class="pln">number</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Factorial= %lld"</span><span class="pun">,</span><span class="pln"> factorial</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p></p><div class="block-inject block-inject-1" id="block-inject-1"><div class="block block-block" id="block-block-123">
+<div class="content">
+<!-- /8095840/.2_A.34657.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth <= 768) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+<!-- /8095840/.2_A.34660.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth > 768) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div> </div>
+</div>
+</div><div class="clearfix"></div><p><strong>Output</strong></p>
+<pre><samp>Enter an integer: 5
+Factorial = 120
+</samp></pre>
+<p>To learn more on test expression (when test expression is evaluated to nonzero (true) and 0 (false)), check out relational and logical operators.</p>
+<h2>do...while loop</h2>
+<p>The <code>do..while</code> loop is similar to the <code>while</code> loop with one important difference. The body of <code>do...while</code> loop is executed once, before checking the test expression. Hence, the <code>do...while loop</code> is executed at least once.</p>
+<hr/>
+<h3>do...while loop Syntax</h3>
+<pre>do
+{
+   // codes
+}
+while (testExpression);
+</pre>
+<hr/>
+<h3>How do...while loop works?</h3>
+<p>The code block (loop body) inside the braces is executed once.</p>
+<p>Then, the test expression is evaluated. If the test expression is true, the loop body is executed again. This process goes on until the test expression is evaluated to 0 (false).</p>
+<p>When the test expression is false (nonzero), the <code>do...while</code> loop is terminated.</p>
+<p><img alt="do while loop flowchart in C programming" src="./images/c-do-while-loop.jpg" title="do while loop flowchart"/></p>
+<hr/>
+<h3>Example #2: do...while loop</h3>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">// Program to add numbers until user enters zero</span><span class="pln">
+
+</span><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">double</span><span class="pln"> number</span><span class="pun">,</span><span class="pln"> sum </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+
+    </span><span class="com">// loop body is executed at least once</span><span class="pln">
+    </span><span class="kwd">do</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"Enter a number: "</span><span class="pun">);</span><span class="pln">
+        scanf</span><span class="pun">(</span><span class="str">"%lf"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">number</span><span class="pun">);</span><span class="pln">
+        sum </span><span class="pun">+=</span><span class="pln"> number</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">while</span><span class="pun">(</span><span class="pln">number </span><span class="pun">!=</span><span class="pln"> </span><span class="lit">0.0</span><span class="pun">);</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Sum = %.2lf"</span><span class="pun">,</span><span class="pln">sum</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter a number: 1.5
+Enter a number: 2.4
+Enter a number: -3.4
+Enter a number: 4.2
+Enter a number: 0
+Sum = 4.70</samp></pre>
+<p>To learn more on test expression (when test expression is evaluated to nonzero (true) and 0 (false)), check out relational and logical operators.</p>
+</div></div></div></div>
+</div> </div>
+</div>
+</div>
+
+</div>
+</section>
+  </div>
+</body>
+</html>

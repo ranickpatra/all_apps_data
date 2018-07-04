@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="./style/style1.css">
+  <link rel="stylesheet" href="./style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+<h2 class="page_title"><strong>How to pass arrays to a function in C Programming?</strong></h2><br><p>
+In this article, you'll learn about passing an array to a function and using it in your program. You'll learn to pass both one-dimensional and multi-dimensional arrays.</p><br><section class="main-content">
+
+
+<div class="inside-content">
+<div class="region region-content-inside">
+<div class="block block-block" id="block-block-43">
+<div class="content">
+<style>
+.Learn C language_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Learn C language_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" style="display: none !important;"></script>
+<!-- Learn C language_Responsive_Top -->
+<ins class="adsbygoogle Learn C language_Responsive_Top" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021" style="display: none !important;">
+</ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div>
+</div>
+</div>
+<img alt="C Programming Arrays and Functions" src="./images/c-array-functions.jpg" title="C Programming Arrays and Functions"/>
+<div class="clearfix">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/c-programming/c-arrays-functions" class="node node-c-tutorial clearfix" id="node-158" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="How to pass arrays to a function in C Programming?" property="dc:title"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>In C programming, a single array element or an entire array can be passed to a function.</p>
+<p>This can be done for both one-dimensional array or a multi-dimensional array.</p>
+<h2>Passing One-dimensional Array In Function</h2>
+<p>Single element of an array can be passed in similar manner as passing variable to a function.</p>
+<p><strong>C program to pass a single element of an array to function</strong></p>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">void</span><span class="pln"> display</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> age</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span><span class="pln"> age</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> ageArray</span><span class="pun">[]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pln"> </span><span class="pun">};</span><span class="pln">
+    display</span><span class="pun">(</span><span class="pln">ageArray</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]);</span><span class="pln"> </span><span class="com">//Passing array element ageArray[2] only.</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre>4
+</pre>
+<h3>Passing an entire one-dimensional array to a function</h3>
+<p>While passing arrays as arguments to the function, only the name of the array is passed (,i.e, starting address of memory area is passed as argument).</p>
+<p><strong>C program to pass an array containing age of person to a function. This function should find average age and display the average age in main function.</strong></p>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">float</span><span class="pln"> average</span><span class="pun">(</span><span class="kwd">float</span><span class="pln"> age</span><span class="pun">[]);</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()​</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">float</span><span class="pln"> avg</span><span class="pun">,</span><span class="pln"> age</span><span class="pun">[]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="lit">23.4</span><span class="pun">,</span><span class="pln"> </span><span class="lit">55</span><span class="pun">,</span><span class="pln"> </span><span class="lit">22.6</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">40.5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18</span><span class="pln"> </span><span class="pun">};</span><span class="pln">
+    avg </span><span class="pun">=</span><span class="pln"> average</span><span class="pun">(</span><span class="pln">age</span><span class="pun">);</span><span class="pln"> </span><span class="com">/* Only name of array is passed as argument. */</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"Average age=%.2f"</span><span class="pun">,</span><span class="pln"> avg</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">float</span><span class="pln"> average</span><span class="pun">(</span><span class="kwd">float</span><span class="pln"> age</span><span class="pun">[])</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> i</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">float</span><span class="pln"> avg</span><span class="pun">,</span><span class="pln"> sum </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0.0</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">6</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        sum </span><span class="pun">+=</span><span class="pln"> age</span><span class="pun">[</span><span class="pln">i</span><span class="pun">];</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    avg </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">sum </span><span class="pun">/</span><span class="pln"> </span><span class="lit">6</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> avg</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p></p><div class="block-inject block-inject-1" id="block-inject-1"><div class="block block-block" id="block-block-123">
+<div class="content">
+<!-- /8095840/.2_A.34657.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth <= 768) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+<!-- /8095840/.2_A.34660.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth > 768) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div> </div>
+</div>
+</div><div class="clearfix"></div><p><strong>Output</strong></p>
+<pre><samp>Average age=27.08</samp></pre>
+<h2>Passing Multi-dimensional Arrays to Function</h2>
+<p>To pass two-dimensional array to a function as an argument, starting address of memory area reserved is passed as in one dimensional array</p>
+<h3>#Example: Pass two-dimensional arrays to a function</h3>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">void</span><span class="pln"> displayNumbers</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> num</span><span class="pun">[</span><span class="lit">2</span><span class="pun">][</span><span class="lit">2</span><span class="pun">]);</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> num</span><span class="pun">[</span><span class="lit">2</span><span class="pun">][</span><span class="lit">2</span><span class="pun">],</span><span class="pln"> i</span><span class="pun">,</span><span class="pln"> j</span><span class="pun">;</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"Enter 4 numbers:\n"</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">2</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">j </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">2</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">j</span><span class="pun">)</span><span class="pln">
+            scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">num</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">]);</span><span class="pln">
+    </span><span class="com">// passing multi-dimensional array to displayNumbers function</span><span class="pln">
+    displayNumbers</span><span class="pun">(</span><span class="pln">num</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">void</span><span class="pln"> displayNumbers</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> num</span><span class="pun">[</span><span class="lit">2</span><span class="pun">][</span><span class="lit">2</span><span class="pun">])</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// Instead of the above line,</span><span class="pln">
+    </span><span class="com">// void displayNumbers(int num[][2]) is also valid</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> i</span><span class="pun">,</span><span class="pln"> j</span><span class="pun">;</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"Displaying:\n"</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">2</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">j </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">2</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">j</span><span class="pun">)</span><span class="pln">
+            printf</span><span class="pun">(</span><span class="str">"%d\n"</span><span class="pun">,</span><span class="pln"> num</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">]);</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter 4 numbers:
+2
+3
+4
+5
+Displaying:
+2
+3
+4
+5</samp></pre>
+</div></div></div></div>
+</div> </div>
+</div>
+</div>
+
+</div>
+</section>
+  </div>
+</body>
+</html>

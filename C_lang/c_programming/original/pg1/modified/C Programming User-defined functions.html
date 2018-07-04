@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/style/style1.css">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+<h2 class="page_title"><strong>C Programming User-defined functions</strong></h2><br><p>
+You will learn to create user-defined functions in C programming in this article.</p><br><section class="main-content">
+
+
+<div class="inside-content">
+<div class="region region-content-inside">
+<div class="block block-block" id="block-block-43">
+<div class="content">
+<style>
+.Learn C language_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Learn C language_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" style="display: none !important;"></script>
+<!-- Learn C language_Responsive_Top -->
+<ins class="adsbygoogle Learn C language_Responsive_Top" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021" style="display: none !important;">
+</ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div>
+</div>
+</div>
+<img alt="C Programming user-defined functions" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/images/c-user-defined-function.jpg" title="C Programming user-defined functions"/>
+<div class="clearfix">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/c-programming/c-user-defined-functions" class="node node-c-tutorial clearfix" id="node-140" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="C Programming User-defined functions" property="dc:title"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>A function is a block of code that performs a specific task.</p>
+<p>C allows you to define functions according to your need. These functions are known as user-defined functions. For example:</p>
+<p>Suppose, you need to create a circle and color it depending upon the radius and color. You can create two functions to solve this problem:</p>
+<ul>
+<li>createCircle() function</li>
+<li>color() function</li>
+</ul>
+<h2>Example: User-defined function</h2>
+<p>Here is a example to add two integers. To perform this task, a user-defined function <code>addNumbers()</code> is defined.</p>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> addNumbers</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> a</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> b</span><span class="pun">);</span><span class="pln">         </span><span class="com">// function prototype</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> n1</span><span class="pun">,</span><span class="pln">n2</span><span class="pun">,</span><span class="pln">sum</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enters two numbers: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d %d"</span><span class="pun">,&amp;</span><span class="pln">n1</span><span class="pun">,&amp;</span><span class="pln">n2</span><span class="pun">);</span><span class="pln">
+
+    sum </span><span class="pun">=</span><span class="pln"> addNumbers</span><span class="pun">(</span><span class="pln">n1</span><span class="pun">,</span><span class="pln"> n2</span><span class="pun">);</span><span class="pln">        </span><span class="com">// function call</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"sum = %d"</span><span class="pun">,</span><span class="pln">sum</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> addNumbers</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> a</span><span class="pun">,</span><span class="kwd">int</span><span class="pln"> b</span><span class="pun">)</span><span class="pln">         </span><span class="com">// function definition   </span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> result</span><span class="pun">;</span><span class="pln">
+    result </span><span class="pun">=</span><span class="pln"> a</span><span class="pun">+</span><span class="pln">b</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> result</span><span class="pun">;</span><span class="pln">                  </span><span class="com">// return statement</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+<h2>Function prototype</h2>
+<p>A function prototype is simply the declaration of a function that specifies function's name, parameters and return type. It doesn't contain function body.</p>
+<p>A function prototype gives information to the compiler that the function may later be used in the program.</p>
+<hr/>
+<h3>Syntax of function prototype</h3>
+<pre>returnType functionName(type1 argument1, type2 argument2,...);</pre>
+<p>In the above example, <code>int addNumbers(int a, int b);</code> is the function prototype which provides following information to the compiler:</p>
+<ol>
+<li>name of the function is <code>addNumbers()</code></li>
+<li>return type of the function is <code>int</code></li>
+<li>two arguments of type <code>int</code> are passed to the function</li>
+</ol>
+<p>The function prototype is not needed if the user-defined function is defined before the <code>main()</code> function.</p>
+<h2>Calling a function</h2>
+<p>Control of the program is transferred to the user-defined function by calling it.</p>
+<hr/>
+<h3>Syntax of function call</h3>
+<pre>functionName(argument1, argument2, ...);</pre>
+<p>In the above example, function call is made using <code>addNumbers(n1,n2);</code> statement inside the <code>main()</code>.</p>
+<h2>Function definition</h2>
+<p>Function definition contains the block of code to perform a specific task i.e. in this case, adding two numbers and returning it.</p>
+<hr/>
+<h4>Syntax of function definition</h4>
+<pre>returnType functionName(type1 argument1, type2 argument2, ...)
+{
+    //body of the function
+}
+</pre>
+<p>When a function is called, the control of the program is transferred to the function definition. And, the compiler starts executing the codes inside the body of a function.</p>
+<h2>Passing arguments to a function</h2>
+<p>In programming, argument refers to the variable passed to the function. In the above example, two variables <var>n1</var> and <var>n2</var> are passed during function call.</p>
+<p>The parameters <var>a</var> and <var>b</var> accepts the passed arguments in the function definition. These arguments are called formal parameters of the function.</p>
+<p><img alt="Passing arguments to a function" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/images/pass-arguments-c-programming.jpg" title="Passing arguments to a function"/></p>
+<p></p><div class="block-inject block-inject-1" id="block-inject-1"><div class="block block-block" id="block-block-123">
+<div class="content">
+<!-- /8095840/.2_A.34657.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth <= 768) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+<!-- /8095840/.2_A.34660.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth > 768) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div> </div>
+</div>
+</div><div class="clearfix"></div><p>The type of arguments passed to a function and the formal parameters must match, otherwise the compiler throws error.</p>
+<p>If <var>n1</var> is of char type, <var>a</var> also should be of char type. If <var>n2</var> is of float type, variable <var>b</var> also should be of float type.</p>
+<p>A function can also be called without passing an argument.</p>
+<h2>Return Statement</h2>
+<p>The return statement terminates the execution of a function and returns a value to the calling function. The program control is transferred to the calling function after return statement.</p>
+<p>In the above example, the value of variable <var>result</var> is returned to the variable <var>sum</var> in the <code>main()</code> function.</p>
+<p><img alt="Return statement of a function" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/images/c-return-statement.jpg" title="Return statement of a function"/></p>
+<hr/>
+<h3>Syntax of return statement</h3>
+<pre>return (expression);     
+</pre>
+<p>For example,</p>
+<pre>return a;
+return (a+b);</pre>
+<p>The type of value returned from the function and the return type specified in function prototype and function definition must match.</p>
+<p>Visit this page to learn more on passing arguments and returning value from a function.</p>
+</div></div></div></div>
+</div> </div>
+</div>
+</div>
+
+</div>
+</section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Introduction to C</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style/style1.css">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+<div class="col-md-7 middle-col">
+<h1>Data Structure and Algorithms - Stack</h1>
+
+<hr/>
+
+
+
+<hr/>
+<p>A stack is an Abstract Data Type (ADT), commonly used in most programming languages. It is named stack as it behaves like a real-world stack, for example – a deck of cards or a pile of plates, etc.</p>
+<img alt="Stack Example" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/stack_example.jpg"/>
+<p>A real-world stack allows operations at one end only. For example, we can place or remove a card or plate from the top of the stack only. Likewise, Stack ADT allows all data operations at one end only. At any given time, we can only access the top element of a stack.</p>
+<p>This feature makes it LIFO data structure. LIFO stands for Last-in-first-out. Here, the element which is placed (inserted or added) last, is accessed first. In stack terminology, insertion operation is called <b>PUSH</b> operation and removal operation is called <b>POP</b> operation.</p>
+<h2>Stack Representation</h2>
+<p>The following diagram depicts a stack and its operations −</p>
+<img alt="Stack Representation" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/stack_representation.jpg"/>
+<p>A stack can be implemented by means of Array, Structure, Pointer, and Linked List. Stack can either be a fixed size one or it may have a sense of dynamic resizing. Here, we are going to implement stack using arrays, which makes it a fixed size stack implementation.</p>
+<h2>Basic Operations</h2>
+<p>Stack operations may involve initializing the stack, using it and then de-initializing it. Apart from these basic stuffs, a stack is used for the following two primary operations −</p>
+<ul class="list">
+<li><p><b>push()</b> − Pushing (storing) an element on the stack.</p></li>
+<li><p><b>pop()</b> − Removing (accessing) an element from the stack.</p></li>
+</ul>
+<p>When data is PUSHed onto stack.</p>
+<p>To use a stack efficiently, we need to check the status of stack as well. For the same purpose, the following functionality is added to stacks −</p>
+<ul class="list">
+<li><p><b>peek()</b> − get the top data element of the stack, without removing it.</p></li>
+<li><p><b>isFull()</b> − check if stack is full.</p></li>
+<li><p><b>isEmpty()</b> − check if stack is empty.</p></li>
+</ul>
+<p>At all times, we maintain a pointer to the last PUSHed data on the stack. As this pointer always represents the top of the stack, hence named <b>top</b>. The <b>top</b> pointer provides top value of the stack without actually removing it.</p>
+<p>First we should learn about procedures to support stack functions −</p>
+<h3>peek()</h3>
+<p>Algorithm of peek() function −</p>
+<pre class="result notranslate">begin procedure peek
+   return stack[top]
+end procedure
+</pre>
+<p>Implementation of peek() function in C programming language −</p>
+<p><b>Example</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">int</span><span class="pln"> peek</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">return</span><span class="pln"> stack</span><span class="pun">[</span><span class="pln">top</span><span class="pun">];</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<h3>isfull()</h3>
+<p>Algorithm of isfull() function −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">begin</span><span class="pln"> procedure isfull
+
+   </span><span class="kwd">if</span><span class="pln"> top equals to MAXSIZE
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+   </span><span class="kwd">else</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pln">
+   endif
+   
+</span><span class="kwd">end</span><span class="pln"> procedure</span></pre>
+<p>Implementation of isfull() function in C programming language −</p>
+<p><b>Example</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">bool</span><span class="pln"> isfull</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">top </span><span class="pun">==</span><span class="pln"> MAXSIZE</span><span class="pun">)</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+   </span><span class="kwd">else</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<h3>isempty()</h3>
+<p>Algorithm of isempty() function −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">begin</span><span class="pln"> procedure isempty
+
+   </span><span class="kwd">if</span><span class="pln"> top less than </span><span class="lit">1</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+   </span><span class="kwd">else</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pln">
+   endif
+   
+</span><span class="kwd">end</span><span class="pln"> procedure</span></pre>
+<p>Implementation of isempty() function in C programming language is slightly different. We initialize top at -1, as the index in array starts from 0. So we check if the top is below zero or -1 to determine if the stack is empty. Here's the code −</p>
+<p><b>Example</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">bool</span><span class="pln"> isempty</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">top </span><span class="pun">==</span><span class="pln"> </span><span class="pun">-</span><span class="lit">1</span><span class="pun">)</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+   </span><span class="kwd">else</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<h2>Push Operation</h2>
+<p>The process of putting a new data element onto stack is known as a Push Operation. Push operation involves a series of steps −</p>
+<ul class="list">
+<li><p><b>Step 1</b> − Checks if the stack is full.</p></li>
+<li><p><b>Step 2</b> − If the stack is full, produces an error and exit.</p></li>
+<li><p><b>Step 3</b> − If the stack is not full, increments <b>top</b> to point next empty space.</p></li>
+<li><p><b>Step 4</b> − Adds data element to the stack location, where top is pointing.</p></li>
+<li><p><b>Step 5</b> − Returns success.</p></li>
+</ul>
+<img alt="Stack Push Operation" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/stack_push_operation.jpg"/>
+<p>If the linked list is used to implement the stack, then in step 3, we need to allocate space dynamically.</p>
+<h3>Algorithm for PUSH Operation</h3>
+<p>A simple algorithm for Push operation can be derived as follows −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">begin</span><span class="pln"> procedure push</span><span class="pun">:</span><span class="pln"> stack</span><span class="pun">,</span><span class="pln"> data
+
+   </span><span class="kwd">if</span><span class="pln"> stack </span><span class="kwd">is</span><span class="pln"> full
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">null</span><span class="pln">
+   endif
+   
+   top </span><span class="pun">←</span><span class="pln"> top </span><span class="pun">+</span><span class="pln"> </span><span class="lit">1</span><span class="pln">
+   stack</span><span class="pun">[</span><span class="pln">top</span><span class="pun">]</span><span class="pln"> </span><span class="pun">←</span><span class="pln"> data
+
+</span><span class="kwd">end</span><span class="pln"> procedure</span></pre>
+<p>Implementation of this algorithm in C, is very easy. See the following code −</p>
+<p><b>Example</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">void</span><span class="pln"> push</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> data</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">if</span><span class="pun">(!</span><span class="pln">isFull</span><span class="pun">())</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      top </span><span class="pun">=</span><span class="pln"> top </span><span class="pun">+</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">   
+      stack</span><span class="pun">[</span><span class="pln">top</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> data</span><span class="pun">;</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      printf</span><span class="pun">(</span><span class="str">"Could not insert data, Stack is full.\n"</span><span class="pun">);</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<h2>Pop Operation</h2>
+<p>Accessing the content while removing it from the stack, is known as a Pop Operation. In an array implementation of pop() operation, the data element is not actually removed, instead <b>top</b> is decremented to a lower position in the stack to point to the next value. But in linked-list implementation, pop() actually removes data element and deallocates memory space.</p>
+<p>A Pop operation may involve the following steps −</p>
+<ul class="list">
+<li><p><b>Step 1</b> − Checks if the stack is empty.</p></li>
+<li><p><b>Step 2</b> − If the stack is empty, produces an error and exit.</p></li>
+<li><p><b>Step 3</b> − If the stack is not empty, accesses the data element at which <b>top</b> is pointing.</p></li>
+<li><p><b>Step 4</b> − Decreases the value of top by 1.</p></li>
+<li><p><b>Step 5</b> − Returns success.</p></li>
+</ul>
+<img alt="Stack Pop Operation" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/stack_pop_operation.jpg"/>
+<h3>Algorithm for Pop Operation</h3>
+<p>A simple algorithm for Pop operation can be derived as follows −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">begin</span><span class="pln"> procedure pop</span><span class="pun">:</span><span class="pln"> stack
+
+   </span><span class="kwd">if</span><span class="pln"> stack </span><span class="kwd">is</span><span class="pln"> empty
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">null</span><span class="pln">
+   endif
+   
+   data </span><span class="pun">←</span><span class="pln"> stack</span><span class="pun">[</span><span class="pln">top</span><span class="pun">]</span><span class="pln">
+   top </span><span class="pun">←</span><span class="pln"> top </span><span class="pun">-</span><span class="pln"> </span><span class="lit">1</span><span class="pln">
+   </span><span class="kwd">return</span><span class="pln"> data
+
+</span><span class="kwd">end</span><span class="pln"> procedure</span></pre>
+<p>Implementation of this algorithm in C, is as follows −</p>
+<p><b>Example</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">int</span><span class="pln"> pop</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> data</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+   </span><span class="kwd">if</span><span class="pun">(!</span><span class="pln">isempty</span><span class="pun">())</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      data </span><span class="pun">=</span><span class="pln"> stack</span><span class="pun">[</span><span class="pln">top</span><span class="pun">];</span><span class="pln">
+      top </span><span class="pun">=</span><span class="pln"> top </span><span class="pun">-</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">   
+      </span><span class="kwd">return</span><span class="pln"> data</span><span class="pun">;</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      printf</span><span class="pun">(</span><span class="str">"Could not retrieve data, Stack is empty.\n"</span><span class="pun">);</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>For a complete stack program in C programming language, please <a alt="Stack Program in C" href="https://www.tutorialspoint.com/data_structures_algorithms/stack_program_in_c.htm">click here</a>.</p>
+<hr/>
+
+
+
+<hr/>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead" style="display: none !important;">
+<div class="bottomadtag" style="display: none !important;">Advertisements</div>
+<!-- /60931893/tutorial_bottom_leader_board -->
+<div id="div-gpt-ad-1510138782906-3">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1510138782906-3'); });
+</script>
+</div>
+</div>
+</div>
+
+  </div>
+
+</body>
+
+</html>
+
+

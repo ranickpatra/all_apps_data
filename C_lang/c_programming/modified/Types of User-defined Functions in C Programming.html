@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="./style/style1.css">
+  <link rel="stylesheet" href="./style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+<h2 class="page_title"><strong>Types of User-defined Functions in C Programming</strong></h2><br><p>
+In this tutorial, you will learn about different approaches you can take to solve a single problem using functions.</p><br><section class="main-content">
+
+
+<div class="inside-content">
+<div class="region region-content-inside">
+<div class="block block-block" id="block-block-43">
+<div class="content">
+<style>
+.Learn C language_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Learn C language_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" style="display: none !important;"></script>
+<!-- Learn C language_Responsive_Top -->
+<ins class="adsbygoogle Learn C language_Responsive_Top" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021" style="display: none !important;">
+</ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div>
+</div>
+</div>
+<img alt="User-defined function with different argument and return type" src="./images/user-defined-function-types.jpg" title="User-defined function types"/>
+<div class="clearfix">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/c-programming/types-user-defined-functions" class="node node-c-tutorial clearfix" id="node-139" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="Types of User-defined Functions in C Programming" property="dc:title"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>For better understanding of arguments and return value from the function, user-defined functions can be categorized as:</p>
+<ul>
+<li>Function with no arguments and no return value</li>
+<li>Function with no arguments and a return value</li>
+<li>Function with arguments and no return value</li>
+<li>Function with arguments and a return value.</li>
+</ul>
+<p>The 4 programs below check whether an integer entered by the user is a prime number or not. And, all these programs generate the same output.</p>
+<h2>Example #1: No arguments passed and no return Value</h2>
+<pre class="prettyprint prettyprinted" style="" title="Source Code of function having no arguments and no return"><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+
+</span><span class="kwd">void</span><span class="pln"> checkPrimeNumber</span><span class="pun">();</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    checkPrimeNumber</span><span class="pun">();</span><span class="pln">    </span><span class="com">// no argument is passed to prime()</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="com">// return type of the function is void becuase no value is returned from the function</span><span class="pln">
+</span><span class="kwd">void</span><span class="pln"> checkPrimeNumber</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> n</span><span class="pun">,</span><span class="pln"> i</span><span class="pun">,</span><span class="pln"> flag</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter a positive integer: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">n</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">2</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;=</span><span class="pln"> n</span><span class="pun">/</span><span class="lit">2</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">n</span><span class="pun">%</span><span class="pln">i </span><span class="pun">==</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            flag </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">flag </span><span class="pun">==</span><span class="pln"> </span><span class="lit">1</span><span class="pun">)</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%d is not a prime number."</span><span class="pun">,</span><span class="pln"> n</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">else</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%d is a prime number."</span><span class="pun">,</span><span class="pln"> n</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>The <code>checkPrimeNumber()</code> function takes input from the user, checks whether it is a prime number or not and displays it on the screen.</p>
+<p>The empty parentheses in <code>checkPrimeNumber();</code> statement inside the <code>main()</code> function indicates that no argument is passed to the function.</p>
+<p>The return type of the function is <code>void</code>. Hence, no value is returned from the function.</p>
+<h2>Example #2: No arguments passed but a return value</h2>
+<pre class="prettyprint prettyprinted" style="" title="Source code of a function with no argument passed but having a return value."><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> getInteger</span><span class="pun">();</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> n</span><span class="pun">,</span><span class="pln"> i</span><span class="pun">,</span><span class="pln"> flag </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+
+    </span><span class="com">// no argument is passed to the function</span><span class="pln">
+    </span><span class="com">// the value returned from the function is assigned to n</span><span class="pln">
+    n </span><span class="pun">=</span><span class="pln"> getInteger</span><span class="pun">();</span><span class="pln">
+
+    </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">2</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;=</span><span class="pln">n</span><span class="pun">/</span><span class="lit">2</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">n</span><span class="pun">%</span><span class="pln">i</span><span class="pun">==</span><span class="lit">0</span><span class="pun">){</span><span class="pln">
+            flag </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+            </span><span class="kwd">break</span><span class="pun">;</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">flag </span><span class="pun">==</span><span class="pln"> </span><span class="lit">1</span><span class="pun">)</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%d is not a prime number."</span><span class="pun">,</span><span class="pln"> n</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">else</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%d is a prime number."</span><span class="pun">,</span><span class="pln"> n</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="com">// getInteger() function returns integer entered by the user</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> getInteger</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> n</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter a positive integer: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">n</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="kwd">return</span><span class="pln"> n</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p></p><div class="block-inject block-inject-1" id="block-inject-1"><div class="block block-block" id="block-block-123">
+<div class="content">
+<!-- /8095840/.2_A.34657.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth <= 768) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+<!-- /8095840/.2_A.34660.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth > 768) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div> </div>
+</div>
+</div><div class="clearfix"></div><p>The empty parentheses in <code>n = getInteger();</code> statement indicates that no argument is passed to the function. And, the value returned from the function is assigned to <var>n</var>.</p>
+<p>Here, the <code>getInteger()</code> function takes input from the user and returns it. The code to check whether a number is prime or not is inside the <code>main()</code> function.</p>
+<h2>Example #3: Argument passed but no return value</h2>
+<pre class="prettyprint prettyprinted" style="" title="Source code of a function with arguments passed but no return value"><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">void</span><span class="pln"> checkPrimeAndDisplay</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> n</span><span class="pun">);</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> n</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter a positive integer: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">n</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="com">// n is passed to the function</span><span class="pln">
+    checkPrimeAndDisplay</span><span class="pun">(</span><span class="pln">n</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="com">// void indicates that no value is returned from the function</span><span class="pln">
+</span><span class="kwd">void</span><span class="pln"> checkPrimeAndDisplay</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> n</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> i</span><span class="pun">,</span><span class="pln"> flag </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+
+    </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">2</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;=</span><span class="pln"> n</span><span class="pun">/</span><span class="lit">2</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">n</span><span class="pun">%</span><span class="pln">i </span><span class="pun">==</span><span class="pln"> </span><span class="lit">0</span><span class="pun">){</span><span class="pln">
+            flag </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+            </span><span class="kwd">break</span><span class="pun">;</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">flag </span><span class="pun">==</span><span class="pln"> </span><span class="lit">1</span><span class="pun">)</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%d is not a prime number."</span><span class="pun">,</span><span class="pln">n</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">else</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%d is a prime number."</span><span class="pun">,</span><span class="pln"> n</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>The integer value entered by the user is passed to <code>checkPrimeAndDisplay()</code> function.</p>
+<p>Here, the <code>checkPrimeAndDisplay()</code> function checks whether the argument passed is a prime number or not and displays the appropriate message.</p>
+<h2>Example #4: Argument passed and a return value</h2>
+<pre class="prettyprint prettyprinted" style="" title="Function wit argument and a return value"><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> checkPrimeNumber</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> n</span><span class="pun">);</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> n</span><span class="pun">,</span><span class="pln"> flag</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter a positive integer: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">n</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="com">// n is passed to the checkPrimeNumber() function</span><span class="pln">
+    </span><span class="com">// the value returned from the function is assigned to flag variable</span><span class="pln">
+    flag </span><span class="pun">=</span><span class="pln"> checkPrimeNumber</span><span class="pun">(</span><span class="pln">n</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">flag</span><span class="pun">==</span><span class="lit">1</span><span class="pun">)</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%d is not a prime number"</span><span class="pun">,</span><span class="pln">n</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">else</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%d is a prime number"</span><span class="pun">,</span><span class="pln">n</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="com">// integer is returned from the function</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> checkPrimeNumber</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> n</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="com">/* Integer value is returned from function checkPrimeNumber() */</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> i</span><span class="pun">;</span><span class="pln">
+
+    </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">2</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;=</span><span class="pln"> n</span><span class="pun">/</span><span class="lit">2</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">n</span><span class="pun">%</span><span class="pln">i </span><span class="pun">==</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+            </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+<p>The input from the user is passed to <code>checkPrimeNumber()</code> function.</p>
+<p>The <code>checkPrimeNumber()</code> function checks whether the passed argument is prime or not. If the passed argument is a prime number, the function returns 0. If the passed argument is a non-prime number, the function returns 1. The return value is assigned to <var>flag</var> variable.</p>
+<p>Then, the appropriate message is displayed from the <code>main()</code> function.</p>
+<h2>Which approach is better?</h2>
+<p>Well, it depends on the problem you are trying to solve. In case of this problem, the last approach is better.</p>
+<p>A function should perform a specific task. The <code>checkPrimeNumber()</code> function doesn't take input from the user nor it displays the appropriate message. It only checks whether a number is prime or not, which makes code modular, easy to understand and debug.</p>
+</div></div></div></div>
+</div> </div>
+</div>
+</div>
+
+</div>
+</section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/style/style1.css">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+<h2 class="page_title"><strong>C Programming Recursion </strong></h2><br><p>
+In this tutorial, you will learn to create a recursive function in C programming.</p><br><section class="main-content">
+
+
+<div class="inside-content">
+<div class="region region-content-inside">
+<div class="block block-block" id="block-block-43">
+<div class="content">
+<style>
+.Learn C language_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Learn C language_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" style="display: none !important;"></script>
+<!-- Learn C language_Responsive_Top -->
+<ins class="adsbygoogle Learn C language_Responsive_Top" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021" style="display: none !important;">
+</ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div>
+</div>
+</div>
+<img alt="Recursion in C programming" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/images/c-recursion_0.jpg" title="Recursion in C programming"/>
+<div class="clearfix">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/c-programming/c-recursion" class="node node-c-tutorial clearfix" id="node-137" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="C Programming Recursion " property="dc:title"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>A function that calls itself is known as a recursive function. And, this technique is known as recursion.</p>
+<hr/>
+<h3>How recursion works?</h3>
+<pre>void recurse()
+{
+    ... .. ...
+    recurse();
+    ... .. ...
+}
+
+int main()
+{
+    ... .. ...
+    recurse();
+    ... .. ...
+}</pre>
+<p></p><div class="block-inject block-inject-1" id="block-inject-1"><div class="block block-block" id="block-block-123">
+<div class="content">
+<!-- /8095840/.2_A.34657.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth <= 768) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+<!-- /8095840/.2_A.34660.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth > 768) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div> </div>
+</div>
+</div><div class="clearfix"></div><p><img alt="How recursion works in C programming?" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/images/how-recursion-works-c_0.jpg"/></p>
+<p>The recursion continues until some condition is met to prevent it.</p>
+<p>To prevent infinite recursion, if...else statement (or similar approach) can be used where one branch makes the recursive call and other doesn't.</p>
+<h3>Example: Sum of Natural Numbers Using Recursion</h3>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> sum</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> n</span><span class="pun">);</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> number</span><span class="pun">,</span><span class="pln"> result</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter a positive integer: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">number</span><span class="pun">);</span><span class="pln">
+
+    result </span><span class="pun">=</span><span class="pln"> sum</span><span class="pun">(</span><span class="pln">number</span><span class="pun">);</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"sum=%d"</span><span class="pun">,</span><span class="pln"> result</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> sum</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> num</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">num</span><span class="pun">!=</span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> num </span><span class="pun">+</span><span class="pln"> sum</span><span class="pun">(</span><span class="pln">num</span><span class="pun">-</span><span class="lit">1</span><span class="pun">);</span><span class="pln"> </span><span class="com">// sum() function calls itself</span><span class="pln">
+    </span><span class="kwd">else</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> num</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter a positive integer:
+3
+6</samp></pre>
+<p>Initially, the <code>sum()</code> is called from the <code>main()</code> function with <var>number</var> passed as an argument.</p>
+<p>Suppose, the value of <var>num</var> is 3 initially. During next function call, 2 is passed to the <code>sum()</code> function. This process continues until <var>num</var> is equal to 0.</p>
+<p>When <var>num</var> is equal to 0, the if condition fails and the else part is executed returning the sum of integers to the <code>main()</code> function.</p>
+<p><img alt="Calculation of sum of natural number using recursion" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/images/natural-numbers-sum-recursion_0.jpg" style="font-size: 13.008px; line-height: 1.538em;"/></p>
+<hr/>
+<h3>Advantages and Disadvantages of Recursion</h3>
+<p>Recursion makes program elegant and cleaner. All algorithms can be defined recursively which makes it easier to visualize and prove. </p>
+<p>If the speed of the program is vital then, you should avoid using recursion. Recursions use more memory and are generally slow. Instead, you can use loop.</p>
+</div></div></div></div>
+</div> </div>
+</div>
+</div>
+
+</div>
+</section>
+  </div>
+</body>
+</html>

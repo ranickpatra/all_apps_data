@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/style/style1.css">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+<h2 class="page_title"><strong>C Programming Files I/O</strong></h2><br><p>
+There are a large number of functions to handle file I/O (Input Output) in C. In this tutorial, you will learn to handle standard I/O in C using fprintf(), fscanf(), fread(), fwrite(), fseek.and more.</p><br><section class="main-content">
+
+
+<div class="inside-content">
+<div class="region region-content-inside">
+<div class="block block-block" id="block-block-43">
+<div class="content">
+<style>
+.Learn C language_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Learn C language_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" style="display: none !important;"></script>
+<!-- Learn C language_Responsive_Top -->
+<ins class="adsbygoogle Learn C language_Responsive_Top" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021" style="display: none !important;">
+</ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div>
+</div>
+</div>
+<img alt="C Programming Files Input/Output" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/images/c-file-input-output.jpg" title="C Programming Files I/O"/>
+<div class="clearfix">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/c-programming/c-file-input-output" class="node node-c-tutorial clearfix" id="node-148" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="C Programming Files I/O" property="dc:title"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>In C programming, file is a place on your physical disk where information is stored.</p>
+<h2>Why files are needed?</h2>
+<ul>
+<li>When a program is terminated, the entire data is lost. Storing in a file will preserve your data even if the program terminates.</li>
+<li>If you have to enter a large number of data, it will take a lot of time to enter them all.<br/>
+		However, if you have a file containing all the data, you can easily access the contents of the file using few commands in C.</li>
+<li>You can easily move your data from one computer to another without any changes.</li>
+</ul>
+<h2>Types of Files</h2>
+<p>When dealing with files, there are two types of files you should know about:</p>
+<ol>
+<li>Text files</li>
+<li>Binary files</li>
+</ol>
+<h3>1. Text files</h3>
+<p>Text files are the normal .txt files that you can easily create using Notepad or any simple text editors.</p>
+<p>When you open those files, you'll see all the contents within the file as plain text. You can easily edit or delete the contents.</p>
+<p>They take minimum effort to maintain, are easily readable, and provide least security and takes bigger storage space.</p>
+<h3>2. Binary files</h3>
+<p>Binary files are mostly the .bin files in your computer.</p>
+<p>Instead of storing data in plain text, they store it in the binary form (0's and 1's).</p>
+<p>They can hold higher amount of data, are not readable easily and provides a better security than text files.</p>
+<h2>File Operations</h2>
+<p>In C, you can perform four major operations on the file, either text or binary:</p>
+<ol>
+<li>Creating a new file</li>
+<li>Opening an existing file</li>
+<li>Closing a file</li>
+<li>Reading from and writing information to a file</li>
+</ol>
+<h2>Working with files</h2>
+<p>When working with files, you need to declare a pointer of type file. This declaration is needed for communication between the file and program.</p>
+<pre>FILE *fptr;</pre>
+<h2>Opening a file - for creation and edit</h2>
+<p>Opening a file is performed using the library function in the <strong>"stdio.h"</strong> header file: fopen().</p>
+<p>The syntax for opening a file in standard I/O is:</p>
+<pre>ptr = fopen("fileopen","mode")
+</pre>
+<p>For Example:</p>
+<pre>fopen("E:\\cprogram\\newprogram.txt","w");
+
+fopen("E:\\cprogram\\oldprogram.bin","rb");</pre>
+<ul>
+<li>Let's suppose the file <code>newprogram.txt</code> doesn't exist in the location <code>E:\cprogram</code>. The first function creates a new file named <code>newprogram.txt</code> and opens it for writing as per the mode 'w'.<br/>
+		The writing mode allows you to create and edit (overwrite) the contents of the file.</li>
+<li>Now let's suppose the second binary file <code>oldprogram.bin</code> exists in the location <code>E:\cprogram</code>. The second function opens the existing file for reading in binary mode 'rb'.<br/>
+		The reading mode only allows you to read the file, you cannot write into the file.</li>
+</ul>
+<table summary="Different opening modes for standard input/output in C programming.">
+<caption>Opening Modes in Standard I/O</caption>
+<thead>
+<tr>
+<th>File Mode</th>
+<th>Meaning of Mode</th>
+<th>During Inexistence of file</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r</td>
+<td>Open for reading.</td>
+<td>If the file does not exist, fopen() returns NULL.</td>
+</tr>
+<tr>
+<td>rb</td>
+<td>Open for reading in binary mode.</td>
+<td>If the file does not exist, fopen() returns NULL.</td>
+</tr>
+<tr>
+<td>w</td>
+<td>Open for writing.</td>
+<td>If the file exists, its contents are overwritten. If the file does not exist, it will be created.</td>
+</tr>
+<tr>
+<td>wb</td>
+<td>Open for writing in binary mode.</td>
+<td>If the file exists, its contents are overwritten. If the file does not exist, it will be created.</td>
+</tr>
+<tr>
+<td>a</td>
+<td>Open for append. i.e, Data is added to end of file.</td>
+<td>If the file does not exists, it will be created.</td>
+</tr>
+<tr>
+<td>ab</td>
+<td>Open for append in binary mode. i.e, Data is added to end of file.</td>
+<td>If the file does not exists, it will be created.</td>
+</tr>
+<tr>
+<td>r+</td>
+<td>Open for both reading and writing.</td>
+<td>If the file does not exist, fopen() returns NULL.</td>
+</tr>
+<tr>
+<td>rb+</td>
+<td>Open for both reading and writing in binary mode.</td>
+<td>If the file does not exist, fopen() returns NULL.</td>
+</tr>
+<tr>
+<td>w+</td>
+<td>Open for both reading and writing.</td>
+<td>If the file exists, its contents are overwritten. If the file does not exist, it will be created.</td>
+</tr>
+<tr>
+<td>wb+</td>
+<td>Open for both reading and writing in binary mode.</td>
+<td>If the file exists, its contents are overwritten. If the file does not exist, it will be created.</td>
+</tr>
+<tr>
+<td>a+</td>
+<td>Open for both reading and appending.</td>
+<td>If the file does not exists, it will be created.</td>
+</tr>
+<tr>
+<td>ab+</td>
+<td>Open for both reading and appending in binary mode.</td>
+<td>If the file does not exists, it will be created.</td>
+</tr>
+</tbody>
+</table>
+<h2>Closing a File</h2>
+<p>The file (both text and binary) should be closed after reading/writing.</p>
+<p>Closing a file is performed using library function fclose().</p>
+<pre>fclose(fptr); //fptr is the file pointer associated with file to be closed.</pre>
+<h2>Reading and writing to a text file</h2>
+<p>For reading and writing to a text file, we use the functions <code>fprintf()</code> and <code>fscanf().</code></p>
+<p>They are just the file versions of <code>printf()</code> and <code>scanf()</code>. The only difference is that, fprint and fscanf expects a pointer to the structure FILE.</p>
+<h3>Writing to a text file</h3>
+<p><strong>Example 1: Write to a text file using fprintf()</strong></p>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> num</span><span class="pun">;</span><span class="pln">
+   FILE </span><span class="pun">*</span><span class="pln">fptr</span><span class="pun">;</span><span class="pln">
+   fptr </span><span class="pun">=</span><span class="pln"> fopen</span><span class="pun">(</span><span class="str">"C:\\program.txt"</span><span class="pun">,</span><span class="str">"w"</span><span class="pun">);</span><span class="pln">
+
+   </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">fptr </span><span class="pun">==</span><span class="pln"> NULL</span><span class="pun">)</span><span class="pln">
+   </span><span class="pun">{</span><span class="pln">
+      printf</span><span class="pun">(</span><span class="str">"Error!"</span><span class="pun">);</span><span class="pln">   
+      </span><span class="kwd">exit</span><span class="pun">(</span><span class="lit">1</span><span class="pun">);</span><span class="pln">             
+   </span><span class="pun">}</span><span class="pln">
+
+   printf</span><span class="pun">(</span><span class="str">"Enter num: "</span><span class="pun">);</span><span class="pln">
+   scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">num</span><span class="pun">);</span><span class="pln">
+
+   fprintf</span><span class="pun">(</span><span class="pln">fptr</span><span class="pun">,</span><span class="str">"%d"</span><span class="pun">,</span><span class="pln">num</span><span class="pun">);</span><span class="pln">
+   fclose</span><span class="pun">(</span><span class="pln">fptr</span><span class="pun">);</span><span class="pln">
+
+   </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+<p>This program takes a number from user and stores in the file <code>program.txt</code>.</p>
+<p></p><div class="block-inject block-inject-1" id="block-inject-1"><div class="block block-block" id="block-block-123">
+<div class="content">
+<!-- /8095840/.2_A.34657.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth <= 768) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+<!-- /8095840/.2_A.34660.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth > 768) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div> </div>
+</div>
+</div><div class="clearfix"></div><p>After you compile and run this program, you can see a text file program.txt created in C drive of your computer. When you open the file, you can see the integer you entered.</p>
+<h3>Reading from a text file</h3>
+<p><strong>Example 2: Read from a text file using fscanf()</strong></p>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> num</span><span class="pun">;</span><span class="pln">
+   FILE </span><span class="pun">*</span><span class="pln">fptr</span><span class="pun">;</span><span class="pln">
+
+   </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">((</span><span class="pln">fptr </span><span class="pun">=</span><span class="pln"> fopen</span><span class="pun">(</span><span class="str">"C:\\program.txt"</span><span class="pun">,</span><span class="str">"r"</span><span class="pun">))</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> NULL</span><span class="pun">){</span><span class="pln">
+       printf</span><span class="pun">(</span><span class="str">"Error! opening file"</span><span class="pun">);</span><span class="pln">
+
+       </span><span class="com">// Program exits if the file pointer returns NULL.</span><span class="pln">
+       </span><span class="kwd">exit</span><span class="pun">(</span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+
+   fscanf</span><span class="pun">(</span><span class="pln">fptr</span><span class="pun">,</span><span class="str">"%d"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">num</span><span class="pun">);</span><span class="pln">
+
+   printf</span><span class="pun">(</span><span class="str">"Value of n=%d"</span><span class="pun">,</span><span class="pln"> num</span><span class="pun">);</span><span class="pln">
+   fclose</span><span class="pun">(</span><span class="pln">fptr</span><span class="pun">);</span><span class="pln"> 
+  
+   </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>This program reads the integer present in the <code>program.txt</code> file and prints it onto the screen.</p>
+<p>If you succesfully created the file from <strong>Example 1</strong>, running this program will get you the integer you entered.</p>
+<p>Other functions like <code>fgetchar()</code>, <code>fputc()</code> etc. can be used in similar way.</p>
+<h2>Reading and writing to a binary file</h2>
+<p>Functions <code>fread()</code> and <code>fwrite()</code> are used for reading from and writing to a file on the disk respectively in case of binary files.</p>
+<h3>Writing to a binary file</h3>
+<p>To write into a binary file, you need to use the function fwrite(). The functions takes four arguments: Address of data to be written in disk, Size of data to be written in disk, number of such type of data and pointer to the file where you want to write.</p>
+<pre>fwrite(address_data,size_data,numbers_data,pointer_to_file);</pre>
+<p><strong>Example 3: Writing to a binary file using fwrite()</strong></p>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+
+</span><span class="kwd">struct</span><span class="pln"> threeNum
+</span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> n1</span><span class="pun">,</span><span class="pln"> n2</span><span class="pun">,</span><span class="pln"> n3</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">};</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> n</span><span class="pun">;</span><span class="pln">
+   </span><span class="kwd">struct</span><span class="pln"> threeNum num</span><span class="pun">;</span><span class="pln">
+   FILE </span><span class="pun">*</span><span class="pln">fptr</span><span class="pun">;</span><span class="pln">
+
+   </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">((</span><span class="pln">fptr </span><span class="pun">=</span><span class="pln"> fopen</span><span class="pun">(</span><span class="str">"C:\\program.bin"</span><span class="pun">,</span><span class="str">"wb"</span><span class="pun">))</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> NULL</span><span class="pun">){</span><span class="pln">
+       printf</span><span class="pun">(</span><span class="str">"Error! opening file"</span><span class="pun">);</span><span class="pln">
+
+       </span><span class="com">// Program exits if the file pointer returns NULL.</span><span class="pln">
+       </span><span class="kwd">exit</span><span class="pun">(</span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+
+   </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">n </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln"> n </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">5</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">n</span><span class="pun">)</span><span class="pln">
+   </span><span class="pun">{</span><span class="pln">
+      num</span><span class="pun">.</span><span class="pln">n1 </span><span class="pun">=</span><span class="pln"> n</span><span class="pun">;</span><span class="pln">
+      num</span><span class="pun">.</span><span class="pln">n2 </span><span class="pun">=</span><span class="pln"> </span><span class="lit">5n</span><span class="pun">;</span><span class="pln">
+      num</span><span class="pun">.</span><span class="pln">n3 </span><span class="pun">=</span><span class="pln"> </span><span class="lit">5n</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+      fwrite</span><span class="pun">(&amp;</span><span class="pln">num</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">sizeof</span><span class="pun">(</span><span class="kwd">struct</span><span class="pln"> threeNum</span><span class="pun">),</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln"> fptr</span><span class="pun">);</span><span class="pln"> 
+   </span><span class="pun">}</span><span class="pln">
+   fclose</span><span class="pun">(</span><span class="pln">fptr</span><span class="pun">);</span><span class="pln"> 
+  
+   </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>In this program, you create a new file <code>program.bin</code> in the C drive.</p>
+<p>We declare a structure <code>threeNum</code> with three numbers - <var>n1, n2 and n3</var>, and define it in the main function as num.</p>
+<p>Now, inside the for loop, we store the value into the file using fwrite.</p>
+<p>The first parameter takes the address of <var>num</var> and the second parameter takes the size of the structure <code>threeNum</code>.</p>
+<p>Since, we're only inserting one instance of <var>num</var>, the third parameter is <code>1</code>. And, the last parameter <code>*fptr</code> points to the file we're storing the data.</p>
+<p>Finally, we close the file.</p>
+<h3>Reading from a binary file</h3>
+<p>Function <code>fread()</code> also take 4 arguments similar to <code>fwrite()</code> function as above.</p>
+<pre>fread(address_data,size_data,numbers_data,pointer_to_file);</pre>
+<p><strong>Example 4: Reading from a binary file using fread()</strong></p>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+
+</span><span class="kwd">struct</span><span class="pln"> threeNum
+</span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> n1</span><span class="pun">,</span><span class="pln"> n2</span><span class="pun">,</span><span class="pln"> n3</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">};</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> n</span><span class="pun">;</span><span class="pln">
+   </span><span class="kwd">struct</span><span class="pln"> threeNum num</span><span class="pun">;</span><span class="pln">
+   FILE </span><span class="pun">*</span><span class="pln">fptr</span><span class="pun">;</span><span class="pln">
+
+   </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">((</span><span class="pln">fptr </span><span class="pun">=</span><span class="pln"> fopen</span><span class="pun">(</span><span class="str">"C:\\program.bin"</span><span class="pun">,</span><span class="str">"rb"</span><span class="pun">))</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> NULL</span><span class="pun">){</span><span class="pln">
+       printf</span><span class="pun">(</span><span class="str">"Error! opening file"</span><span class="pun">);</span><span class="pln">
+
+       </span><span class="com">// Program exits if the file pointer returns NULL.</span><span class="pln">
+       </span><span class="kwd">exit</span><span class="pun">(</span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+
+   </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">n </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln"> n </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">5</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">n</span><span class="pun">)</span><span class="pln">
+   </span><span class="pun">{</span><span class="pln">
+      fread</span><span class="pun">(&amp;</span><span class="pln">num</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">sizeof</span><span class="pun">(</span><span class="kwd">struct</span><span class="pln"> threeNum</span><span class="pun">),</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln"> fptr</span><span class="pun">);</span><span class="pln"> 
+      printf</span><span class="pun">(</span><span class="str">"n1: %d\tn2: %d\tn3: %d"</span><span class="pun">,</span><span class="pln"> num</span><span class="pun">.</span><span class="pln">n1</span><span class="pun">,</span><span class="pln"> num</span><span class="pun">.</span><span class="pln">n2</span><span class="pun">,</span><span class="pln"> num</span><span class="pun">.</span><span class="pln">n3</span><span class="pun">);</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+   fclose</span><span class="pun">(</span><span class="pln">fptr</span><span class="pun">);</span><span class="pln"> 
+  
+   </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>In this program, you read the same file <code>program.bin</code> and loop through the records one by one.</p>
+<p>In simple terms, you read one <code>threeNum</code> record of <code>threeNum</code> size from the file pointed by <var>*fptr</var> into the structure <var>num</var>.</p>
+<p>You'll get the same records you inserted in Example 3.</p>
+<h2>Getting data using fseek()</h2>
+<p>If you have many records inside a file and need to access a record at a specific position, you need to loop through all the records before it to get the record.</p>
+<p>This will waste a lot of memory and operation time. An easier way to get to the required data can be achieved using fseek().</p>
+<p>As the name suggests, fseek() seeks the cursor to the given record in the file.</p>
+<h3>Syntax of fseek()</h3>
+<pre>fseek(FILE * stream, long int offset, int whence)</pre>
+<p>The first parameter stream is the pointer to the file. The second parameter is the position of the record to be found, and the third parameter specifies the location where the offset starts.</p>
+<table summary="Different Whence in fseek.">
+<caption>Different Whence in fseek</caption>
+<thead>
+<tr>
+<th>Whence</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SEKK_SET</td>
+<td>Starts the offset from the beginning of the file.</td>
+</tr>
+<tr>
+<td>SEKK_END</td>
+<td>Starts the offset from the end of the file.</td>
+</tr>
+<tr>
+<td>SEKK_CUR</td>
+<td>Starts the offset from the current location of the cursor in the file.</td>
+</tr>
+</tbody>
+</table>
+<h3>Example of fseek()</h3>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+
+</span><span class="kwd">struct</span><span class="pln"> threeNum
+</span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> n1</span><span class="pun">,</span><span class="pln"> n2</span><span class="pun">,</span><span class="pln"> n3</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">};</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> n</span><span class="pun">;</span><span class="pln">
+   </span><span class="kwd">struct</span><span class="pln"> threeNum num</span><span class="pun">;</span><span class="pln">
+   FILE </span><span class="pun">*</span><span class="pln">fptr</span><span class="pun">;</span><span class="pln">
+
+   </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">((</span><span class="pln">fptr </span><span class="pun">=</span><span class="pln"> fopen</span><span class="pun">(</span><span class="str">"C:\\program.bin"</span><span class="pun">,</span><span class="str">"rb"</span><span class="pun">))</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> NULL</span><span class="pun">){</span><span class="pln">
+       printf</span><span class="pun">(</span><span class="str">"Error! opening file"</span><span class="pun">);</span><span class="pln">
+
+       </span><span class="com">// Program exits if the file pointer returns NULL.</span><span class="pln">
+       </span><span class="kwd">exit</span><span class="pun">(</span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+   
+   </span><span class="com">// Moves the cursor to the end of the file</span><span class="pln">
+   fseek</span><span class="pun">(</span><span class="pln">fptr</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">sizeof</span><span class="pun">(</span><span class="kwd">struct</span><span class="pln"> threeNum</span><span class="pun">),</span><span class="pln"> SEEK_END</span><span class="pun">);</span><span class="pln">
+
+   </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">n </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln"> n </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">5</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">n</span><span class="pun">)</span><span class="pln">
+   </span><span class="pun">{</span><span class="pln">
+      fread</span><span class="pun">(&amp;</span><span class="pln">num</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">sizeof</span><span class="pun">(</span><span class="kwd">struct</span><span class="pln"> threeNum</span><span class="pun">),</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln"> fptr</span><span class="pun">);</span><span class="pln"> 
+      printf</span><span class="pun">(</span><span class="str">"n1: %d\tn2: %d\tn3: %d"</span><span class="pun">,</span><span class="pln"> num</span><span class="pun">.</span><span class="pln">n1</span><span class="pun">,</span><span class="pln"> num</span><span class="pun">.</span><span class="pln">n2</span><span class="pun">,</span><span class="pln"> num</span><span class="pun">.</span><span class="pln">n3</span><span class="pun">);</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+   fclose</span><span class="pun">(</span><span class="pln">fptr</span><span class="pun">);</span><span class="pln"> 
+  
+   </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>This program will start reading the records from the file <code>program.bin</code> in the reverse order (last to first) and prints it.</p>
+</div></div></div></div>
+</div> </div>
+</div>
+</div>
+
+</div>
+</section>
+  </div>
+</body>
+</html>

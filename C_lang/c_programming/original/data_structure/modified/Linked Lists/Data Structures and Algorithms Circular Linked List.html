@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Introduction to C</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style/style1.css">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+<div class="col-md-7 middle-col" style="height: 2593px;">
+<h1>Data Structure - Circular Linked List</h1>
+
+<hr/>
+
+
+
+<hr/>
+<p>Circular Linked List is a variation of Linked list in which the first element points to the last element and the last element points to the first element. Both Singly Linked List and Doubly Linked List can be made into a circular linked list.</p>
+<h2>Singly Linked List as Circular</h2>
+<p>In singly linked list, the next pointer of the last node points to the first node.</p>
+<img alt="Singly Linked List as Circular Linked List" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/singly_circular_linked_list.jpg"/>
+<h2>Doubly Linked List as Circular</h2>
+<p>In doubly linked list, the next pointer of the last node points to the first node and the previous pointer of the first node points to the last node making the circular in both directions.</p>
+<img alt="Doubly Linked List as Circular Linked List" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/doubly_circular_linked_list.jpg"/>
+<p>As per the above illustration, following are the important points to be considered.</p>
+<ul class="list">
+<li><p>The last link's next points to the first link of the list in both cases of singly as well as doubly linked list.</p></li>
+<li><p>The first link's previous points to the last of the list in case of doubly linked list.</p></li>
+</ul>
+<h2>Basic Operations</h2>
+<p>Following are the important operations supported by a circular list.</p>
+<ul class="list">
+<li><p><b>insert</b> − Inserts an element at the start of the list.</p></li>
+<li><p><b>delete</b> − Deletes an element from the start of the list.</p></li>
+<li><p><b>display</b> − Displays the list.</p></li>
+</ul>
+<h2>Insertion Operation</h2>
+<p>Following code demonstrates the insertion operation in a circular linked list based on single linked list.</p>
+<h3>Example</h3>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="com">//insert link at the first location</span><span class="pln">
+</span><span class="kwd">void</span><span class="pln"> insertFirst</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> key</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> data</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="com">//create a link</span><span class="pln">
+   </span><span class="kwd">struct</span><span class="pln"> node </span><span class="pun">*</span><span class="pln">link </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">struct</span><span class="pln"> node</span><span class="pun">*)</span><span class="pln"> malloc</span><span class="pun">(</span><span class="kwd">sizeof</span><span class="pun">(</span><span class="kwd">struct</span><span class="pln"> node</span><span class="pun">));</span><span class="pln">
+   link</span><span class="pun">-&gt;</span><span class="pln">key </span><span class="pun">=</span><span class="pln"> key</span><span class="pun">;</span><span class="pln">
+   link</span><span class="pun">-&gt;</span><span class="pln">data</span><span class="pun">=</span><span class="pln"> data</span><span class="pun">;</span><span class="pln">
+	
+   </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">isEmpty</span><span class="pun">())</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      head </span><span class="pun">=</span><span class="pln"> link</span><span class="pun">;</span><span class="pln">
+      head</span><span class="pun">-&gt;</span><span class="kwd">next</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> head</span><span class="pun">;</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="com">//point it to old first node</span><span class="pln">
+      link</span><span class="pun">-&gt;</span><span class="kwd">next</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> head</span><span class="pun">;</span><span class="pln">
+		
+      </span><span class="com">//point first to new first node</span><span class="pln">
+      head </span><span class="pun">=</span><span class="pln"> link</span><span class="pun">;</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">   
+</span><span class="pun">}</span></pre>
+<h2>Deletion Operation</h2>
+<p>Following code demonstrates the deletion operation in a circular linked list based on single linked list.</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="com">//delete first item</span><span class="pln">
+</span><span class="kwd">struct</span><span class="pln"> node </span><span class="pun">*</span><span class="pln"> deleteFirst</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="com">//save reference to first link</span><span class="pln">
+   </span><span class="kwd">struct</span><span class="pln"> node </span><span class="pun">*</span><span class="pln">tempLink </span><span class="pun">=</span><span class="pln"> head</span><span class="pun">;</span><span class="pln">
+	
+   </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">head</span><span class="pun">-&gt;</span><span class="kwd">next</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> head</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">  
+      head </span><span class="pun">=</span><span class="pln"> NULL</span><span class="pun">;</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> tempLink</span><span class="pun">;</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">     
+
+   </span><span class="com">//mark next to first link as first </span><span class="pln">
+   head </span><span class="pun">=</span><span class="pln"> head</span><span class="pun">-&gt;</span><span class="kwd">next</span><span class="pun">;</span><span class="pln">
+	
+   </span><span class="com">//return the deleted link</span><span class="pln">
+   </span><span class="kwd">return</span><span class="pln"> tempLink</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<h2>Display List Operation</h2>
+<p>Following code demonstrates the display list operation in a circular linked list.</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="com">//display the list</span><span class="pln">
+</span><span class="kwd">void</span><span class="pln"> printList</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">struct</span><span class="pln"> node </span><span class="pun">*</span><span class="pln">ptr </span><span class="pun">=</span><span class="pln"> head</span><span class="pun">;</span><span class="pln">
+   printf</span><span class="pun">(</span><span class="str">"\n[ "</span><span class="pun">);</span><span class="pln">
+	
+   </span><span class="com">//start from the beginning</span><span class="pln">
+   </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">head </span><span class="pun">!=</span><span class="pln"> NULL</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="kwd">while</span><span class="pun">(</span><span class="pln">ptr</span><span class="pun">-&gt;</span><span class="kwd">next</span><span class="pln"> </span><span class="pun">!=</span><span class="pln"> ptr</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">     
+         printf</span><span class="pun">(</span><span class="str">"(%d,%d) "</span><span class="pun">,</span><span class="pln">ptr</span><span class="pun">-&gt;</span><span class="pln">key</span><span class="pun">,</span><span class="pln">ptr</span><span class="pun">-&gt;</span><span class="pln">data</span><span class="pun">);</span><span class="pln">
+         ptr </span><span class="pun">=</span><span class="pln"> ptr</span><span class="pun">-&gt;</span><span class="kwd">next</span><span class="pun">;</span><span class="pln">
+      </span><span class="pun">}</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+	
+   printf</span><span class="pun">(</span><span class="str">" ]"</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>To know about its implementation in C programming language, please <a href="https://www.tutorialspoint.com/data_structures_algorithms/circular_linked_list_program_in_c.htm">click here</a>.</p>
+<hr/>
+
+
+
+<hr/>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead" style="display: none !important;">
+<div class="bottomadtag" style="display: none !important;">Advertisements</div>
+<!-- /60931893/tutorial_bottom_leader_board -->
+<div id="div-gpt-ad-1510138782906-3">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1510138782906-3'); });
+</script>
+</div>
+</div>
+</div>
+
+  </div>
+
+</body>
+
+</html>
+
+

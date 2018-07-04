@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/style/style1.css">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+<h2 class="page_title"><strong>C Call by Reference: Using pointers</strong></h2><br><p>
+In this article, you'll learn to pass pointers as an argument to the function, and use it efficiently in your program.</p><br><section class="main-content">
+
+
+<div class="inside-content">
+<div class="region region-content-inside">
+<div class="block block-block" id="block-block-43">
+<div class="content">
+<style>
+.Learn C language_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Learn C language_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" style="display: none !important;"></script>
+<!-- Learn C language_Responsive_Top -->
+<ins class="adsbygoogle Learn C language_Responsive_Top" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021" style="display: none !important;">
+</ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div>
+</div>
+</div>
+<img alt="C Programming Pointers and Functions" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/images/c-pointers-functions.jpg" title="C Programming Pointers and Functions"/>
+<div class="clearfix">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/c-programming/c-pointer-functions" class="node node-c-tutorial clearfix" id="node-156" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="C Call by Reference: Using pointers" property="dc:title"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>When a pointer is passed as an argument to a function, address of the memory location is passed instead of the value.</p>
+<p>This is because, pointer stores the location of the memory, and not the value.</p>
+<div>
+<h3>Example of Pointer And Functions</h3>
+<p><strong>Program to swap two number using call by reference.</strong></p>
+<pre class="prettyprint prettyprinted" style=""><code><span class="pln"> </span><span class="com">/* C Program to swap two numbers using pointers and function. */</span><span class="pln">
+</span><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">void</span><span class="pln"> swap</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> </span><span class="pun">*</span><span class="pln">n1</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> </span><span class="pun">*</span><span class="pln">n2</span><span class="pun">);</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> num1 </span><span class="pun">=</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln"> num2 </span><span class="pun">=</span><span class="pln"> </span><span class="lit">10</span><span class="pun">;</span><span class="pln">
+
+    </span><span class="com">// address of num1 and num2 is passed to the swap function</span><span class="pln">
+    swap</span><span class="pun">(</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">num1</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">num2</span><span class="pun">);</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"Number1 = %d\n"</span><span class="pun">,</span><span class="pln"> num1</span><span class="pun">);</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"Number2 = %d"</span><span class="pun">,</span><span class="pln"> num2</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">void</span><span class="pln"> swap</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> n1</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> n2</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// pointer n1 and n2 points to the address of num1 and num2 respectively</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> temp</span><span class="pun">;</span><span class="pln">
+    temp </span><span class="pun">=</span><span class="pln"> </span><span class="pun">*</span><span class="pln">n1</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">*</span><span class="pln">n1 </span><span class="pun">=</span><span class="pln"> </span><span class="pun">*</span><span class="pln">n2</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">*</span><span class="pln">n2 </span><span class="pun">=</span><span class="pln"> temp</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Number1 = 10
+Number2 = 5</samp></pre>
+</div>
+<p></p><div class="block-inject block-inject-1" id="block-inject-1"><div class="block block-block" id="block-block-123">
+<div class="content">
+<!-- /8095840/.2_A.34657.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth <= 768) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+<!-- /8095840/.2_A.34660.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth > 768) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div> </div>
+</div>
+</div><div class="clearfix"></div><p>The address of memory location <var>num1</var> and <var>num2</var> are passed to the function swap and the pointers <var>*n1</var> and <var>*n2</var> accept those values.</p>
+<p>So, now the pointer <var>n1</var> and <var>n2</var> points to the address of <var>num1</var> and <var>num2</var> respectively.</p>
+<p>When, the value of pointers are changed, the value in the pointed memory location also changes correspondingly.</p>
+<p>Hence, changes made to <code>*n1</code> and <var>*n2</var> are reflected in <var>num1</var> and <var>num2</var> in the main function.</p>
+<p>This technique is known as Call by Reference in C programming.</p>
+</div></div></div></div>
+</div> </div>
+</div>
+</div>
+
+</div>
+</section>
+  </div>
+</body>
+</html>

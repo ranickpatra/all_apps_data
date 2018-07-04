@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/style/style1.css">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+<h2 class="page_title"><strong>C if...else Statement</strong></h2><br><p>
+In programming, decision making is used to specify the order in which statements are executed. In this tutorial, you will learn to create decision making program using if...else statements.</p><br><section class="main-content">
+
+
+<div class="inside-content">
+<div class="region region-content-inside">
+<div class="block block-block" id="block-block-43">
+<div class="content">
+<style>
+.Learn C language_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Learn C language_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" style="display: none !important;"></script>
+<!-- Learn C language_Responsive_Top -->
+<ins class="adsbygoogle Learn C language_Responsive_Top" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021" style="display: none !important;">
+</ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div>
+</div>
+</div>
+<img alt="Working of if else statement in C programming" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/images/c-if-else.jpg" title=""/>
+<div class="clearfix">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/c-programming/c-if-else-statement" class="node node-c-tutorial clearfix" id="node-131" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="C if...else Statement" property="dc:title"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><h2>C if statement</h2>
+<pre>if (testExpression) 
+{
+   // statements
+}</pre>
+<p>The <code>if</code> statement evaluates the test expression inside the parenthesis.</p>
+<p>If the test expression is evaluated to true (nonzero), statements inside the body of <code>if</code> is executed.</p>
+<p>If the test expression is evaluated to false (0), statements inside the body of <code>if</code> is skipped from execution.</p>
+<p>To learn more on when test expression is evaluated to nonzero (true) and 0 (false), check out relational and logical operators.</p>
+<hr/>
+<h3>Flowchart of if statement</h3>
+<p><img alt="Flowchart of if statement in C programming" class="figure" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/images/flowchart-if-programming_0.jpg" title="C if statement"/></p>
+<hr/>
+<h3>Example #1: C if statement</h3>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">// Program to display a number if user enters negative number</span><span class="pln">
+</span><span class="com">// If user enters positive number, that number won't be displayed</span><span class="pln">
+
+</span><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> number</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter an integer: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">number</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="com">// Test expression is true if number is less than 0</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">number </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"You entered %d.\n"</span><span class="pun">,</span><span class="pln"> number</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"The if statement is easy."</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span></code></pre>
+<p><strong>Output 1</strong></p>
+<pre>Enter an integer: -2
+You entered -2.
+The if statement is easy.</pre>
+<p>When user enters -2, the test expression <code>(number &lt; 0)</code> becomes true. Hence, <samp>You entered -2</samp> is displayed on the screen.</p>
+<p><strong>Output 2</strong></p>
+<pre><samp>Enter an integer: 5
+The if statement in C programming is easy.</samp></pre>
+<p>When user enters 5, the test expression <code>(number &lt; 0)</code> becomes false and the statement inside the body of <code>if</code> is skipped.</p>
+<h2>C if...else statement</h2>
+<p>The <code>if...else</code> statement executes some code if the test expression is true (nonzero) and some other code if the test expression is false (0).</p>
+<hr/>
+<h3>Syntax of if...else</h3>
+<pre>if (testExpression) {
+    // codes inside the body of if
+}
+else {
+    // codes inside the body of else
+}</pre>
+<p>If test expression is true, codes inside the body of <code>if</code> statement is executed and, codes inside the body of <code>else</code> statement is skipped.</p>
+<p></p><div class="block-inject block-inject-1" id="block-inject-1"><div class="block block-block" id="block-block-123">
+<div class="content">
+<!-- /8095840/.2_A.34657.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth <= 768) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+<!-- /8095840/.2_A.34660.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth > 768) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div> </div>
+</div>
+</div><div class="clearfix"></div><p>If test expression is false, codes inside the body of <code>else</code> statement is executed and, codes inside the body of <code>if</code> statement is skipped.</p>
+<hr/>
+<h3>Flowchart of if...else statement</h3>
+<p><img alt="Flowchart of if...else statement in C Programming" class="figure" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/images/flowchart-if-else-programming.jpg" title="C if...else statement"/></p>
+<hr/>
+<h3>Example #2: C if...else statement</h3>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">// Program to check whether an integer entered by the user is odd or even</span><span class="pln">
+
+</span><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> number</span><span class="pun">;</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"Enter an integer: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">number</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="com">// True if remainder is 0</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pun">(</span><span class="pln"> number</span><span class="pun">%</span><span class="lit">2</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%d is an even integer."</span><span class="pun">,</span><span class="pln">number</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">else</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%d is an odd integer."</span><span class="pun">,</span><span class="pln">number</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter an integer: 7
+7 is an odd integer.</samp></pre>
+<p>When user enters 7, the test expression <code>( number%2 == 0 )</code> is evaluated to false. Hence, the statement inside the body of <code>else</code> statement <code>printf("%d is an odd integer");</code> is executed and the statement inside the body of <code>if</code> is skipped.</p>
+<h2>Nested if...else statement (if...elseif....else Statement)</h2>
+<p>The <code>if...else</code> statement executes two different codes depending upon whether the test expression is true or false. Sometimes, a choice has to be made from more than 2 possibilities.</p>
+<p>The nested if...else statement allows you to check for multiple test expressions and execute different codes for more than two conditions.</p>
+<hr/>
+<h3>Syntax of nested if...else statement.</h3>
+<pre>if (testExpression1) 
+{
+   // statements to be executed if testExpression1 is true
+}
+else if(testExpression2) 
+{
+   // statements to be executed if testExpression1 is false and testExpression2 is true
+}
+else if (testExpression 3) 
+{
+   // statements to be executed if testExpression1 and testExpression2 is false and testExpression3 is true
+}
+.
+.
+else 
+{
+   // statements to be executed if all test expressions are false
+}</pre>
+<hr/>
+<h3>Example #3: C Nested if...else statement</h3>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">// Program to relate two integers using =, &gt; or &lt;</span><span class="pln">
+
+</span><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> number1</span><span class="pun">,</span><span class="pln"> number2</span><span class="pun">;</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"Enter two integers: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d %d"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">number1</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">number2</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="com">//checks if two integers are equal.</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">number1 </span><span class="pun">==</span><span class="pln"> number2</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"Result: %d = %d"</span><span class="pun">,</span><span class="pln">number1</span><span class="pun">,</span><span class="pln">number2</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="com">//checks if number1 is greater than number2.</span><span class="pln">
+    </span><span class="kwd">else</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">number1 </span><span class="pun">&gt;</span><span class="pln"> number2</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"Result: %d &gt; %d"</span><span class="pun">,</span><span class="pln"> number1</span><span class="pun">,</span><span class="pln"> number2</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="com">// if both test expression is false</span><span class="pln">
+    </span><span class="kwd">else</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"Result: %d &lt; %d"</span><span class="pun">,</span><span class="pln">number1</span><span class="pun">,</span><span class="pln"> number2</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter two integers: 12
+23
+Result: 12 &lt; 23
+</samp></pre>
+<p>You can also use switch statement to make decision between multiple possibilites.</p>
+</div></div></div></div>
+</div> </div>
+</div>
+</div>
+
+</div>
+</section>
+  </div>
+</body>
+</html>

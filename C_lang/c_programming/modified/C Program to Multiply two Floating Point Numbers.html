@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="./style/style1.css">
+  <link rel="stylesheet" href="./style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+<h2 class="page_title"><strong>C Program to Multiply two Floating Point Numbers</strong></h2><br><p>
+In this program, user is asked to enter two numbers (floating point numbers). Then, the product of those two numbers is stored in a variable and displayed on the screen.</p><br><section class="main-content">
+
+
+<div class="inside-content">
+<div class="region region-content-inside">
+<div class="block block-block" id="block-block-43">
+<div class="content">
+<style>
+.Programiz_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Programiz_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Programiz_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Programiz_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+<script async="" src="./images/f(3).txt"></script>
+<!-- Programiz_Responsive_Top -->
+<ins class="adsbygoogle Programiz_Responsive_Top" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021" data-adsbygoogle-status="done" style="display: inline-block; width: 728px; height: 90px;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div>
+</div>
+</div>
+<img alt="Multiplication of two number" src="./images/multiplication.jpg" title="Multiplication"/>
+<p>To understand this example, you should have the knowledge of following C programming topics:</p><ul><li>C Programming Constants and Variables</li><li>C Programming Data Types</li><li>C Input Output (I/O)</li><li>C Programming Operators</li></ul><div class="clearfix">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/c-programming/examples/product-numbers" class="node node-c-example clearfix" id="node-177" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="C Program to Multiply two Floating Point Numbers" property="dc:title"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><h2>Program to Multiply Two Numbers</h2>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">double</span><span class="pln"> firstNumber</span><span class="pun">,</span><span class="pln"> secondNumber</span><span class="pun">,</span><span class="pln"> product</span><span class="pun">;</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"Enter two numbers: "</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="com">// Stores two floating point numbers in variable firstNumber and secondNumber respectively</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%lf %lf"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">firstNumber</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">secondNumber</span><span class="pun">);</span><span class="pln">  
+ 
+    </span><span class="com">// Performs multiplication and stores the result in variable productOfTwoNumbers</span><span class="pln">
+    product </span><span class="pun">=</span><span class="pln"> firstNumber </span><span class="pun">*</span><span class="pln"> secondNumber</span><span class="pun">;</span><span class="pln">  
+
+    </span><span class="com">// Result up to 2 decimal point is displayed using %.2lf</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"Product = %.2lf"</span><span class="pun">,</span><span class="pln"> product</span><span class="pun">);</span><span class="pln">
+    
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter two numbers: 2.4
+1.12
+Product = 2.69</samp>
+</pre>
+<p>In this program, user is asked to enter two numbers. These two numbers entered by the user is stored in variable <var>firstNumber</var> and <var>secondNumber</var> respectively. This is done using <code>scanf()</code> function.</p>
+<p>Then, the product of <var>firstNumber</var> and <var>secondNumber</var> is evaluated and the result is stored in variable <var>productOfTwoNumbers</var>.</p>
+<p></p><div class="block-inject block-inject-1" id="block-inject-1"><div class="block block-block" id="block-block-153">
+<div class="content">
+<!-- /8095840/.2_A.34657.4_Programiz.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth <= 768) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+<!-- /8095840/.2_A.34660.4_Programiz.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth > 768) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div> </div>
+</div>
+</div><div class="clearfix"></div><p>Finally, the <var>productOfTwoNumbers</var> is displayed on the screen using <code>printf()</code> function.</p>
+<p>Notice that, the result is round to second decimal place using <code>%.2lf</code> conversion character.</p>
+</div></div></div></div>
+</div> </div>
+</div>
+</div>
+
+</div>
+</section>
+  </div>
+</body>
+</html>

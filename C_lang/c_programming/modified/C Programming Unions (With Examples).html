@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="./style/style1.css">
+  <link rel="stylesheet" href="./style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+<h2 class="page_title"><strong>C Programming Unions</strong></h2><br><p>
+In this article, you'll learn about unions in C programming. More specifically, how to create unions, access its members and learn the differences between unions and structures.</p><br><section class="main-content">
+
+
+<div class="inside-content">
+<div class="region region-content-inside">
+<div class="block block-block" id="block-block-43">
+<div class="content">
+<style>
+.Learn C language_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Learn C language_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" style="display: none !important;"></script>
+<!-- Learn C language_Responsive_Top -->
+<ins class="adsbygoogle Learn C language_Responsive_Top" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021" style="display: none !important;">
+</ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div>
+</div>
+</div>
+<img alt="C Unions" src="./images/c-unions.jpg" title="Unions in C"/>
+<div class="clearfix">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/c-programming/c-unions" class="node node-c-tutorial clearfix" id="node-150" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="C Programming Unions" property="dc:title"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Unions are quite similar to structures in C. Like structures, unions are also derived types.</p>
+<pre>union car
+{
+  char name[50];
+  int price;
+};</pre>
+<p>Defining a union is as easy as replacing the keyword <strong>struct</strong> with the keyword <strong>union</strong>.</p>
+<h2>How to create union variables?</h2>
+<p>Union variables can be created in similar manner as structure variables.</p>
+<pre>union car
+{
+  char name[50];
+  int price;
+} car1, car2, *car3;
+</pre>
+<p><strong>OR</strong></p>
+<pre>union car
+{
+  char name[50];
+  int price;
+};
+
+int main()
+{
+  union car car1, car2, *car3;
+  return 0;
+}
+</pre>
+<p>In both cases, union variables <var>car1</var>, <var>car2</var> and union pointer variable <var>car3</var> of type <code><strong>union car</strong></code> is created.</p>
+<h3>Accessing members of a union</h3>
+<p></p><div class="block-inject block-inject-1" id="block-inject-1"><div class="block block-block" id="block-block-123">
+<div class="content">
+<!-- /8095840/.2_A.34657.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth <= 768) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+<!-- /8095840/.2_A.34660.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth > 768) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div> </div>
+</div>
+</div><div class="clearfix"></div><p>Again, the member of unions can be accessed in similar manner as structures.</p>
+<p>In the above example, suppose you want to access <var>price</var> for union variable <var>car1</var>, it can be accessed as:</p>
+<pre>car1.price</pre>
+<p>Likewise, if you want to access <var>price</var> for the union pointer variable <var>car3</var>, it can be accessed as:</p>
+<pre>(*car3).price
+or;
+car3-&gt;price
+</pre>
+<h2>Difference between union and structure</h2>
+<p>Though unions are similar to structure in so many ways, the difference between them is crucial to understand.</p>
+<p>The primary difference can be demonstrated by this example:</p>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">union</span><span class="pln"> unionJob
+</span><span class="pun">{</span><span class="pln">
+   </span><span class="com">//defining a union</span><span class="pln">
+   </span><span class="kwd">char</span><span class="pln"> name</span><span class="pun">[</span><span class="lit">32</span><span class="pun">];</span><span class="pln">
+   </span><span class="kwd">float</span><span class="pln"> salary</span><span class="pun">;</span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> workerNo</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln"> uJob</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">struct</span><span class="pln"> structJob
+</span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">char</span><span class="pln"> name</span><span class="pun">[</span><span class="lit">32</span><span class="pun">];</span><span class="pln">
+   </span><span class="kwd">float</span><span class="pln"> salary</span><span class="pun">;</span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> workerNo</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln"> sJob</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   printf</span><span class="pun">(</span><span class="str">"size of union = %d"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">sizeof</span><span class="pun">(</span><span class="pln">uJob</span><span class="pun">));</span><span class="pln">
+   printf</span><span class="pun">(</span><span class="str">"\nsize of structure = %d"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">sizeof</span><span class="pun">(</span><span class="pln">sJob</span><span class="pun">));</span><span class="pln">
+   </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre>size of union = 32
+size of structure = 40</pre>
+<h3>More memory is allocated to structures than union</h3>
+<p>As seen in the above example, there is a difference in memory allocation between union and structure.</p>
+<p>The amount of memory required to store a structure variable is the sum of memory size of all members.</p>
+<p><img alt="Memory allocation of structure variable in C programming" class="figure" src="./images/C-structure-memory-allocation.jpg" title="Memory of structure variable"/></p>
+<p>But, the memory required to store a union variable is the memory required for the largest element of an union.</p>
+<p><img alt="Memory allocation of union variable in C programming" class="figure" src="./images/memory-allocation-union.jpg" title="Memory of union variable"/></p>
+<h3>Only one union member can be accessed at a time</h3>
+<p>In the case of structure, all of its members can be accessed at any time.</p>
+<p>But, in the case of union, only one of its members can be accessed at a time and all other members will contain garbage values.</p>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">union</span><span class="pln"> job
+</span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">char</span><span class="pln"> name</span><span class="pun">[</span><span class="lit">32</span><span class="pun">];</span><span class="pln">
+   </span><span class="kwd">float</span><span class="pln"> salary</span><span class="pun">;</span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> workerNo</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln"> job1</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   printf</span><span class="pun">(</span><span class="str">"Enter name:\n"</span><span class="pun">);</span><span class="pln">
+   scanf</span><span class="pun">(</span><span class="str">"%s"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">job1</span><span class="pun">.</span><span class="pln">name</span><span class="pun">);</span><span class="pln">
+
+   printf</span><span class="pun">(</span><span class="str">"Enter salary: \n"</span><span class="pun">);</span><span class="pln">
+   scanf</span><span class="pun">(</span><span class="str">"%f"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">job1</span><span class="pun">.</span><span class="pln">salary</span><span class="pun">);</span><span class="pln">
+
+   printf</span><span class="pun">(</span><span class="str">"Displaying\nName :%s\n"</span><span class="pun">,</span><span class="pln"> job1</span><span class="pun">.</span><span class="pln">name</span><span class="pun">);</span><span class="pln">
+   printf</span><span class="pun">(</span><span class="str">"Salary: %.1f"</span><span class="pun">,</span><span class="pln"> job1</span><span class="pun">.</span><span class="pln">salary</span><span class="pun">);</span><span class="pln">
+
+   </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+<p><strong>Output</strong></p>
+<pre>Enter name 
+Hillary
+Enter salary
+1234.23
+Displaying
+Name: f%Bary   
+Salary: 1234.2
+</pre>
+<p><strong>Note:</strong> You may get different garbage value or empty string for the name.</p>
+<p>Initially in the program, <var>Hillary</var> is stored in <code>job1.name</code> and all other members of <var>job1</var>, i.e. salary, workerNo, will contain garbage values.</p>
+<p>But, when user enters the value of salary, 1234.23 will be stored in <code>job1.salary</code> and other members, i.e. name, workerNo, will now contain garbage values.</p>
+<p>Thus in the output, <var>salary</var> is printed accurately but, <var>name</var> displays some random string.</p>
+<h3>Passing Union To a Function</h3>
+<p>Union can be passed in similar manner as structures in C programming.</p>
+<p>Visit this page to learn more about: How structure can be passed to function in C programming?</p>
+</div></div></div></div>
+</div> </div>
+</div>
+</div>
+
+</div>
+</section>
+  </div>
+</body>
+</html>

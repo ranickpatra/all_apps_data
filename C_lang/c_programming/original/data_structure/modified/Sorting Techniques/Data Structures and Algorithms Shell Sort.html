@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Introduction to C</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style/style1.css">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+<div class="col-md-7 middle-col">
+<h1>Data Structure and Algorithms - Shell Sort</h1>
+
+<hr/>
+
+
+
+<hr/>
+<p>Shell sort is a highly efficient sorting algorithm and is based on insertion sort algorithm. This algorithm avoids large shifts as in case of insertion sort, if the smaller value is to the far right and has to be moved to the far left.</p>
+<p>This algorithm uses insertion sort on a widely spread elements, first to sort them and then sorts the less widely spaced elements. This spacing is termed as <b>interval</b>. This interval is calculated based on Knuth's formula as −</p>
+<h3>Knuth's Formula</h3>
+<pre class="result notranslate">h = h * 3 + 1
+where −
+   h is interval with initial value 1
+</pre>
+<p>This algorithm is quite efficient for medium-sized data sets as its average and worst case complexity are of Ο(n), where <b>n</b> is the number of items.</p>
+<h2>How Shell Sort Works?</h2>
+<p>Let us consider the following example to have an idea of how shell sort works. We take the same array we have used in our previous examples. For our example and ease of understanding, we take the interval of 4. Make a virtual sub-list of all values located at the interval of 4 positions. Here these values are {35, 14}, {33, 19}, {42, 27} and {10, 44}</p>
+<img alt="Shell Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/shell_sort_gap_4.jpg"/>
+<p>We compare values in each sub-list and swap them (if necessary) in the original array. After this step, the new array should look like this −</p>
+<img alt="Shell Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/shell_sort_step_1.jpg"/>
+<p>Then, we take interval of 2 and this gap generates two sub-lists - {14, 27, 35, 42}, {19, 10, 33, 44}</p>
+<img alt="Shell Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/shell_sort_gap_2.jpg"/>
+<p>We compare and swap the values, if required, in the original array. After this step, the array should look like this −</p>
+<img alt="Shell Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/shell_sort_step_2.jpg"/>
+<p>Finally, we sort the rest of the array using interval of value 1. Shell sort uses insertion sort to sort the array.</p>
+<p>Following is the step-by-step depiction −</p>
+<img alt="Shell Sort" src="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images/shell_sort.jpg"/>
+<p>We see that it required only four swaps to sort the rest of the array.</p>
+<h3>Algorithm</h3>
+<p>Following is the algorithm for shell sort.</p>
+<pre class="result notranslate"><b>Step 1</b> − Initialize the value of <i>h</i>
+<b>Step 2</b> − Divide the list into smaller sub-list of equal interval <i>h</i>
+<b>Step 3</b> − Sort these sub-lists using <b>insertion sort</b>
+<b>Step 3</b> − Repeat until complete list is sorted
+</pre>
+<h2>Pseudocode</h2>
+<p>Following is the pseudocode for shell sort.</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="pln">procedure shellSort</span><span class="pun">()</span><span class="pln">
+   A </span><span class="pun">:</span><span class="pln"> array of items 
+	
+   </span><span class="com">/* calculate interval*/</span><span class="pln">
+   </span><span class="kwd">while</span><span class="pln"> interval </span><span class="pun">&lt;</span><span class="pln"> A</span><span class="pun">.</span><span class="pln">length </span><span class="pun">/</span><span class="lit">3</span><span class="pln"> </span><span class="kwd">do</span><span class="pun">:</span><span class="pln">
+      interval </span><span class="pun">=</span><span class="pln"> interval </span><span class="pun">*</span><span class="pln"> </span><span class="lit">3</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="lit">1</span><span class="pln">	    
+   </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">while</span><span class="pln">
+   
+   </span><span class="kwd">while</span><span class="pln"> interval </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="kwd">do</span><span class="pun">:</span><span class="pln">
+
+      </span><span class="kwd">for</span><span class="pln"> outer </span><span class="pun">=</span><span class="pln"> interval</span><span class="pun">;</span><span class="pln"> outer </span><span class="pun">&lt;</span><span class="pln"> A</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln"> outer </span><span class="pun">++</span><span class="pln"> </span><span class="kwd">do</span><span class="pun">:</span><span class="pln">
+
+      </span><span class="com">/* select value to be inserted */</span><span class="pln">
+      valueToInsert </span><span class="pun">=</span><span class="pln"> A</span><span class="pun">[</span><span class="pln">outer</span><span class="pun">]</span><span class="pln">
+      inner </span><span class="pun">=</span><span class="pln"> outer</span><span class="pun">;</span><span class="pln">
+
+         </span><span class="com">/*shift element towards right*/</span><span class="pln">
+         </span><span class="kwd">while</span><span class="pln"> inner </span><span class="pun">&gt;</span><span class="pln"> interval </span><span class="pun">-</span><span class="lit">1</span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln"> A</span><span class="pun">[</span><span class="pln">inner </span><span class="pun">-</span><span class="pln"> interval</span><span class="pun">]</span><span class="pln"> </span><span class="pun">&gt;=</span><span class="pln"> valueToInsert </span><span class="kwd">do</span><span class="pun">:</span><span class="pln">
+            A</span><span class="pun">[</span><span class="pln">inner</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> A</span><span class="pun">[</span><span class="pln">inner </span><span class="pun">-</span><span class="pln"> interval</span><span class="pun">]</span><span class="pln">
+            inner </span><span class="pun">=</span><span class="pln"> inner </span><span class="pun">-</span><span class="pln"> interval
+         </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">while</span><span class="pln">
+
+      </span><span class="com">/* insert the number at hole position */</span><span class="pln">
+      A</span><span class="pun">[</span><span class="pln">inner</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> valueToInsert
+
+      </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">for</span><span class="pln">
+
+   </span><span class="com">/* calculate interval*/</span><span class="pln">
+   interval </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">interval </span><span class="pun">-</span><span class="lit">1</span><span class="pun">)</span><span class="pln"> </span><span class="pun">/</span><span class="lit">3</span><span class="pun">;</span><span class="pln">	  
+
+   </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">while</span><span class="pln">
+   
+</span><span class="kwd">end</span><span class="pln"> procedure</span></pre>
+<p>To know about shell sort implementation in C programming language, please <a href="https://www.tutorialspoint.com/data_structures_algorithms/shell_sort_program_in_c.htm">click here</a>.</p>
+<hr/>
+
+
+
+<hr/>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead" style="display: none !important;">
+<div class="bottomadtag" style="display: none !important;">Advertisements</div>
+<!-- /60931893/tutorial_bottom_leader_board -->
+<div id="div-gpt-ad-1510138782906-3">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1510138782906-3'); });
+</script>
+</div>
+</div>
+</div>
+
+  </div>
+
+</body>
+
+</html>
+
+
