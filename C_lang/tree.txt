@@ -1,0 +1,449 @@
+.
+├── ds
+│   └── modified
+│       ├── Algorithm
+│       │   ├── Data Structures Algorithms Basics.html
+│       │   ├── Data Structures Asymptotic Analysis.html
+│       │   ├── Data Structures Divide and Conquer.html
+│       │   ├── Data Structures Dynamic Programming.html
+│       │   └── Data Structures Greedy Algorithms.html
+│       ├── Data Structures
+│       │   ├── Data Structures and Algorithm Basic Concepts.html
+│       │   └── Data Structures and Algorithms Arrays.html
+│       ├── Data Structures and Algorithms
+│       │   ├── Data Structure and Algorithms (DSA) Tutorial.html
+│       │   ├── Data Structures and Algorithms Overview.html
+│       │   └── Data Structures Environment Setup.html
+│       ├── Graph Data Structure
+│       │   ├── Data Structures and Algorithms Graph Data Structure.html
+│       │   ├── Data Structures and Breadth First Traversal.html
+│       │   └── Data Structures and Depth First Traversal.html
+│       ├── images
+│       │   ├── activation_records.jpg
+│       │   ├── array_declaration.jpg
+│       │   ├── array_representation.jpg
+│       │   ├── avl_left_rotation.jpg
+│       │   ├── avl_right_rotation.jpg
+│       │   ├── balanced_avl_tree.jpg
+│       │   ├── bfs_five.jpg
+│       │   ├── bfs_four.jpg
+│       │   ├── bfs_one.jpg
+│       │   ├── bfs_seven.jpg
+│       │   ├── bfs_six.jpg
+│       │   ├── bfs_three.jpg
+│       │   ├── bfs_two.jpg
+│       │   ├── big_o_notation.jpg
+│       │   ├── binary_search_0.jpg
+│       │   ├── binary_search_1.jpg
+│       │   ├── binary_search_2.jpg
+│       │   ├── binary_search_3.jpg
+│       │   ├── binary_search_4.jpg
+│       │   ├── binary_search_5.jpg
+│       │   ├── binary_search_6.jpg
+│       │   ├── binary_search_tree.jpg
+│       │   ├── binary_tree.jpg
+│       │   ├── breadth_first_traversal.jpg
+│       │   ├── bst_step_four.jpg
+│       │   ├── bst_step_one.jpg
+│       │   ├── bst_step_three.jpg
+│       │   ├── bst_step_two.jpg
+│       │   ├── bubble_sort_0.jpg
+│       │   ├── bubble_sort_10.jpg
+│       │   ├── bubble_sort_11.jpg
+│       │   ├── bubble_sort_1.jpg
+│       │   ├── bubble_sort_2.jpg
+│       │   ├── bubble_sort_3.jpg
+│       │   ├── bubble_sort_4.jpg
+│       │   ├── bubble_sort_5.jpg
+│       │   ├── bubble_sort_6.jpg
+│       │   ├── bubble_sort_7.jpg
+│       │   ├── bubble_sort_8.jpg
+│       │   ├── bubble_sort_9.jpg
+│       │   ├── data-structure-algorithm.jpg
+│       │   ├── depth_first_traversal.jpg
+│       │   ├── dfs_five.jpg
+│       │   ├── dfs_four.jpg
+│       │   ├── dfs_one.jpg
+│       │   ├── dfs_seven.jpg
+│       │   ├── dfs_six.jpg
+│       │   ├── dfs_three.jpg
+│       │   ├── dfs_two.jpg
+│       │   ├── divide_and_conquer.jpg
+│       │   ├── doubly_circular_linked_list.jpg
+│       │   ├── doubly_linked_list.jpg
+│       │   ├── fibonacci_animation.gif
+│       │   ├── graph_basics.jpg
+│       │   ├── graph.jpg
+│       │   ├── hash_function.jpg
+│       │   ├── inorder_traversal.jpg
+│       │   ├── insertion_sort_10.jpg
+│       │   ├── insertion_sort_11.jpg
+│       │   ├── insertion_sort_12.jpg
+│       │   ├── insertion_sort_1.jpg
+│       │   ├── insertion_sort_2.jpg
+│       │   ├── insertion_sort_3.jpg
+│       │   ├── insertion_sort_4.jpg
+│       │   ├── insertion_sort_5.jpg
+│       │   ├── insertion_sort_6.jpg
+│       │   ├── insertion_sort_7.jpg
+│       │   ├── insertion_sort_8.jpg
+│       │   ├── insertion_sort_9.jpg
+│       │   ├── interpolation_step_one.jpg
+│       │   ├── interpolation_step_two.jpg
+│       │   ├── left_rotation.jpg
+│       │   ├── left_subtree_of_right_subtree.jpg
+│       │   ├── left_unbalanced_tree.jpg
+│       │   ├── linear_search.gif
+│       │   ├── linked_list_deletion_0.jpg
+│       │   ├── linked_list_deletion_1.jpg
+│       │   ├── linked_list_deletion_2.jpg
+│       │   ├── linked_list_deletion_3.jpg
+│       │   ├── linked_list_insertion_0.jpg
+│       │   ├── linked_list_insertion_1.jpg
+│       │   ├── linked_list_insertion_2.jpg
+│       │   ├── linked_list_insertion_3.jpg
+│       │   ├── linked_list.jpg
+│       │   ├── linked_list_reverse_0.jpg
+│       │   ├── linked_list_reverse_1.jpg
+│       │   ├── linked_list_reverse_2.jpg
+│       │   ├── linked_list_reverse_3.jpg
+│       │   ├── linked_list_reverse_4.jpg
+│       │   ├── max_heap_animation.gif
+│       │   ├── max_heap_deletion_animation.gif
+│       │   ├── max_heap_example.jpg
+│       │   ├── merge_sort_combine_1.jpg
+│       │   ├── merge_sort_combine_2.jpg
+│       │   ├── merge_sort_divide_1.jpg
+│       │   ├── merge_sort_divide_2.jpg
+│       │   ├── merge_sort_divide_3.jpg
+│       │   ├── merge_sort.jpg
+│       │   ├── min_heap_example.jpg
+│       │   ├── omega_notation.jpg
+│       │   ├── operator_precedence.jpg
+│       │   ├── postorder_traversal.jpg
+│       │   ├── preorder_traversal.jpg
+│       │   ├── problem_solutions.jpg
+│       │   ├── queue_dequeue_diagram.jpg
+│       │   ├── queue_diagram.jpg
+│       │   ├── queue_enqueue_diagram.jpg
+│       │   ├── queue_example.jpg
+│       │   ├── quick_sort_partition_animation.gif
+│       │   ├── right_rotation.jpg
+│       │   ├── right_subtree_of_left_subtree.jpg
+│       │   ├── right_unbalanced_tree.jpg
+│       │   ├── selection_sort_1.jpg
+│       │   ├── selection_sort_2.jpg
+│       │   ├── selection_sort_3.jpg
+│       │   ├── selection_sort_4.jpg
+│       │   ├── selection_sort_5.jpg
+│       │   ├── selection_sort.jpg
+│       │   ├── shell_sort_gap_2.jpg
+│       │   ├── shell_sort_gap_4.jpg
+│       │   ├── shell_sort.jpg
+│       │   ├── shell_sort_step_1.jpg
+│       │   ├── shell_sort_step_2.jpg
+│       │   ├── singly_circular_linked_list.jpg
+│       │   ├── spanning_trees.jpg
+│       │   ├── stable_sort.jpg
+│       │   ├── stack_example.jpg
+│       │   ├── stack_pop_operation.jpg
+│       │   ├── stack_push_operation.jpg
+│       │   ├── stack_representation.jpg
+│       │   ├── subtree_left_rotation.jpg
+│       │   ├── subtree_right_rotation.jpg
+│       │   ├── theta_notation.jpg
+│       │   ├── tower_of_hanoi.gif
+│       │   ├── tower_of_hanoi.jpg
+│       │   ├── tower_of_hanoi_two_disks.gif
+│       │   ├── unbalanced_avl_trees.jpg
+│       │   ├── unbalanced_bst.jpg
+│       │   ├── unsorted_array.jpg
+│       │   └── unstable_sort.jpg
+│       ├── Linked Lists
+│       │   ├── Data Structures & Algorithms Doubly Linked List.html
+│       │   ├── Data Structures and Algorithms Circular Linked List.html
+│       │   └── Data Structures and Algorithms Linked List.html
+│       ├── Recursion
+│       │   ├── Data Structures and Algorithms Fibonacci Series.html
+│       │   ├── Data Structures and Algorithms Recursion Basics.html
+│       │   └── Data Structures and Algorithms Tower of Hanoi.html
+│       ├── Searching Techniques
+│       │   ├── Data Structures and Algorithms Binary Search.html
+│       │   ├── Data Structures and Algorithms Hash Table.html
+│       │   ├── Data Structures and Algorithms Interpolation Search.html
+│       │   └── Data Structures and Algorithms Linear Search.html
+│       ├── Sorting Techniques
+│       │   ├── Data Structures and Algorithms Bubble Sort.html
+│       │   ├── Data Structures and Algorithms Insertion Sort.html
+│       │   ├── Data Structures and Algorithms Quick Sort.html
+│       │   ├── Data Structures and Algorithms Selection Sort.html
+│       │   ├── Data Structures and Algorithms Shell Sort.html
+│       │   ├── Data Structures and Algorithms Sorting Techniques.html
+│       │   └── Data Structures and Merge Sort Algorithms.html
+│       ├── Stack & Queue
+│       │   ├── Data Structures and Algorithms Parsing Expressions.html
+│       │   ├── Data Structures and Algorithms Queue.html
+│       │   └── Data Structures and Algorithms Stack.html
+│       ├── style
+│       │   ├── OpenSans-Bold.ttf
+│       │   ├── OpenSans-Regular.ttf
+│       │   ├── style1.css
+│       │   ├── style2.css
+│       │   └── Untitled Document
+│       └── Tree Data Structure
+│           ├── Data Structures and Algorithms AVL Trees.html
+│           ├── Data Structures and Algorithms Binary Search Tree.html
+│           ├── Data Structures and Algorithms Spanning Tree.html
+│           ├── Data Structures and Algorithms Tree.html
+│           ├── Data Structures and Algorithms Tree Traversal.html
+│           └── Heap Data Structures.html
+├── modified
+│   ├── C Arrays_ Declare, Initialize and Access Elements (With Examples).html
+│   ├── C Bitwise Operators_ AND, OR, XOR, Complement and Shift Operations.html
+│   ├── C Call by Reference_ Using pointers [With Examples].html
+│   ├── C Data Types_ int, float, char and more.html
+│   ├── C Enumeration (Enum)_ Examples and Where it is used_.html
+│   ├── C goto Statement.html
+│   ├── C _Hello, World!_ Program.html
+│   ├── C if, if...else and Nested if...else Statement.html
+│   ├── C Input_Output_ printf() and scanf().html
+│   ├── C Memory Allocation Using malloc(), calloc(), free() & realloc().html
+│   ├── C Multidimensional Arrays (2d and 3d Array).html
+│   ├── C Operators_ Arithmetic, Logical, Conditional and more.html
+│   ├── C Pointers_ A Complete Beginner's Guide - Programiz.html
+│   ├── C Preprocessor and Macros_ #include, #define, conditional compilation and more.html
+│   ├── C Programming Array and Pointer Examples.html
+│   ├── C Programming break and continue Statement.html
+│   ├── C Programming Constants and Variables.html
+│   ├── C Programming Decision Making and Loops Examples.html
+│   ├── C Programming Examples.html
+│   ├── C Programming File Examples.html
+│   ├── C Programming Files I_O_ Opening, Reading, Writing and Closing a file.html
+│   ├── C Programming for Loop.html
+│   ├── C Programming Function Examples.html
+│   ├── C Programming Functions.html
+│   ├── C Programming Introduction Examples.html
+│   ├── C Programming Keywords and Identifiers.html
+│   ├── C Programming Pointers and Arrays.html
+│   ├── C Programming Recursion_ Recursive function.html
+│   ├── C Programming Strings.html
+│   ├── C Programming Structure and Pointer.html
+│   ├── C Programming Structure.html
+│   ├── C Programming Structure (struct) Examples.html
+│   ├── C Programming Unions (With Examples).html
+│   ├── C Programming User-defined functions.html
+│   ├── C Programming while and do...while Loop.html
+│   ├── C Programs To Print Triangle, Pyramid, Pascal's Triangle, Floyd's Triangle and So On.html
+│   ├── C Program Swap Numbers in Cyclic Order Using Call by Reference.html
+│   ├── C Program to Access Elements of an Array Using Pointer.html
+│   ├── C Program to Add Two Complex Numbers by Passing Structure to a Function.html
+│   ├── C Program to Add Two Distances (in inch-feet) System Using Structures.html
+│   ├── C Program to Add Two Integers.html
+│   ├── C Program to Add Two Matrix Using Multi-dimensional Arrays.html
+│   ├── C Program to Calculate Average Using Arrays.html
+│   ├── C Program to Calculate Difference Between Two Time Periods.html
+│   ├── C Program to Calculate Standard Deviation.html
+│   ├── C Program to Calculate the Power of a Number.html
+│   ├── C program to calculate the power using recursion.html
+│   ├── C Program to Calculate the Sum of Natural Numbers.html
+│   ├── C Program to Check Armstrong Number.html
+│   ├── C Program to Check Leap Year.html
+│   ├── C Program to Check Prime or Armstrong Number Using User-defined Function.html
+│   ├── C Program to Check Whether a Character is an Alphabet or not.html
+│   ├── C Program to Check Whether a Character is Vowel or Consonant.html
+│   ├── C Program to Check Whether a Number can be Expressed as Sum of Two Prime Numbers.html
+│   ├── C Program to Check Whether a Number is Even or Odd.html
+│   ├── C Program to Check Whether a Number is Palindrome or Not.html
+│   ├── C Program to Check Whether a Number is Positive or Negative.html
+│   ├── C Program to Check Whether a Number is Prime or Not.html
+│   ├── C Program to Compute Quotient and Remainder.html
+│   ├── C Program to Concatenate Two Strings.html
+│   ├── C Program to Convert Binary Number to Decimal and vice-versa.html
+│   ├── C Program to Convert Binary Number to Octal and vice-versa.html
+│   ├── C Program to Convert Octal Number to Decimal and vice-versa.html
+│   ├── C Program to Copy String Without Using strcpy().html
+│   ├── C Program to Count Number of Digits in an Integer.html
+│   ├── C program to count the number of vowels, consonants and so on.html
+│   ├── C Program to Demonstrate the Working of Keyword long.html
+│   ├── C Program to Display Armstrong Number Between Two Intervals.html
+│   ├── C Program to Display Characters from A to Z Using Loop.html
+│   ├── C Program to Display Factors of a Number.html
+│   ├── C Program to Display Fibonacci Sequence.html
+│   ├── C Program to Display its own Source Code as Output.html
+│   ├── C Program to Display Prime Numbers Between Intervals Using Function.html
+│   ├── C Program to Display Prime Numbers Between Two Intervals.html
+│   ├── C Program to Find all Roots of a Quadratic Equation.html
+│   ├── C Program to Find ASCII Value of a Character.html
+│   ├── C Program to Find Factorial of a Number.html
+│   ├── C Program to Find Factorial of a Number Using Recursion.html
+│   ├── C Program to Find GCD of two Numbers.html
+│   ├── C Program to Find G.C.D Using Recursion.html
+│   ├── C Program to Find Largest Element of an Array.html
+│   ├── C Program to Find Largest Number Using Dynamic Memory Allocation.html
+│   ├── C Program to Find LCM of two Numbers.html
+│   ├── C Program to Find the Frequency of Characters in a String.html
+│   ├── C Program to Find the Largest Number Among Three Numbers.html
+│   ├── C Program to Find the Length of a String.html
+│   ├── C Program to Find the Size of int, float, double and char.html
+│   ├── C Program to Find the Sum of Natural Numbers using Recursion.html
+│   ├── C Program to Find Transpose of a Matrix.html
+│   ├── C Program to Generate Multiplication Table.html
+│   ├── C Program to Make a Simple Calculator Using switch...case.html
+│   ├── C Program to Multiply to Matrix Using Multi-dimensional Arrays.html
+│   ├── C Program to Multiply two Floating Point Numbers.html
+│   ├── C Program to Multiply two Matrices by Passing Matrix to a Function.html
+│   ├── C Program to Print an Integer (Entered by the User).html
+│   ├── C Program to Read a Line From a File and Display it.html
+│   ├── C Program to Remove all Characters in a String Except Alphabet.html
+│   ├── C Program to Reverse a Number.html
+│   ├── C program to Reverse a Sentence Using Recursion.html
+│   ├── C Program to Sort Elements in Lexicographical Order (Dictionary Order).html
+│   ├── C Program to Store Information(name, roll and marks) of a Student Using Structure.html
+│   ├── C Program to Store Information of Students Using Structure.html
+│   ├── C Program to Store Information Using Structures with Dynamically Memory Allocation.html
+│   ├── C Program to Swap Two Numbers_ With or Without Temporary Variables - Programiz.html
+│   ├── C Program to Write a Sentence to a File.html
+│   ├── C Standard Library Functions.html
+│   ├── C switch...case Statement.html
+│   ├── How to pass arrays to a function in C Programming_.html
+│   ├── How to pass structure to a function in C programming_.html
+│   ├── images
+│   │   ├── addition-program_0.jpg
+│   │   ├── addition-program.jpg
+│   │   ├── armstrong-number.jpg
+│   │   ├── armstrong-number-range.jpg
+│   │   ├── array-as-pointers.jpg
+│   │   ├── Ascii-code.jpg
+│   │   ├── bitwise-operators-c.jpg
+│   │   ├── break-continue-statement.jpg
+│   │   ├── c-alphabets_0.jpg
+│   │   ├── c-alphabets.jpg
+│   │   ├── c-array-declaration.jpg
+│   │   ├── c-array-functions.jpg
+│   │   ├── c-array-initialization.jpg
+│   │   ├── c-array-pointers_0.jpg
+│   │   ├── c-array-pointers_1.jpg
+│   │   ├── c-arrays.jpg
+│   │   ├── c-break-statement.jpg
+│   │   ├── c-code-output-linux.png
+│   │   ├── c-continue-flowchart.jpg
+│   │   ├── c-data-types.jpg
+│   │   ├── c-display-integer.jpg
+│   │   ├── c-do-while-loop.jpg
+│   │   ├── c-dynamic-memory-allocation.jpg
+│   │   ├── c-enum.jpg
+│   │   ├── c-even-odd.jpg
+│   │   ├── c-factorial-number-recursion.jpg
+│   │   ├── c-file-examples.jpg
+│   │   ├── c-file-input-output.jpg
+│   │   ├── c-flow-control-examples.jpg
+│   │   ├── c-function-examples.jpg
+│   │   ├── c-goto-statement_0.jpg
+│   │   ├── c-goto-statement.jpg
+│   │   ├── c-if-else.jpg
+│   │   ├── c-input-output_0.jpg
+│   │   ├── c-introduction-examples.jpg
+│   │   ├── c-keywords_0.jpg
+│   │   ├── c-keywords.jpg
+│   │   ├── c-large-number.jpg
+│   │   ├── c-learn-right-way_0.png
+│   │   ├── c-multidimensional-arrays.jpg
+│   │   ├── command-line-tool.png
+│   │   ├── c-operators.jpg
+│   │   ├── count-number-digits.jpg
+│   │   ├── c-pointers-functions.jpg
+│   │   ├── c-pointers.jpg
+│   │   ├── c-preprocessor.jpg
+│   │   ├── c-programming-functions.jpg
+│   │   ├── create-c-file.jpg
+│   │   ├── create-new-file-codeblocks.png
+│   │   ├── c-recursion_0.jpg
+│   │   ├── c-return-statement.jpg
+│   │   ├── c-standard-library-functions.jpg
+│   │   ├── c-string-examples.jpg
+│   │   ├── C-string-initialization.jpg
+│   │   ├── c-string-manipulation.jpg
+│   │   ├── c-strings.jpg
+│   │   ├── c-structure-functions.jpg
+│   │   ├── C-structure-memory-allocation.jpg
+│   │   ├── c-structure-pointer.jpg
+│   │   ├── c-structures_1.jpg
+│   │   ├── c-unions.jpg
+│   │   ├── c-user-defined-function.jpg
+│   │   ├── c-variables-constants.jpg
+│   │   ├── c-vowel-constants.jpg
+│   │   ├── c-while-loop.jpg
+│   │   ├── Declaration-of-strings-in-C.jpg
+│   │   ├── download-codeblocks-windows.png
+│   │   ├── download-xcode.png
+│   │   ├── factorial-number.jpg
+│   │   ├── factors-number.jpg
+│   │   ├── fibonacci-sequence.jpg
+│   │   ├── first-c-program.png
+│   │   ├── flowchart-if-else-programming.jpg
+│   │   ├── flowchart-if-programming_0.jpg
+│   │   ├── flowchart-switch-statement.jpg
+│   │   ├── for-loop_0.jpg
+│   │   ├── for-loop.jpg
+│   │   ├── function-c-programming.jpg
+│   │   ├── gcc-version.png
+│   │   ├── gEdit-cfile.png
+│   │   ├── greatest-common-divisor.jpg
+│   │   ├── hello-world.jpg
+│   │   ├── how-break-statement-works_1.jpg
+│   │   ├── how-continue-statement-works.jpg
+│   │   ├── how-recursion-works-c_0.jpg
+│   │   ├── info.png
+│   │   ├── leap-year.jpg
+│   │   ├── learn-c-programming.png
+│   │   ├── long-keyword.jpg
+│   │   ├── lowest-common-multiple.jpg
+│   │   ├── main.c-macosx.png
+│   │   ├── memory-allocation-union.jpg
+│   │   ├── Memory-of-strings.jpg
+│   │   ├── multiplication.jpg
+│   │   ├── multiplication-table.jpg
+│   │   ├── natural-numbers.jpg
+│   │   ├── natural-numbers-recursion_0.jpg
+│   │   ├── natural-numbers-sum-recursion_0.jpg
+│   │   ├── navigate-project.png
+│   │   ├── palindrome-number.jpg
+│   │   ├── pass-arguments-c-programming.jpg
+│   │   ├── pointers-in-c-programming.jpg
+│   │   ├── positive-negative-numbers.jpg
+│   │   ├── power-number_0.jpg
+│   │   ├── prime-armstrong-number-check.jpg
+│   │   ├── prime-numbers_0.jpg
+│   │   ├── prime-numbers-interval-function_0.jpg
+│   │   ├── prime-numbers.jpg
+│   │   ├── prime-numbers-sum.jpg
+│   │   ├── print-pyramid.jpg
+│   │   ├── quadratic-equation.jpg
+│   │   ├── quadratic-equation-roots.jpg
+│   │   ├── quotient-remainder.jpg
+│   │   ├── reverse-integer.jpg
+│   │   ├── rolling.gif
+│   │   ├── Run C on your system.png
+│   │   ├── simple-calculator.jpg
+│   │   ├── sizeof-operator.jpg
+│   │   ├── source-code-display-c-programming.jpg
+│   │   ├── swap-numbers.jpg
+│   │   ├── switch-case_0.jpg
+│   │   ├── two-dimensional-array.jpg
+│   │   ├── user-defined-function-types.jpg
+│   │   ├── variable-scope.jpg
+│   │   └── while-loop.jpg
+│   ├── Scope and Lifetime of a variable.html
+│   ├── String Examples in C Programming.html
+│   ├── String Manipulations In C Programming Using Library Functions.html
+│   ├── style
+│   │   ├── OpenSans-Bold.ttf
+│   │   ├── OpenSans-Regular.ttf
+│   │   ├── style1.css
+│   │   ├── style2.css
+│   │   └── Untitled Document
+│   ├── The Complete List of all 32 C Programming Keywords (With Examples) - Programiz.html
+│   └── Types of User-defined Functions in C Programming.html
+└── tree.txt
+
+17 directories, 429 files
