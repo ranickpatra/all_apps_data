@@ -18,7 +18,8 @@
   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
 
-  <link rel="stylesheet" href="./style/style1.css">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style//style1.css">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style//style2.css">
 
 
 </head>
@@ -36,7 +37,7 @@
 
 <hr/>
 <p>Tower of Hanoi, is a mathematical puzzle which consists of three towers (pegs) and more than one rings is as depicted −</p>
-<img alt="Tower Of Hanoi" src="./../images/tower_of_hanoi.jpg"/>
+<img alt="Tower Of Hanoi" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//tower_of_hanoi.jpg"/>
 <p>These rings are of different sizes and stacked upon in an ascending order, i.e. the smaller one sits over the larger one. There are other variations of the puzzle where the number of disks increase, but the tower count remains the same.</p>
 <h2>Rules</h2>
 <p>The mission is to move all the disks to some another tower without violating the sequence of arrangement. A few rules to be followed for Tower of Hanoi are −</p>
@@ -46,7 +47,7 @@
 <li>No large disk can sit over a small disk.</li>
 </ul>
 <p>Following is an animated representation of solving a Tower of Hanoi puzzle with three disks.</p>
-<img alt="Tower Of Hanoi" src="./../images/tower_of_hanoi.gif"/>
+<img alt="Tower Of Hanoi" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//tower_of_hanoi.gif"/>
 <p>Tower of Hanoi puzzle with n disks can be solved in minimum <b>2<sup>n</sup>−1</b> steps. This presentation shows that a puzzle with 3 disks has taken <b>2<sup>3</sup> - 1 = 7</b> steps.</p>
 <h2>Algorithm</h2>
 <p>To write an algorithm for Tower of Hanoi, first we need to learn how to solve this problem with lesser amount of disks, say → 1 or 2. We mark three towers with name, <b>source</b>, <b>destination</b> and <b>aux</b> (only to help moving the disks). If we have only one disk, then it can easily be moved from source to destination peg.</p>
@@ -56,7 +57,7 @@
 <li>Then, we move the larger (bottom) disk to destination peg.</li>
 <li>And finally, we move the smaller disk from aux to destination peg.</li>
 </ul>
-<img alt="Tower Of Hanoi with Two Disks" src="./../images/tower_of_hanoi_two_disks.gif"/>
+<img alt="Tower Of Hanoi with Two Disks" src="./https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/images//tower_of_hanoi_two_disks.gif"/>
 <p>So now, we are in a position to design an algorithm for Tower of Hanoi with more than two disks. We divide the stack of disks in two parts. The largest disk (n<sup>th</sup> disk) is in one part and all other (n-1) disks are in the second part.</p>
 <p>Our ultimate aim is to move disk <b>n</b> from source to destination and then put all other (n1) disks onto it. We can imagine to apply the same in a recursive way for all given set of disks.</p>
 <p>The steps to follow are −</p>
