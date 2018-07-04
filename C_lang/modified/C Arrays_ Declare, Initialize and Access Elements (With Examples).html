@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="./style/style1.css">
+  <link rel="stylesheet" href="./style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+<h2 class="page_title"><strong>C Programming Arrays</strong></h2><br><p>
+In this article, you will learn to work with arrays. You will learn to declare, initialize and, access array elements with the help of examples.</p><br><section class="main-content">
+
+
+<div class="inside-content">
+<div class="region region-content-inside">
+<div class="block block-block" id="block-block-43">
+<div class="content">
+<style>
+.Learn C language_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Learn C language_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" style="display: none !important;"></script>
+<!-- Learn C language_Responsive_Top -->
+<ins class="adsbygoogle Learn C language_Responsive_Top" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021" style="display: none !important;">
+</ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div>
+</div>
+</div>
+<img alt="C arrays" src="./images/c-arrays.jpg" title="C arrays"/>
+<div class="clearfix">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/c-programming/c-arrays" class="node node-c-tutorial clearfix" id="node-136" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="C Programming Arrays" property="dc:title"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>An array is a collection of data that holds fixed number of values of same type. For example: if you want to store marks of 100 students, you can create an array for it.</p>
+<pre>float marks[100];</pre>
+<p>The size and type of arrays cannot be changed after its declaration.</p>
+<p>Arrays are of two types:</p>
+<ol>
+<li>One-dimensional arrays</li>
+<li>Multidimensional arrays (will be discussed in next chapter)</li>
+</ol>
+<h2>How to declare an array in C?</h2>
+<pre>data_type array_name[array_size];
+</pre>
+<p><strong>For example,</strong></p>
+<pre>float mark[5];</pre>
+<p>Here, we declared an array, <var>mark</var>, of floating-point type and size 5. Meaning, it can hold 5 floating-point values.</p>
+<h2>Elements of an Array and How to access them?</h2>
+<p>You can access elements of an array by indices.</p>
+<p>Suppose you declared an array <var>mark</var> as above. The first element is <var>mark[0]</var>, second element is <var>mark[1]</var> and so on.</p>
+<p><img alt="C Array declaration " src="./images/c-array-declaration.jpg"/></p>
+<h4>Few key notes:</h4>
+<ul>
+<li>Arrays have 0 as the first index not 1. In this example, <var>mark[0]</var></li>
+<li>If the size of an array is <var>n</var>, to access the last element, <code>(n-1)</code> index is used. In this example, <var>mark[4]</var></li>
+<li>Suppose the starting address of <code>mark[0]</code> is 2120d. Then, the next address, <code>a[1]</code>, will be 2124d, address of <code>a[2]</code> will be 2128d and so on. It's because the size of a float is 4 bytes.</li>
+</ul>
+<h3>How to initialize an array in C programming?</h3>
+<p>It's possible to initialize an array during declaration. For example,</p>
+<pre>int mark[5] = {19, 10, 8, 17, 9};</pre>
+<p></p><div class="block-inject block-inject-1" id="block-inject-1"><div class="block block-block" id="block-block-123">
+<div class="content">
+<!-- /8095840/.2_A.34657.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth <= 768) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+<!-- /8095840/.2_A.34660.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth > 768) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div> </div>
+</div>
+</div><div class="clearfix"></div><p>Another method to initialize array during declaration:</p>
+<pre>int mark[] = {19, 10, 8, 17, 9};</pre>
+<p><br/>
+<img alt="Initialize an array in C programming" src="./images/c-array-initialization.jpg"/></p>
+<p>Here,</p>
+<pre>mark[0] is equal to 19
+mark[1] is equal to 10
+mark[2] is equal to 8
+mark[3] is equal to 17
+mark[4] is equal to 9</pre>
+<h3>How to insert and print array elements?</h3>
+<pre>int mark[5] = {19, 10, 8, 17, 9}
+
+// insert different value to third element
+mark[3] = 9;
+
+// take input from the user and insert in third element
+​scanf("%d", &amp;mark[2]);
+
+// take input from the user and insert in (i+1)th element
+scanf("%d", &amp;mark[i]);
+
+// print first element of an array
+printf("%d", mark[0]);
+
+// print ith element of an array
+printf("%d", mark[i-1]);
+</pre>
+<h2>Example: C Arrays</h2>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">// Program to find the average of n (n &lt; 10) numbers using arrays</span><span class="pln">
+
+</span><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+     </span><span class="kwd">int</span><span class="pln"> marks</span><span class="pun">[</span><span class="lit">10</span><span class="pun">],</span><span class="pln"> i</span><span class="pun">,</span><span class="pln"> n</span><span class="pun">,</span><span class="pln"> sum </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> average</span><span class="pun">;</span><span class="pln">
+     printf</span><span class="pun">(</span><span class="str">"Enter n: "</span><span class="pun">);</span><span class="pln">
+     scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">n</span><span class="pun">);</span><span class="pln">
+     </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">n</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln">
+     </span><span class="pun">{</span><span class="pln">
+          printf</span><span class="pun">(</span><span class="str">"Enter number%d: "</span><span class="pun">,</span><span class="pln">i</span><span class="pun">+</span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+          scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">marks</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]);</span><span class="pln">
+          sum </span><span class="pun">+=</span><span class="pln"> marks</span><span class="pun">[</span><span class="pln">i</span><span class="pun">];</span><span class="pln">
+     </span><span class="pun">}</span><span class="pln">
+     average </span><span class="pun">=</span><span class="pln"> sum</span><span class="pun">/</span><span class="pln">n</span><span class="pun">;</span><span class="pln">
+
+     printf</span><span class="pun">(</span><span class="str">"Average = %d"</span><span class="pun">,</span><span class="pln"> average</span><span class="pun">);</span><span class="pln">
+
+     </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter n: 5
+Enter number1: 45
+Enter number2: 35
+Enter number3: 38
+Enter number4: 31
+Enter number5: 49
+Average = 39
+</samp></pre>
+<h3>Important thing to remember when working with C arrays</h3>
+<p>Suppose you declared an array of 10 elements. Let's say,</p>
+<pre>int testArray[10];</pre>
+<p>You can use the array members from <code>testArray[0]</code> to <code>testArray[9]</code>.</p>
+<p>If you try to access array elements outside of its bound, let's say <code>testArray[12]</code>, the compiler may not show any error. However, this may cause unexpected output (undefined behavior).</p>
+<p>Before going further, checkout these array articles:</p>
+<ul>
+<li>How to pass arrays to a function?</li>
+<li>Relation between arrays and pointers</li>
+<li>Multidimensional arrays</li>
+</ul>
+</div></div></div></div>
+</div> </div>
+</div>
+</div>
+
+</div>
+</section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Introduction to C</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="./style/style1.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+<div class="col-md-7 middle-col">
+<h1>Data Structure and Algorithms - Hash Table</h1>
+
+<hr/>
+
+
+
+<hr/>
+<p>Hash Table is a data structure which stores data in an associative manner. In a hash table, data is stored in an array format, where each data value has its own unique index value. Access of data becomes very fast if we know the index of the desired data.</p>
+<p>Thus, it becomes a data structure in which insertion and search operations are very fast irrespective of the size of the data. Hash Table uses an array as a storage medium and uses hash technique to generate an index where an element is to be inserted or is to be located from.</p>
+<h2>Hashing</h2>
+<p>Hashing is a technique to convert a range of key values into a range of indexes of an array. We're going to use modulo operator to get a range of key values. Consider an example of hash table of size 20, and the following items are to be stored. Item are in the (key,value) format.</p>
+<img alt="Hash Function" src="./../images/hash_function.jpg"/>
+<ul class="list">
+<li>(1,20)</li>
+<li>(2,70)</li>
+<li>(42,80)</li>
+<li>(4,25)</li>
+<li>(12,44)</li>
+<li>(14,32)</li>
+<li>(17,11)</li>
+<li>(13,78)</li>
+<li>(37,98)</li>
+</ul>
+<table class="table table-bordered" style="text-align:center;">
+<tbody><tr>
+<th style="text-align:center;">Sr.No.</th>
+<th style="text-align:center;">Key</th>
+<th style="text-align:center;">Hash</th>
+<th style="text-align:center;">Array Index</th>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1 % 20 = 1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>2 % 20 = 2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>42</td>
+<td>42 % 20 = 2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+<td>4 % 20 = 4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>12</td>
+<td>12 % 20 = 12</td>
+<td>12</td>
+</tr>
+<tr>
+<td>6</td>
+<td>14</td>
+<td>14 % 20 = 14</td>
+<td>14</td>
+</tr>
+<tr>
+<td>7</td>
+<td>17</td>
+<td>17 % 20 = 17</td>
+<td>17</td>
+</tr>
+<tr>
+<td>8</td>
+<td>13</td>
+<td>13 % 20 = 13</td>
+<td>13</td>
+</tr>
+<tr>
+<td>9</td>
+<td>37</td>
+<td>37 % 20 = 17</td>
+<td>17</td>
+</tr>
+</tbody></table>
+<h2>Linear Probing</h2>
+<p>As we can see, it may happen that the hashing technique is used to create an already used index of the array. In such a case, we can search the next empty location in the array by looking into the next cell until we find an empty cell. This technique is called linear probing.</p>
+<table class="table table-bordered" style="text-align:center;">
+<tbody><tr>
+<th style="text-align:center;vertical-align:middle;width:12%">Sr.No.</th>
+<th style="text-align:center;vertical-align:middle;width:8%">Key</th>
+<th style="text-align:center;vertical-align:middle;width:20%">Hash</th>
+<th style="text-align:center;vertical-align:middle;width:20%">Array Index</th>
+<th style="text-align:center;width:40%">After Linear Probing, Array Index</th>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1 % 20 = 1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>2 % 20 = 2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>42</td>
+<td>42 % 20 = 2</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+<td>4 % 20 = 4</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>12</td>
+<td>12 % 20 = 12</td>
+<td>12</td>
+<td>12</td>
+</tr>
+<tr>
+<td>6</td>
+<td>14</td>
+<td>14 % 20 = 14</td>
+<td>14</td>
+<td>14</td>
+</tr>
+<tr>
+<td>7</td>
+<td>17</td>
+<td>17 % 20 = 17</td>
+<td>17</td>
+<td>17</td>
+</tr>
+<tr>
+<td>8</td>
+<td>13</td>
+<td>13 % 20 = 13</td>
+<td>13</td>
+<td>13</td>
+</tr>
+<tr>
+<td>9</td>
+<td>37</td>
+<td>37 % 20 = 17</td>
+<td>17</td>
+<td>18</td>
+</tr>
+</tbody></table>
+<h2>Basic Operations</h2>
+<p>Following are the basic primary operations of a hash table.</p>
+<ul class="list">
+<li><p><b>Search</b> − Searches an element in a hash table.</p></li>
+<li><p><b>Insert</b> − inserts an element in a hash table.</p></li>
+<li><p><b>delete</b> − Deletes an element from a hash table.</p></li>
+</ul>
+<h2>DataItem</h2>
+<p>Define a data item having some data and key, based on which the search is to be conducted in a hash table.</p>
+<pre class="result notranslate">struct DataItem {
+   int data;
+   int key;
+};
+</pre>
+<h2>Hash Method</h2>
+<p>Define a hashing method to compute the hash code of the key of the data item.</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">int</span><span class="pln"> hashCode</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> key</span><span class="pun">){</span><span class="pln">
+   </span><span class="kwd">return</span><span class="pln"> key </span><span class="pun">%</span><span class="pln"> SIZE</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<h2>Search Operation</h2>
+<p>Whenever an element is to be searched, compute the hash code of the key passed and locate the element using that hash code as index in the array. Use linear probing to get the element ahead if the element is not found at the computed hash code.</p>
+<h3>Example</h3>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">struct</span><span class="pln"> </span><span class="typ">DataItem</span><span class="pln"> </span><span class="pun">*</span><span class="pln">search</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> key</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="com">//get the hash</span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> hashIndex </span><span class="pun">=</span><span class="pln"> hashCode</span><span class="pun">(</span><span class="pln">key</span><span class="pun">);</span><span class="pln">
+	
+   </span><span class="com">//move in array until an empty</span><span class="pln">
+   </span><span class="kwd">while</span><span class="pun">(</span><span class="pln">hashArray</span><span class="pun">[</span><span class="pln">hashIndex</span><span class="pun">]</span><span class="pln"> </span><span class="pun">!=</span><span class="pln"> NULL</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+	
+      </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">hashArray</span><span class="pun">[</span><span class="pln">hashIndex</span><span class="pun">]-&gt;</span><span class="pln">key </span><span class="pun">==</span><span class="pln"> key</span><span class="pun">)</span><span class="pln">
+         </span><span class="kwd">return</span><span class="pln"> hashArray</span><span class="pun">[</span><span class="pln">hashIndex</span><span class="pun">];</span><span class="pln">
+			
+      </span><span class="com">//go to next cell</span><span class="pln">
+      </span><span class="pun">++</span><span class="pln">hashIndex</span><span class="pun">;</span><span class="pln">
+		
+      </span><span class="com">//wrap around the table</span><span class="pln">
+      hashIndex </span><span class="pun">%=</span><span class="pln"> SIZE</span><span class="pun">;</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+
+   </span><span class="kwd">return</span><span class="pln"> NULL</span><span class="pun">;</span><span class="pln">        
+</span><span class="pun">}</span></pre>
+<h2>Insert Operation</h2>
+<p>Whenever an element is to be inserted, compute the hash code of the key passed and locate the index using that hash code as an index in the array. Use linear probing for empty location, if an element is found at the computed hash code.</p>
+<h3>Example</h3>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">void</span><span class="pln"> insert</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> key</span><span class="pun">,</span><span class="kwd">int</span><span class="pln"> data</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">struct</span><span class="pln"> </span><span class="typ">DataItem</span><span class="pln"> </span><span class="pun">*</span><span class="pln">item </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">struct</span><span class="pln"> </span><span class="typ">DataItem</span><span class="pun">*)</span><span class="pln"> malloc</span><span class="pun">(</span><span class="kwd">sizeof</span><span class="pun">(</span><span class="kwd">struct</span><span class="pln"> </span><span class="typ">DataItem</span><span class="pun">));</span><span class="pln">
+   item</span><span class="pun">-&gt;</span><span class="pln">data </span><span class="pun">=</span><span class="pln"> data</span><span class="pun">;</span><span class="pln">  
+   item</span><span class="pun">-&gt;</span><span class="pln">key </span><span class="pun">=</span><span class="pln"> key</span><span class="pun">;</span><span class="pln">     
+
+   </span><span class="com">//get the hash </span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> hashIndex </span><span class="pun">=</span><span class="pln"> hashCode</span><span class="pun">(</span><span class="pln">key</span><span class="pun">);</span><span class="pln">
+
+   </span><span class="com">//move in array until an empty or deleted cell</span><span class="pln">
+   </span><span class="kwd">while</span><span class="pun">(</span><span class="pln">hashArray</span><span class="pun">[</span><span class="pln">hashIndex</span><span class="pun">]</span><span class="pln"> </span><span class="pun">!=</span><span class="pln"> NULL </span><span class="pun">&amp;&amp;</span><span class="pln"> hashArray</span><span class="pun">[</span><span class="pln">hashIndex</span><span class="pun">]-&gt;</span><span class="pln">key </span><span class="pun">!=</span><span class="pln"> </span><span class="pun">-</span><span class="lit">1</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="com">//go to next cell</span><span class="pln">
+      </span><span class="pun">++</span><span class="pln">hashIndex</span><span class="pun">;</span><span class="pln">
+		
+      </span><span class="com">//wrap around the table</span><span class="pln">
+      hashIndex </span><span class="pun">%=</span><span class="pln"> SIZE</span><span class="pun">;</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+	
+   hashArray</span><span class="pun">[</span><span class="pln">hashIndex</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> item</span><span class="pun">;</span><span class="pln">        
+</span><span class="pun">}</span></pre>
+<h2>Delete Operation</h2>
+<p>Whenever an element is to be deleted, compute the hash code of the key passed and locate the index using that hash code as an index in the array. Use linear probing to get the element ahead if an element is not found at the computed hash code. When found, store a dummy item there to keep the performance of the hash table intact.</p>
+<h3>Example</h3>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">struct</span><span class="pln"> </span><span class="typ">DataItem</span><span class="pun">*</span><span class="pln"> </span><span class="kwd">delete</span><span class="pun">(</span><span class="kwd">struct</span><span class="pln"> </span><span class="typ">DataItem</span><span class="pun">*</span><span class="pln"> item</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> key </span><span class="pun">=</span><span class="pln"> item</span><span class="pun">-&gt;</span><span class="pln">key</span><span class="pun">;</span><span class="pln">
+
+   </span><span class="com">//get the hash </span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> hashIndex </span><span class="pun">=</span><span class="pln"> hashCode</span><span class="pun">(</span><span class="pln">key</span><span class="pun">);</span><span class="pln">
+
+   </span><span class="com">//move in array until an empty </span><span class="pln">
+   </span><span class="kwd">while</span><span class="pun">(</span><span class="pln">hashArray</span><span class="pun">[</span><span class="pln">hashIndex</span><span class="pun">]</span><span class="pln"> </span><span class="pun">!=</span><span class="pln">NULL</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+	
+      </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">hashArray</span><span class="pun">[</span><span class="pln">hashIndex</span><span class="pun">]-&gt;</span><span class="pln">key </span><span class="pun">==</span><span class="pln"> key</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+         </span><span class="kwd">struct</span><span class="pln"> </span><span class="typ">DataItem</span><span class="pun">*</span><span class="pln"> temp </span><span class="pun">=</span><span class="pln"> hashArray</span><span class="pun">[</span><span class="pln">hashIndex</span><span class="pun">];</span><span class="pln"> 
+			
+         </span><span class="com">//assign a dummy item at deleted position</span><span class="pln">
+         hashArray</span><span class="pun">[</span><span class="pln">hashIndex</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> dummyItem</span><span class="pun">;</span><span class="pln"> 
+         </span><span class="kwd">return</span><span class="pln"> temp</span><span class="pun">;</span><span class="pln">
+      </span><span class="pun">}</span><span class="pln"> 
+		
+      </span><span class="com">//go to next cell</span><span class="pln">
+      </span><span class="pun">++</span><span class="pln">hashIndex</span><span class="pun">;</span><span class="pln">
+		
+      </span><span class="com">//wrap around the table</span><span class="pln">
+      hashIndex </span><span class="pun">%=</span><span class="pln"> SIZE</span><span class="pun">;</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">  
+	
+   </span><span class="kwd">return</span><span class="pln"> NULL</span><span class="pun">;</span><span class="pln">        
+</span><span class="pun">}</span></pre>
+<p>To know about hash implementation in C programming language, please <a href="https://www.tutorialspoint.com/data_structures_algorithms/hash_table_program_in_c.htm">click here</a>.</p>
+<hr/>
+
+
+
+<hr/>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead" style="display: none !important;">
+<div class="bottomadtag" style="display: none !important;">Advertisements</div>
+<!-- /60931893/tutorial_bottom_leader_board -->
+<div id="div-gpt-ad-1510138782906-3">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1510138782906-3'); });
+</script>
+</div>
+</div>
+</div>
+
+  </div>
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="./style/style1.css">
+  <link rel="stylesheet" href="./style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+<h2 class="page_title"><strong>C Program to Find all Roots of a Quadratic Equation</strong></h2><br><p>
+This program accepts coefficients of a quadratic equation from the user and displays the roots (both real and complex roots depending upon the determinant).</p><br><section class="main-content">
+
+
+<div class="inside-content">
+<div class="region region-content-inside">
+<div class="block block-block" id="block-block-43">
+<div class="content">
+<style>
+.Programiz_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Programiz_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Programiz_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Programiz_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+<script async="" src="./images/f(3).txt"></script>
+<!-- Programiz_Responsive_Top -->
+<ins class="adsbygoogle Programiz_Responsive_Top" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021" data-adsbygoogle-status="done" style="display: inline-block; width: 728px; height: 90px;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div>
+</div>
+</div>
+<img alt="Quadratic equation graph" src="./images/quadratic-equation.jpg" title=""/>
+<p>To understand this example, you should have the knowledge of following C programming topics:</p><ul><li>C Programming Operators</li><li>C if...else Statement</li></ul><div class="clearfix">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/c-programming/examples/quadratic-roots" class="node node-c-example clearfix" id="node-186" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="C Program to Find all Roots of a Quadratic Equation" property="dc:title"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>The standard form of a quadratic equation is:</p>
+<pre>ax<sup>2</sup> + bx + c = 0, where
+a, b and c are real numbers and
+a ≠ 0
+</pre>
+<p>The term <code>b<sup>2</sup>-4ac</code> is known as the determinant of a quadratic equation. The determinant tells the nature of the roots.</p>
+<ul>
+<li>If determinant is greater than 0, the roots are real and different.</li>
+<li>If determinant is equal to 0, the roots are real and equal.</li>
+<li>If determinant is less than 0, the roots are complex and different.</li>
+</ul>
+<p><img alt="Calculation of roots of a quadratic equation" src="./images/quadratic-equation-roots.jpg"/></p>
+<h2>Example: Program to Find Roots of a Quadratic Equation</h2>
+<pre class="prettyprint prettyprinted" style=""><code><span class="pln">
+</span><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;math.h&gt;</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">double</span><span class="pln"> a</span><span class="pun">,</span><span class="pln"> b</span><span class="pun">,</span><span class="pln"> c</span><span class="pun">,</span><span class="pln"> determinant</span><span class="pun">,</span><span class="pln"> root1</span><span class="pun">,</span><span class="pln">root2</span><span class="pun">,</span><span class="pln"> realPart</span><span class="pun">,</span><span class="pln"> imaginaryPart</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter coefficients a, b and c: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%lf %lf %lf"</span><span class="pun">,&amp;</span><span class="pln">a</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">b</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">c</span><span class="pun">);</span><span class="pln">
+
+    determinant </span><span class="pun">=</span><span class="pln"> b</span><span class="pun">*</span><span class="pln">b</span><span class="pun">-</span><span class="lit">4</span><span class="pun">*</span><span class="pln">a</span><span class="pun">*</span><span class="pln">c</span><span class="pun">;</span><span class="pln">
+
+    </span><span class="com">// condition for real and different roots</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">determinant </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// sqrt() function returns square root</span><span class="pln">
+        root1 </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(-</span><span class="pln">b</span><span class="pun">+</span><span class="pln">sqrt</span><span class="pun">(</span><span class="pln">determinant</span><span class="pun">))/(</span><span class="lit">2</span><span class="pun">*</span><span class="pln">a</span><span class="pun">);</span><span class="pln">
+        root2 </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(-</span><span class="pln">b</span><span class="pun">-</span><span class="pln">sqrt</span><span class="pun">(</span><span class="pln">determinant</span><span class="pun">))/(</span><span class="lit">2</span><span class="pun">*</span><span class="pln">a</span><span class="pun">);</span><span class="pln">
+
+        printf</span><span class="pun">(</span><span class="str">"root1 = %.2lf and root2 = %.2lf"</span><span class="pun">,</span><span class="pln">root1 </span><span class="pun">,</span><span class="pln"> root2</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="com">//condition for real and equal roots</span><span class="pln">
+    </span><span class="kwd">else</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">determinant </span><span class="pun">==</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        root1 </span><span class="pun">=</span><span class="pln"> root2 </span><span class="pun">=</span><span class="pln"> </span><span class="pun">-</span><span class="pln">b</span><span class="pun">/(</span><span class="lit">2</span><span class="pun">*</span><span class="pln">a</span><span class="pun">);</span><span class="pln">
+
+        printf</span><span class="pun">(</span><span class="str">"root1 = root2 = %.2lf;"</span><span class="pun">,</span><span class="pln"> root1</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="com">// if roots are not real </span><span class="pln">
+    </span><span class="kwd">else</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        realPart </span><span class="pun">=</span><span class="pln"> </span><span class="pun">-</span><span class="pln">b</span><span class="pun">/(</span><span class="lit">2</span><span class="pun">*</span><span class="pln">a</span><span class="pun">);</span><span class="pln">
+        imaginaryPart </span><span class="pun">=</span><span class="pln"> sqrt</span><span class="pun">(-</span><span class="pln">determinant</span><span class="pun">)/(</span><span class="lit">2</span><span class="pun">*</span><span class="pln">a</span><span class="pun">);</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"root1 = %.2lf+%.2lfi and root2 = %.2f-%.2fi"</span><span class="pun">,</span><span class="pln"> realPart</span><span class="pun">,</span><span class="pln"> imaginaryPart</span><span class="pun">,</span><span class="pln"> realPart</span><span class="pun">,</span><span class="pln"> imaginaryPart</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">   </span></code></pre>
+<p></p><div class="block-inject block-inject-1" id="block-inject-1"><div class="block block-block" id="block-block-153">
+<div class="content">
+<!-- /8095840/.2_A.34657.4_Programiz.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth <= 768) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+<!-- /8095840/.2_A.34660.4_Programiz.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth > 768) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div> </div>
+</div>
+</div><div class="clearfix"></div><p><strong>Output </strong></p>
+<pre><samp>Enter coefficients a, b and c: 2.3
+4
+5.6
+Roots are: -0.87+1.30i and -0.87-1.30i</samp></pre>
+<p>In this program, library function <code>sqrt()</code> is used to find the square root of a number. To learn more, visit:  sqrt() function.</p>
+</div></div></div></div>
+</div> </div>
+</div>
+</div>
+
+</div>
+</section>
+  </div>
+</body>
+</html>

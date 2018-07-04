@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Introduction to C</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="./style/style1.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+<div class="col-md-7 middle-col" style="height: 2593px;">
+<h1>Data Structures - Merge Sort Algorithm</h1>
+
+<hr/>
+
+
+
+<hr/>
+<p>Merge sort is a sorting technique based on divide and conquer technique. With worst-case time complexity being Ο(n log n), it is one of the most respected algorithms.</p>
+<p>Merge sort first divides the array into equal halves and then combines them in a sorted manner.</p>
+<h2>How Merge Sort Works?</h2>
+<p>To understand merge sort, we take an unsorted array as the following −</p>
+<img alt="Unsorted Array" src="./../images/unsorted_array.jpg"/>
+<p>We know that merge sort first divides the whole array iteratively into equal halves unless the atomic values are achieved. We see here that an array of 8 items is divided into two arrays of size 4.</p>
+<img alt="Merge Sort Division" src="./../images/merge_sort_divide_1.jpg"/>
+<p>This does not change the sequence of appearance of items in the original. Now we divide these two arrays into halves.</p>
+<img alt="Merge Sort Division" src="./../images/merge_sort_divide_2.jpg"/>
+<p>We further divide these arrays and we achieve atomic value which can no more be divided.</p>
+<img alt="Merge Sort Division" src="./../images/merge_sort_divide_3.jpg"/>
+<p>Now, we combine them in exactly the same manner as they were broken down. Please note the color codes given to these lists.</p>
+<p>We first compare the element for each list and then combine them into another list in a sorted manner. We see that 14 and 33 are in sorted positions. We compare 27 and 10 and in the target list of 2 values we put 10 first, followed by 27. We change the order of 19 and 35 whereas 42 and 44 are placed sequentially.</p>
+<img alt="Merge Sort Combine" src="./../images/merge_sort_combine_1.jpg"/>
+<p>In the next iteration of the combining phase, we compare lists of two data values, and merge them into a list of found data values placing all in a sorted order.</p>
+<img alt="Merge Sort Combine" src="./../images/merge_sort_combine_2.jpg"/>
+<p>After the final merging, the list should look like this −</p>
+<img alt="Merge Sort" src="./../images/merge_sort.jpg"/>
+<p>Now we should learn some programming aspects of merge sorting.</p>
+<h3>Algorithm</h3>
+<p>Merge sort keeps on dividing the list into equal halves until it can no more be divided. By definition, if it is only one element in the list, it is sorted. Then, merge sort combines the smaller sorted lists keeping the new list sorted too.</p>
+<pre class="result notranslate"><b>Step 1</b> − if it is only one element in the list it is already sorted, return.
+<b>Step 2</b> − divide the list recursively into two halves until it can no more be divided.
+<b>Step 3</b> − merge the smaller lists into new list in sorted order.
+</pre>
+<h3>Pseudocode</h3>
+<p>We shall now see the pseudocodes for merge sort functions. As our algorithms point out two main functions − divide &amp; merge.</p>
+<p>Merge sort works with recursion and we shall see our implementation in the same way.</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="pln">procedure mergesort</span><span class="pun">(</span><span class="pln"> </span><span class="kwd">var</span><span class="pln"> a </span><span class="kwd">as</span><span class="pln"> array </span><span class="pun">)</span><span class="pln">
+   </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> n </span><span class="pun">==</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> a
+
+   </span><span class="kwd">var</span><span class="pln"> l1 </span><span class="kwd">as</span><span class="pln"> array </span><span class="pun">=</span><span class="pln"> a</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> a</span><span class="pun">[</span><span class="pln">n</span><span class="pun">/</span><span class="lit">2</span><span class="pun">]</span><span class="pln">
+   </span><span class="kwd">var</span><span class="pln"> l2 </span><span class="kwd">as</span><span class="pln"> array </span><span class="pun">=</span><span class="pln"> a</span><span class="pun">[</span><span class="pln">n</span><span class="pun">/</span><span class="lit">2</span><span class="pun">+</span><span class="lit">1</span><span class="pun">]</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> a</span><span class="pun">[</span><span class="pln">n</span><span class="pun">]</span><span class="pln">
+
+   l1 </span><span class="pun">=</span><span class="pln"> mergesort</span><span class="pun">(</span><span class="pln"> l1 </span><span class="pun">)</span><span class="pln">
+   l2 </span><span class="pun">=</span><span class="pln"> mergesort</span><span class="pun">(</span><span class="pln"> l2 </span><span class="pun">)</span><span class="pln">
+
+   </span><span class="kwd">return</span><span class="pln"> merge</span><span class="pun">(</span><span class="pln"> l1</span><span class="pun">,</span><span class="pln"> l2 </span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln"> procedure
+
+procedure merge</span><span class="pun">(</span><span class="pln"> </span><span class="kwd">var</span><span class="pln"> a </span><span class="kwd">as</span><span class="pln"> array</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">var</span><span class="pln"> b </span><span class="kwd">as</span><span class="pln"> array </span><span class="pun">)</span><span class="pln">
+
+   </span><span class="kwd">var</span><span class="pln"> c </span><span class="kwd">as</span><span class="pln"> array
+   </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> a </span><span class="kwd">and</span><span class="pln"> b have elements </span><span class="pun">)</span><span class="pln">
+      </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> a</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> b</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+         add b</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> to the </span><span class="kwd">end</span><span class="pln"> of c
+         remove b</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">from</span><span class="pln"> b
+      </span><span class="kwd">else</span><span class="pln">
+         add a</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> to the </span><span class="kwd">end</span><span class="pln"> of c
+         remove a</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">from</span><span class="pln"> a
+      </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">if</span><span class="pln">
+   </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">while</span><span class="pln">
+   
+   </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> a has elements </span><span class="pun">)</span><span class="pln">
+      add a</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> to the </span><span class="kwd">end</span><span class="pln"> of c
+      remove a</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">from</span><span class="pln"> a
+   </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">while</span><span class="pln">
+   
+   </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> b has elements </span><span class="pun">)</span><span class="pln">
+      add b</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> to the </span><span class="kwd">end</span><span class="pln"> of c
+      remove b</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">from</span><span class="pln"> b
+   </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">while</span><span class="pln">
+   
+   </span><span class="kwd">return</span><span class="pln"> c
+	
+</span><span class="kwd">end</span><span class="pln"> procedure</span></pre>
+<p>To know about merge sort implementation in C programming language, please <a href="https://www.tutorialspoint.com/data_structures_algorithms/merge_sort_program_in_c.htm">click here</a>.</p>
+<hr/>
+
+
+
+<hr/>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead" style="display: none !important;">
+<div class="bottomadtag" style="display: none !important;">Advertisements</div>
+<!-- /60931893/tutorial_bottom_leader_board -->
+<div id="div-gpt-ad-1510138782906-3">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1510138782906-3'); });
+</script>
+</div>
+</div>
+</div>
+
+  </div>
+
+</body>
+
+</html>
+
+

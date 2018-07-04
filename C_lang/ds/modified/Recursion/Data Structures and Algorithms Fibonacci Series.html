@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Introduction to C</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="./style/style1.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+<div class="col-md-7 middle-col" style="height: 2593px;">
+<h1>Data Structure &amp; Algorithms Fibonacci Series</h1>
+
+<hr/>
+
+
+
+<hr/>
+<p>Fibonacci series generates the subsequent number by adding two previous numbers. Fibonacci series starts from two numbers − <b>F<sub>0</sub> &amp; F<sub>1</sub></b>. The initial values of F<sub>0</sub> &amp; F<sub>1</sub> can be taken 0, 1 or 1, 1 respectively.</p>
+<p>Fibonacci series satisfies the following conditions −</p>
+<pre class="result notranslate">F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub>
+</pre>
+<p>Hence, a Fibonacci series can look like this −</p>
+<p>F<sub>8</sub> = 0 1 1 2 3 5 8 13</p>
+<p>or, this −</p>
+<p>F<sub>8</sub> = 1 1 2 3 5 8 13 21</p>
+<p>For illustration purpose, Fibonacci of F<sub>8</sub> is displayed as −</p>
+<img alt="Fibonacci Animation" src="./../images/fibonacci_animation.gif"/>
+<h2>Fibonacci Iterative Algorithm</h2>
+<p>First we try to draft the iterative algorithm for Fibonacci series.</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="typ">Procedure</span><span class="pln"> </span><span class="typ">Fibonacci</span><span class="pun">(</span><span class="pln">n</span><span class="pun">)</span><span class="pln">
+   declare f</span><sub><span class="pln">0</span></sub><span class="pun">,</span><span class="pln"> f</span><sub><span class="pln">1</span></sub><span class="pun">,</span><span class="pln"> fib</span><span class="pun">,</span><span class="pln"> loop 
+   
+   </span><span class="kwd">set</span><span class="pln"> f</span><sub><span class="pln">0</span></sub><span class="pln"> to </span><span class="lit">0</span><span class="pln">
+   </span><span class="kwd">set</span><span class="pln"> f</span><sub><span class="pln">1</span></sub><span class="pln"> to </span><span class="lit">1</span><span class="pln">
+   
+   </span><b><span class="pln">display f</span><sub><span class="pln">0</span></sub><span class="pun">,</span><span class="pln"> f</span><sub><span class="pln">1</span></sub></b><span class="pln">
+   
+   </span><span class="kwd">for</span><span class="pln"> loop </span><span class="pun">←</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> to n
+   
+      fib </span><span class="pun">←</span><span class="pln"> f</span><sub><span class="pln">0</span></sub><span class="pln"> </span><span class="pun">+</span><span class="pln"> f</span><sub><span class="pln">1</span></sub><span class="pln">   
+      f</span><sub><span class="pln">0</span></sub><span class="pln"> </span><span class="pun">←</span><span class="pln"> f</span><sub><span class="pln">1</span></sub><span class="pln">
+      f</span><sub><span class="pln">1</span></sub><span class="pln"> </span><span class="pun">←</span><span class="pln"> fib
+
+      </span><b><span class="pln">display fib</span></b><span class="pln">
+   </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">for</span><span class="pln">
+	
+</span><span class="kwd">end</span><span class="pln"> procedure</span></pre>
+<p>To know about the implementation of the above algorithm in C programming language, <a href="https://www.tutorialspoint.com/data_structures_algorithms/fibonacci_iterative_program_in_c.htm">click here</a>.</p>
+<h2>Fibonacci Recursive Algorithm</h2>
+<p>Let us learn how to create a recursive algorithm Fibonacci series. The base criteria of recursion.</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="pln">START
+</span><span class="typ">Procedure</span><span class="pln"> </span><span class="typ">Fibonacci</span><span class="pun">(</span><span class="pln">n</span><span class="pun">)</span><span class="pln">
+   declare f</span><sub><span class="pln">0</span></sub><span class="pun">,</span><span class="pln"> f</span><sub><span class="pln">1</span></sub><span class="pun">,</span><span class="pln"> fib</span><span class="pun">,</span><span class="pln"> loop 
+   
+   </span><span class="kwd">set</span><span class="pln"> f</span><sub><span class="pln">0</span></sub><span class="pln"> to </span><span class="lit">0</span><span class="pln">
+   </span><span class="kwd">set</span><span class="pln"> f</span><sub><span class="pln">1</span></sub><span class="pln"> to </span><span class="lit">1</span><span class="pln">
+   
+   </span><b><span class="pln">display f</span><sub><span class="pln">0</span></sub><span class="pun">,</span><span class="pln"> f</span><sub><span class="pln">1</span></sub></b><span class="pln">
+   
+   </span><span class="kwd">for</span><span class="pln"> loop </span><span class="pun">←</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> to n
+   
+      fib </span><span class="pun">←</span><span class="pln"> f</span><sub><span class="pln">0</span></sub><span class="pln"> </span><span class="pun">+</span><span class="pln"> f</span><sub><span class="pln">1</span></sub><span class="pln">   
+      f</span><sub><span class="pln">0</span></sub><span class="pln"> </span><span class="pun">←</span><span class="pln"> f</span><sub><span class="pln">1</span></sub><span class="pln">
+      f</span><sub><span class="pln">1</span></sub><span class="pln"> </span><span class="pun">←</span><span class="pln"> fib
+
+      </span><b><span class="pln">display fib</span></b><span class="pln">
+   </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">for</span><span class="pln">
+
+</span><span class="kwd">END</span></pre>
+<p>To see the implementation of above algorithm in c programming language, <a href="https://www.tutorialspoint.com/data_structures_algorithms/fibonacci_recursive_program_in_c.htm">click here</a>.</p>
+<hr/>
+
+
+
+<hr/>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead" style="display: none !important;">
+<div class="bottomadtag" style="display: none !important;">Advertisements</div>
+<!-- /60931893/tutorial_bottom_leader_board -->
+<div id="div-gpt-ad-1510138782906-3">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1510138782906-3'); });
+</script>
+</div>
+</div>
+</div>
+
+  </div>
+
+</body>
+
+</html>
+
+

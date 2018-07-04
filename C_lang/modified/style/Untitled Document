@@ -1,0 +1,8 @@
+@font-face {
+    font-family: norm_font;
+    src: url(OpenSans-Regular.ttf);
+}
+
+h2 {
+  font-family: norm_font;
+}

@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Introduction to C</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="./style/style1.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+<div class="col-md-7 middle-col">
+<h1>Data Structure - Bubble Sort Algorithm</h1>
+
+<hr/>
+
+
+
+<hr/>
+<p>Bubble sort is a simple sorting algorithm. This sorting algorithm is comparison-based algorithm in which each pair of adjacent elements is compared and the elements are swapped if they are not in order. This algorithm is not suitable for large data sets as its average and worst case complexity are of Ο(n<sup>2</sup>) where <b>n</b> is the number of items.</p>
+<h2>How Bubble Sort Works?</h2>
+<p>We take an unsorted array for our example. Bubble sort takes Ο(n<sup>2</sup>) time so we're keeping it short and precise.</p>
+<img alt="Bubble Sort" src="./../images/bubble_sort_0.jpg"/>
+<p>Bubble sort starts with very first two elements, comparing them to check which one is greater.</p>
+<img alt="Bubble Sort" src="./../images/bubble_sort_1.jpg"/>
+<p>In this case, value 33 is greater than 14, so it is already in sorted locations. Next, we compare 33 with 27.</p>
+<img alt="Bubble Sort" src="./../images/bubble_sort_2.jpg"/>
+<p>We find that 27 is smaller than 33 and these two values must be swapped.</p>
+<img alt="Bubble Sort" src="./../images/bubble_sort_3.jpg"/>
+<p>The new array should look like this −</p>
+<img alt="Bubble Sort" src="./../images/bubble_sort_4.jpg"/>
+<p>Next we compare 33 and 35. We find that both are in already sorted positions.</p>
+<img alt="Bubble Sort" src="./../images/bubble_sort_5.jpg"/>
+<p>Then we move to the next two values, 35 and 10.</p>
+<img alt="Bubble Sort" src="./../images/bubble_sort_6.jpg"/>
+<p>We know then that 10 is smaller 35. Hence they are not sorted.</p>
+<img alt="Bubble Sort" src="./../images/bubble_sort_7.jpg"/>
+<p>We swap these values. We find that we have reached the end of the array. After one iteration, the array should look like this −</p>
+<img alt="Bubble Sort" src="./../images/bubble_sort_8.jpg"/>
+<p>To be precise, we are now showing how an array should look like after each iteration. After the second iteration, it should look like this −</p>
+<img alt="Bubble Sort" src="./../images/bubble_sort_9.jpg"/>
+<p>Notice that after each iteration, at least one value moves at the end.</p>
+<img alt="Bubble Sort" src="./../images/bubble_sort_10.jpg"/>
+<p>And when there's no swap required, bubble sorts learns that an array is completely sorted.</p>
+<img alt="Bubble Sort" src="./../images/bubble_sort_11.jpg"/>
+<p>Now we should look into some practical aspects of bubble sort.</p>
+<h2>Algorithm</h2>
+<p>We assume <b>list</b> is an array of <b>n</b> elements. We further assume that <b>swap</b> function swaps the values of the given array elements.</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">begin</span><span class="pln"> </span><span class="typ">BubbleSort</span><span class="pun">(</span><span class="pln">list</span><span class="pun">)</span><span class="pln">
+
+   </span><span class="kwd">for</span><span class="pln"> all elements of list
+      </span><span class="kwd">if</span><span class="pln"> list</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]</span><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> list</span><span class="pun">[</span><span class="pln">i</span><span class="pun">+</span><span class="lit">1</span><span class="pun">]</span><span class="pln">
+         swap</span><span class="pun">(</span><span class="pln">list</span><span class="pun">[</span><span class="pln">i</span><span class="pun">],</span><span class="pln"> list</span><span class="pun">[</span><span class="pln">i</span><span class="pun">+</span><span class="lit">1</span><span class="pun">])</span><span class="pln">
+      </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">if</span><span class="pln">
+   </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">for</span><span class="pln">
+   
+   </span><span class="kwd">return</span><span class="pln"> list
+   
+</span><span class="kwd">end</span><span class="pln"> </span><span class="typ">BubbleSort</span></pre>
+<h2>Pseudocode</h2>
+<p>We observe in algorithm that Bubble Sort compares each pair of array element unless the whole array is completely sorted in an ascending order. This may cause a few complexity issues like what if the array needs no more swapping as all the elements are already ascending.</p>
+<p>To ease-out the issue, we use one flag variable <b>swapped</b> which will help us see if any swap has happened or not. If no swap has occurred, i.e. the array requires no more processing to be sorted, it will come out of the loop.</p>
+<p>Pseudocode of BubbleSort algorithm can be written as follows −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="pln">procedure bubbleSort</span><span class="pun">(</span><span class="pln"> list </span><span class="pun">:</span><span class="pln"> array of items </span><span class="pun">)</span><span class="pln">
+
+   loop </span><span class="pun">=</span><span class="pln"> list</span><span class="pun">.</span><span class="pln">count</span><span class="pun">;</span><span class="pln">
+   
+   </span><span class="kwd">for</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> to loop</span><span class="pun">-</span><span class="lit">1</span><span class="pln"> </span><span class="kwd">do</span><span class="pun">:</span><span class="pln">
+      swapped </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pln">
+		
+      </span><span class="kwd">for</span><span class="pln"> j </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> to loop</span><span class="pun">-</span><span class="lit">1</span><span class="pln"> </span><span class="kwd">do</span><span class="pun">:</span><span class="pln">
+      
+         </span><span class="com">/* compare the adjacent elements */</span><span class="pln">   
+         </span><span class="kwd">if</span><span class="pln"> list</span><span class="pun">[</span><span class="pln">j</span><span class="pun">]</span><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> list</span><span class="pun">[</span><span class="pln">j</span><span class="pun">+</span><span class="lit">1</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+            </span><span class="com">/* swap them */</span><span class="pln">
+            swap</span><span class="pun">(</span><span class="pln"> list</span><span class="pun">[</span><span class="pln">j</span><span class="pun">],</span><span class="pln"> list</span><span class="pun">[</span><span class="pln">j</span><span class="pun">+</span><span class="lit">1</span><span class="pun">]</span><span class="pln"> </span><span class="pun">)</span><span class="pln">		 
+            swapped </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+         </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">if</span><span class="pln">
+         
+      </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">for</span><span class="pln">
+      
+      </span><span class="com">/*if no number was swapped that means 
+      array is sorted now, break the loop.*/</span><span class="pln">
+      
+      </span><span class="kwd">if</span><span class="pun">(</span><span class="kwd">not</span><span class="pln"> swapped</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+         </span><span class="kwd">break</span><span class="pln">
+      </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">if</span><span class="pln">
+      
+   </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">for</span><span class="pln">
+   
+</span><span class="kwd">end</span><span class="pln"> procedure </span><span class="kwd">return</span><span class="pln"> list</span></pre>
+<h2>Implementation</h2>
+<p>One more issue we did not address in our original algorithm and its improvised pseudocode, is that, after every iteration the highest values settles down at the end of the array. Hence, the next iteration need not include already sorted elements. For this purpose, in our implementation, we restrict the inner loop to avoid already sorted values.</p>
+<p>To know about bubble sort implementation in C programming language, please <a href="https://www.tutorialspoint.com/data_structures_algorithms/bubble_sort_program_in_c.htm">click here</a>.</p>
+<hr/>
+
+
+
+<hr/>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead" style="display: none !important;">
+<div class="bottomadtag" style="display: none !important;">Advertisements</div>
+<!-- /60931893/tutorial_bottom_leader_board -->
+<div id="div-gpt-ad-1510138782906-3">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1510138782906-3'); });
+</script>
+</div>
+</div>
+</div>
+
+  </div>
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Introduction to C</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="./style/style1.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+<div class="col-md-7 middle-col">
+<h1>Data Structure &amp; Algorithms - Tree Traversal</h1>
+
+<hr/>
+
+
+
+<hr/>
+<p>Traversal is a process to visit all the nodes of a tree and may print their values too. Because, all nodes are connected via edges (links) we always start from the root (head) node. That is, we cannot randomly access a node in a tree. There are three ways which we use to traverse a tree −</p>
+<ul class="list">
+<li>In-order Traversal</li>
+<li>Pre-order Traversal</li>
+<li>Post-order Traversal</li>
+</ul>
+<p>Generally, we traverse a tree to search or locate a given item or key in the tree or to print all the values it contains.</p>
+<h2>In-order Traversal</h2>
+<p>In this traversal method, the left subtree is visited first, then the root and later the right sub-tree. We should always remember that every node may represent a subtree itself.</p>
+<p>If a binary tree is traversed <b>in-order</b>, the output will produce sorted key values in an ascending order.</p>
+<img alt="In Order Traversal" src="./../images/inorder_traversal.jpg"/>
+<p>We start from <b>A</b>, and following in-order traversal, we move to its left subtree <b>B</b>. <b>B</b> is also traversed in-order. The process goes on until all the nodes are visited. The output of inorder traversal of this tree will be −</p>
+<p style="text-align:center;"><b><i>D → B → E → A → F → C → G</i></b></p>
+<h3>Algorithm</h3>
+<pre class="result notranslate">Until all nodes are traversed −
+<b>Step 1</b> − Recursively traverse left subtree.
+<b>Step 2</b> − Visit root node.
+<b>Step 3</b> − Recursively traverse right subtree.
+</pre>
+<h2>Pre-order Traversal</h2>
+<p>In this traversal method, the root node is visited first, then the left subtree and finally the right subtree.</p>
+<img alt="Pre Order Traversal" src="./../images/preorder_traversal.jpg"/>
+<p>We start from <b>A</b>, and following pre-order traversal, we first visit <b>A</b> itself and then move to its left subtree <b>B</b>. <b>B</b> is also traversed pre-order. The process goes on until all the nodes are visited. The output of pre-order traversal of this tree will be −</p>
+<p style="text-align:center;"><b><i>A → B → D → E → C → F → G</i></b></p>
+<h3>Algorithm</h3>
+<pre class="result notranslate">Until all nodes are traversed −
+<b>Step 1</b> − Visit root node.
+<b>Step 2</b> − Recursively traverse left subtree.
+<b>Step 3</b> − Recursively traverse right subtree.
+</pre>
+<h2>Post-order Traversal</h2>
+<p>In this traversal method, the root node is visited last, hence the name. First we traverse the left subtree, then the right subtree and finally the root node.</p>
+<img alt="Post Order Traversal" src="./../images/postorder_traversal.jpg"/>
+<p>We start from <b>A</b>, and following Post-order traversal, we first visit the left subtree <b>B</b>. <b>B</b> is also traversed post-order. The process goes on until all the nodes are visited. The output of post-order traversal of this tree will be −</p>
+<p style="text-align:center;"><b><i>D → E → B → F → G → C → A</i></b></p>
+<h3>Algorithm</h3>
+<pre class="result notranslate">Until all nodes are traversed −
+<b>Step 1</b> − Recursively traverse left subtree.
+<b>Step 2</b> − Recursively traverse right subtree.
+<b>Step 3</b> − Visit root node.
+</pre>
+<p>To check the C implementation of tree traversing, please <a href="https://www.tutorialspoint.com/data_structures_algorithms/tree_traversal_in_c.htm">click here</a>.</p>
+<hr/>
+
+
+
+<hr/>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead" style="display: none !important;">
+<div class="bottomadtag" style="display: none !important;">Advertisements</div>
+<!-- /60931893/tutorial_bottom_leader_board -->
+<div id="div-gpt-ad-1510138782906-3">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1510138782906-3'); });
+</script>
+</div>
+</div>
+</div>
+
+  </div>
+
+</body>
+
+</html>
+
+

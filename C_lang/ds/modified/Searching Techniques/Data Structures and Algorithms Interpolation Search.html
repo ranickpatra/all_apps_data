@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Introduction to C</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="./style/style1.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+<div class="col-md-7 middle-col" style="height: 2593px;">
+<h1>Data Structure - Interpolation Search</h1>
+
+<hr/>
+
+
+
+<hr/>
+<p>Interpolation search is an improved variant of binary search. This search algorithm works on the probing position of the required value. For this algorithm to work properly, the data collection should be in a sorted form and equally distributed.</p>
+<p>Binary search has a huge advantage of time complexity over linear search. Linear search has worst-case complexity of Ο(n) whereas binary search has Ο(log n).</p>
+<p>There are cases where the location of target data may be known in advance. For example, in case of a telephone directory, if we want to search the telephone number of Morphius. Here, linear search and even binary search will seem slow as we can directly jump to memory space where the names start from 'M' are stored.</p>
+<h2>Positioning in Binary Search</h2>
+<p>In binary search, if the desired data is not found then the rest of the list is divided in two parts, lower and higher. The search is carried out in either of them.</p>
+<img alt="BST Step One" src="./../images/bst_step_one.jpg"/>
+<img alt="BST Step Two" src="./../images/bst_step_two.jpg"/>
+<img alt="BST Step Three" src="./../images/bst_step_three.jpg"/>
+<img alt="BST Step Four" src="./../images/bst_step_four.jpg"/>
+<p>Even when the data is sorted, binary search does not take advantage to probe the position of the desired data.</p>
+<h2>Position Probing in Interpolation Search</h2>
+<p>Interpolation search finds a particular item by computing the probe position. Initially, the probe position is the position of the middle most item of the collection.</p>
+<img alt="Interpolation Step One" src="./../images/interpolation_step_one.jpg"/>
+<img alt="Interpolation Step Two" src="./../images/interpolation_step_two.jpg"/>
+<p>If a match occurs, then the index of the item is returned. To split the list into two parts, we use the following method −</p>
+<pre class="result notranslate">mid = Lo + ((Hi - Lo) / (A[Hi] - A[Lo])) * (X - A[Lo])
+
+where −
+   A    = list
+   Lo   = Lowest index of the list
+   Hi   = Highest index of the list
+   A[n] = Value stored at index n in the list
+</pre>
+<p>If the middle item is greater than the item, then the probe position is again calculated in the sub-array to the right of the middle item. Otherwise, the item is searched in the subarray to the left of the middle item. This process continues on the sub-array as well until the size of subarray reduces to zero.</p>
+<p>Runtime complexity of interpolation search algorithm is <b>Ο(log (log n))</b> as compared to <b>Ο(log n)</b> of BST in favorable situations.</p>
+<h3>Algorithm</h3>
+<p>As it is an improvisation of the existing BST algorithm, we are mentioning the steps to search the 'target' data value index, using position probing −</p>
+<pre class="result notranslate">Step 1 − Start searching <b>data</b> from middle of the list.
+Step 2 − If it is a match, return the index of the item, and exit.
+Step 3 − If it is not a match, probe position.
+Step 4 − Divide the list using probing formula and find the new midle.
+Step 5 − If data is greater than middle, search in higher sub-list.
+Step 6 − If data is smaller than middle, search in lower sub-list.
+Step 7 − Repeat until match.
+</pre>
+<h2>Pseudocode</h2>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="pln">A </span><span class="pun">→</span><span class="pln"> </span><span class="typ">Array</span><span class="pln"> list
+N </span><span class="pun">→</span><span class="pln"> </span><span class="typ">Size</span><span class="pln"> of A
+X </span><span class="pun">→</span><span class="pln"> </span><span class="typ">Target</span><span class="pln"> </span><span class="typ">Value</span><span class="pln">
+
+</span><span class="typ">Procedure</span><span class="pln"> </span><span class="typ">Interpolation_Search</span><span class="pun">()</span><span class="pln">
+
+   </span><span class="typ">Set</span><span class="pln"> </span><span class="typ">Lo</span><span class="pln">  </span><span class="pun">→</span><span class="pln">  </span><span class="lit">0</span><span class="pln">
+   </span><span class="typ">Set</span><span class="pln"> </span><span class="typ">Mid</span><span class="pln"> </span><span class="pun">→</span><span class="pln"> </span><span class="pun">-</span><span class="lit">1</span><span class="pln">
+   </span><span class="typ">Set</span><span class="pln"> </span><span class="typ">Hi</span><span class="pln">  </span><span class="pun">→</span><span class="pln">  N</span><span class="pun">-</span><span class="lit">1</span><span class="pln">
+
+   </span><span class="typ">While</span><span class="pln"> X does </span><span class="kwd">not</span><span class="pln"> match
+   
+      </span><span class="kwd">if</span><span class="pln"> </span><span class="typ">Lo</span><span class="pln"> equals to </span><span class="typ">Hi</span><span class="pln"> OR A</span><span class="pun">[</span><span class="typ">Lo</span><span class="pun">]</span><span class="pln"> equals to A</span><span class="pun">[</span><span class="typ">Hi</span><span class="pun">]</span><span class="pln">
+         EXIT</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Failure</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Target</span><span class="pln"> </span><span class="kwd">not</span><span class="pln"> found
+      </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">if</span><span class="pln">
+      
+      </span><span class="typ">Set</span><span class="pln"> </span><span class="typ">Mid</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Lo</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="pun">((</span><span class="typ">Hi</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> </span><span class="typ">Lo</span><span class="pun">)</span><span class="pln"> </span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="pln">A</span><span class="pun">[</span><span class="typ">Hi</span><span class="pun">]</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> A</span><span class="pun">[</span><span class="typ">Lo</span><span class="pun">]))</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="pun">(</span><span class="pln">X </span><span class="pun">-</span><span class="pln"> A</span><span class="pun">[</span><span class="typ">Lo</span><span class="pun">])</span><span class="pln"> 
+
+      </span><span class="kwd">if</span><span class="pln"> A</span><span class="pun">[</span><span class="typ">Mid</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> X
+         EXIT</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Success</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Target</span><span class="pln"> found at </span><span class="typ">Mid</span><span class="pln">
+      </span><span class="kwd">else</span><span class="pln"> 
+         </span><span class="kwd">if</span><span class="pln"> A</span><span class="pun">[</span><span class="typ">Mid</span><span class="pun">]</span><span class="pln"> </span><span class="pun">&lt;</span><span class="pln"> X
+            </span><span class="typ">Set</span><span class="pln"> </span><span class="typ">Lo</span><span class="pln"> to </span><span class="typ">Mid</span><span class="pun">+</span><span class="lit">1</span><span class="pln">
+         </span><span class="kwd">else</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> A</span><span class="pun">[</span><span class="typ">Mid</span><span class="pun">]</span><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> X
+            </span><span class="typ">Set</span><span class="pln"> </span><span class="typ">Hi</span><span class="pln"> to </span><span class="typ">Mid</span><span class="pun">-</span><span class="lit">1</span><span class="pln">
+         </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">if</span><span class="pln">
+      </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">if</span><span class="pln">
+   </span><span class="typ">End</span><span class="pln"> </span><span class="typ">While</span><span class="pln">
+
+</span><span class="typ">End</span><span class="pln"> </span><span class="typ">Procedure</span></pre>
+<p>To know about the implementation of interpolation search in C programming language, <a href="https://www.tutorialspoint.com/data_structures_algorithms/interpolation_search_in_c.htm">click here</a>.</p>
+<hr/>
+
+
+
+<hr/>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead" style="display: none !important;">
+<div class="bottomadtag" style="display: none !important;">Advertisements</div>
+<!-- /60931893/tutorial_bottom_leader_board -->
+<div id="div-gpt-ad-1510138782906-3">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1510138782906-3'); });
+</script>
+</div>
+</div>
+</div>
+
+  </div>
+
+</body>
+
+</html>
+
+

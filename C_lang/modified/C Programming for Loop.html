@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="./style/style1.css">
+  <link rel="stylesheet" href="./style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+<h2 class="page_title"><strong>C Programming for Loop</strong></h2><br><p>
+Loops are used in programming to repeat a specific block of code. After reading this tutorial, you will learn to create a for loop in C programming.</p><br><section class="main-content">
+
+
+<div class="inside-content">
+<div class="region region-content-inside">
+<div class="block block-block" id="block-block-43">
+<div class="content">
+<style>
+.Learn C language_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Learn C language_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Learn C language_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" style="display: none !important;"></script>
+<!-- Learn C language_Responsive_Top -->
+<ins class="adsbygoogle Learn C language_Responsive_Top" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021" style="display: none !important;">
+</ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div>
+</div>
+</div>
+<img alt="for loop in C programming" src="./images/for-loop_0.jpg" title="C for loop"/>
+<div class="clearfix">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/c-programming/c-for-loop" class="node node-c-tutorial clearfix" id="node-146" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="C Programming for Loop" property="dc:title"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Loops are used in programming to repeat a specific block until some end condition is met. There are three loops in C programming:</p>
+<ol>
+<li>for loop</li>
+<li>while loop</li>
+<li>do...while loop</li>
+</ol>
+<h2>for Loop</h2>
+<p> The syntax of for loop is:</p>
+<pre>for (initializationStatement; testExpression; updateStatement)
+{
+       // codes 
+}</pre>
+<hr/>
+<h3>How for loop works?</h3>
+<p>The initialization statement is executed only once.</p>
+<p>Then, the test expression is evaluated. If the test expression is false (0), for loop is terminated. But if the test expression is true (nonzero), codes inside the body of <code>for</code> loop is executed and the update expression is updated.</p>
+<p>This process repeats until the test expression is false.</p>
+<p>The <var>for</var> loop is commonly used when the number of iterations is known.</p>
+<p>To learn more on test expression (when test expression is evaluated to nonzero (true) and 0 (false)), check out relational and logical operators.</p>
+<hr/>
+<h3>for loop Flowchart</h3>
+<p></p><div class="block-inject block-inject-1" id="block-inject-1"><div class="block block-block" id="block-block-123">
+<div class="content">
+<!-- /8095840/.2_A.34657.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth <= 768) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+<!-- /8095840/.2_A.34660.4_Learn C language.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth > 768) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div> </div>
+</div>
+</div><div class="clearfix"></div><p><img alt="Flowchart of for loop in C programming language" class="figure" src="./images/for-loop.jpg" title="for loop Flowchart"/></p>
+<hr/>
+<h3>Example: for loop</h3>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">// Program to calculate the sum of first n natural numbers</span><span class="pln">
+</span><span class="com">// Positive integers 1,2,3...n are known as natural numbers</span><span class="pln">
+
+</span><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> num</span><span class="pun">,</span><span class="pln"> count</span><span class="pun">,</span><span class="pln"> sum </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter a positive integer: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">num</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="com">// for loop terminates when n is less than count</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">count </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln"> count </span><span class="pun">&lt;=</span><span class="pln"> num</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">count</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        sum </span><span class="pun">+=</span><span class="pln"> count</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Sum = %d"</span><span class="pun">,</span><span class="pln"> sum</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code>
+</pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter a positive integer: 10
+Sum = 55</samp></pre>
+<p>The value entered by the user is stored in variable <var>num</var>. Suppose, the user entered 10.</p>
+<p>The <var>count</var> is initialized to 1 and the test expression is evaluated. Since, the test expression <code>count &lt;= num</code> (1 less than or equal to 10) is true, the body of for loop is executed and the value of <var>sum</var> will equal to 1.</p>
+<p>Then, the update statement <code>++count</code> is executed and count will equal to 2. Again, the test expression is evaluated. Since, 2 is also less than 10, the test expression is evaluated to true and the body of for loop is executed. Now, the <var>sum</var> will equal 3.</p>
+<p>This process goes on and the sum is calculated until the count reaches 11.</p>
+<p>When the count is 11,  the test expression is evaluated to 0 (false) as 11 is not less than or equal to 10. Therefore, the loop terminates and next, the total sum is printed.</p>
+</div></div></div></div>
+</div> </div>
+</div>
+</div>
+
+</div>
+</section>
+  </div>
+</body>
+</html>

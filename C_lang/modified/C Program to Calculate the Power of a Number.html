@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+  <link rel="stylesheet" href="./style/style1.css">
+  <link rel="stylesheet" href="./style/style2.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+<h2 class="page_title"><strong>C Program to Calculate the Power of a Number</strong></h2><br><p>
+Example on how to calculate the power of a number if the exponent is an integer. Also, you will learn to compute the power using pow() function.</p><br><section class="main-content">
+
+
+<div class="inside-content">
+<div class="region region-content-inside">
+<div class="block block-block" id="block-block-43">
+<div class="content">
+<style>
+.Programiz_Responsive_Top { margin: 20px auto; width: 300px; height: 250px; }
+@media(min-width: 748px) { .Programiz_Responsive_Top { width: 728px; height: 90px; } }
+@media(min-width: 900px) { .Programiz_Responsive_Top { width: 300px; height: 250px; margin: 20px 0; } }
+@media(min-width: 1150px) { .Programiz_Responsive_Top { width: 728px; height: 90px; margin: 12px 0; } }
+</style>
+<script async="" src="./images/f(3).txt"></script>
+<!-- Programiz_Responsive_Top -->
+<ins class="adsbygoogle Programiz_Responsive_Top" data-ad-client="ca-pub-9007421361448641" data-ad-slot="1467818021" data-adsbygoogle-status="done" style="display: inline-block; width: 728px; height: 90px;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+</div>
+</div>
+</div>
+<img alt="Power of a number" src="./images/power-number_0.jpg" title=""/>
+<p>To understand this example, you should have the knowledge of following C programming topics:</p><ul><li>C Programming Operators</li><li>C Programming while and do...while Loop</li></ul><div class="clearfix">
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+<div class="content">
+<div about="/c-programming/examples/power-number" class="node node-c-example clearfix" id="node-199" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="C Program to Calculate the Power of a Number" property="dc:title"></span><div class="content clearfix">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>The program below takes two integers from the user (a base number and an exponent) and calculates the power.</p>
+<p><strong>For example:</strong> In case of 2<sup>3</sup></p>
+<ul>
+<li>2 is the base number</li>
+<li>3 is the exponent</li>
+<li>And, the power is equal to 2*2*2</li>
+</ul>
+<h2>Example #1: Power of a Number Using while Loop</h2>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> </span><span class="kwd">base</span><span class="pun">,</span><span class="pln"> exponent</span><span class="pun">;</span><span class="pln">
+
+    </span><span class="kwd">long</span><span class="pln"> </span><span class="kwd">long</span><span class="pln"> result </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter a base number: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="kwd">base</span><span class="pun">);</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter an exponent: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">exponent</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="pln">exponent </span><span class="pun">!=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        result </span><span class="pun">*=</span><span class="pln"> </span><span class="kwd">base</span><span class="pun">;</span><span class="pln">
+        </span><span class="pun">--</span><span class="pln">exponent</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Answer = %lld"</span><span class="pun">,</span><span class="pln"> result</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter a base number: 3
+Enter an exponent: 4
+Answer = 81</samp>
+</pre>
+<p></p><div class="block-inject block-inject-1" id="block-inject-1"><div class="block block-block" id="block-block-153">
+<div class="content">
+<!-- /8095840/.2_A.34657.4_Programiz.com_tier1 -->
+<div id="div-gpt-ad-1527670353707-0">
+<script>
+if (window.innerWidth <= 768) {
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670353707-0'); });
+      }
+</script>
+</div>
+<!-- /8095840/.2_A.34660.4_Programiz.com_tier1 -->
+<div id="div-gpt-ad-1527670429257-0">
+<script>
+if (window.innerWidth > 768) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1527670429257-0'); });
+}
+</script>
+</div> </div>
+</div>
+</div><div class="clearfix"></div><p>The above technique works only if the exponent is a positive integer.</p>
+<p>If you need to find the power of a number with any real number as an exponent, you can use pow() function. </p>
+<h2>Example #2: Power Using pow() Function</h2>
+<pre class="prettyprint prettyprinted" style=""><code><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;math.h&gt;</span><span class="pln">
+
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">double</span><span class="pln"> </span><span class="kwd">base</span><span class="pun">,</span><span class="pln"> exponent</span><span class="pun">,</span><span class="pln"> result</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter a base number: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%lf"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="kwd">base</span><span class="pun">);</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter an exponent: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%lf"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">exponent</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="com">// calculates the power</span><span class="pln">
+    result </span><span class="pun">=</span><span class="pln"> pow</span><span class="pun">(</span><span class="kwd">base</span><span class="pun">,</span><span class="pln"> exponent</span><span class="pun">);</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"%.1lf^%.1lf = %.2lf"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">base</span><span class="pun">,</span><span class="pln"> exponent</span><span class="pun">,</span><span class="pln"> result</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p><b>Output</b></p>
+<pre><samp>Enter a base number: 2.3
+Enter an exponent: 4.5
+2.3^4.5 = 42.44</samp></pre>
+</div></div></div></div>
+</div> </div>
+</div>
+</div>
+
+</div>
+</section>
+  </div>
+</body>
+</html>
