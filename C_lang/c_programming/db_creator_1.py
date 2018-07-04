@@ -41,4 +41,5 @@ create_db(super_class='example', file_name='example.txt', host='https://raw.gith
 create_db_ds(super_class='ds', file_name='content_ds.txt', host='https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/')
 
 with open('database.json', 'w') as f:
-    f.write(json.dumps(files_lst, sort_keys=True, indent=4))
+    #f.write(json.dumps(files_lst, sort_keys=True, indent=4))
+    f.write(json.dumps(files_lst))
