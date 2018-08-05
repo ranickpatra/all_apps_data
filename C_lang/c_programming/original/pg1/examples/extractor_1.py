@@ -2,6 +2,7 @@ import bs4 as bs
 import shutil
 import os
 
+image_url = 'https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/images'
 
 hd = '''
 <!DOCTYPE html>
@@ -73,6 +74,10 @@ for f_name in  file_list:
         for _ in main_content.findAll('div', 'content-bottom'):
             _.decompose()
 
+        for _ in main_content.findAll('div', {"class":"content"}):
+            _.decompose()
+            break
+
         for _ in main_content.findAll('iframe'):
             _.decompose()
 
@@ -86,8 +91,8 @@ for f_name in  file_list:
 
     with open('modified/'+f_name, 'w') as f:
         cont = str(cont)
-        replace_what = f_name.replace('.html', '_files')
-        cont = cont.replace(replace_what, 'images')
+        replace_what = './'+f_name.replace('.html', '_files')
+        cont = cont.replace(replace_what, image_url)
         f.write(hd + '<h2 class="page_title"><strong>' + title + '</strong></h2><br><p>' + desc + '</p><br>' + cont + fd)
 
     #break

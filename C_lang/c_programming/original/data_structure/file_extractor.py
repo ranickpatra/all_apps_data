@@ -28,8 +28,8 @@ h_cont = '''
   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
 
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style/style1.css">
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/style/style2.css">
+  <link rel="stylesheet" href="../style/style1.css">
+  <link rel="stylesheet" href="../style/style2.css">
 
 
 </head>

@@ -35,10 +35,10 @@ def create_db_ds(super_class, file_name, host):
 
 
 
-create_db(super_class='advance', file_name='advance.txt', host='https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/')
-create_db(super_class='basic', file_name='basic.txt', host='https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/')
-create_db(super_class='example', file_name='example.txt', host='https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/')
-create_db_ds(super_class='ds', file_name='content_ds.txt', host='https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/ds/modified/')
+create_db(super_class='advance', file_name='advance.txt', host='https://learn-c-language.firebaseapp.com/modified/')
+create_db(super_class='basic', file_name='basic.txt', host='https://learn-c-language.firebaseapp.com/modified/')
+create_db(super_class='example', file_name='example.txt', host='https://learn-c-language.firebaseapp.com/examples/')
+create_db_ds(super_class='ds', file_name='content_ds.txt', host='https://learn-c-language.firebaseapp.com/ds/')
 
 with open('database.json', 'w') as f:
     f.write(json.dumps(files_lst, sort_keys=True, indent=4))

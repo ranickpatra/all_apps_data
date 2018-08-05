@@ -25,8 +25,8 @@ hd = '''
   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
 
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/style/style1.css">
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/ranickpatra/all_apps_data/master/C_lang/modified/style/style2.css">
+  <link rel="stylesheet" href="./style/style1.css">
+  <link rel="stylesheet" href="./style/style2.css">
 
 
 </head>
@@ -72,6 +72,10 @@ for f_name in  file_list:
 
         for _ in main_content.findAll('div', 'content-bottom'):
             _.decompose()
+
+        for _ in main_content.findAll('div', {"class":"content"}):
+            _.decompose()
+            break
 
         for _ in main_content.findAll('iframe'):
             _.decompose()
