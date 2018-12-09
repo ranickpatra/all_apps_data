@@ -1,0 +1,971 @@
+
+<!-- saved from url=(0052)https://www.tcscodevita.com/CodevitaV7/main_page.jsp -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script src="./TCS_ CodeVita - 2_files/jquery1.9.js.download"></script>
+<!-- <script src="./JS/jquery-ui.min.js"></script> -->
+
+
+
+
+
+
+
+	
+		<script>
+			
+		</script>
+	</head>
+	<body style="">
+		<link rel="stylesheet" href="./TCS_ CodeVita - 2_files/main_page.css">
+		
+
+
+<link rel="stylesheet" href="./TCS_ CodeVita - 2_files/header.css">
+<header class="header">
+	<div class="left_pane">
+		<img src="./TCS_ CodeVita - 2_files/cv_logo.png" style="width: 160px">
+	</div>
+	<div class="right_pane">
+		<span class="name">ranick patra</span>
+		<a href="https://www.tcscodevita.com/CodevitaV7/logout.jsp"><img src="./TCS_ CodeVita - 2_files/logout.png"></a>
+	</div>
+</header>
+
+		<div class="main-container">
+			<div class="section side-content">
+				<div class="timer">
+					<span class="num" id="hour" style="display: inline-block;">00</span><span class="desc" style="display: inline-block;">Hr</span>
+					<span class="num" id="minute" style="display: inline-block;">00</span><span class="desc" style="display: inline-block;">Min</span>
+					<span class="num" id="second" style="display: inline-block;">00</span><span class="desc" style="display: inline-block;">Sec</span>
+				<span class="wish" style="display: none;">All the Best</span></div>
+
+
+
+				<ul class="navigation">
+					
+					<li id="guidelines" class="" style="display: block;">Guidelines</li>
+					
+						<li id="coding_area" style="display: block;" class="active">Coding Area</li>	
+					
+					<li id="compile_run" style="display: block;">Editor | Compile &amp; Run History </li>
+					<li id="submissions" style="display: block;">Submissions</li>
+					<li id="feedback" style="display: block;">Feedback Form</li>
+					<li id="result" style="display: block;">Result</li>
+					<!--  <li id="msg">Messages</li>-->
+					<li id="livedashboard" style="display: block;">Dashboard</li>
+				</ul>
+
+				<div class="button_main" id="graphs" onclick="launchReport()">Graphs</div>
+
+			</div>
+			<div class="section main-content" style="min-height: 500px">
+				<h1 id="the-heading">Coding Area</h1>
+				<div id="main-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>TCS: CodeVita - Coding Arena</title>
+	<script type="text/javascript" src="./TCS_ CodeVita - 2_files/jquery-2.0.3.js.download"></script>
+	<script type="text/javascript" src="./TCS_ CodeVita - 2_files/main_script.js.download"></script>
+
+
+
+
+
+<div class="module">
+	<span class="open-code-editor" onclick="openCodeEditor(this)" style="display: inline-block;">Online Editor (<span id="editor-question">B</span>)</span>
+<!-- Code by Shubham (STARTS) -->
+	
+
+<!-- Code by Shubham (ENDS) -->
+
+
+
+<div class="question_selectors tab-selectors" style="grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;">
+	
+		<div class="question_selector tab-selector" id="A" onclick="SelectProblem(this)">
+			A
+		</div>
+		
+	
+		<div class="question_selector tab-selector active" id="B" onclick="SelectProblem(this)">
+			B
+		</div>
+		
+	
+		<div class="question_selector tab-selector" id="C" onclick="SelectProblem(this)">
+			C
+		</div>
+		
+	
+		<div class="question_selector tab-selector" id="D" onclick="SelectProblem(this)">
+			D
+		</div>
+		
+	
+		<div class="question_selector tab-selector" id="E" onclick="SelectProblem(this)">
+			E
+		</div>
+		
+	
+		<div class="question_selector tab-selector" id="F" onclick="SelectProblem(this)">
+			F
+		</div>
+		
+	
+		<div class="question_selector tab-selector" id="G" onclick="SelectProblem(this)">
+			G
+		</div>
+		
+	
+		<div class="question_selector tab-selector" id="H" onclick="SelectProblem(this)">
+			H
+		</div>
+		
+	
+</div><div class="tab-selector-pointer"><div class="pointer" style="width: 12.5%; left: 12.5%;"></div></div>
+
+
+
+<div class="tabs">
+				
+	
+	<div class="question_container tab" id="A" style="opacity: 0; display: none;">
+		<p></p>
+
+<h2 id="problemname">Election in DisneyLand</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  
+<h3 id="hexample">Examples</h3>
+<p id="example"></p>
+-->
+
+
+
+
+
+
+	<div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3>Problem Description</h3></div><div class="content-tab" style="opacity: 1;"><p id="problemdesc"></p><p>Disney Land had an election on 1st April, 2018. Disney Land is divided into different constituencies. </p><p>Different parties who fought in the Election are as follows:-</p><p>Party 1 : AAA</p><p>Party 2 : BBB</p><p>Party 3 : Others</p><p></p><p>Disney Land is rolling out a new political process. Under this process, Disney Land will be divided into N * M equal parts called constituencies. These constituencies will then have to be aggregated into Political seats. The winner of the maximum number of seats will be the winner of the elections and will come to power in Disney Land.</p><p>The Aggregation process will involve distributing N*M constituencies into K Seats such that</p><p>Number of constituencies that are a part of a Electoral Seat is maximum i.e. of size B*B</p><p>No constituency is left out</p><p>There is no overlap of constituencies across Seats</p><p>Distribution of constituencies in Seats is equal</p><p></p><p>The party which wins maximum constituencies in a given Seat wins that Seat. Winner of maximum Seats wins the election.</p><p>For representational purpose, N*M constituencies of Disney Land are represented as a matrix. The winning political party in that constituency is represented with number as follows</p><p>Party AAA -&gt; 1 </p><p>Party BBB -&gt; 2</p><p>Others -&gt; 3</p><p>Given the matrix, find B*B different constituencies in the Disney Land (B &lt; N,<b> </b>M). Find B in such a way that, B is maximum. </p><p>Unfortunate reality of Elections in this day and age is, Horse Trading. Disney Land is no different. After the election, some party may bribe some other party to surrender a particular constituency to win that seat. </p><p>Your task is to find which party won the Election after due process, including Horse-trading. If no party has a majority, then print "<b>No Majority</b>".</p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="hconst">Constraints</h3></div><div class="content-tab" style="opacity: 1;"><p id="const"></p><p>Both N and M are even numbers</p><p>2&lt;=N , M &lt;=10</p><p>1&lt;=seats &lt;= 20</p><p>1&lt;= H &lt;= 10</p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="hinput">Input Format</h3></div><div class="content-tab" style="opacity: 1;"><p id="input"></p><p>First Line indicates the Row (N) and Column (M) of the total number of constituencies in Disney Land.</p><p>Next N lines contain the data about which party has won which constituency</p><p>Next Line (After the N Lines of Seats) contains number of Horse-trades (H) that took place during the elections.</p><p>Next H Lines contains a data tuple &lt;X, Y, Z&gt; where</p><p> X &amp; Y are the row &amp; column of the seat where bribe took place, and </p><p>Z is the Party who initiated the horse trading.</p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="houtput">Output</h3></div><div class="content-tab" style="opacity: 1;"><p id="output"></p><p>First Line should contain the party who has the majority before horse-trading and the number of seats of that party, separated by a colon (:) or <b>No Majority</b> </p><p>Second Line should contain the party who has majority after horse-trading and the number of Seats of that party, separated by a colon (:) or <b>No Majority</b> </p><p>For Example, in case of no majority before horse trading, you have to print "<b>Initial Majority Party:Seats = No Majority</b>".Also, after horse trading if there is no majority you have to print "<b>Party Won Party:Seats = No Majority</b>"</p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="htestcase">Test Case</h3></div><div class="content-tab" style="opacity: 1;"><pre><p id="testcase"></p>
+</pre></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="hexplanation">Explanation</h3></div><div class="content-tab" style="opacity: 1;"><p id="explanation"></p><p>Example 1</p><p>Input </p><p>4 4</p><p>1 1 2 2</p><p>2 3 2 3</p><p>1 1 3 3</p><p>2 1 3 3</p><p>1</p><p>1 1 2</p><p>Output </p><p>Initial Majority Party:Seats = AAA:2</p><p>Party Won Party:Seats = BBB:2</p><p>Explanation</p><p>From the input having 4*4 matrix; wherein N = 4 and M = 4, it is divided into 4 equal constituency of 2*2 matrix each.</p><p>First Seat:-</p><p>1 1</p><p>2 3</p><p>Second Seat:-</p><p>2 2 </p><p>2 3</p><p>Third Seat:-</p><p>1 1</p><p>2 1</p><p>Fourth Seat:-</p><p>3 3</p><p>3 3</p><p></p><p>The Party who won the First Seat = AAA</p><p>The Party who won the Second Seat = BBB</p><p>The Party who won the Third Seat = AAA</p><p>The Party who won the Fourth Seat = Others</p><p></p><p>From the Seat wins, it is clear that the Party who has the initial majority = AAA</p><p></p><p>Now, the constituency present in Row = 1 and Column = 1 is bribed by Party BBB.</p><p>Hence, that Seat (First Seat) after the Bribing process will be:-</p><p>2 1</p><p>2 3</p><p>Hence, the Party who won the First Seat = BBB</p><p></p><p>Thus, after horse-trading activities complete, the Party who finally won the Election = BBB </p><p></p></div></div>	
+	
+				
+	
+	<div class="question_container tab active" id="B" style="opacity: 1; display: block;">
+		<p></p>
+
+<h2 id="problemname">Score Keeping</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  
+<h3 id="hexample">Examples</h3>
+<p id="example"></p>
+-->
+
+
+
+
+
+
+	<div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3>Problem Description</h3></div><div class="content-tab" style="opacity: 1;"><p id="problemdesc"></p><p>N chess engines are competing in a tournament. Each engine will compete with every other engine in round robin manner in each round.</p><p>You have to find the engine that scores the most (highest rank) and the least scores (lowest ranked). Also answer the queries which will be asked.</p><p>The participants are seeded and their seed number corresponds to the participant's number. For example, if the participant is P1, then the seed number of that participant is 1.</p><p>The ranking of the engines is based on the total scores received across all the rounds, with one that scored the highest being the highest ranked, and the one that scored the least being lowest ranked.</p><p>The engines having same score will be ranked according to the following rules:</p><p class="list_Paragraph">1. The participant which is having higher score with black pieces against the corresponding participant, with whom the score is tied, will be placed higher.</p><p class="list_Paragraph">2. If the participants have same score with black pieces while playing against each other, then the participant who is seeded lower will be ranked higher than the other participant.</p><p>The output will be the participant id and score of the highest and lowest ranked engine, with their scores. In addition, responses to the queries need to be output.</p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="hconst">Constraints</h3></div><div class="content-tab" style="opacity: 1;"><p id="const"></p><p>0&lt;N&lt;21</p><p>0&lt;S&lt;19</p><p>M&lt;1001</p><p></p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="hinput">Input Format</h3></div><div class="content-tab" style="opacity: 1;"><p id="input"></p><p>First line of input will contain the number of participants, N.</p><p>Second line will contain the number of rounds, R.</p><p>Next ((n*(n-1)*R)/2) will contain 4 data items corresponding to</p><p>&lt;PwhitePblackScoreroundNumber&gt;</p><p>Where </p><p class="list_Paragraph">· Pwhite is the name of Engine playing white</p><p class="list_Paragraph">· Pblack is the name of Engine playing black</p><p class="list_Paragraph">· Score will be from the set {1-0, 0-1 or 0.5-0.5}</p><p class="list_Paragraph">· roundNumber corresponds to the round number</p><p>Example: &lt;P1 P2 1-0 1&gt;</p><p>Here,</p><p>P1 is the participant playing in white, 1 here represent the seeding of the participant.</p><p>P2 is the participant playing in black, 2 here also represent the seeding of the participant.</p><p>1-0 is the score of the match, the scores can either be (1-0, 0-1, 0.5-0.5)</p><p>roundNumber is the round in which the match is played.</p><p></p><p>Next line contains the number of queries, M.</p><p>Next M lines contains the queries.</p><p>Queries will be of two types:</p><p class="list_Paragraph">1. If the length of the query is 2, then we have to find the difference between the scores of participants after all the rounds. Example, 2 1</p><p class="list_Paragraph">We will have to find the difference between the scores of 2 and 1 after all the rounds are over.</p><p class="list_Paragraph">2. <a name="_GoBack"></a>If the length of the query is 3, then we have to find the difference between the cumulative scores of participants after that round is over. Example, 2 1 4</p><p class="list_Paragraph">We will have to find the difference between the scores of 2 and 1 after fourth round is over.</p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="houtput">Output</h3></div><div class="content-tab" style="opacity: 1;"><p id="output"></p><p>First Line contains the participant's name, who gets the highest rank along with its score delimited by ':'</p><p>Second Line contains the participant's name, who gets the lowest rank along with its score delimited by ':'</p><p>Next M Lines, contains the answers to the queries asked.</p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="htestcase">Test Case</h3></div><div class="content-tab" style="opacity: 1;"><pre><p id="testcase"></p>
+</pre></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="hexplanation">Explanation</h3></div><div class="content-tab" style="opacity: 1;"><p id="explanation"></p><p> <b>Example 1</b> </p><p>Input:</p><p>3</p><p>3</p><p>P1 P2 0.5-0.5 1</p><p>P1 P3 0-1 1</p><p>P2 P3 0.5-0.5 1</p><p>P2 P1 1-0 2</p><p>P3 P1 0-1 2</p><p>P3 P2 0.5-0.5 2</p><p>P1 P2 0-1 3</p><p>P1 P3 0.5-0.5 3</p><p>P2 P3 0-1 3</p><p>2</p><p>3 1</p><p>2 1 2</p><p></p><p>Output:</p><p>P3:3.5</p><p>P1:2.0</p><p>0.0</p><p>1.0</p><p></p><p>Explanation:</p><p>P3 and P2 have same score but P3 will have higher rank because, P3 has won more (while playing as black) against P2 when they played head to head.</p><p>Also, in the query 3 1, means the difference between the scores of 3 and 1 after all the rounds are over that is 0 as P3 has won one match, P1 has won one match and one match was drawn between them.</p><p>Also, in the query 2 1 2, means the difference between the scores of 2 and 1 after second round is over that is 1 as match between them is a draw in first round and P2 won the game in second round.</p><p></p><p> <b>Example 2</b> </p><p>Input:</p><p>4</p><p>2</p><p>P2 P1 0.5-0.5 1</p><p>P3 P1 0.5-0.5 1</p><p>P4 P1 1-0 1</p><p>P3 P2 1-0 1</p><p>P4 P2 0-1 1</p><p>P4 P3 0.5-0.5 1</p><p>P1 P2 0-1 2</p><p>P1 P3 1-0 2</p><p>P1 P4 0.5-0.5 2</p><p>P2 P3 1-0 2</p><p>P2 P4 0-1 2</p><p>P3 P4 0.5-0.5 2</p><p>3</p><p>3 2 2</p><p>1 2</p><p>3 2 1</p><p></p><p>Output:</p><p>P4:3.5</p><p>P3:2.5</p><p>0.0</p><p>1.0</p><p>1.0</p><p></p><p>Explanation:</p><p>Here P4 and P2 have the same score, also they have same score when they play as black against each other but P4 is ranked higher because it is seeded lower than P2.</p><p></p><p></p></div></div>	
+	
+				
+	
+	<div class="question_container tab" id="C" style="opacity: 0; display: none;">
+		<p></p>
+
+<h2 id="problemname">Supertrend</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  
+<h3 id="hexample">Examples</h3>
+<p id="example"></p>
+-->
+
+
+
+
+
+	<div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3>Problem Description</h3></div><div class="content-tab" style="opacity: 1;"><p id="problemdesc"></p><p>Write a program to analyze and back test stock data to find total profit and buy / sell order price using super trend indicator formula.</p><p>There is one indicator on chart data called super trend which is used in stock market to make buy and sell decisions.</p><p>If we see super trend indicator on stock chart and want to back test super trend trading strategy then we have to manually check each and every buy / sell occurrences. A program will make it easy to analyze or back test data of any number of periods.</p><p>It is calculated based on Average true range (ATR) and a multiplier value. ATR measures the degree of volatility of the market.</p><p>Below are the mathematical formulas involved in calculation of super trend indicator:</p><p></p><p> <b>True Range (TR) </b>= Max of (Current High- Current Low, Current High- Previous Close, Current Low- Previous Close)</p><p> <a name="_GoBack"></a> <b>Note</b>: TR value to be calculated starting from 2nd iteration as we are using Previous close in the formula</p><p> <b>Average True Range (ATR) </b>= Average of last n True Range values (Here n is by default 10. Means we have to find last 10 days average true range at every point.)</p><p> <b>Basic Upper band </b>= (Current High + Current Low) / 2 + Multiplier * ATR (Here multiplier is by default 3)</p><p> <b>Basic Lower band </b>= (Current High + Current Low) / 2 - Multiplier * ATR</p><p> <b>Final Upper band </b>= IF( (Current Basic Upper band &lt; Previous Final Upper band) or (Previous Close &gt; Previous Final Upper band)) Then (Current Basic Upper band) ELSE Previous Final Upper band)</p><p> <b>Final Lower band </b>= IF( (Current Basic Lower band &gt; Previous Final Lower band) or (Previous Close &lt; Previous Final Lower band)) Then (Current Basic Lower band) ELSE Previous Final Lower band)</p><p> <b>SUPERTREND </b>= IF(Current Close &lt;= Current Final Upper band ) Then Current Final Upper band ELSE Current Final Lower band</p><p></p><p> <b>Buy &amp; Sell Process</b> </p><p>We have to buy stock on current close price when Super trend indicator value closes above the current close price and a sell stock when super trend value closes below the current closing price.</p><p>Note: Here ATR period is 10 so buy and sell must start after 10th period so that super trend values can be generated. In first initial 10 periods only true range (TR) would be calculated. Calculate total number of buy and sell transactions that were performed based on Super trend analysis.</p><p> <b>Assumption</b> </p><p>We are trading stock market index or stock futures contracts and not equities. </p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="hconst">Constraints</h3></div><div class="content-tab" style="opacity: 1;"><p id="const"></p><p> 1 &lt;= N &lt;= 1000</p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="hinput">Input Format</h3></div><div class="content-tab" style="opacity: 1;"><p id="input"></p><p>First line contains single integer N that denotes the number of periods for which data exist</p><p>Second line contains N * 3 space delimited values which correspond to the sequence &lt;High Low Close&gt; ...repeated 3N times</p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="houtput">Output</h3></div><div class="content-tab" style="opacity: 1;"><p id="output"></p><p>For each Buy / Sell transaction output the following</p><p>Buy at &lt;buy price&gt; (New Position).</p><p>Sell at &lt;sell price&gt; (Close Previous Position).</p><p>Profit &lt;profit&gt;</p><p>Where &lt;buy price&gt;, &lt;sell price&gt; and &lt;profit&gt; are actual values for that transaction accurate up to 2 digit after decimal point.</p><p></p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="htestcase">Test Case</h3></div><div class="content-tab" style="opacity: 1;"><pre><p id="testcase"></p>
+</pre></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="hexplanation">Explanation</h3></div><div class="content-tab" style="opacity: 1;"><p id="explanation"></p><p>Example 1</p><p>Input</p><p>14</p><p>335.4 317.3 321 336.7 319 322.75 338.1 325 325.05 333 318.8 324.2 334.3 320.45 326 331.8 323 327.45 324.95 314.65 319.9 325.9 317.1 322.1 324.35 318.5 323.7 330.05 307 315.55 329.45 310 316.8 0 0 326.05 323.5 312.2 315.45 318.95 315.75 316.85</p><p>Output</p><p>Buy at 316.8 (New Position).</p><p>Sell at 326.05 (Close Previous Position).</p><p>Profit 9.25</p><p></p><p>Sell at 326.05 (New Position).</p><p>Buy at 315.45 (Close Previous Position).</p><p>Profit 19.85</p><p></p><p>Buy at 315.45 (New Position).</p><p>Total orders 3</p><p></p><p>Example 2</p><p>Input</p><p>59</p><p>10315.3 10208.35 10301.4 10339 10248.45 10327.4 10345 10170.25 10194.7 10403 10288.45 10398.05 10420 10360 10399.3 10469.7 10410 10438.55 10482 10438.6 10468 10479.9 10411.5 10468.55 10520.95 10440.25 10507.5 10570 10501.5 10533.2 10590.55 10463.8 10585.5 10604.45 10540 10589.2 10634.05 10560.15 10577.85 10624.7 10591 10612.75 10632.6 10570 10627.6 10660.15 10589 10625.6 10670.9 10609.8 10654.35 10645.95 10568.25 10605.2 10651.6 10591.45 10639.65 10750 10660 10729.9 10796.25 10742.4 10788.9 10801.7 10720 10746.9 10745 10677 10719.45 10696.4 10654 10669.5 10754.4 10676.3 10748.6 10775 10690.1 10742.9 10795.5 10718.8 10777 10800 10724.05 10735.3 10833.65 10746.55 10827.8 10853.5 10792.35 10821.95 10955.35 10794.05 10824.25 10823.3 10731.6 10772.8 10789.7 10693.4 10709.05 10697.5 10599 10605.95 10639 10537.05 10552.35 10587 10521.2 10568 10558.45 10430.35 10442.85 10535.45 10426.05 10516.45 10650 10522.6 10616.2 10710.95 10646.05 10691.2 10714 10606.75 10628.05 10655 10556.2 10614.45 10715.4 10625.1 10702.15 10744 10669.95 10683.9 10732.2 10587.65 10598.7 10630 10552 10596.45 10701 10575 10686.25 10814.05 10725.25 10765.2 10759.4 10691 10748.1 10835 10761.25 10785.8 10849.9 10780.25 10839.05 10873.5 10831.5 10844.85 10834.05 10770.5 10813.9 10837.95 10735.5 10814.65 10817.3 10781 10789.6 10760 10704.55 10719.85 10796.9 10725.2 10790.65 10805.95 10716.65 10737.15 10849 10712.1 10833.95 </p><p></p><p>Output</p><p>Buy at 10585.5 (New Position).</p><p>Sell at 10827.8 (Close Previous Position).</p><p>Profit 242.3</p><p></p><p>Sell at 10827.8 (New Position).</p><p>Buy at 10821.95 (Close Previous Position).</p><p>Profit 248.15</p><p></p><p>Buy at 10821.95 (New Position).</p><p>Sell at 10839.05 (Close Previous Position).</p><p>Profit 265.25</p><p></p><p>Sell at 10839.05 (New Position).</p><p>Buy at 10844.85 (Close Previous Position).</p><p>Profit 259.45</p><p></p><p>Buy at 10844.85 (New Position).</p><p>Total orders 5</p><p></p></div></div>	
+	
+				
+	
+	<div class="question_container tab" id="D" style="opacity: 0; display: none;">
+		<p></p>
+
+<h2 id="problemname">Tower of Lights</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  
+<h3 id="hexample">Examples</h3>
+<p id="example"></p>
+-->
+
+
+
+
+
+	<div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3>Problem Description</h3></div><div class="content-tab" style="opacity: 1;"><p id="problemdesc"></p><p></p><p>There are N number of Light towers (L1...LN) with height (Hi). Amount of area lighted by a tower of height Hi is shown in the image.</p><p> <img id="com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@42257a4b:image1.jpeg" alt="com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@42257a4b:image1.jpeg" src="./TCS_ CodeVita - 2_files/Tower of Lightsimage1.jpeg" class="jspimage" width="300" height="300" margin-left="auto" margin-right="auto"> </p><p>Total Area for this case is Hi2. These towers are placed on a long road. You need to find the total amount of area has light.</p><p></p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="hconst">Constraints</h3></div><div class="content-tab" style="opacity: 1;"><p id="const"></p><p>1 &lt;= T &lt;= 100</p><p>1 &lt;= N &lt;= 1000</p><p>0&lt;= P &lt;= 1000</p><p>1&lt;= H &lt;= 1000</p><p></p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="hinput">Input Format</h3></div><div class="content-tab" style="opacity: 1;"><p id="input"></p><p>The first line contains one Integer T, the number of test cases.</p><p>For each test case,</p><p>The first line contains one Integer N, the number of light towers. In next N lines, each line contains two integers P and H, where P represents the position and H represents the height.</p><p></p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="houtput">Output</h3></div><div class="content-tab" style="opacity: 1;"><p id="output"></p><p>T double values in T lines represent the area for each test case.</p><p></p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="htestcase">Test Case</h3></div><div class="content-tab" style="opacity: 1;"><pre><p id="testcase"></p>
+</pre></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="hexplanation">Explanation</h3></div><div class="content-tab" style="opacity: 1;"><p id="explanation"></p><p> <b>Example 1 </b> </p><p>Input 1</p><p>1</p><p>10 2</p><p class="no_Spacing"> Output</p><p> 4.0</p><p></p><p> <b>Example 2</b> </p><p>Input 2</p><p>3 4 8 6 2 12 3</p><p>2</p><p>5 4</p><p>7 4</p><p></p><p> Output </p><p>70.75</p><p>23.0</p><p></p><p class="no_Spacing">Explanation picture for Example #2 and Example #1</p><p class="no_Spacing"> <b> <i> <img id="com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@42257a4b:image2.png" alt="com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@42257a4b:image2.png" src="./TCS_ CodeVita - 2_files/Tower of Lightsimage2.png" class="jspimage" width="300" height="300" margin-left="auto" margin-right="auto"> </i> </b> </p><p></p><p> </p><p></p></div></div>	
+	
+				
+	
+	<div class="question_container tab" id="E" style="opacity: 0; display: none;">
+		<p></p>
+
+<h2 id="problemname">Cross Words</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  
+<h3 id="hexample">Examples</h3>
+<p id="example"></p>
+-->
+
+
+
+
+
+
+	<div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3>Problem Description</h3></div><div class="content-tab" style="opacity: 1;"><p id="problemdesc"></p><p>A crossword puzzle is a square grid with black and blank squares, containing clue numbers (according to a set of rules) on some of the squares. The puzzle is solved by obtaining the solutions to a set of clues corresponding to the clue numbers.</p><p>The solved puzzle has one letter in each of the blank square, which represent a sequence of letters (consisting of one or more words in English or occasionally other languages) running along the rows (called "Across", or "A") or along the columns (called "Down" or "D"). Each numbered square is the beginning of an Across solution or a Down solution. Some of the across and down solutions will intersect at a blank square, and if the solutions are consistent, both of them will have the same letter at the intersecting square.</p><p>In this problem, you will be given the specifications of the grid, and the solutions in some random order. The problem is to number the grid appropriately, and associate the answers consistently with the clue numbers on the grid, both as Across solutions and as Down solutions, so that the intersecting blank squares have the same letter in both solutions.</p><p> <b>Rules for Clue Numbering</b> </p><p>The clue numbers are given sequentially going row wise (Row 1 first, and then row2 and so on)</p><p>Only blank squares are given a clue number</p><p>A blank square is given a clue number if either of the following conditions exist (only one number is given even if both the conditions are satisfied)</p><p>It has a blank square to its right, and it has no blank square to its left (it has a black square to its left, or it is in the first column). This is the beginning of an Across solution with that number</p><p>It has a blank square below it, and no blank square above it (it has a black square above it or it is in the first row). This is the beginning of a Down solution with that number</p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="hconst">Constraints</h3></div><div class="content-tab" style="opacity: 1;"><p id="const"></p><p>5&lt;=N&lt;=15</p><p>5&lt;=M&lt;=50</p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="hinput">Input Format</h3></div><div class="content-tab" style="opacity: 1;"><p id="input"></p><p>The input consists of two parts, the grid part and the solution part</p><p>The first line of the grid part consists of a number, N, the size of the grid (the overall grid is N x N) squares. The next N lines correspond to the N rows of the grid. Each line is comma separated, and has number of pairs of numbers, the first giving the position (column) of the beginning of a black square block, and the next giving the length of the block. If there are no black squares in a row, the pair "0,0" will be specified. For example, if a line contains "2,3,7,1,14,2", columns 2,3,4 (a block of 3 starting with 2), 7 (a block of 1 starting with 7) and 14,15 (a block of 2 starting with 14) are black in the corresponding row.</p><p>The solution part of the input appears after the grid part. The first line of the solution part contains M, the number of solutions. The M subsequent lines consist of a sequence of letters corresponding to a solution for one of the Across and Down clues. All solutions will be in upper case (Capital letters)</p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="houtput">Output</h3></div><div class="content-tab" style="opacity: 1;"><p id="output"></p><p>The output is a set of M comma separated lines. Each line corresponds to a solution, and consists of three parts, the clue number, the letter A or D (corresponding to Across or Down) and the solution in to that clue (in upper case)</p><p>The output must be in increasing clue number order. Ifa clue number has both an Across and a Down solution, they must come in separate lines, with the Across solution coming before the Down solution.</p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="htestcase">Test Case</h3></div><div class="content-tab" style="opacity: 1;"><pre><p id="testcase"></p>
+</pre></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="hexplanation">Explanation</h3></div><div class="content-tab" style="opacity: 1;"><p id="explanation"></p><p>Example 1</p><p>Input</p><table>
+ <tbody> 
+  <tr> 
+   <td> <p>5</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>5,1</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>1,1,3,1,5,1</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>0,0</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>1,1,3,1,5,1</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>1,1</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>5</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>EVEN</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>ACNE</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>CALVE</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>PLEAS</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>EVADE</p> </td> 
+  </tr> 
+ </tbody> 
+</table><p></p><p>Output</p><table> 
+ <tbody> 
+  <tr> 
+   <td> <p>1,A,ACNE</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>2,D,CALVE</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>3,D,EVADE</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>4,A,PLEAS</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>5,A,EVEN</p> </td> 
+  </tr> 
+ </tbody> 
+</table><p></p><p>Explanation</p><p>N is 5, and the disposition of the black squares are given in the next 5 (N) lines. The grid looks like this</p><p> <img id="com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@4da5ebc4:image1.png" alt="com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@4da5ebc4:image1.png" src="./TCS_ CodeVita - 2_files/Cross Wordsimage1.png" class="jspimage" width="300" height="300" margin-left="auto" margin-right="auto"> </p><p>M=5, and there are 5 (M) solutions.</p><p>If the grid is numbered according to the rules, the numbered grid loos like this. Note that row 3 has no blanks, and the input line says "0,0"</p><p> <img id="com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@4da5ebc4:image2.png" alt="com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@4da5ebc4:image2.png" src="./TCS_ CodeVita - 2_files/Cross Wordsimage2.png" class="jspimage" width="300" height="300" margin-left="auto" margin-right="auto"> </p><p> <a name="_GoBack"></a>The solutions are fitted to the grid so that they are consistent, and the result is shown below. Note that this is consistent, because the letter at each intersecting blank square in the Across solution and the Down solution.</p><p> <img id="com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@4da5ebc4:image3.png" alt="com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@4da5ebc4:image3.png" src="./TCS_ CodeVita - 2_files/Cross Wordsimage3.png" class="jspimage" width="300" height="300" margin-left="auto" margin-right="auto"> </p><p>Based on this the output is given in clue number order. 1 Across is ACNE, and hence the first line of the output is 1,A,ACNE. The same logic gives all the remaining solutions.</p><p>Example 2</p><p>Input</p><table> 
+ <tbody> 
+  <tr> 
+   <td> <p>5</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>1,1</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>1,1,3,2</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>0,0</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>1,1,3,2</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>0,0</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>5</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>ASIAN</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>RISEN</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>FEAR</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>CLAWS</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>FALLS</p> </td> 
+  </tr> 
+ </tbody> 
+</table><p></p><p>Output</p><table> 
+ <tbody> 
+  <tr> 
+   <td> <p>1,A,FEAR</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>1,D,FALLS</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>2,D,RISEN</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>3,A,CLAWS</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>4,A,ASIAN</p> </td> 
+  </tr> 
+ </tbody> 
+</table><p></p><p>Explanation</p><p>N=5, and the grid looks like this</p><p> <img id="com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@4da5ebc4:image4.jpeg" alt="com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@4da5ebc4:image4.jpeg" src="./TCS_ CodeVita - 2_files/Cross Wordsimage4.jpeg" class="jspimage" width="300" height="300" margin-left="auto" margin-right="auto"> </p><p>M=5, and the 5 solutions are given</p><p>The numbered grid looks like this</p><p> <img id="com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@4da5ebc4:image5.png" alt="com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@4da5ebc4:image5.png" src="./TCS_ CodeVita - 2_files/Cross Wordsimage5.png" class="jspimage" width="300" height="300" margin-left="auto" margin-right="auto"> </p><p>The consistently populated grid (with the solutions) look like this</p><p> <img id="com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@4da5ebc4:image6.png" alt="com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@4da5ebc4:image6.png" src="./TCS_ CodeVita - 2_files/Cross Wordsimage6.png" class="jspimage" width="300" height="300" margin-left="auto" margin-right="auto"> </p><p>The output can be easily given from this. Note that clue number 1 has both an Across solution (FEAR) and a DOWN solution (FALLS). The Across solution must precede the Down solution in the output.</p><p></p><p></p><p></p></div></div>	
+	
+				
+	
+	<div class="question_container tab" id="F" style="opacity: 0; display: none;">
+		<p></p>
+
+<h2 id="problemname">Special Triangles</h2>
+
+
+
+
+<h3>Problem Description</h3>
+<p id="problemdesc"></p><p>When we have 4 lines in the plane, the maximum number of triangles formed by them is 4 as shown below:</p><p>Of the four triangles ABF, CDF, BDE, ACE, triangles BDE and CDF are somewhat "special". They do not have another of the given lines go through their interiors.</p><p> <img id="com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@601c7012:image1.png" alt="com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@601c7012:image1.png" src="./TCS_ CodeVita - 2_files/Special Trianglesimage1.png" class="jspimage" width="300" height="300" margin-left="auto" margin-right="auto"> </p><p></p><p>Given n lines in the plane, the objective is to count the number of special triangles formed by them. You may assume that no three lines will be concurrent (go through the same point). Each line will be specified by two points (x and y coordinates of two points on the line).</p><p>Note that three lines may not form a triangle, let alone a special triangle, if two of them are parallel lines.</p><p></p>
+
+<h3 id="hconst">Constraints</h3>
+<p id="const"></p><p>N&lt;=15</p><p>Each of the x and y coordinates of the points defining any line lies between -10 and 10.</p><p></p>
+
+<h3 id="hinput">Input Format</h3>
+<p id="input"></p><p>The first line will have a single integer, N, representing the number of lines in the input.</p><p>The next N lines will have four comma separated numbers representing x1, y1, x2, y2 (the x and y coordinates of the two points on the line.</p><p></p>
+
+<h3 id="houtput">Output</h3>
+<p id="output"></p><p>The output is a single line giving the number of special triangles formed.</p><p></p>
+<!--  
+<h3 id="hexample">Examples</h3>
+<p id="example"></p>
+-->
+<h3 id="htestcase">Test Case</h3>
+<pre><p id="testcase"></p>
+</pre>
+<h3 id="hexplanation">Explanation</h3>
+<p id="explanation"></p><p> <b>Example 1</b> </p><p>Input</p><table> 
+ <tbody> 
+  <tr> 
+   <td> <p>4</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>1,2,4,7</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>2,3,2,5</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>3,5,7,5</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>4,7,3,4</p> </td> 
+  </tr> 
+ </tbody> 
+</table><p></p><p>Output</p><p>2</p><p>Explanation</p><p> <img id="com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@601c7012:image2.png" alt="com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@601c7012:image2.png" src="./TCS_ CodeVita - 2_files/Special Trianglesimage2.png" class="jspimage" width="300" height="300" margin-left="auto" margin-right="auto"> </p><p></p><p>Line I is defined by the points (1,2) (A) and (4,7) (B). Similarly, line II is defined by C (2,3) and D (2,5), line III by E (3,5) and F(7,5) and line IV by B (4,7) and G (3,4).</p><p>Of the four triangles formed by the four lines, the ones by (I,II,III) and (I,III,IV) are special.</p><p>(I,II,IV) has III going through the interior, while (II,III,IV) has I going through the interior.</p><p>As only two triangles are special, the output is 2.</p><p> <b>Example 2</b> </p><p>Input</p><table> 
+ <tbody> 
+  <tr> 
+   <td> <p>4</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>2,2,3,2</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>2,3,3,3</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>2,4,3,4</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p>2,5,3,5</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p></p> <p>Output</p> <p>0</p> <p></p> <p></p> </td> 
+  </tr> 
+ </tbody> 
+</table><p></p><p>Explanation</p><p>As all lines are parallel to the x axis, there are no triangles, and hence no special triangles. The output is 0.</p><p></p><p></p>
+
+
+	</div>	
+	
+				
+	
+	<div class="question_container tab" id="G" style="opacity: 0; display: none;">
+		<p></p>
+
+<h2 id="problemname">On a Cube</h2>
+
+
+
+
+<h3>Problem Description</h3>
+<p id="problemdesc"></p><p>A solid cube of 10 cm x 10cm x 10 cm rests on the ground. It has a beetle on it, and some sweet honey spots at various locations on the surface of the cube.&nbsp; The beetle starts at a point on the surface of the cube, and goes to the honey spots in order along the surface of the cube.</p><p>1. If it goes from a point to another point on the same face (say X to Y), it goes in an arc of a circle that subtends an angle of 60 degrees at the centre of the circle</p><p>2. If it goes from one point to another on a different face, it goes by the shortest path on the surface of the cube, except that it never travels along the bottom of the cube</p><p>The beetle is a student of Cartesian geometry, and knows the coordinates (x, y, z) of all the points it needs to go to. The origin of coordinates it uses is one corner of the cube on the ground, and the z axis points up. Hence, the bottom surface (on which it does not crawl) is z=0, and the top surface is z=10. The beetle keeps track of all the distances travelled, and rounds the distance travelled to two decimal places once it reaches the next spot, so that the final distance is a sum of the rounded distances from spot to spot. </p><p></p>
+
+<h3 id="hconst">Constraints</h3>
+<p id="const"></p><p>None of the points the beetle visits is on the bottom face (z=0) or on any of the edges of the cube (the lines where two faces meet)</p><p>2&lt;=N&lt;=10</p><p></p>
+
+<h3 id="hinput">Input Format</h3>
+<p id="input"></p><p>The first line gives an integer N, the total number of points (including the starting point) the beetle visits</p><p>The second line is a set of 3N comma separated non-negative numbers, with up to two decimal places each. These are to be interpreted in groups of three as the x, y, z coordinates of the points the beetle needs to visit in the given order.</p><p></p>
+
+<h3 id="houtput">Output</h3>
+<p id="output"></p><p>One line with a number giving the total distance travelled by the beetle accurate to two decimal places. Even if the distance travelled is an integer, the output should have two decimal places.</p><p></p>
+<!--  
+<h3 id="hexample">Examples</h3>
+<p id="example"></p>
+-->
+<h3 id="htestcase">Test Case</h3>
+<pre><p id="testcase"></p>
+</pre>
+<h3 id="hexplanation">Explanation</h3>
+<p id="explanation"></p><p> <b>Example 1</b> </p><p>Input</p><p>3</p><p>1,1,10,2,1,10,0,1,9</p><p>Output</p><p>4.05</p><p>Explanation</p><p>There are three points visited by the beetle (N=3). The beetle starts on the top face of the cube (z=10) at point (1,1,10) and goes to another point on the same face (2,1,10). Though the straight line distance is 1, it travels on the arc of a circle subtending an angle of 60 degrees at the centre of the circle, and hence travels (2*pi)/6 or 1.05 (note that it rounds the distance at each leg of the journey). It then travels from (2,1,10) on the face z=10 to (0,1,9) on the face x=0 along the surface of the cube. This is a distance of 3. The total distance travelled is 1.05+3=4.05. The output is 4.05</p><p> <b>Example 2</b> </p><p>Input</p><p>3</p><p>1,1,10,2,1,10,0,5,9</p><p>Output</p><p>6.05</p><p>Explanation</p><p>There are three points visited by the beetle (N=3). The beetle starts on the top face of the cube (z=10) at point (1,1,10) and goes to another point on the same face (2,1,10). As before. This distance is 1.05. It then travels from (2,1,10) on the face z=10 to (0,5,9) on the face x=0 along the surface of the cube. The shortest distance on the surface of the cube between these points is 5. The total distance travelled is 1.05+5=6.05. The output is 6.05.</p><p></p>
+
+	</div>	
+	
+				
+	
+	<div class="question_container tab" id="H" style="opacity: 0; display: none;">
+		<p></p>
+
+<h2 id="problemname">VM Fitment</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  
+<h3 id="hexample">Examples</h3>
+<p id="example"></p>
+-->
+
+
+
+
+
+	<div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3>Problem Description</h3></div><div class="content-tab" style="opacity: 1;"><p id="problemdesc"></p><p></p><p>You are a System Administrator and have access to unlimited number of servers with same amount of CPU (#of cores) and Memory (GB).</p><p> </p><p>On these servers, you need pack number of applications K, deployed as VMs such that the total cost of ownership without affecting the application performance, is the least. Application resource requirements are provided in the following format</p><p></p><p>* CPU Utilization in percentage for a single core system</p><p>* Memory Allocated in MB</p><p></p><p>You need to pack the applications on the server in such a manner that its resource requirement is fully met on that server i.e. you cannot deploy the same application across different servers.</p><p></p><p>Each server that hosts the application has a constant initial cost in terms of</p><p>* Reserved CPU in percentage for a single core system</p><p>* Reserved Memory in MB</p><p></p><p>The cost of the server can be calculated from the following equation: </p><p></p><p>Cost per Hour = constant initial cost + ( 1.5/10000 )( cpu_utilization_os_server ^ 3) + 0.5(mem_utilization_of_server)</p><p></p><p>where 0 &lt;= cpu_utilization_os_server, mem_utilization_of_server &lt;= 100 </p><p>and constant initial cost = 100</p><p></p><p>Your task is to find the minimum cost per hour for running the applications.</p><p></p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="hconst">Constraints</h3></div><div class="content-tab" style="opacity: 1;"><p id="const"></p><p>1 &lt;= number of cores &lt;= 10</p><p>1 &lt;= memory in GB &lt;= 10</p><p>0 &lt;= number of VMs &lt;= 100</p><p>1 GB = 1024 MB</p><p></p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="hinput">Input Format</h3></div><div class="content-tab" style="opacity: 1;"><p id="input"></p><p>First line provides the number of cores, C, in each server</p><p>Second line provides the amount of memory, M, in gigabytes in each server</p><p>Third line provides number of applications, K, to be packed on servers</p><p></p><p>Next, K * 2 lines consists of the following information, on one line each</p><p>CPU requirement in percentage of single core for current application</p><p>Memory requirement in megabytes for current application</p><p></p><p>Last 2 lines consists of the following information</p><p>Reserved CPU in percentage of a single core system</p><p>Reserved Memory in MB</p><p></p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="houtput">Output</h3></div><div class="content-tab" style="opacity: 1;"><p id="output"></p><p>Least cost per hour for hosting all applications, rounded up to the next integer</p><p></p><p></p></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="htestcase">Test Case</h3></div><div class="content-tab" style="opacity: 1;"><pre><p id="testcase"></p>
+</pre></div><div class="heading-tab active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#333" stroke-width="3" d="M12 12h8"></path><path stroke="#333" stroke-width="3" d="M12 12h-8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v8"></path><path class="plus" stroke="#333" stroke-width="3" d="M12 12v-8"></path></svg><h3 id="hexplanation">Explanation</h3></div><div class="content-tab" style="opacity: 1;"><p id="explanation"></p><p> <b>Example 1 </b> </p><p>Input</p><p> 2</p><p>1</p><p>4</p><p>29.72</p><p>366</p><p>25.53</p><p>163</p><p>28.98</p><p>206</p><p>26.64</p><p>506</p><p>11.21</p><p>176</p><p> Output</p><p> 289</p><p></p><p></p><p> <b>Example 2</b> </p><p>Input </p><p>3</p><p>1</p><p>4</p><p>26.66</p><p>451</p><p>25.8</p><p>294</p><p>26.81</p><p>207</p><p>26.77</p><p>192</p><p>8.03</p><p>184</p><p></p><p> Output </p><p>277</p><p></p></div></div>	
+	
+
+</div>
+
+</div>
+
+
+
+
+<div class="file_upload_container module" id="file-upload-section">
+	<h2>Upload Solution [ Question : <span class="question-character-span">B</span> ]</h2>
+	<span class="upload_section">
+		<div class="self_agreement">
+			<input id="self_proclamation" type="checkbox">
+			<label for="self_proclamation">I, <strong>ranick patra</strong> confirm that the answer submitted is my own.</label>
+		</div>
+		<input type="file" id="tempID" class="actual_solution_upload_input" disabled="disabled">
+		<label for="tempID" style="max-height:20px">Choose a File ...</label>
+		<button id="submit_solution" disabled="disabled" onclick="submitSolution()">Submit Solution</button>
+		<div class="extension_container disabled">
+			<span>Select your Language :</span>
+			<select id="extension"></select>
+		</div>
+		<span class="submission_status">
+
+		</span>
+	</span>
+	<span class="attribution_section_container disabled">
+		<div class="attribution_section" style="grid-column: span 2; padding: 5px 0 10px 0">
+			<input type="checkbox" id="attributions">
+			<label for="attributions">Took help from online sources (attributions)</label>			
+		</div>
+		<div class="attribution_section text">
+			<label>Links (Comma Separated): </label>
+			<textarea id="links"></textarea>
+		</div>
+		<div class="attribution_section text">
+			<label>Comments : </label>
+			<textarea id="comments"></textarea>
+		</div>
+	</span>
+</div>
+
+
+<div id="secondary-space" style="display:none">
+	<h2>Upload Solution [ Question : <span class="question-character-span">B</span> ]</h2>
+	<span class="upload_section">
+		<div class="self_agreement">
+			<input id="self_proclamation" type="checkbox">
+			<label for="self_proclamation">I, <strong>ranick patra</strong> confirm that the answer submitted is my own.</label>
+		</div>
+		<input type="file" id="tempID" class="actual_solution_upload_input" disabled="">
+		<label for="tempID" style="max-height:20px">Choose a File . . .</label>
+		<button id="submit_solution" disabled="" onclick="submitSolution()">Submit Solution</button>
+		<div class="extension_container disabled">
+			<span>Select your Language :</span>
+			<select id="extension"></select>
+		</div>
+		<span class="submission_status">
+
+		</span>
+	</span>
+	<span class="attribution_section_container disabled">
+		<div class="attribution_section" style="grid-column: span 2; padding: 5px 0 10px 0">
+			<input type="checkbox" id="attributions">
+			<label for="attributions">Took help from online sources (attributions)</label>			
+		</div>
+		<div class="attribution_section text">
+			<label>Links (Comma Separated): </label>
+			<textarea id="links"></textarea>
+		</div>
+		<div class="attribution_section text">
+			<label>Comments : </label>
+			<textarea id="comments"></textarea>
+		</div>
+	</span>
+</div>
+
+<div class="secondary-space" id="secondary-notification-space" style="display:none">
+	<div class="submission_notification success">
+		<div class="graphic"><img src="./TCS_ CodeVita - 2_files/happy.svg"><div class="short-msg"></div></div>
+		<div class="info">
+			<h2></h2>
+			<div class="actions">
+				<div class="other-info"></div>
+				<div class="buttons"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+/*
+* Initialization Code
+* Author: Ashik A
+*/
+$(document).ready(function(){
+	window.endTime = 'December 9, 2018 9:0:0';
+	 window.timeLeft = 10;
+
+	initializeTabs();
+	var status = window.sessionStorage.getItem('latest_status');
+	if(status != undefined ||status != null){
+		status = JSON.parse(status);
+		if(status.type.localeCompare('error') == 0) {
+			setSubmissionPanel(true,null);
+		}
+		else{
+			setSubmissionPanel(false, window.sessionStorage.getItem('latest_status'));
+		}
+	}
+	else{
+		setSubmissionPanel(true,null);
+	}
+
+	var radio_val = '7';
+	if (radio_val == '') {
+		radio_val = parseInt('0');
+	}
+	else radio_val = parseInt(radio_val);
+	console.log(window.sessionStorage.getItem('visited_question'));
+	if(window.sessionStorage.getItem('visited_question') == null || window.sessionStorage.getItem('visited_question') == undefined){
+		 $('.question_selectors #'+(String.fromCharCode(65 + radio_val))+'.question_selector').click();
+	}
+	else {
+		$('.question_selectors #'+window.sessionStorage.getItem('visited_question').trim()+'.question_selector').click();
+	}
+});
+
+</script>
+
+
+</div>
+			</div>
+		</div>
+
+		
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./TCS_ CodeVita - 2_files/mod_footer_css.css">
+    <link rel="icon" href="https://www.tcscodevita.com/CodevitaV7/images/favicon.ico" type="image/x-icon">
+    <title>Footer</title>
+
+
+    <footer class="footer">
+        <div class="left_pane">
+            <!-- <a class="link">About CodeVita</a> -->
+            <a href="https://www.tcscodevita.com/CodevitaV7/faqs.jsp" target="_blank" class="link">CodeVita FAQ's</a>
+            <a href="https://www.tcscodevita.com/CodevitaV7/codevitablog.jsp" target="_blank" class="link">About CodeVita</a>
+            <a href="https://www.tcscodevita.com/CodevitaV7/privacypolicy.jsp" target="_blank" class="link">Privacy Policy</a>
+            <a href="https://www.tcs.com/" target="_blank" class="link">Careers</a>
+            <span class="copyright">© 2018 Tata Consultancy Services Limited. All Rights Reserved. </span>
+        </div>
+        <div class="right_pane">
+            <div class="connections">
+                <span>CONNECT WITH US</span>
+                <a class="connect_link" href="http://www.facebook.com/TataConsultancyServices" target="_blank"><img src="./TCS_ CodeVita - 2_files/facebook.png" alt="Facebook"></a>
+                <a class="connect_link" href="http://www.linkedin.com/company/tata-consultancy-services/careers?trk=top_nav_careers" target="_blank"><img src="./TCS_ CodeVita - 2_files/linkedin.png" alt="Linked In"></a>
+                <a class="connect_link" href="https://www.instagram.com/tcsglobal/?hl=en%E2%80%8B" target="_blank"><img src="./TCS_ CodeVita - 2_files/instagram.png" alt="Instagram"></a>
+                <a class="connect_link" href="https://twitter.com/TCS_News" target="_blank"><img src="./TCS_ CodeVita - 2_files/twitter.png" alt="Twitter"></a>
+                <a class="connect_link" href="https://www.youtube.com/channel/UCaHyiyvJp4hhPNhIU7r9uqg" target="_blank"><img src="./TCS_ CodeVita - 2_files/youtube.png" alt="Youtube"></a>
+                <!-- <a class="connect_link"><img src="./images/footer/googleplus.png" alt="Google +"></a>
+                <a class="connect_link"><img src="./images/footer/email.png" alt="Email"></a> -->
+            </div>
+            <div>
+                <span class="logo"><a href="http://www.tata.com/" target="_blank"></a><img src="./TCS_ CodeVita - 2_files/tcs_logo.png" style="width: 280px;margin-bottom: 5px"></span>
+                <span class="logo"><img src="./TCS_ CodeVita - 2_files/cc.png" style="width: 150px"></span>
+            </div>
+        </div>
+        <span class="mob copyright">© 2018 Tata Consultancy Services Limited. All Rights Reserved. </span>
+    </footer>
+
+
+
+		<!-- Popup Container for Login(Edited : Ashik Unni A) -->
+		<div class="popup" id="popup" style="display: none">
+			<div class="login_container" id="popup_container">
+				<div class="container">
+					
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			var countdownInterval = undefined;
+			var contestEndedValue = 0;
+
+			function counter(timeString){
+				endTime = new Date(timeString);
+				var localtime=new Date();
+				var offset=localtime.getTimezoneOffset();
+				var serveroffset=-330;
+				var difference=serveroffset-offset;    // In minutes
+				var offsetInMilliseconds=difference*60*1000;    //In Milliseconds
+				var longTime = ((endTime.getTime()+ offsetInMilliseconds)- localtime.getTime()) / 1000;
+				if(longTime >=0){
+					$('.timer #second').html( ((longTime % 60 < 10) ? "0" : "") + parseInt(longTime % 60));
+					longTime /= 60;
+					$('.timer #minute').html( ((longTime % 60 < 10) ? "0" : "") + parseInt(longTime % 60));
+					longTime /=60;
+					$('.timer #hour').html( ((longTime % 24 < 10) ? "0" : "") + parseInt(longTime % 24));
+				}
+				else{
+					$('.timer #hour').html("00");
+					$('.timer #minute').html("00");
+					$('.timer #second').html("00");
+					clearInterval(countdownInterval);
+				}
+			}
+			
+	function calcTime(city, offset) {
+
+    // create Date object for current location
+    d = new Date();
+    
+    // convert to msec
+    // add local time zone offset 
+    // get UTC time in msec
+    utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+    
+    // create new Date object for different city
+    // using supplied offset
+    nd = new Date(utc + (3600000*offset));
+    
+    // return time as a string
+    return nd.toLocaleString();
+
+}
+			
+			
+			$(document).ready(function(){
+				if(window.endTime == undefined){
+					$('.timer .num, .timer .desc').css('display','none');
+					$('.timer').append('<span class="wish">All the Best</span>');
+					setMainContent('guidelines');
+				}
+				else if(contestEndedValue == 2){
+					$('.timer .num, .timer .desc').css('display','none');
+					$('.timer').append('<span class="wish" style="font-weight: 700">Your Contest has Ended</span>');
+					setMainContent('guidelines');
+				}
+				else{
+					$('.navigation li').css({'display':'block'});
+					counter(window.endTime);
+					setMainContent('coding_area');
+				}
+				
+				var watchEndTime = setInterval(function(){
+					if(window.endTime != undefined){
+						$('.navigation li').css({'display':'block'});
+						if(contestEndedValue != 2){
+							console.log(window.endTime + " : Got It");
+							clearInterval(watchEndTime);
+							$('.timer .num, .timer .desc').css('display','inline-block');
+							$('.timer .wish').css('display','none');
+							counter(window.endTime);
+							countdownInterval = setInterval(function(){
+								counter(window.endTime);
+							}, 500);
+						}
+					}
+				}, 1000);
+
+			});
+
+			$('.main-container .navigation li').click(function(){
+				var lists = $('.main-container .navigation li');
+				for(i=0;i<lists.length;i++) $(lists[i]).removeClass('active');
+				$(this).addClass('active');
+				clearInterval(window.time_left_interval_var);
+				setMainContent($(this).attr('id'));
+			});
+
+			function setMainContent(id){
+				$.ajaxSetup({'cache': true});
+				setMainHeading( $('.main-container .navigation li#'+id).html() );
+				var main_content = $('.main-container .section #main-content');
+				if(id.localeCompare('guidelines') == 0){
+					setLoader(true);
+					$.ajax({
+						url: './guidelines.jsp',
+						type: 'get',
+						success: (html)=>{ $(main_content).html(html); }
+					});
+				}
+				else if(id.localeCompare('coding_area') == 0){
+					setLoader(true);
+					$.ajax({
+						cache: true,
+						url: './StartCoding',
+						type: 'get',
+						success: (html)=>{ $(main_content).html(html); }
+					});
+				}
+				else if(id.localeCompare('compile_run') == 0){
+					setLoader(true);
+					$.ajax({
+						url: './ChkExecuteServlet',
+						type: 'get',
+						success: (html)=>{ $(main_content).html(html); }
+					});
+				}
+				else if(id.localeCompare('submissions') == 0){
+					setLoader(true);
+					$.ajax({
+						url: './ChkSubmissionServlet',
+						type: 'get',
+						success: (html)=>{ $(main_content).html(html); }
+					});
+				}
+				else if(id.localeCompare('feedback') == 0){
+					setLoader(true);
+					$.ajax({
+						url: './feedback.jsp',
+						type: 'get',
+						success: (html)=>{ $(main_content).html(html); }
+					});
+				}
+				else if(id.localeCompare('result') == 0){
+					setLoader(true);
+					$.ajax({
+						url: './result.jsp',
+						type: 'get',
+						success: (html)=>{ $(main_content).html(html); }
+					});
+				}
+				else if(id.localeCompare('your_team') == 0){
+					setLoader(true);
+					$.ajax({
+						url: './Team',
+						type: 'get',
+						success: (html)=>{ $(main_content).html(html); }
+					});
+				}else if(id.localeCompare('msg') == 0){
+					setLoader(true);
+					$.ajax({
+						url: './msg.jsp',
+						type: 'get',
+						success: (html)=>{ $(main_content).html(html); }
+					});
+				}else if(id.localeCompare('livedashboard') == 0){
+					setLoader(true);
+					$.ajax({
+						url: './livestatus.jsp',
+						type: 'get',
+						success: (html)=>{ $(main_content).html(html); }
+					});
+				}
+
+				if(!$('.main-container .navigation li#'+id).hasClass('active')) $('.main-container .navigation li#'+id).addClass('active');
+			}
+
+			function setMainHeading(value){
+				$('.main-container #the-heading').html(value);
+			}
+
+			function setLoader(bool_value){
+				if(bool_value){
+					$('#main-content').html('');
+					var container = $('<div class="loader_main"></div>');
+					container.append('<span class="letter" style="animation-delay: 0s; -webkit-animation-delay: 0s">L</span>');
+					container.append('<span class="letter" style="animation-delay: 0.25s; -webkit-animation-delay: 0.25s">.</span>');
+					container.append('<span class="letter" style="animation-delay: 0.5s; -webkit-animation-delay: 0.5s">O</span>');
+					container.append('<span class="letter" style="animation-delay: 0.75s; -webkit-animation-delay: 0.75s">.</span>');
+					container.append('<span class="letter" style="animation-delay: 1s; -webkit-animation-delay: 1s">A</span>');
+					container.append('<span class="letter" style="aUsernimation-delay: 1.25s; -webkit-animation-delay: 1.25s">.</span>');
+					container.append('<span class="letter" style="animation-delay: 1.5s; -webkit-animation-delay: 1.5s">D</span>');
+					container.append('<span class="letter" style="animation-delay: 1.75s; -webkit-animation-delay: 1.75s">.</span>');
+					container.append('<span class="letter" style="animation-delay: 2s; -webkit-animation-delay: 2s">I</span>');
+					container.append('<span class="letter" style="animation-delay: 2.25s; -webkit-animation-delay: 2.25s">.</span>');
+					container.append('<span class="letter" style="animation-delay: 2.5s; -webkit-animation-delay: 2.5s">N</span>');
+					container.append('<span class="letter" style="animation-delay: 2.75s; -webkit-animation-delay: 2.75s">.</span>');
+					container.append('<span class="letter" style="animation-delay: 3s; -webkit-animation-delay: 3s">G</span>');
+					$('#main-content').html(container);
+				}
+			}
+
+			function launchReport() {
+				my_window = window.open("graphs.jsp", "my", "scrollbars=1,status=1,width=1102,height=800,top=0,left=0,toolbar=no, menubar=no");
+			}
+
+			function showSessionTimeOutError(){
+				$('#popup').css('display','grid');
+				$.get('./modules/notification_popup.jsp', function(html){
+					$('#popup .container').html(html);
+					$('#popup .container h1').html('Somebody was not here');
+					setMessage('Session Timed Out. Please Login Again.');
+					$('#popup .container #okay').click(()=>{
+						window.location = './index.jsp';
+					});
+				});
+			}
+
+			function showCustomError(heading, message){
+				$('#popup').css('display','grid');
+				$.get('./modules/notification_popup.jsp', function(html){
+					$('#popup .container').html(html);
+					$('#popup .container h1').html(heading);
+					setMessage(message);
+					$('#popup .container #okay').click(()=>{
+						$('.navigation #guidelines').click();
+					});
+				});
+			}
+		</script>
+	
+</body></html>
